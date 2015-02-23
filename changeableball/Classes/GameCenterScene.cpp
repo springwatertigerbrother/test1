@@ -8,6 +8,7 @@
 
 #include "GameCenterScene.h"
 #include "ControllerLayer.h"
+#include "GameOverLayer.h"
 
 using namespace cocos2d;
 

@@ -10,6 +10,7 @@
 #include <algorithm>
 #include "SimpleAudioEngine.h"
 #include "GameCenterScene.h"
+#include "GameOverLayer.h"
 
 static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
@@ -391,6 +392,9 @@ void DataManager:: touchEnd()
     
     if(!enableDispel())
     {
+        auto scene = GameOverLayer::scene();
+        Director::getInstance()->replaceScene(scene);
+
         printf("gameover");
     }
 }
