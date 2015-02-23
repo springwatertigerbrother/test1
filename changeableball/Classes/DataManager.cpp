@@ -349,23 +349,25 @@ void DataManager:: touchEnd()
         nSum = nNumber*pow(2, nTypeValue);
         
         char scoreStr[50] = {0};
-        std::sprintf(scoreStr,"n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
+        std::sprintf(scoreStr,"n += %d X 2^%d = %d",nNumber,nTypeValue,nSum);
 //        CCString* scoreStr = CCString::create("n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
         CCLabelTTF* pTotalScoreLabel = CCLabelTTF::create();
         pTotalScoreLabel->setString(scoreStr);
-        pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.5));
+        pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.7));
         pTotalScoreLabel->setColor(ccc3(255, 100, 100));
         pTotalScoreLabel->setScale(2);
+        pTotalScoreLabel->setFontSize(30);
         this->getParent()->addChild(pTotalScoreLabel);
         
         CCMoveTo* pMoveto1 = CCMoveTo::create(2,ccp(10, s.height));
+        auto pScaleby = ScaleBy::create(0.5, 1.2);
         //         CCFadeIn* pFadein1 = [CCFadeIn actionWithDuration:2];
 //        CCCallFuncO* call = [CCCallBlockO actionWithBlock:^(id object){
 //                              [pTotalScoreLabel removeFromParent];
 //                              } object:self];
         CCCallFuncN* call = CCCallFuncN::create(this, callfuncN_selector(DataManager::hideScoreEffect));
         CCSpawn* pSp = CCSpawn::create(pMoveto1, NULL);
-        CCSequence* pSq = CCSequence::create(pSp,call, NULL);
+        CCSequence* pSq = CCSequence::create(pScaleby,DelayTime::create(0.5), pScaleby->reverse(),call, NULL);
         pTotalScoreLabel->runAction(pSq);
         
         //zhao
