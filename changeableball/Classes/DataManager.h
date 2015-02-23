@@ -28,8 +28,9 @@ public:
     virtual ~DataManager();
     CREATE_FUNC(DataManager);
     
-    virtual void draw();
-    
+//    virtual void draw();
+    virtual void draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transform,uint32_t flags);
+
     std::vector<BallSprite*> m_ballSpriteArray;
 
     ccColor4F m_currentDrawColor;

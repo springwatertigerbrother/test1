@@ -416,14 +416,14 @@ int DataManager::disappearAllSameColorDotsWithSelected()
     return count;
 }
          
-void DataManager::draw()
+void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transform,uint32_t flags)
 {
 //         CCNode::draw();
  
  if (m_drawLine && m_canPlaying)
  {
  
- glLineWidth(10);
+ glLineWidth(20);
  
  ccColor4B c4b = ccc4BFromccc4F(m_currentDrawColor);
  ccDrawColor4B(c4b.r, c4b.g, c4b.b, c4b.a);
