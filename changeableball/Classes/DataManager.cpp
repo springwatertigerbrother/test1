@@ -389,32 +389,6 @@ void DataManager:: touchEnd()
     }
     m_stackArray.clear();
     
-    //zhao
-    int num = 0;
-    int lastNum = 1;
-    int afterCalcultedNum = 0;
-    m_lastNum = 1;
-    for (int i=0; i<TOTALX; i++)
-    {
-        for (int j=0; j<TOTALY; j++)
-        {
-            lastNum = 1;
-            calculateSerialNum(i,j,i,j,lastNum);
-            printf("numnum:%d\n",afterCalcultedNum);
-            if (afterCalcultedNum <= lastNum)
-            {
-                afterCalcultedNum = lastNum;
-            }
-        }
-    }
-    printf("numnum lastNum:%d\n",lastNum);
-    printf("afterCalcultedNum:%d\n",afterCalcultedNum);
-    
-    if (afterCalcultedNum < 3)
-    {
-        printf("gameover");
-    }
-    
     if(!enableDispel())
     {
         printf("gameover");
@@ -511,29 +485,6 @@ void DataManager::draw()
     }
     
     this->clear();
- //zhao
-// int num = 0;
-// int lastNum = 1;
-// m_lastNum = 1;
-// for (int i=0; i<TOTALX-1; i++)
-// {
-//     for (int j=0; j<TOTALY-1; j++)
-//     {
-//     
-//         num = hasEliminableElementN(i,j,1);
-//         printf("numnum:%d\n",num);
-//         if (lastNum <= num)
-//         {
-//         lastNum = num;
-//         }
-//     }
-// }
-//     printf("numnum lastNum:%d\n",lastNum);
-//     
-//     if (lastNum < 3)
-//     {
-//     printf("gameover");
-//     }
  }
  
          
@@ -756,63 +707,7 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
          }
          return NULL;
          }
-         
-    int DataManager::hasEliminableElementN(int n,int m,int t)
-         //判断是否还有可消除元素
-         {
-             printf("n,m,%d,%d",n,m);
-         //    printf("m: %d,n: %d,m,n,m_TypeArray[n][m],m_TypeArray[n+1][m] %d,%d\n ",m,n,m_TypeArray[n][m],m_TypeArray[n+1][m]);
-             if (n+1<TOTALX)
-             {
-                 if (m_TypeArray[n][m] == m_TypeArray[n+1][m])
-                 {
-                     
-                     printf("m: %d,n: %d,m_TypeArray[n][m],m_TypeArray[n+1][m] %d,%d\n ",m,n,m_TypeArray[n][m],m_TypeArray[n+1][m]);
-                     t++;
-                 }
-             }
 
-             if (m+1<TOTALY)
-             {
-                 if(m_TypeArray[n][m] == m_TypeArray[n][m+1])
-                 {
-                     printf("m: %d,n: %d,m_TypeArray[n][m],m_TypeArray[n][m+1] %d,%d\n ",m,n,m_TypeArray[n][m],m_TypeArray[n][m+1]);
-                     
-                     t++;
-                     
-                 }
-             }
-             if (n-1>=0)
-             {
-                 if(m_TypeArray[n][m] == m_TypeArray[n-1][m])
-                 {
-                     printf("m: %d,n: %d,m_TypeArray[n][m],m_TypeArray[n-1][m] %d,%d\n ",m,n,m_TypeArray[n][m],m_TypeArray[n-1][m]);
-                     
-                     //m++;
-                     t++;
-                 }
-             }
-             if (m-1>=0)
-             {
-                 if(m_TypeArray[n][m] == m_TypeArray[n][m-1])
-                 {
-                     printf("m: %d,n: %d,m_TypeArray[n][m],m_TypeArray[n][m-1] %d,%d\n ",m,n,m_TypeArray[n][m],m_TypeArray[n][m-1]);
-                     
-                     t++;
-                 }
-                 
-             }
-
-         //    printf("TTTT:%d",t);
-         //    if (m_lastNum < t)
-         //    {
-         //        m_lastNum = t;
-         //    }
-         //    printf("m_lastNumm_lastNum:%d\n",t);
-         
-         return t;
-         }
-         
          DataManager:: ~DataManager()
          {
              m_stackArray.clear();
@@ -823,42 +718,4 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
 //{
 //    CCDirector::sharedDirector()->getEventDispatcher()->addTargetedDelegate(this, -128, false);
 //}
-
-// a[0][0] = a[1][0]
-int DataManager::calculateSerialNum(int x,int y, int lastX,int LastY, int& num)
-{
-    if( x+1 < TOTALX && (m_TypeArray[x][y] == m_TypeArray[x+1][y]))
-    {
-        num++;
-        if(num > 3)
-            return true;
-        
-        calculateSerialNum(x+1,y,x,y,num);
-    }
-    else if(y+1<TOTALY && (m_TypeArray[x][y] == m_TypeArray[x][y+1]))
-    {
-        num++;
-        if(num > 3)
-            return true;
-        
-        calculateSerialNum(x+1,y,x,y,num);
-    }
-    else if (x-1 > 0 && (m_TypeArray[x][y] == m_TypeArray[x-1][y]))
-    {
-        num++;
-        if(num > 3)
-            return true;
-        
-        calculateSerialNum(x+1,y,x,y,num);
-    }
-    else if (y-1 > 0 && (m_TypeArray[x][y] == m_TypeArray[x][y-1]))
-    {
-        num++;
-        if(num > 3)
-            return true;
-        
-        calculateSerialNum(x+1,y,x,y,num);
-    }
-    return num;
-}
 

@@ -67,7 +67,6 @@ public:
     void moveOut();
     void moveIn();
     
-    int hasEliminableElementN(int n,int m,int t);//判断是否还有可消除元素
     int changeArray();
     void loadEffectSounds();
     
@@ -91,8 +90,6 @@ public:
     virtual void onTouchCancelled(Touch *touch, Event *unused_event);
     
     void playingSound(int count);
-
-    int calculateSerialNum(int x,int y, int lastX,int LastY, int& num);
     
     //判断是否还有可消除的
     int shuzu[6][6];
