@@ -89,6 +89,13 @@ void BallSprite::calcColor()
     m_ValueLabel->setFontSize(wFontSize);
     m_drawNode-> addChild(m_ValueLabel);
     
+//    if (m_ValueLabel)
+//    {
+//        auto action1 = ScaleBy::create(0.3, 1.1);
+//        auto seq = Sequence::create(action1,action1->reverse(), NULL);
+//        m_ValueLabel->runAction(RepeatForever::create(seq));
+//    }
+
     m_drawNode-> setPosition(ccp(wd, size.height/2));
     
     

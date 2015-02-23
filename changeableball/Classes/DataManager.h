@@ -92,6 +92,18 @@ public:
     
     void playingSound(int count);
 
+    int calculateSerialNum(int x,int y, int lastX,int LastY, int& num);
+    
+    //判断是否还有可消除的
+    int shuzu[6][6];
+    int sum[6][6];
+    void printXiaoChu();
+    void clear();
+    //mark all
+    int markMinusOne(int i,int j);
+    void findNeighborMark(int i,int j,int color);
+    void printXiaoChu(int shuzu[6][6]);
+    bool enableDispel();
 };
 
 #endif /* defined(__changeableball__DataManager__) */

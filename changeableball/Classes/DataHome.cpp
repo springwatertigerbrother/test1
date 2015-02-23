@@ -20,6 +20,6 @@ DataHome* DataHome:: getInstance()
 }
 DataHome::DataHome()
 {
- wZoomvalue = 1;
- wFontSize = wZoomvalue*12;
+ wZoomvalue = 2;
+ wFontSize = wZoomvalue*24;
 }

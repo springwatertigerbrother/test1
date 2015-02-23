@@ -15,6 +15,89 @@ static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
 }
 
+
+void DataManager::printXiaoChu(int shuzu[6][6]){
+    for(int i=0;i<6;i++){
+        
+        for(int j=0;j<6;j++){
+            
+            
+            std::cout<<shuzu[j][i]<<'\t';
+        }
+        std::cout<<std::endl;
+    }
+    
+}
+
+void DataManager::clear(){
+    
+    for(int i=0;i<6;i++){
+        
+        for(int j=0;j<6;j++){
+            
+            
+            if(shuzu[i][j]==-1){
+                continue;
+            }
+            markMinusOne(i,j);
+            //cout<<shuzu[j][i]<<" ";
+        }
+        std::cout<<std::endl;
+    }
+}
+//mark all
+int DataManager::markMinusOne(int i,int j){
+    
+    int color=shuzu[i][j];
+    sum[i][j]=0;
+    if(i>=0&&i<6	&&j>= 0	&&j< 6){}else{return 11;}
+    if(i-1>=0 && color==shuzu[i-1][j]){
+        
+        
+        sum[i][j]++;
+    }
+    if(i+1<6 &&color==shuzu[i+1][j] ){
+        sum[i][j]++;
+        
+    }
+    if(j-1>=0&&color==shuzu[i ][j-1]  ){
+        sum[i][j]++;
+        
+    }
+    if(j+1<6&&color==shuzu[i ][j+1]  ){
+        sum[i][j]++;
+        
+    }
+    
+    if(sum[i][j]>=2){
+        findNeighborMark(i,j,color);
+    }
+}
+
+
+void DataManager::findNeighborMark(int i,int j,int color){
+    if(i>=0&&i<6	&&j>= 0	&&j< 6){}else{return ;}
+    if(shuzu[i][j]==color){
+        
+        shuzu[i][j]=-1;
+        findNeighborMark(i-1,j,color);
+        findNeighborMark(i+1,j,color);
+        findNeighborMark(i,j-1,color);
+        findNeighborMark(i,j+1,color);
+        
+    }
+}
+
+bool DataManager::enableDispel()
+{
+    for(int i = 0;i < TOTALX;i++)
+        for(int j = 0;j <TOTALY;j++)
+        {
+            if(shuzu[i][j] == -1)
+                return true;
+        }
+    return false;
+}
 DataManager::DataManager()
 {
     m_drawLine = false;
@@ -70,6 +153,17 @@ bool DataManager::init()
         m_stackArray.clear();
         
     }
+    
+    for (int i = 0; i< m_ballSpriteArray.size(); i++) {
+        
+        BallSprite * ds = (BallSprite*)m_ballSpriteArray[i];
+        
+        m_TypeArray[i%TOTALX][i/TOTALY] = ds->getType();
+        shuzu[i%TOTALX][i/TOTALY] = m_TypeArray[i%TOTALX][i/TOTALY];
+        
+    }
+    this->clear();
+    
 //    mCoreLayer->setVisible(true);
 //    this->addChild(mCoreLayer);
     loadEffectSounds();
@@ -281,6 +375,7 @@ void DataManager:: touchEnd()
                 pLastElement->changeType(m_stackArray.size());
                 
             }
+            
         }
     }
     
@@ -297,27 +392,33 @@ void DataManager:: touchEnd()
     //zhao
     int num = 0;
     int lastNum = 1;
+    int afterCalcultedNum = 0;
     m_lastNum = 1;
     for (int i=0; i<TOTALX; i++)
     {
         for (int j=0; j<TOTALY; j++)
         {
-            
-            num = hasEliminableElementN(i,j,1);
-            printf("numnum:%d\n",num);
-            if (lastNum <= num)
+            lastNum = 1;
+            calculateSerialNum(i,j,i,j,lastNum);
+            printf("numnum:%d\n",afterCalcultedNum);
+            if (afterCalcultedNum <= lastNum)
             {
-                lastNum = num;
+                afterCalcultedNum = lastNum;
             }
         }
     }
     printf("numnum lastNum:%d\n",lastNum);
+    printf("afterCalcultedNum:%d\n",afterCalcultedNum);
     
-    if (lastNum < 3)
+    if (afterCalcultedNum < 3)
     {
         printf("gameover");
     }
     
+    if(!enableDispel())
+    {
+        printf("gameover");
+    }
 }
 void DataManager:: hideScoreEffect(CCNode* pSender)
 {
@@ -399,7 +500,17 @@ void DataManager::draw()
          ds->respawn();
  }
  }
- 
+ // update m_TypeArray
+    for (int i = 0; i< m_ballSpriteArray.size(); i++) {
+        
+        BallSprite * ds = (BallSprite*)m_ballSpriteArray[i];
+                    
+        m_TypeArray[i%TOTALX][i/TOTALY] = ds->getType();
+        shuzu[i%TOTALX][i/TOTALY] = m_TypeArray[i%TOTALX][i/TOTALY];
+
+    }
+    
+    this->clear();
  //zhao
 // int num = 0;
 // int lastNum = 1;
@@ -712,4 +823,42 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
 //{
 //    CCDirector::sharedDirector()->getEventDispatcher()->addTargetedDelegate(this, -128, false);
 //}
+
+// a[0][0] = a[1][0]
+int DataManager::calculateSerialNum(int x,int y, int lastX,int LastY, int& num)
+{
+    if( x+1 < TOTALX && (m_TypeArray[x][y] == m_TypeArray[x+1][y]))
+    {
+        num++;
+        if(num > 3)
+            return true;
+        
+        calculateSerialNum(x+1,y,x,y,num);
+    }
+    else if(y+1<TOTALY && (m_TypeArray[x][y] == m_TypeArray[x][y+1]))
+    {
+        num++;
+        if(num > 3)
+            return true;
+        
+        calculateSerialNum(x+1,y,x,y,num);
+    }
+    else if (x-1 > 0 && (m_TypeArray[x][y] == m_TypeArray[x-1][y]))
+    {
+        num++;
+        if(num > 3)
+            return true;
+        
+        calculateSerialNum(x+1,y,x,y,num);
+    }
+    else if (y-1 > 0 && (m_TypeArray[x][y] == m_TypeArray[x][y-1]))
+    {
+        num++;
+        if(num > 3)
+            return true;
+        
+        calculateSerialNum(x+1,y,x,y,num);
+    }
+    return num;
+}
 
