@@ -390,13 +390,6 @@ void DataManager:: touchEnd()
     }
     m_stackArray.clear();
     
-    if(!enableDispel())
-    {
-        auto scene = GameOverLayer::scene();
-        Director::getInstance()->replaceScene(scene);
-
-        printf("gameover");
-    }
 }
 void DataManager:: hideScoreEffect(CCNode* pSender)
 {
@@ -489,6 +482,14 @@ void DataManager::draw()
     }
     
     this->clear();
+    
+    if(!enableDispel())
+    {
+        auto scene = GameOverLayer::scene();
+        Director::getInstance()->replaceScene(scene);
+        
+        log("gameover");
+    }
  }
  
          
