@@ -56,6 +56,8 @@ bool GameCenterScene::init()
         m_data = DataManager::create();
         this->addChild(m_data);
 
+        m_score = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
+
         bRet = true;
     }
     while(0);
@@ -71,6 +73,8 @@ void GameCenterScene::startGame()
 void GameCenterScene::addScore(int nScore)
 {
     m_score += nScore;
+    
+    UserDefault::getInstance()->setIntegerForKey("TOTALSCORE", m_score);
     CCString* scores = CCString::createWithFormat("%d",m_score);
     m_controllerLayer->resetScoreString(scores);
 }

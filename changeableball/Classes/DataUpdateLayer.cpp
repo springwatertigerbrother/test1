@@ -30,30 +30,52 @@ bool UpStateLayer::init()
             CCMenu * menu = CCMenu::create(m_scoreItem, m_timeItem,NULL);
             
             menu->setPosition(ccp(0, 2));
+            menu->setVisible(false);
             addChild(menu);
             
             m_labelScore = CCLabelTTF::create("0","Arial",30);
             m_labelTime  = CCLabelTTF::create("60","Arial",30);
             m_labelNciyuanTitle = CCLabelTTF::create("0","Arial",30);
             m_labelTotalScoreTitle = CCLabelTTF::create("0","Arial",30);
+            m_labelNValue = CCLabelTTF::create("0","Arial",30);
 
+
+            
             m_labelScore->setAnchorPoint(ccp(0, 0.5));
             m_labelScore->setColor(ccc3(0, 0, 0));
-            m_labelScore->setPosition(ccp(m_scoreItem->getContentSize().width/2+10,
-                                          m_scoreItem->getContentSize().height/2));
+            m_labelScore->setPosition(ccp(100,
+                                          150));
             addChild(m_labelScore);
+
+            int nTotalScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
+            String* pTotalScoreStr = String::createWithFormat("%d",nTotalScore);
+            m_labelScore->setString(pTotalScoreStr->getCString());
 
             m_labelNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
-            m_labelNciyuanTitle->setPosition(ccp(m_scoreItem->getContentSize().width/5,
-                                          m_scoreItem->getContentSize().height));
-            m_labelNciyuanTitle->setString("您的次元是：");
+            m_labelNciyuanTitle->setPosition(ccp(10,
+                                          80));
+            m_labelNciyuanTitle->setString("您已达到的次元N是：");
             addChild(m_labelNciyuanTitle);
+            
+            m_labelNValue->setAnchorPoint(ccp(0, 0.5));
+            m_labelNValue->setColor(ccc3(0, 0, 0));
+            m_labelNValue->setPosition(ccp(m_labelNciyuanTitle->getPositionX()
+                                           + m_labelNciyuanTitle->getContentSize().width + 5,80)
+                                           );
+            String* temStr = String::createWithFormat("%d",(int)(log2(nTotalScore)));
 
+            if (nTotalScore == 0)
+            {
+                temStr = String::createWithFormat("%d!",0);
+            }
+            m_labelNValue->setString(temStr->getCString());
+            addChild(m_labelNValue);
+            
             m_labelTotalScoreTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
-            m_labelTotalScoreTitle->setPosition(ccp(m_scoreItem->getContentSize().width/2,
-                                          50));
+            m_labelTotalScoreTitle->setPosition(ccp(10,
+                                          150));
             m_labelTotalScoreTitle->setString("总分：");
             addChild(m_labelTotalScoreTitle);
 
@@ -61,6 +83,7 @@ bool UpStateLayer::init()
             m_labelTime->setColor(ccc3(0, 0, 0));
             m_labelTime->setPosition(ccp(m_timeItem->getPosition().x - m_timeItem->getContentSize().width/2,
                                          m_timeItem->getContentSize().height/2));
+            m_labelTime->setVisible(false);
             addChild(m_labelTime);
             
 //            m_labelTime-
@@ -103,6 +126,9 @@ void UpStateLayer::resetScoreString(CCString*string)
 {
     m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCJumpTo::create(0.3f, m_labelScore->getPosition(), 5.0f, 3), CCScaleTo::create(0.3f, 1.0f),NULL));
     m_labelScore->setString(string->getCString());
+    
+    String* temStr = String::createWithFormat("%d",(int)(log2(string->intValue())));
+    m_labelNValue->setString(temStr->getCString());
 }
 void UpStateLayer::resetTimeString(CCString*string)
 {

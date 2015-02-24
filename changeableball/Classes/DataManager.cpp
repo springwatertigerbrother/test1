@@ -349,7 +349,7 @@ void DataManager:: touchEnd()
         nSum = nNumber*pow(2, nTypeValue);
         
         char scoreStr[50] = {0};
-        std::sprintf(scoreStr,"n += %d X 2^%d = %d",nNumber,nTypeValue,nSum);
+        std::sprintf(scoreStr," %d X 2^%d = %d",nNumber,nTypeValue,nSum);
 //        CCString* scoreStr = CCString::create("n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
         CCLabelTTF* pTotalScoreLabel = CCLabelTTF::create();
         pTotalScoreLabel->setString(scoreStr);
