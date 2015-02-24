@@ -346,7 +346,8 @@ void DataManager:: touchEnd()
         CCSize s = CCDirector::sharedDirector()->getWinSize();
         int nTypeValue = pLastElement->getType();
         int nNumber = m_stackArray.size();
-        nSum = nNumber*pow(2, nTypeValue);
+//        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
+        nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
         
         char scoreStr[50] = {0};
         std::sprintf(scoreStr," %d X 2^%d = %d",nNumber,nTypeValue,nSum);
@@ -485,7 +486,7 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
     
     this->clear();
     
-    if(!enableDispel())
+//    if(!enableDispel())
     {
         auto scene = GameOverLayer::scene();
         Director::getInstance()->replaceScene(scene);
