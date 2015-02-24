@@ -34,11 +34,11 @@
 #define MAX_TYPE_VALUE 5
 #define CONTINIOUS_NUM 3
 
-#define ccc4fBlue ccc4f(0.549,0.7412,0.9921,1)
-#define ccc4fOrange ccc4f(1,0.6745,0,1)
-#define ccc4fRed ccc4f(0.9137,0.3686,0.298,1)
-#define ccc4fPurple ccc4f(0.6,0.3765,0.7019,1)
-#define ccc4fGreen ccc4f(0.5529,0.9098,0.5803,1)
+#define ccc4fBlue ccc4f(88/255.f,34/255.f,241/255.f,1)
+#define ccc4fOrange ccc4f(244/255.f,148/255.f,37/255.f,1)
+#define ccc4fRed ccc4f(242/255.f,13/255.f,43/255.f,1)
+#define ccc4fPurple ccc4f(148/255.f,35/255.f,242/255.f,1)
+#define ccc4fGreen ccc4f(52/255.f,241/255.f,44/255.f,1)
 #define ccc4fYellow ccc4f(0.902,0.851,0.2391,1)
 
 typedef enum {
