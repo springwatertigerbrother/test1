@@ -57,7 +57,7 @@ bool GameCenterScene::init()
         this->addChild(m_data);
 
         m_score = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
-
+        m_current_score = 0;
         bRet = true;
     }
     while(0);
@@ -73,7 +73,13 @@ void GameCenterScene::startGame()
 void GameCenterScene::addScore(int nScore)
 {
     m_score += nScore;
-    
+    m_current_score += nScore;
+    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
+    if (bestSingleScore < m_current_score)
+    {
+        UserDefault::getInstance()->setIntegerForKey("SINGLE_BEST_SCORE",m_current_score);
+    }
+
     UserDefault::getInstance()->setIntegerForKey("TOTALSCORE", m_score);
     CCString* scores = CCString::createWithFormat("%d",m_score);
     m_controllerLayer->resetScoreString(scores);

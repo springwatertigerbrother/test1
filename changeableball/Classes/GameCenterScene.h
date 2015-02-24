@@ -22,6 +22,7 @@ class GameCenterScene:public cocos2d::CCLayer
     
     float m_delta;
     int m_score;
+    int m_current_score;
     int m_timeCounter;
     
     bool m_pause;

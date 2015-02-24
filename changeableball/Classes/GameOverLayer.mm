@@ -62,11 +62,6 @@ bool GameOverLayer::init()
     //    setTouchEnabled(true);
     CCSize s = CCDirector::sharedDirector()->getWinSize();
     
-    CCSprite* pBg = CCSprite::create("images/gameoverBG2.jpg");
-    pBg->setPosition(CCPointMake(s.width/2, s.height/2));
-    pBg->setScale(0.6);
-    pBg->setOpacity(200);
-    addChild(pBg);
     
     MenuItemImage* pItem1 = MenuItemImage::create("images/restartn.png", "images/restartp.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
     MenuItemImage* pItem2 = MenuItemImage::create("images/start2normal.png", "images/start2press.png", CC_CALLBACK_0(GameOverLayer::ExitGame,this)) ;
@@ -87,16 +82,29 @@ bool GameOverLayer::init()
     pMenu->setPosition(ccp(s.width/2, s.height/4.5));
     addChild(pMenu);
     
-    CCLabelBMFont* pGameoverLblBM = CCLabelBMFont::create("Game Over", "fonts/bitmapFontTest2.fnt");
-    pGameoverLblBM->setString("Game Over");
-    pGameoverLblBM->setScale(1);
-    pGameoverLblBM->setPosition(ccp(s.width/2,s.height*0.8));
-    addChild(pGameoverLblBM);
+//    CCLabelBMFont* pGameoverLblBM = CCLabelBMFont::create("Game Over", "fonts/bitmapFontTest2.fnt");
+//    pGameoverLblBM->setString("Game Over");
+//    pGameoverLblBM->setScale(1);
+//    pGameoverLblBM->setPosition(ccp(s.width/2,s.height*0.8));
+//    addChild(pGameoverLblBM);
+    
+    CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",50);
+    pCongratulation->setPosition(ccp(s.width/2,s.height*0.8));
+    int nTotalScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
+    String* pCongratulationScoreStr = String::createWithFormat("恭喜您已进入 %d 次元",(int)(log2(nTotalScore)));
+    pCongratulation->setString(pCongratulationScoreStr->getCString());
+    addChild(pCongratulation);
     
     //    CCLabelTTF* pGameoverLbl = CCLabelTTF::create("Game Over", "ArialRoundedMTBold", 100);
     //    pGameoverLbl->setColor(ccRED);
     //    pGameoverLbl->setPosition(ccp(s.width/2,s.height*0.7));
     //    addChild(pGameoverLbl);
+    
+    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","Arial",50);
+    pTotalScore->setPosition(ccp(s.width/2,s.height*0.63));
+    String* pTotalScoreStr = String::createWithFormat("%d",(nTotalScore));
+    pTotalScore->setString(pTotalScoreStr->getCString());
+    addChild(pTotalScore);
     
     int nScore = DataHome::getInstance()->wScore;
     char tempStr[50] = {0};
@@ -105,9 +113,9 @@ bool GameOverLayer::init()
     pScoreTitle->setPosition(ccp(s.width/2,s.height*0.7));
     addChild(pScoreTitle);
     
-    CCLabelBMFont* pScoreValue = CCLabelBMFont::create(tempStr, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
-    pScoreValue->setPosition(ccp(s.width/2,s.height*0.63));
-    addChild(pScoreValue);
+//    CCLabelBMFont* pScoreValue = CCLabelBMFont::create(tempStr, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
+//    pScoreValue->setPosition(ccp(s.width/2,s.height*0.63));
+//    addChild(pScoreValue);
     
     
     //    tempStr = "score:"+tempStr;
@@ -127,10 +135,17 @@ bool GameOverLayer::init()
     pBestTitle->setPosition(ccp(s.width/2,s.height*0.58));
     addChild(pBestTitle);
     
-    CCLabelBMFont* pBestValue = CCLabelBMFont::create(tempStr2, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
-    pBestValue->setPosition(ccp(s.width/2,s.height*0.50));
-    addChild(pBestValue);
+//    CCLabelBMFont* pBestValue = CCLabelBMFont::create(tempStr2, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
+//    pBestValue->setPosition(ccp(s.width/2,s.height*0.50));
+//    addChild(pBestValue);
     
+    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","Arial",50);
+    pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.50));
+    
+    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
+    String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);
+    pSingleBestScore->setString(pSinggleBestScoreStr->getCString());
+    addChild(pSingleBestScore);
     
     int sum = 0;
     
