@@ -11,7 +11,7 @@
 
 bool UpStateLayer::init()
 {
-    if ( CCLayerColor::initWithColor( ccc4(255,255,255,255) ) )
+    if ( CCLayerColor::initWithColor( ccc4(100,255,255,255) ) )
 	{
         
         CCSize s = CCDirector::sharedDirector()->getWinSize();
@@ -34,17 +34,35 @@ bool UpStateLayer::init()
             
             m_labelScore = CCLabelTTF::create("0","Arial",30);
             m_labelTime  = CCLabelTTF::create("60","Arial",30);
-            
+            m_labelNciyuanTitle = CCLabelTTF::create("0","Arial",30);
+            m_labelTotalScoreTitle = CCLabelTTF::create("0","Arial",30);
+
             m_labelScore->setAnchorPoint(ccp(0, 0.5));
             m_labelScore->setColor(ccc3(0, 0, 0));
             m_labelScore->setPosition(ccp(m_scoreItem->getContentSize().width/2+10,
                                           m_scoreItem->getContentSize().height/2));
             addChild(m_labelScore);
+
+            m_labelNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
+            m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
+            m_labelNciyuanTitle->setPosition(ccp(m_scoreItem->getContentSize().width/5,
+                                          m_scoreItem->getContentSize().height));
+            m_labelNciyuanTitle->setString("您的次元是：");
+            addChild(m_labelNciyuanTitle);
+
+            m_labelTotalScoreTitle->setAnchorPoint(ccp(0, 0.5));
+            m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
+            m_labelTotalScoreTitle->setPosition(ccp(m_scoreItem->getContentSize().width/2,
+                                          50));
+            m_labelTotalScoreTitle->setString("总分：");
+            addChild(m_labelTotalScoreTitle);
+
             m_labelTime->setAnchorPoint(ccp(1, 0.5));
             m_labelTime->setColor(ccc3(0, 0, 0));
             m_labelTime->setPosition(ccp(m_timeItem->getPosition().x - m_timeItem->getContentSize().width/2,
                                          m_timeItem->getContentSize().height/2));
             addChild(m_labelTime);
+            
 //            m_labelTime-
 //            m_timeItem->addChild(m_labelTime,11);
 //            m_scoreItem->addChild(m_labelScore ,11);
@@ -70,7 +88,7 @@ void UpStateLayer::startAnimationDisplay()
     setAnchorPoint(ccp(0, 0));
     setPosition(ccp(0, s.height));
     
-    CCMoveTo * moveTo = CCMoveTo::create(0.2, ccp(0, s.height-260));
+    CCMoveTo * moveTo = CCMoveTo::create(0.2, ccp(0, s.height-360));
     CCMoveTo * moveTo2 = CCMoveTo::create(0.2, ccp(0, s.height-243));
     CCCallFunc* call = CCCallFunc::create(this, callfunc_selector(UpStateLayer:: AfterStartAnimationDisplayCall));
     
