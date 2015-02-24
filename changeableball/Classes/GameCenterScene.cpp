@@ -55,8 +55,9 @@ bool GameCenterScene::init()
         setAnchorPoint(CCPoint(0,0));
         m_data = DataManager::create();
         this->addChild(m_data);
+        
+        m_score = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 
-        m_score = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
         m_current_score = 0;
         bRet = true;
     }
@@ -80,9 +81,13 @@ void GameCenterScene::addScore(int nScore)
         UserDefault::getInstance()->setIntegerForKey("SINGLE_BEST_SCORE",m_current_score);
     }
 
-    UserDefault::getInstance()->setIntegerForKey("TOTALSCORE", m_score);
-    CCString* scores = CCString::createWithFormat("%d",m_score);
-    m_controllerLayer->resetScoreString(scores);
+    auto num = m_score;
+    char str[100];
+    sprintf(str, " %lu" , num);
+    
+    UserDefault::getInstance()->setStringForKey("TOTALSCORE", str);
+//    CCString* scores = CCString::createWithFormat("%d",m_score);
+    m_controllerLayer->resetScoreString(StringMake(str));
 }
 
 

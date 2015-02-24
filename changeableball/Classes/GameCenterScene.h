@@ -21,7 +21,7 @@ class GameCenterScene:public cocos2d::CCLayer
     ControllerLayer* m_controllerLayer;
     
     float m_delta;
-    int m_score;
+    unsigned long int m_score;
     int m_current_score;
     int m_timeCounter;
     

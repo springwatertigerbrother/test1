@@ -58,10 +58,8 @@ bool GameOverLayer::init()
     {
         return false;
     }
-    m_i_HistoryHighestScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("HistoryHighestScore");
     //    setTouchEnabled(true);
     CCSize s = CCDirector::sharedDirector()->getWinSize();
-    
     
     MenuItemImage* pItem1 = MenuItemImage::create("images/restartn.png", "images/restartp.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
     MenuItemImage* pItem2 = MenuItemImage::create("images/start2normal.png", "images/start2press.png", CC_CALLBACK_0(GameOverLayer::ExitGame,this)) ;
@@ -96,7 +94,9 @@ bool GameOverLayer::init()
     
     CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",60);
     pCongratulation->setPosition(ccp(s.width/2,s.height*0.8));
-    int nTotalScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
+    unsigned long  nTotalScore = 0;
+//    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
+    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
     String* pCongratulationScoreStr = String::createWithFormat("%d 次元",(int)(log2(nTotalScore)));
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
@@ -107,69 +107,31 @@ bool GameOverLayer::init()
     //    pGameoverLbl->setPosition(ccp(s.width/2,s.height*0.7));
     //    addChild(pGameoverLbl);
     
-    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","Arial",50);
-    pTotalScore->setPosition(ccp(s.width/2,s.height*0.63));
-    String* pTotalScoreStr = String::createWithFormat("%d",(nTotalScore));
-    pTotalScore->setString(pTotalScoreStr->getCString());
-    addChild(pTotalScore);
-    
-    int nScore = DataHome::getInstance()->wScore;
-    char tempStr[50] = {0};
-    std::sprintf(tempStr, "%d",nScore);
-    CCLabelBMFont* pScoreTitle = CCLabelBMFont::create("score", "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
+    CCLabelTTF* pScoreTitle = CCLabelTTF::create("总分","Arial",50);
     pScoreTitle->setPosition(ccp(s.width/2,s.height*0.7));
     addChild(pScoreTitle);
     
-//    CCLabelBMFont* pScoreValue = CCLabelBMFont::create(tempStr, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
-//    pScoreValue->setPosition(ccp(s.width/2,s.height*0.63));
-//    addChild(pScoreValue);
-    
-    
-    //    tempStr = "score:"+tempStr;
-    //    CCLabelTTF* pCurrentScoreLbl = CCLabelTTF::create(tempStr.c_str(), "ArialRoundedMTBold", 100);
-    //    pCurrentScoreLbl->setPosition(ccp(s.width/2,s.height*0.6));
-    //    addChild(pCurrentScoreLbl);
-    
-    if (nScore>m_i_HistoryHighestScore)
-    {
-        m_i_HistoryHighestScore = nScore;
-    }
-    char tempStr2[50] = {0};
-    std::sprintf(tempStr2, "%d",m_i_HistoryHighestScore);
-    
-    //    tempStr = std::to_string(m_i_HistoryHighestScore);
-    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
+    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","Arial",46);
+    pTotalScore->setPosition(ccp(s.width/2,s.height*0.65));
+    String* pTotalScoreStr = String::createWithFormat("%d",(nTotalScore));
+    pTotalScore->setString(pTotalScoreStr->getCString());
+    pTotalScore->setColor(ccYELLOW);
+    addChild(pTotalScore);
+
+//    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
+    CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高得分","Arial",50);
     pBestTitle->setPosition(ccp(s.width/2,s.height*0.58));
     addChild(pBestTitle);
     
-//    CCLabelBMFont* pBestValue = CCLabelBMFont::create(tempStr2, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
-//    pBestValue->setPosition(ccp(s.width/2,s.height*0.50));
-//    addChild(pBestValue);
-    
     CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","Arial",50);
-    pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.50));
+    pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.53));
+    pSingleBestScore->setColor(ccGREEN);
     
     int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
     String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);
     pSingleBestScore->setString(pSinggleBestScoreStr->getCString());
     addChild(pSingleBestScore);
     
-    int sum = 0;
-    
-    sum = CCUserDefault::sharedUserDefault()->getIntegerForKey("sum");
-    sum += nScore;
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("sum", sum);
-    char tempStr3[50] = {0};
-    std::sprintf(tempStr3, "%d",sum);
-    
-    CCLabelBMFont* pSumTitle = CCLabelBMFont::create("SUM",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
-    pSumTitle->setPosition(ccp(s.width/2,s.height*0.42));
-    addChild(pSumTitle);
-    
-    CCLabelBMFont* pSumValue = CCLabelBMFont::create(tempStr3, "fonts/boundsTestFont.fnt", 1.8, kCCTextAlignmentCenter, CCPointZero);
-    pSumValue->setPosition(ccp(s.width/2,s.height*0.35));
-    addChild(pSumValue);
-    //
     //    tempStr = "best:"+tempStr;
     //    CCLabelTTF* pHightestLbl = CCLabelTTF::create(tempStr.c_str(), "ArialRoundedMTBold", 100);
     //    pHightestLbl->setPosition(ccp(s.width/2,s.height*0.5));

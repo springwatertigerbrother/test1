@@ -46,9 +46,10 @@ bool UpStateLayer::init()
             m_labelScore->setPosition(ccp(100,
                                           150));
             addChild(m_labelScore);
-
-            int nTotalScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
-            String* pTotalScoreStr = String::createWithFormat("%d",nTotalScore);
+            
+            unsigned long nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+//            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
+            String* pTotalScoreStr = String::createWithFormat("%lu",nTotalScore);
             m_labelScore->setString(pTotalScoreStr->getCString());
 
             m_labelNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
@@ -63,6 +64,7 @@ bool UpStateLayer::init()
             m_labelNValue->setPosition(ccp(m_labelNciyuanTitle->getPositionX()
                                            + m_labelNciyuanTitle->getContentSize().width + 5,80)
                                            );
+
             String* temStr = String::createWithFormat("%d",(int)(log2(nTotalScore)));
 
             if (nTotalScore == 0)

@@ -350,7 +350,7 @@ void DataManager:: touchEnd()
         nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
         
         char scoreStr[50] = {0};
-        std::sprintf(scoreStr," %d X 2^%d = %d",nNumber,nTypeValue,nSum);
+        std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
 //        CCString* scoreStr = CCString::create("n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
         CCLabelTTF* pTotalScoreLabel = CCLabelTTF::create();
         pTotalScoreLabel->setString(scoreStr);
@@ -486,7 +486,7 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
     
     this->clear();
     
-//    if(!enableDispel())
+    if(!enableDispel())
     {
         auto scene = GameOverLayer::scene();
         Director::getInstance()->replaceScene(scene);
