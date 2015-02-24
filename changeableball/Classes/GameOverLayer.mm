@@ -88,11 +88,18 @@ bool GameOverLayer::init()
 //    pGameoverLblBM->setPosition(ccp(s.width/2,s.height*0.8));
 //    addChild(pGameoverLblBM);
     
-    CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",50);
+    CCLabelTTF* pCongratulationTitle = CCLabelTTF::create("0","ArialRoundedMTBold",50);
+    pCongratulationTitle->setPosition(ccp(s.width/2,s.height*0.8 + 70));
+    String* pCongratulationTitleStr = String::createWithFormat("恭喜您的世界已进入");
+    pCongratulationTitle->setString(pCongratulationTitleStr->getCString());
+    addChild(pCongratulationTitle);
+    
+    CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",60);
     pCongratulation->setPosition(ccp(s.width/2,s.height*0.8));
     int nTotalScore = CCUserDefault::sharedUserDefault()->getIntegerForKey("TOTALSCORE");
-    String* pCongratulationScoreStr = String::createWithFormat("恭喜您已进入 %d 次元",(int)(log2(nTotalScore)));
+    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",(int)(log2(nTotalScore)));
     pCongratulation->setString(pCongratulationScoreStr->getCString());
+    pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
     
     //    CCLabelTTF* pGameoverLbl = CCLabelTTF::create("Game Over", "ArialRoundedMTBold", 100);
