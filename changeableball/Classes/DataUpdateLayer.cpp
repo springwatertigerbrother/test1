@@ -51,12 +51,13 @@ bool UpStateLayer::init()
 //            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
             String* pTotalScoreStr = String::createWithFormat("%lu",nTotalScore);
             m_labelScore->setString(pTotalScoreStr->getCString());
-
+            m_labelScore->setColor(ccORANGE);
             m_labelNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
             m_labelNciyuanTitle->setPosition(ccp(10,
                                           80));
             m_labelNciyuanTitle->setString("您已达到的次元N是：");
+            m_labelNciyuanTitle->setColor(ccBLACK);
             addChild(m_labelNciyuanTitle);
             
             m_labelNValue->setAnchorPoint(ccp(0, 0.5));
@@ -64,7 +65,7 @@ bool UpStateLayer::init()
             m_labelNValue->setPosition(ccp(m_labelNciyuanTitle->getPositionX()
                                            + m_labelNciyuanTitle->getContentSize().width + 5,80)
                                            );
-
+            m_labelNValue->setColor(ccORANGE);
             String* temStr = String::createWithFormat("%d",(int)(log2(nTotalScore)));
 
             if (nTotalScore == 0)
@@ -78,6 +79,7 @@ bool UpStateLayer::init()
             m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
             m_labelTotalScoreTitle->setPosition(ccp(10,
                                           150));
+            m_labelTotalScoreTitle->setColor(ccBLACK);
             m_labelTotalScoreTitle->setString("总分：");
             addChild(m_labelTotalScoreTitle);
 
