@@ -168,5 +168,5 @@ void UpStateLayer::menuBePressed(Ref* pSender)
 
 void UpStateLayer::musicControl(Ref* pSender)
 {
-    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()-> pauseAllEffects();
 }

@@ -64,22 +64,41 @@ void BallGameScene::onEnter()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
-    m_playnow = CCMenuItemImage::create("Images/play_now.png","Images/play_now.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
+    m_playnow = CCMenuItemImage::create("Images/start.png","Images/start.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
     
-    m_multiplayer = CCMenuItemImage::create("Images/multiple_player.png","Images/multiple_player.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
+//    m_multiplayer = CCMenuItemImage::create("Images/multiple_player.png","Images/multiple_player.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
+//    
+//    m_highscore = CCMenuItemImage::create("Images/high_score.png","Images/high_score.png",CC_CALLBACK_1(BallGameScene::highScore,this));
+//    
+//    m_settings = CCMenuItemImage::create("Images/settings.png","Images/settings.png", CC_CALLBACK_1(BallGameScene::settings,this));
+//    
+//    m_aboutus = CCMenuItemImage::create("Images/about_us.png","Images/about_us.png", CC_CALLBACK_1(BallGameScene::aboutus,this));
     
-    m_highscore = CCMenuItemImage::create("Images/high_score.png","Images/high_score.png",CC_CALLBACK_1(BallGameScene::highScore,this));
-    
-    m_settings = CCMenuItemImage::create("Images/settings.png","Images/settings.png", CC_CALLBACK_1(BallGameScene::settings,this));
-    
-    m_aboutus = CCMenuItemImage::create("Images/about_us.png","Images/about_us.png", CC_CALLBACK_1(BallGameScene::aboutus,this));
-    
-    CCMenu *menu = CCMenu::create(m_playnow, m_multiplayer,
-                    m_highscore, m_settings, m_aboutus, NULL);
+    CCMenu *menu = CCMenu::create(m_playnow, NULL);
     
     menu->alignItemsVerticallyWithPadding(10);
     
     menu->setPosition(ccp(size.width/2,size.height/3));
+    
+    
+    MenuItemFont::setFontName("American Typewriter");
+    MenuItemFont::setFontSize(30);
+    auto title1 = MenuItemFont::create("Sound");
+    title1->setEnabled(false);
+    MenuItemFont::setFontName( "fonts/Marker Felt.ttf" );
+    MenuItemFont::setFontSize(50);
+    auto item1 = MenuItemToggle::createWithCallback( CC_CALLBACK_1(BallGameScene::musicControl, this),
+                                                    MenuItemFont::create( "music On" ),
+                                                    MenuItemFont::create( "music Off"),
+                                                    nullptr );
+    item1->setEnabled(true);
+    auto musciMenu = Menu::create(item1, nullptr);
+    musciMenu->setPosition(ccp(size.width/2,size.height/5));
+    
+    //            musciMenu->alignItemsInColumns(2, 2, 2, 2, 1, NULL);
+//    musciMenu->setVisible(false);
+    addChild( musciMenu );
+
     
     this-> addChild(menu);
 }
@@ -133,3 +152,8 @@ void BallGameScene::onEnterTransitionDidFinish()
     CCLOG("trans");
 }
 
+void BallGameScene::musicControl(Ref* pSender)
+{
+    CocosDenshion::SimpleAudioEngine::sharedEngine()-> stopAllEffects();
+
+}

@@ -39,7 +39,7 @@ public:
     
     // a selector callback
     void menuCloseCallback(cocos2d::CCObject* pSender);
-    
+    void musicControl(Ref* pSender);
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(BallGameScene);
 
