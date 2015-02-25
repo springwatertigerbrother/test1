@@ -54,7 +54,7 @@ CCScene* GameOverLayer::scene()
 
 bool GameOverLayer::init()
 {
-    if ( !CCLayerColor::initWithColor(ccc4(200, 100, 100, 100)))
+    if ( !CCLayerColor::initWithColor(ccc4(0, 0, 0, 0)))
     {
         return false;
     }
@@ -62,7 +62,7 @@ bool GameOverLayer::init()
     CCSize s = CCDirector::sharedDirector()->getWinSize();
     
     MenuItemImage* pItem1 = MenuItemImage::create("images/restartn.png", "images/restartp.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
-    MenuItemImage* pItem2 = MenuItemImage::create("images/start2normal.png", "images/start2press.png", CC_CALLBACK_0(GameOverLayer::ExitGame,this)) ;
+    MenuItemImage* pItem2 = MenuItemImage::create("images/sharen.png", "images/sharep.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
     //    pItem2->setFontSize(180);
     //    CCMenu* pMenu2 = CCMenu::create(pItem2,NULL);
     //    pItem2->setPosition(ccp(s.width/2, s.height/5));
@@ -72,12 +72,12 @@ bool GameOverLayer::init()
     //    CCMenuItemFont* pItem1 = CCMenuItemFont::create("restart", this, menu_selector(GameOverLayer::ReStartGame));
     //    CCMenuItemFont* pItem2 = CCMenuItemFont::create("share",this,menu_selector(GameOverLayer::ExitGame));
     
-    CCMenu* pMenu = CCMenu::create(pItem1,NULL);
-    pMenu->alignItemsVerticallyWithPadding(20);
+    CCMenu* pMenu = CCMenu::create(pItem1,pItem2,NULL);
+    pMenu->alignItemsHorizontallyWithPadding(20);
     //    pItem1->setFontSize(30);
     //    pItem2->setFontSize(30);
     
-    pMenu->setPosition(ccp(s.width/2, s.height/4.5));
+    pMenu->setPosition(ccp(s.width/2, s.height/4.0));
     addChild(pMenu);
     
 //    CCLabelBMFont* pGameoverLblBM = CCLabelBMFont::create("Game Over", "fonts/bitmapFontTest2.fnt");
@@ -178,12 +178,23 @@ void GameOverLayer::ExitGame()
 {
     CCDirector::sharedDirector()->end();
     
-    #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-        exit(0);
-    #endif
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    exit(0);
+#endif
+    
+}
+void GameOverLayer::ShareGame()
+{
+    log("share");
+}
+void GameOverLayer::GameCenter()
+{
 
 }
-
+void GameOverLayer::RateMe()
+{
+    
+}
 //
 //void GameOverLayer::registerWithTouchDispatcher()
 //{

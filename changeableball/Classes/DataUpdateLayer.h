@@ -34,6 +34,7 @@ void resetTimeString(CCString* string);
 void resetScoreString(CCString* string);
 void menuBePressed(Ref* pSender);
 void startAnimationDisplay(Ref* pSender);
+    void musicControl(Ref* pSender);
     
 };
 #endif /* defined(__changeableball__DataUpdateLayer__) */

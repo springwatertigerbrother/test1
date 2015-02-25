@@ -90,6 +90,24 @@ bool UpStateLayer::init()
             m_labelTime->setVisible(false);
             addChild(m_labelTime);
             
+            MenuItemFont::setFontName("American Typewriter");
+            MenuItemFont::setFontSize(18);
+            auto title1 = MenuItemFont::create("Sound");
+            title1->setEnabled(false);
+            MenuItemFont::setFontName( "fonts/Marker Felt.ttf" );
+            MenuItemFont::setFontSize(34);
+            auto item1 = MenuItemToggle::createWithCallback( CC_CALLBACK_1(UpStateLayer::musicControl, this),
+                                                            MenuItemFont::create( "On" ),
+                                                            MenuItemFont::create( "Off"),
+                                                            nullptr );
+            item1->setEnabled(true);
+            auto musciMenu = Menu::create(item1, nullptr);
+            musciMenu->setPosition(ccp(s.width - 50,10));
+            
+//            musciMenu->alignItemsInColumns(2, 2, 2, 2, 1, NULL);
+            musciMenu->setVisible(false);
+            addChild( musciMenu );
+            
 //            m_labelTime-
 //            m_timeItem->addChild(m_labelTime,11);
 //            m_scoreItem->addChild(m_labelScore ,11);
@@ -146,4 +164,9 @@ void UpStateLayer::menuBePressed(Ref* pSender)
         ControllerLayer *hc = (ControllerLayer*)getParent();
         hc-> gamePause();
     }
+}
+
+void UpStateLayer::musicControl(Ref* pSender)
+{
+    
 }

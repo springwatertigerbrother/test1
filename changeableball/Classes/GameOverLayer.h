@@ -28,6 +28,9 @@ public:
 //    bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
     void ReStartGame();
     void ExitGame();
+    void ShareGame();
+    void RateMe();
+    void GameCenter();
     static cocos2d::CCScene* scene();
 
 };
