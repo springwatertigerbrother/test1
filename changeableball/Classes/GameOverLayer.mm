@@ -61,6 +61,10 @@ bool GameOverLayer::init()
     //    setTouchEnabled(true);
     CCSize s = CCDirector::sharedDirector()->getWinSize();
     
+    CCSprite* pBg = Sprite::create("images/bg3.png");
+    pBg->setPosition(ccp(s.width/2,s.height/2));
+    addChild(pBg);
+    
     MenuItemImage* pItem1 = MenuItemImage::create("images/restartn.png", "images/restartp.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
     MenuItemImage* pItem2 = MenuItemImage::create("images/sharen.png", "images/sharep.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
     MenuItemImage* pItem3 = MenuItemImage::create("images/backHome.png", "images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
@@ -110,12 +114,12 @@ bool GameOverLayer::init()
     //    pGameoverLbl->setPosition(ccp(s.width/2,s.height*0.7));
     //    addChild(pGameoverLbl);
     
-    CCLabelTTF* pScoreTitle = CCLabelTTF::create("总能量","Arial",50);
+    CCLabelTTF* pScoreTitle = CCLabelTTF::create("总能量","ArialRoundedMTBold",50);
     pScoreTitle->setPosition(ccp(s.width/2,s.height*0.7));
     pScoreTitle->setColor(ccc3Red);
     addChild(pScoreTitle);
     
-    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","Arial",46);
+    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","ArialRoundedMTBold",46);
     pTotalScore->setPosition(ccp(s.width/2,s.height*0.65));
     String* pTotalScoreStr = String::createWithFormat("%d",(nTotalScore));
     pTotalScore->setString(pTotalScoreStr->getCString());
@@ -123,14 +127,14 @@ bool GameOverLayer::init()
     addChild(pTotalScore);
 
 //    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
-    CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高获取能量","Arial",50);
+    CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高获取能量","ArialRoundedMTBold",50);
     pBestTitle->setPosition(ccp(s.width/2,s.height*0.58));
     pBestTitle->setColor(ccc3Red);
     addChild(pBestTitle);
     
-    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","Arial",50);
+    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","ArialRoundedMTBold",50);
     pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.53));
-    pSingleBestScore->setColor(ccGREEN);
+    pSingleBestScore->setColor(ccBLUE);
     
     int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
     String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);

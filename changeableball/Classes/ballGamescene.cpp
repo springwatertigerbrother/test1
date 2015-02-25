@@ -65,6 +65,17 @@ void BallGameScene::onEnter()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
+    CCSprite* pBg = Sprite::create("images/aiyisitanfudiao.png");
+    pBg->setPosition(ccp(size.width/2,size.height/1.5));
+    addChild(pBg);
+
+    CCSprite* pemc2 = Sprite::create("images/emc2.png");
+    pemc2->setPosition(ccp(size.width/2,size.height/1.3));
+    addChild(pemc2);
+
+    pemc2->setAnchorPoint(ccp(-0.5,-0.5));
+    pemc2->runAction(RepeatForever::create(RotateBy::create(10, 360) ) );
+    
     m_playnow = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
 
     m_multiplayer = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
