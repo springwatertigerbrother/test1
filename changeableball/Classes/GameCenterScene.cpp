@@ -96,14 +96,27 @@ void GameCenterScene::addScore(int nScore)
 void GameCenterScene::startTimerCounter()
 {
     m_pause = false;
-    m_timeCounter = 60;
+    m_timeCounter = 3;//DEFAULT_COUNT_TIME;
     schedule(schedule_selector(GameCenterScene::tick),1);
 }
 
 void GameCenterScene:: tick(float dt)
 {
+    m_controllerLayer->resetCunntDownWithIntValue(m_timeCounter);
+
     m_timeCounter -= 1;
-//    
+    if (m_timeCounter <= 0)
+    {
+        unschedule(schedule_selector(GameCenterScene::tick));
+        
+        auto scene = GameOverLayer::scene();
+        Director::getInstance()->replaceScene(scene);
+        
+        log("gameover");
+    }
+    
+    
+//
 //    if (!m_pause) {
 //        m_delta +=dt;
 //    }

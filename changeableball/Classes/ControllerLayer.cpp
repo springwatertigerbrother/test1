@@ -101,6 +101,11 @@ void ControllerLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
 {
     m_upstateLayer-> resetCurrentScoreWithIntValue(nValue);
 }
+
+void ControllerLayer::resetCunntDownWithIntValue(unsigned long int nValue)
+{
+    m_upstateLayer->resetCunntDownWithIntValue(nValue);
+}
 void ControllerLayer::playerUseSkill(PLAYERTOOLTYPE skillTpye)
 {
     if (getParent()) {

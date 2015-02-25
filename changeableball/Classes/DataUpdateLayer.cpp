@@ -40,7 +40,7 @@ bool UpStateLayer::init()
             m_labelNValue = CCLabelTTF::create("0","Arial",30);
             m_labelCurrentScoreTitle = CCLabelTTF::create("本场得分：","Arial",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","Arial",30);
-            m_countDown = CCLabelTTF::create("0","Arial",30);
+            m_labelCountDown = CCLabelTTF::create("180","Arial",50);
 
 
             
@@ -80,12 +80,12 @@ bool UpStateLayer::init()
             
             //count down
             
-            m_countDown->setAnchorPoint(ccp(1, 0.5));
-            m_countDown->setColor(ccc3(0, 0, 0));
-            m_countDown->setPosition(ccp(s.width - 100,210));
+            m_labelCountDown->setAnchorPoint(ccp(1, 0.5));
+            m_labelCountDown->setColor(ccc3(0, 0, 0));
+            m_labelCountDown->setPosition(ccp(s.width - 100,210));
             //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
-            m_countDown->setColor(ccRED);
-            addChild(m_countDown);
+            m_labelCountDown->setColor(ccRED);
+            addChild(m_labelCountDown);
 
             
             // current
@@ -205,6 +205,12 @@ void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
 {
     String* temStr = String::createWithFormat("%lu",nValue);
     m_labelCurrentScoreValue->setString(temStr->getCString());
+}
+
+void UpStateLayer::resetCunntDownWithIntValue(unsigned long int nValue)
+{
+    String* temStr = String::createWithFormat("%lu",nValue);
+    m_labelCountDown->setString(temStr->getCString());
 }
 void UpStateLayer::resetTimeString(CCString*string)
 {

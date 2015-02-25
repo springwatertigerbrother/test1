@@ -22,7 +22,7 @@ class UpStateLayer :public cocos2d::CCLayerColor {
     CCLabelTTF* m_labelTotalScoreTitle;
     CCLabelTTF* m_labelCurrentScoreTitle;
     CCLabelTTF* m_labelCurrentScoreValue;
-    CCLabelTTF* m_countDown;
+    CCLabelTTF* m_labelCountDown;
     
     CCMenuItemImage * m_scoreItem;
     CCMenuItemImage * m_timeItem;
@@ -38,6 +38,7 @@ void resetTimeString(CCString* string);
     void resetScoreString(CCString* string);
     void resetScoreWithIntValue(unsigned long nValue);
     void resetCurrentScoreWithIntValue(unsigned long nValue);
+    void resetCunntDownWithIntValue(unsigned long nValue);
 void menuBePressed(Ref* pSender);
 void startAnimationDisplay(Ref* pSender);
     void musicControl(Ref* pSender);
