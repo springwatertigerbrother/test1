@@ -33,7 +33,8 @@ public:
     void onEnterTransitionDidFinish();
     void settings(void* sender);
     
-    
+//    void playingNow(Ref *senderz, cocos2d::extension::Control::EventType controlEvent);
+
     // there's no 'id' in cpp, so we recommend to return the class instance pointer
     static cocos2d::CCScene* scene();
     

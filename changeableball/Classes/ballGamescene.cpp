@@ -65,9 +65,9 @@ void BallGameScene::onEnter()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
-    m_playnow = CCMenuItemImage::create("Images/start.png","Images/start.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
-    
-    m_multiplayer = CCMenuItemImage::create("Images/multiple_player.png","Images/multiple_player.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
+    m_playnow = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
+
+    m_multiplayer = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
 //    
 //    m_highscore = CCMenuItemImage::create("Images/high_score.png","Images/high_score.png",CC_CALLBACK_1(BallGameScene::highScore,this));
 //    
@@ -81,7 +81,20 @@ void BallGameScene::onEnter()
     
     menu->setPosition(ccp(size.width/2,size.height/3));
     
-    
+//    auto backgroundButton = cocos2d::extension::Scale9Sprite::create("Images/button.png");
+//    auto backgroundHighlightedButton = cocos2d::extension::Scale9Sprite::create("Images/buttonHighlighted.png");
+//    
+//    auto title = "标准模式";
+//    auto titleButton = Label::createWithTTF(title, "fonts/Marker Felt.ttf", 30);
+//    
+//    titleButton->setColor(Color3B(159, 168, 176));
+//    
+//    cocos2d::extension::ControlButton *button = cocos2d::extension::ControlButton::create(titleButton, backgroundButton);
+//    button->setBackgroundSpriteForState(backgroundHighlightedButton, cocos2d::extension::Control::State::HIGH_LIGHTED);
+//    button->setTitleColorForState(Color3B::WHITE, cocos2d::extension::Control::State::HIGH_LIGHTED);
+//    button->addTargetWithActionForControlEvents(this, cccontrol_selector(BallGameScene::playingNow), cocos2d::extension::Control::EventType::TOUCH_DOWN);
+//    button->setPosition(ccp(size.width/2,size.height/3));
+
     MenuItemFont::setFontName("American Typewriter");
     MenuItemFont::setFontSize(30);
     auto title1 = MenuItemFont::create("Sound");
@@ -111,7 +124,13 @@ void BallGameScene:: startGame()
     this-> removeAllChildren();
     
 }
-
+//void BallGameScene::playingNow(Ref *senderz, cocos2d::extension::Control::EventType controlEvent)
+//{
+//    DataHome::getInstance()->isCountDownModel = false;
+//    
+//    CCScene * playingScene = GameCenterScene::scene();
+//    CCDirector::sharedDirector()->replaceScene(playingScene);
+//}
 
 void BallGameScene:: playingNow(void* sender)
 {
