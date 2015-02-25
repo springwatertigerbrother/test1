@@ -22,4 +22,5 @@ DataHome::DataHome()
 {
  wZoomvalue = 2;
  wFontSize = wZoomvalue*24;
+    isCountDownModel = false;
 }

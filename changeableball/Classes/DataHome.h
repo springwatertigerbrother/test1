@@ -24,7 +24,7 @@ public:
     float wCountDown;
     float wWinNum;
     
-    
+    bool isCountDownModel;
     static DataHome* getInstance();
 };
 

@@ -9,6 +9,7 @@
 #include "GameCenterScene.h"
 #include "ControllerLayer.h"
 #include "GameOverLayer.h"
+#include "DataHome.h"
 
 using namespace cocos2d;
 
@@ -69,7 +70,10 @@ void GameCenterScene::startGame()
 {
     m_data->startAnimtionDisplay();
     m_data->startPlaying();
-    startTimerCounter();
+    if (DataHome::getInstance()->isCountDownModel)
+    {
+        startTimerCounter();
+    }
 }
 void GameCenterScene::addScore(int nScore)
 {

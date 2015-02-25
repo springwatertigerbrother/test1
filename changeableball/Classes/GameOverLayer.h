@@ -31,6 +31,7 @@ public:
     void ShareGame();
     void RateMe();
     void GameCenter();
+    void backToHome();
     static cocos2d::CCScene* scene();
 
 };

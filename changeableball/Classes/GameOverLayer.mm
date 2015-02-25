@@ -63,6 +63,7 @@ bool GameOverLayer::init()
     
     MenuItemImage* pItem1 = MenuItemImage::create("images/restartn.png", "images/restartp.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
     MenuItemImage* pItem2 = MenuItemImage::create("images/sharen.png", "images/sharep.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
+    MenuItemImage* pItem3 = MenuItemImage::create("images/backHome.png", "images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
     //    pItem2->setFontSize(180);
     //    CCMenu* pMenu2 = CCMenu::create(pItem2,NULL);
     //    pItem2->setPosition(ccp(s.width/2, s.height/5));
@@ -72,8 +73,8 @@ bool GameOverLayer::init()
     //    CCMenuItemFont* pItem1 = CCMenuItemFont::create("restart", this, menu_selector(GameOverLayer::ReStartGame));
     //    CCMenuItemFont* pItem2 = CCMenuItemFont::create("share",this,menu_selector(GameOverLayer::ExitGame));
     
-    CCMenu* pMenu = CCMenu::create(pItem1,pItem2,NULL);
-    pMenu->alignItemsHorizontallyWithPadding(20);
+    CCMenu* pMenu = CCMenu::create(pItem2,pItem1,pItem3, NULL);
+    pMenu->alignItemsHorizontallyWithPadding(10);
     //    pItem1->setFontSize(30);
     //    pItem2->setFontSize(30);
     
@@ -196,6 +197,11 @@ void GameOverLayer::GameCenter()
 void GameOverLayer::RateMe()
 {
     
+}
+void GameOverLayer::backToHome()
+{
+    auto scene = BallGameScene::scene();
+    Director::getInstance()->replaceScene(scene);
 }
 //
 //void GameOverLayer::registerWithTouchDispatcher()

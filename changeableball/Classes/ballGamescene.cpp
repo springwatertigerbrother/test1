@@ -8,6 +8,7 @@
 
 #include "ballGamescene.h"
 #include "GameCenterScene.h"
+#include "DataHome.h"
 
 using namespace cocos2d;
 
@@ -66,7 +67,7 @@ void BallGameScene::onEnter()
     
     m_playnow = CCMenuItemImage::create("Images/start.png","Images/start.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
     
-//    m_multiplayer = CCMenuItemImage::create("Images/multiple_player.png","Images/multiple_player.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
+    m_multiplayer = CCMenuItemImage::create("Images/multiple_player.png","Images/multiple_player.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
 //    
 //    m_highscore = CCMenuItemImage::create("Images/high_score.png","Images/high_score.png",CC_CALLBACK_1(BallGameScene::highScore,this));
 //    
@@ -74,7 +75,7 @@ void BallGameScene::onEnter()
 //    
 //    m_aboutus = CCMenuItemImage::create("Images/about_us.png","Images/about_us.png", CC_CALLBACK_1(BallGameScene::aboutus,this));
     
-    CCMenu *menu = CCMenu::create(m_playnow, NULL);
+    CCMenu *menu = CCMenu::create(m_playnow,m_multiplayer, NULL);
     
     menu->alignItemsVerticallyWithPadding(10);
     
@@ -114,7 +115,8 @@ void BallGameScene:: startGame()
 
 void BallGameScene:: playingNow(void* sender)
 {
-    
+    DataHome::getInstance()->isCountDownModel = false;
+
     CCScene * playingScene = GameCenterScene::scene();
     CCDirector::sharedDirector()->replaceScene(playingScene);
 //    [[CCDirector sharedDirector] replaceScene:[CCTransitionMoveInR transitionWithDuration:0.2 scene:playingScene]];
@@ -122,6 +124,11 @@ void BallGameScene:: playingNow(void* sender)
 
 void BallGameScene:: multiplePlayer(void* sender)
 {
+    DataHome::getInstance()->isCountDownModel = true;
+    
+    CCScene * playingScene = GameCenterScene::scene();
+    CCDirector::sharedDirector()->replaceScene(playingScene);
+    
     //    [[NetWorkHandle getSharedNetWork] startMatchOppoent:self];
 //    CCScene * playingScene = MutablePlayerScene node];
 //    
