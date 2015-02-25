@@ -42,6 +42,8 @@
 #define ccc4fGreen ccc4f(52/255.f,241/255.f,44/255.f,1)
 #define ccc4fYellow ccc4f(242/255.f,207/255.f,48/255.f,1)
 
+#define ccc3Red Color3B(242,13,43)
+
 typedef enum {
     tooltime = 0,
     toolDisappearAll = 1,

@@ -38,7 +38,7 @@ bool UpStateLayer::init()
             m_labelNciyuanTitle = CCLabelTTF::create("0","Arial",30);
             m_labelTotalScoreTitle = CCLabelTTF::create("0","Arial",30);
             m_labelNValue = CCLabelTTF::create("0","Arial",30);
-            m_labelCurrentScoreTitle = CCLabelTTF::create("本场得分：","Arial",30);
+            m_labelCurrentScoreTitle = CCLabelTTF::create("本场获取能量：","Arial",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","Arial",30);
             m_labelCountDown = CCLabelTTF::create("180","Arial",50);
 
@@ -118,7 +118,7 @@ bool UpStateLayer::init()
             m_labelTotalScoreTitle->setPosition(ccp(10,
                                           150));
             m_labelTotalScoreTitle->setColor(ccBLACK);
-            m_labelTotalScoreTitle->setString("总分：");
+            m_labelTotalScoreTitle->setString("总能量：");
             addChild(m_labelTotalScoreTitle);
 
             m_labelTime->setAnchorPoint(ccp(1, 0.5));

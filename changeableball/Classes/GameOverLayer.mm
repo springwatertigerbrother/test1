@@ -110,8 +110,9 @@ bool GameOverLayer::init()
     //    pGameoverLbl->setPosition(ccp(s.width/2,s.height*0.7));
     //    addChild(pGameoverLbl);
     
-    CCLabelTTF* pScoreTitle = CCLabelTTF::create("总分","Arial",50);
+    CCLabelTTF* pScoreTitle = CCLabelTTF::create("总能量","Arial",50);
     pScoreTitle->setPosition(ccp(s.width/2,s.height*0.7));
+    pScoreTitle->setColor(ccc3Red);
     addChild(pScoreTitle);
     
     CCLabelTTF* pTotalScore = CCLabelTTF::create("0","Arial",46);
@@ -122,8 +123,9 @@ bool GameOverLayer::init()
     addChild(pTotalScore);
 
 //    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
-    CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高得分","Arial",50);
+    CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高获取能量","Arial",50);
     pBestTitle->setPosition(ccp(s.width/2,s.height*0.58));
+    pBestTitle->setColor(ccc3Red);
     addChild(pBestTitle);
     
     CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","Arial",50);
