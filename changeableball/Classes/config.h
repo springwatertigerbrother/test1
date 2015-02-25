@@ -39,7 +39,7 @@
 #define ccc4fRed ccc4f(242/255.f,13/255.f,43/255.f,1)
 #define ccc4fPurple ccc4f(148/255.f,35/255.f,242/255.f,1)
 #define ccc4fGreen ccc4f(52/255.f,241/255.f,44/255.f,1)
-#define ccc4fYellow ccc4f(0.902,0.851,0.2391,1)
+#define ccc4fYellow ccc4f(242/255.f,207/255.f,48/255.f,1)
 
 typedef enum {
     tooltime = 0,

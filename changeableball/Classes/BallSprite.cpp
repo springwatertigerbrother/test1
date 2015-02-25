@@ -359,20 +359,20 @@ void BallSprite::BallSprite::changeType(int nNum)
     int type = m_type - 1;
     switch (type) {
         case 0:
-            m_BallColor = ccc4fBlue;
+            m_BallColor = ccc4fRed;
             //m_type = 1;
             break;
         case 1:
-            m_BallColor = ccc4fGreen;   //m_type = 2;
+            m_BallColor = ccc4fOrange;   //m_type = 2;
             break;
         case 2:
-            m_BallColor = ccc4fRed;  //m_type = 3;
+            m_BallColor = ccc4fGreen;  //m_type = 3;
             break;
         case 3:
-            m_BallColor = ccc4fPurple; // m_type = 4;
+            m_BallColor = ccc4fBlue; // m_type = 4;
             break;
         case 4:
-            m_BallColor = ccc4fOrange;  //m_type = 5;
+            m_BallColor = ccc4fPurple;  //m_type = 5;
             break;
             
         default:
