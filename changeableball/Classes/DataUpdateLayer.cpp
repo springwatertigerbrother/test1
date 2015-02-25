@@ -38,6 +38,8 @@ bool UpStateLayer::init()
             m_labelNciyuanTitle = CCLabelTTF::create("0","Arial",30);
             m_labelTotalScoreTitle = CCLabelTTF::create("0","Arial",30);
             m_labelNValue = CCLabelTTF::create("0","Arial",30);
+            m_labelCurrentScoreTitle = CCLabelTTF::create("本场得分：","Arial",30);
+            m_labelCurrentScoreValue = CCLabelTTF::create("0","Arial",30);
 
 
             
@@ -75,6 +77,31 @@ bool UpStateLayer::init()
             m_labelNValue->setString(temStr->getCString());
             addChild(m_labelNValue);
             
+            // current
+            m_labelCurrentScoreTitle->setAnchorPoint(ccp(0, 0.5));
+            m_labelCurrentScoreTitle->setColor(ccc3(0, 0, 0));
+            m_labelCurrentScoreTitle->setPosition(ccp(10,
+                                                 210));
+//            m_labelNciyuanTitle->setString("您已达到的次元N是：");
+            m_labelCurrentScoreTitle->setColor(ccBLACK);
+            addChild(m_labelCurrentScoreTitle);
+            
+            m_labelCurrentScoreValue->setAnchorPoint(ccp(0, 0.5));
+            m_labelCurrentScoreValue->setColor(ccc3(0, 0, 0));
+            m_labelCurrentScoreValue->setPosition(ccp(m_labelCurrentScoreTitle->getPositionX()
+                                           + m_labelCurrentScoreTitle->getContentSize().width + 5,210)
+                                       );
+            m_labelCurrentScoreValue->setColor(ccORANGE);
+//            String* currentScoreStr = String::createWithFormat("%d",(int)(log2(nTotalScore)));
+//            
+//            if (nTotalScore == 0)
+//            {
+//                temStr = String::createWithFormat("%d!",0);
+//            }
+//            m_labelNValue->setString(currentScoreStr->getCString());
+            addChild(m_labelCurrentScoreValue);
+            
+            // total
             m_labelTotalScoreTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
             m_labelTotalScoreTitle->setPosition(ccp(10,
@@ -149,8 +176,24 @@ void UpStateLayer::resetScoreString(CCString*string)
     m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCJumpTo::create(0.3f, m_labelScore->getPosition(), 5.0f, 3), CCScaleTo::create(0.3f, 1.0f),NULL));
     m_labelScore->setString(string->getCString());
     
-    String* temStr = String::createWithFormat("%d",(int)(log2(string->intValue())));
+    String* temStr = String::createWithFormat("%d",(unsigned int)(log2(string->uintValue())));
     m_labelNValue->setString(temStr->getCString());
+}
+
+void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
+{
+    m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCJumpTo::create(0.3f, m_labelScore->getPosition(), 5.0f, 3), CCScaleTo::create(0.3f, 1.0f),NULL));
+    
+    String* scoreStr = String::createWithFormat("%d",nValue);
+    m_labelScore->setString(scoreStr->getCString());
+
+    String* temStr = String::createWithFormat("%d",(unsigned int)(log2(nValue)));
+    m_labelNValue->setString(temStr->getCString());
+}
+void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
+{
+    String* temStr = String::createWithFormat("%lu",nValue);
+    m_labelCurrentScoreValue->setString(temStr->getCString());
 }
 void UpStateLayer::resetTimeString(CCString*string)
 {

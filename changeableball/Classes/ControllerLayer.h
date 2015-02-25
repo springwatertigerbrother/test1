@@ -38,8 +38,9 @@ void gamePause();
 void currentGameOver(int score);
 
 void resetTimeString(CCString* string);
-void resetScoreString(CCString* string);
-
+    void resetScoreString(CCString* string);
+    void resetScoreWithIntValue(unsigned long int nValue);
+    void resetCurrentScoreWithIntValue(unsigned long int nValue);
 void startGame();
 
 void playerUseSkill(PLAYERTOOLTYPE skillTpye);

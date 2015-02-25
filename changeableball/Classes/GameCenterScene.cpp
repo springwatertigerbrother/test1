@@ -87,7 +87,9 @@ void GameCenterScene::addScore(int nScore)
     
     UserDefault::getInstance()->setStringForKey("TOTALSCORE", str);
 //    CCString* scores = CCString::createWithFormat("%d",m_score);
-    m_controllerLayer->resetScoreString(StringMake(str));
+//    m_controllerLayer->resetScoreString(StringMake(str));
+    m_controllerLayer->resetScoreWithIntValue(m_score);
+    m_controllerLayer->resetCurrentScoreWithIntValue(m_current_score);
 }
 
 

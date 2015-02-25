@@ -93,7 +93,14 @@ void ControllerLayer::resetScoreString(CCString* string)
     m_upstateLayer-> resetScoreString(string);
 }
 
-
+void ControllerLayer::resetScoreWithIntValue(unsigned long int nValue)
+{
+    m_upstateLayer-> resetScoreWithIntValue(nValue);
+}
+void ControllerLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
+{
+    m_upstateLayer-> resetCurrentScoreWithIntValue(nValue);
+}
 void ControllerLayer::playerUseSkill(PLAYERTOOLTYPE skillTpye)
 {
     if (getParent()) {
