@@ -95,33 +95,34 @@ void GameCenterScene::startTimerCounter()
 {
     m_pause = false;
     m_timeCounter = 60;
-    schedule(schedule_selector(GameCenterScene::tick));
+    schedule(schedule_selector(GameCenterScene::tick),1);
 
 }
 
 void GameCenterScene:: tick(float dt)
 {
-    
-    if (!m_pause) {
-        m_delta +=dt;
-    }
-    
-    if (m_delta>=0.9999) {
-        m_delta = 0.0;
-        m_timeCounter -=1;
-        m_timeCounter = 1;
-        
-//        if (m_timeCounter<=0)//zhao
-//        {
-//            [m_hudController resetTimeString:[NSString stringWithFormat:@"%d",m_timeCounter]];
-//            [m_data moveOut];
-//            //            [m_hudController gamePause];
-//            [m_hudController currentGameOver:m_score];
-//            [self unscheduleAllSelectors];
-//        }else{
-//            [m_hudController resetTimeString:[NSString stringWithFormat:@"%d",m_timeCounter]];
-//        }
-    }
+    m_timeCounter -= 1;
+//    
+//    if (!m_pause) {
+//        m_delta +=dt;
+//    }
+//    
+//    if (m_delta>=0.9999) {
+//        m_delta = 0.0;
+//        m_timeCounter -=1;
+//        m_timeCounter = 1;
+//        
+////        if (m_timeCounter<=0)//zhao
+////        {
+////            [m_hudController resetTimeString:[NSString stringWithFormat:@"%d",m_timeCounter]];
+////            [m_data moveOut];
+////            //            [m_hudController gamePause];
+////            [m_hudController currentGameOver:m_score];
+////            [self unscheduleAllSelectors];
+////        }else{
+////            [m_hudController resetTimeString:[NSString stringWithFormat:@"%d",m_timeCounter]];
+////        }
+//    }
 }
 
 
