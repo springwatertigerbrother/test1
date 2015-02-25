@@ -102,6 +102,8 @@ bool GameOverLayer::init()
     pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
     
+    pCongratulation->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    
     //    CCLabelTTF* pGameoverLbl = CCLabelTTF::create("Game Over", "ArialRoundedMTBold", 100);
     //    pGameoverLbl->setColor(ccRED);
     //    pGameoverLbl->setPosition(ccp(s.width/2,s.height*0.7));
