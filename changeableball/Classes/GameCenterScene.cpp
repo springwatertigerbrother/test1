@@ -98,7 +98,6 @@ void GameCenterScene::startTimerCounter()
     m_pause = false;
     m_timeCounter = 60;
     schedule(schedule_selector(GameCenterScene::tick),1);
-
 }
 
 void GameCenterScene:: tick(float dt)

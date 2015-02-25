@@ -40,6 +40,7 @@ bool UpStateLayer::init()
             m_labelNValue = CCLabelTTF::create("0","Arial",30);
             m_labelCurrentScoreTitle = CCLabelTTF::create("本场得分：","Arial",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","Arial",30);
+            m_countDown = CCLabelTTF::create("0","Arial",30);
 
 
             
@@ -76,6 +77,16 @@ bool UpStateLayer::init()
             }
             m_labelNValue->setString(temStr->getCString());
             addChild(m_labelNValue);
+            
+            //count down
+            
+            m_countDown->setAnchorPoint(ccp(1, 0.5));
+            m_countDown->setColor(ccc3(0, 0, 0));
+            m_countDown->setPosition(ccp(s.width - 100,210));
+            //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
+            m_countDown->setColor(ccRED);
+            addChild(m_countDown);
+
             
             // current
             m_labelCurrentScoreTitle->setAnchorPoint(ccp(0, 0.5));

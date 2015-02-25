@@ -22,6 +22,7 @@ class UpStateLayer :public cocos2d::CCLayerColor {
     CCLabelTTF* m_labelTotalScoreTitle;
     CCLabelTTF* m_labelCurrentScoreTitle;
     CCLabelTTF* m_labelCurrentScoreValue;
+    CCLabelTTF* m_countDown;
     
     CCMenuItemImage * m_scoreItem;
     CCMenuItemImage * m_timeItem;
