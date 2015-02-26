@@ -65,6 +65,10 @@ void BallGameScene::onEnter()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
+    CCSprite* pBg4 = Sprite::create("images/bg4.png");
+    pBg4->setPosition(ccp(size.width/2,size.height/2));
+    addChild(pBg4);
+    
     CCSprite* pBg = Sprite::create("images/aiyisitanfudiao.png");
     pBg->setPosition(ccp(size.width/2,size.height/1.5));
     addChild(pBg);
