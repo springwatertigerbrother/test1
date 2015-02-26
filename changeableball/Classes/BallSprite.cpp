@@ -257,7 +257,7 @@ bool BallSprite::selectedType()
     m_selectNode->setScale(1.0);
     m_selectNode->setVisible(true);
     
-    CCScaleBy * scaleBy = CCScaleBy::create(0.1,2.0);
+    CCScaleBy * scaleBy = CCScaleBy::create(0.1,1.5);
     CCCallFunc* callB = CCCallFunc::create(this, callfunc_selector(BallSprite::selectedTypeCallback));
     
     CCSequence * seq = CCSequence::create(scaleBy,scaleBy->reverse(), callB, NULL);
