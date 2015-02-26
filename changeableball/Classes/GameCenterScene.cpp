@@ -48,24 +48,16 @@ bool GameCenterScene::init()
         CC_BREAK_IF(! CCLayer::create() );
 
         CCSize s = Director::getInstance()->getWinSize();
-        CCSprite* pBg = Sprite::create("images/bg1.png");
-        pBg->setPosition(ccp(s.width/2,s.height/2));
-//        pBg->setOpacity(200);
-        addChild(pBg);
-        pBg->setScale(3, 3);
-        CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1), RotateBy::create(0.5, 360), NULL);
-        CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1), RotateBy::create(0.5,-360), NULL);
-        pBg->runAction(Sequence::create(spawn1,spawn2,NULL) );
-        
+               
         m_controllerLayer = ControllerLayer::create();
         m_controllerLayer->setPosition(ccp(0, 0));
         m_controllerLayer->setAnchorPoint(ccp(0, 0));
 
-        addChild(m_controllerLayer);
+        addChild(m_controllerLayer,2);
         
         setAnchorPoint(CCPoint(0,0));
         m_data = DataManager::create();
-        this->addChild(m_data);
+        this->addChild(m_data,1);
         
         m_score = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 

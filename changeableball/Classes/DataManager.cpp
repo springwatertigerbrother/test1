@@ -162,6 +162,23 @@ bool DataManager::init()
     listener->onTouchesEnded = CC_CALLBACK_2(DataManager::onTouchesEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
+//    m_pDrawNode = DrawNode::create();
+//    addChild(m_pDrawNode, 10);
+    
+    
+    CCSize s = Director::getInstance()->getWinSize();
+    
+    m_pBg = Sprite::create("images/bg1.png");
+    m_pBg->setPosition(ccp(s.width/2,s.height/2));
+//    m_pBg->setOpacity(170);
+    addChild(m_pBg,-10);
+    m_pBg->setZOrder(-100);
+    m_pBg->setScale(3, 3);
+    CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1), RotateBy::create(0.5, 360), NULL);
+    CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1), RotateBy::create(0.5,-360), NULL);
+    m_pBg->runAction(Sequence::create(spawn1,spawn2,NULL) );
+
+    
     mCoreLayer = CCLayerColor::create(ccc4(255, 255, 255, 255));//WithColor:ccc4(230, 230, 230, 255)
     if ( !mCoreLayer )
     {
@@ -260,7 +277,8 @@ bool DataManager::touchBegine(CCPoint local)
         
         return false;
     }
-    
+    m_pBg->setOpacity(170);
+
     m_movePos = local;
     m_objectHasContina = false;
     m_removeAllSameColor = false;
@@ -348,7 +366,8 @@ void DataManager:: touchMove(CCPoint local)
 void DataManager:: touchEnd()
 {
     m_drawLine = false;
-    
+    m_pBg->setOpacity(255);
+
     int disappearCount = 0;
     
     if (m_stackArray.size()>=ELIMINABLE_NUM) {
@@ -495,6 +514,8 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
      BallSprite * ds = m_stackArray.back();
      CCPoint pos = ds->getDrawNodePosition();
      ccDrawLine(pos, m_movePos);
+     
+//     m_pDrawNode->drawSegment(pos, m_movePos, 20,Color4F::ORANGE);
   }
  }
  

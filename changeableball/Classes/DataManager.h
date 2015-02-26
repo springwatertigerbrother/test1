@@ -105,6 +105,10 @@ public:
     
     // init elements
     void initElements();
+    
+    CCSprite* m_pBg;
+    //draw line
+    DrawNode* m_pDrawNode;
 };
 
 #endif /* defined(__changeableball__DataManager__) */

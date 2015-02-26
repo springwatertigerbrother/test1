@@ -41,20 +41,28 @@ bool UpStateLayer::init()
             m_labelCurrentScoreTitle = CCLabelTTF::create("本场获取能量：","Arial",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","Arial",30);
             m_labelCountDown = CCLabelTTF::create("180","Arial",50);
-
-
-            
-            m_labelScore->setAnchorPoint(ccp(0, 0.5));
-            m_labelScore->setColor(ccc3(0, 0, 0));
-            m_labelScore->setPosition(ccp(100,
-                                          150));
-            addChild(m_labelScore);
             
             unsigned long nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 //            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
+           
+            // total
             String* pTotalScoreStr = String::createWithFormat("%lu",nTotalScore);
             m_labelScore->setString(pTotalScoreStr->getCString());
             m_labelScore->setColor(ccORANGE);
+            m_labelTotalScoreTitle->setAnchorPoint(ccp(0, 0.5));
+            m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
+            m_labelTotalScoreTitle->setPosition(ccp(10,
+                                                    150));
+            m_labelTotalScoreTitle->setColor(ccBLACK);
+            m_labelTotalScoreTitle->setString("总能量：");
+            addChild(m_labelTotalScoreTitle);
+            
+            m_labelScore->setAnchorPoint(ccp(0, 0.5));
+            m_labelScore->setPosition(ccp(m_labelTotalScoreTitle->getPositionX()
+                                          + m_labelTotalScoreTitle->getContentSize().width,
+                                          150));
+            addChild(m_labelScore);
+            
             m_labelNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
             m_labelNciyuanTitle->setPosition(ccp(10,
@@ -79,10 +87,13 @@ bool UpStateLayer::init()
             addChild(m_labelNValue);
             
             //count down
+            CCSprite* pClock = Sprite::create("images/clock.png");
+            pClock->setPosition(ccp(s.width/2,-30));
+            addChild(pClock);
             
-            m_labelCountDown->setAnchorPoint(ccp(1, 0.5));
+            m_labelCountDown->setAnchorPoint(ccp(0.5, 0.5));
             m_labelCountDown->setColor(ccc3(0, 0, 0));
-            m_labelCountDown->setPosition(ccp(s.width - 100,210));
+            m_labelCountDown->setPosition(ccp(s.width/2,-30));
             //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
             m_labelCountDown->setColor(ccRED);
             addChild(m_labelCountDown);
@@ -112,15 +123,6 @@ bool UpStateLayer::init()
 //            m_labelNValue->setString(currentScoreStr->getCString());
             addChild(m_labelCurrentScoreValue);
             
-            // total
-            m_labelTotalScoreTitle->setAnchorPoint(ccp(0, 0.5));
-            m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
-            m_labelTotalScoreTitle->setPosition(ccp(10,
-                                          150));
-            m_labelTotalScoreTitle->setColor(ccBLACK);
-            m_labelTotalScoreTitle->setString("总能量：");
-            addChild(m_labelTotalScoreTitle);
-
             m_labelTime->setAnchorPoint(ccp(1, 0.5));
             m_labelTime->setColor(ccc3(0, 0, 0));
             m_labelTime->setPosition(ccp(m_timeItem->getPosition().x - m_timeItem->getContentSize().width/2,
