@@ -43,7 +43,6 @@ void DataManager::clear(){
             markMinusOne(i,j);
             //cout<<shuzu[j][i]<<" ";
         }
-        std::cout<<std::endl;
     }
 }
 //mark all
@@ -117,6 +116,44 @@ bool DataManager::containObject(BallSprite* object,std::vector<BallSprite*> cont
     }
     return false;
 }
+void DataManager::initElements()
+{
+    for(int i = 0; i<m_ballSpriteArray.size();i++)
+    {
+        ((BallSprite*) m_ballSpriteArray[i])->removeFromParentAndCleanup(true);
+    }
+    m_ballSpriteArray.clear();
+    
+    if (mCoreLayer)
+    {
+        for (int y = 0; y<TOTALY; y++) {
+            for (int x = 0; x<TOTALX; x++) {
+                
+                BallSprite * drawS = BallSprite::create();
+                
+                drawS->spawnAtXY(x, y, DRAWSPRITE_WIDTH,DRAWSPRITE_HEIGH);
+                m_TypeArray[x][y] = drawS->getType();
+                m_ballSpriteArray.push_back(drawS);
+                addChild(drawS);
+            }
+        }
+        m_stackArray.clear();
+    }
+    
+    for (int i = 0; i< m_ballSpriteArray.size(); i++) {
+        
+        BallSprite * ds = (BallSprite*)m_ballSpriteArray[i];
+        
+        m_TypeArray[i%TOTALX][i/TOTALY] = ds->getType();
+        shuzu[i%TOTALX][i/TOTALY] = m_TypeArray[i%TOTALX][i/TOTALY];
+        
+    }
+    this->clear();
+    if(!enableDispel())
+    {
+        initElements();
+    }
+}
 bool DataManager::init()
 {
     auto listener = EventListenerTouchAllAtOnce::create();
@@ -164,7 +201,10 @@ bool DataManager::init()
         
     }
     this->clear();
-    
+    if(!enableDispel())
+    {
+        initElements();
+    }
 //    mCoreLayer->setVisible(true);
 //    this->addChild(mCoreLayer);
     loadEffectSounds();
@@ -355,7 +395,7 @@ void DataManager:: touchEnd()
         CCLabelTTF* pTotalScoreLabel = CCLabelTTF::create();
         pTotalScoreLabel->setString(scoreStr);
         pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.7));
-        pTotalScoreLabel->setColor(ccc3(255, 100, 100));
+        pTotalScoreLabel->setColor(ccc3(242, 13, 43));
         pTotalScoreLabel->setScale(2);
         pTotalScoreLabel->setFontSize(30);
         this->getParent()->addChild(pTotalScoreLabel);
@@ -393,6 +433,15 @@ void DataManager:: touchEnd()
     }
     m_stackArray.clear();
     
+    this->clear();
+    
+    if(!enableDispel())
+    {
+        auto scene = GameOverLayer::scene();
+        Director::getInstance()->replaceScene(scene);
+        
+        log("gameover");
+    }
 }
 void DataManager:: hideScoreEffect(CCNode* pSender)
 {

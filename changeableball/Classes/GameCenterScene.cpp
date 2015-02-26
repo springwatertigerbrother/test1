@@ -50,6 +50,7 @@ bool GameCenterScene::init()
         CCSize s = Director::getInstance()->getWinSize();
         CCSprite* pBg = Sprite::create("images/bg1.png");
         pBg->setPosition(ccp(s.width/2,s.height/2));
+//        pBg->setOpacity(200);
         addChild(pBg);
         pBg->setScale(3, 3);
         CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1), RotateBy::create(0.5, 360), NULL);

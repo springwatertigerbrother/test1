@@ -102,6 +102,9 @@ public:
     void findNeighborMark(int i,int j,int color);
     void printXiaoChu(int shuzu[6][6]);
     bool enableDispel();
+    
+    // init elements
+    void initElements();
 };
 
 #endif /* defined(__changeableball__DataManager__) */
