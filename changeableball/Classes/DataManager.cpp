@@ -11,6 +11,7 @@
 #include "SimpleAudioEngine.h"
 #include "GameCenterScene.h"
 #include "GameOverLayer.h"
+#include "DataHome.h"
 
 static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
@@ -184,39 +185,41 @@ bool DataManager::init()
     {
         return false;
     }
-    if (mCoreLayer)
-    {
-//        mCoreLayer->setTouchEnabled(true);
-//        addChild(mCoreLayer);
-        for (int y = 0; y<TOTALY; y++) {
-            for (int x = 0; x<TOTALX; x++) {
-                
-                BallSprite * drawS = BallSprite::create();
-                
-                //[drawS spawnAtX:x Y:y Width:BallSprite_WIDTH Height:BallSprite_HEIGH];
-                drawS->spawnAtXY(x, y, DRAWSPRITE_WIDTH,DRAWSPRITE_HEIGH);
-                m_TypeArray[x][y] = drawS->getType();
-                
-                m_ballSpriteArray.push_back(drawS);
-//
-//                CCSprite* sp = CCSprite::create("Default.png");
-//                mCoreLayer->addChild(sp);
-                
-                addChild(drawS);
-            }
-        }
-        m_stackArray.clear();
-        
-    }
-    
-    for (int i = 0; i< m_ballSpriteArray.size(); i++) {
-        
-        BallSprite * ds = (BallSprite*)m_ballSpriteArray[i];
-        
-        m_TypeArray[i%TOTALX][i/TOTALY] = ds->getType();
-        shuzu[i%TOTALX][i/TOTALY] = m_TypeArray[i%TOTALX][i/TOTALY];
-        
-    }
+    initElements();
+
+//    if (mCoreLayer)
+//    {
+////        mCoreLayer->setTouchEnabled(true);
+////        addChild(mCoreLayer);
+//        for (int y = 0; y<TOTALY; y++) {
+//            for (int x = 0; x<TOTALX; x++) {
+//                
+//                BallSprite * drawS = BallSprite::create();
+//                
+//                //[drawS spawnAtX:x Y:y Width:BallSprite_WIDTH Height:BallSprite_HEIGH];
+//                drawS->spawnAtXY(x, y, DRAWSPRITE_WIDTH,DRAWSPRITE_HEIGH);
+//                m_TypeArray[x][y] = drawS->getType();
+//                
+//                m_ballSpriteArray.push_back(drawS);
+////
+////                CCSprite* sp = CCSprite::create("Default.png");
+////                mCoreLayer->addChild(sp);
+//                
+//                addChild(drawS);
+//            }
+//        }
+//        m_stackArray.clear();
+//        
+//    }
+//    
+//    for (int i = 0; i< m_ballSpriteArray.size(); i++) {
+//        
+//        BallSprite * ds = (BallSprite*)m_ballSpriteArray[i];
+//        
+//        m_TypeArray[i%TOTALX][i/TOTALY] = ds->getType();
+//        shuzu[i%TOTALX][i/TOTALY] = m_TypeArray[i%TOTALX][i/TOTALY];
+//        
+//    }
     this->clear();
     if(!enableDispel())
     {
@@ -556,12 +559,18 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
     
     this->clear();
     
-    if(!enableDispel())
+    if(!enableDispel() && ! (DataHome::getInstance()->isCountDownModel))
     {
         auto scene = GameOverLayer::scene();
         Director::getInstance()->replaceScene(scene);
         
         log("gameover");
+    }
+    else if(!enableDispel() && (DataHome::getInstance()->isCountDownModel))
+    {
+        initElements();
+        startAnimtionDisplay();
+        startPlaying();
     }
  }
  

@@ -102,7 +102,7 @@ void GameCenterScene::addScore(int nScore)
 void GameCenterScene::startTimerCounter()
 {
     m_pause = false;
-    m_timeCounter = 3;//DEFAULT_COUNT_TIME;
+    m_timeCounter = DEFAULT_COUNT_TIME;
     schedule(schedule_selector(GameCenterScene::tick),1);
 }
 
