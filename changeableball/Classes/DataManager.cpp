@@ -310,7 +310,7 @@ bool DataManager::touchBegine(CCPoint local)
     if (ds && ds->selectedType()) {
         
         m_stackArray.push_back(ds);
-//        playingSound(m_stackArray.size();
+        playingSound(m_stackArray.size());
         m_currentDrawColor = ds->getBallColor();
         m_drawLine = true;
         return true;
@@ -344,7 +344,7 @@ void DataManager:: touchMove(CCPoint local)
             }
             m_stackArray.pop_back();
             ds->selectedType();
-            playingSound(m_stackArray.size());//play sounds
+            playingSound(m_stackArray.size()+1);//play sounds
             return;
         }
 
