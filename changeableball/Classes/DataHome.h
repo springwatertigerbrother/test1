@@ -23,7 +23,7 @@ public:
     float wFailNum;
     float wCountDown;
     float wWinNum;
-    
+    int wAdjustBallPos;
     bool isCountDownModel;
     static DataHome* getInstance();
 };

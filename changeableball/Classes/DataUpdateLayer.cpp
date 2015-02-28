@@ -8,6 +8,7 @@
 
 #include "DataUpdateLayer.h"
 #include "ControllerLayer.h"
+#include "DataHome.h"
 
 bool UpStateLayer::init()
 {
@@ -102,17 +103,20 @@ bool UpStateLayer::init()
             addChild(m_labelNValue);
             
             //count down
-            CCSprite* pClock = Sprite::create("images/bagua.png");
-            pClock->setPosition(ccp(s.width/2,-30));
+            CCSprite* pClock = Sprite::create("images/bagua1.png");
+            pClock->setPosition(ccp(s.width/2 - 50,10));
+            pClock->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(pClock);
             
             m_labelCountDown->setAnchorPoint(ccp(0.5, 0.5));
             m_labelCountDown->setColor(ccc3(0, 0, 0));
-            m_labelCountDown->setPosition(ccp(s.width/2,-30));
+            m_labelCountDown->setPosition(ccp(s.width/2+50,10));
             //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
             m_labelCountDown->setColor(ccRED);
             addChild(m_labelCountDown);
 
+            m_labelCountDown->setVisible(DataHome::getInstance()->isCountDownModel);
+            pClock->setVisible(DataHome::getInstance()->isCountDownModel);
             
             // current
             m_labelCurrentScoreTitle->setAnchorPoint(ccp(0, 0.5));

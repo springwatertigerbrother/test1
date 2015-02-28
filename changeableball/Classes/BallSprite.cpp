@@ -27,7 +27,7 @@ BallSprite:: ~BallSprite()
 CCPoint BallSprite:: calcPos(int x ,int y)
 {
     
-    float width = this->getAnchorPoint().x * m_w + x * m_w +addWidth;
+    float width = this->getAnchorPoint().x * m_w + x * m_w + addWidth + DRAWSPRITE_WIDTH*DataHome::getInstance()->wAdjustBallPos;
     float height = this->getAnchorPoint().y * m_h + y * m_h +AddHeigh;
     return ccp(width, height);
 }
@@ -66,19 +66,31 @@ void BallSprite::calcColor()
     CCSize size = CCDirector::sharedDirector()->getWinSize();
 
     float nZoomFactor = size.width/320;
+    float nZoomFactorWithResolution = 1.5;
+    DataHome::getInstance()->wAdjustBallPos = 0;
+    if (size.width == 768)
+    {
+        DataHome::getInstance()->wAdjustBallPos = 3;
+        nZoomFactorWithResolution = 1.5;
+    }
+    else if(size.width == 640)
+    {
+        DataHome::getInstance()->wAdjustBallPos = 0;
+        nZoomFactorWithResolution = 2;
+    }
     m_hasSelected = true;
     m_disappear = false;
     m_x = x;
     m_y = y;
     
-    m_w = w*2*nZoomFactor;
-    m_h = h*2*nZoomFactor;
+    m_w = w*nZoomFactorWithResolution*nZoomFactor;
+    m_h = h*nZoomFactorWithResolution*nZoomFactor;
     
     calcColor();
     
     //    [self setContentSize:CGSizeMake(DRAWSPRITE_RADIUES*zoomvalue, DRAWSPRITE_RADIUES*zoomvalue)];
     
-    float wd = this->getAnchorPoint().x * m_w + x * m_w+addWidth;
+    float wd = this->getAnchorPoint().x * m_w + x * m_w+addWidth + (w * 3)*DataHome::getInstance()->wAdjustBallPos;
     
     //zhao
     CCString* typeStr = CCString::createWithFormat("%d",m_type);
