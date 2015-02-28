@@ -66,8 +66,8 @@ bool GameOverLayer::init()
     pBg->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pBg);
     
-    MenuItemImage* pItem1 = MenuItemImage::create("images/restartn.png", "images/restartp.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
-    MenuItemImage* pItem2 = MenuItemImage::create("images/sharen.png", "images/sharep.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
+    MenuItemImage* pItem1 = MenuItemImage::create("images/restart.png", "images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
+    MenuItemImage* pItem2 = MenuItemImage::create("images/share.png", "images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
     MenuItemImage* pItem3 = MenuItemImage::create("images/backHome.png", "images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
     pItem1->setScale(CC_CONTENT_SCALE_FACTOR());
     pItem2->setScale(CC_CONTENT_SCALE_FACTOR());
