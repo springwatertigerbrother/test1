@@ -106,6 +106,10 @@ bool GameOverLayer::init()
     unsigned long  nTotalScore = 0;
 //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
     nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    if (nTotalScore<0)
+    {
+        nTotalScore = 0;
+    }
     String* pCongratulationScoreStr = String::createWithFormat("%d 次元",(int)(log2(nTotalScore)));
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
@@ -136,7 +140,7 @@ bool GameOverLayer::init()
     pBestTitle->setColor(ccc3Red);
     addChild(pBestTitle);
     
-    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","ArialRoundedMTBold",50);
+    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","ArialRoundedMTBold",60);
     pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.53));
     pSingleBestScore->setColor(ccBLUE);
     
@@ -144,7 +148,7 @@ bool GameOverLayer::init()
     String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);
     pSingleBestScore->setString(pSinggleBestScoreStr->getCString());
     addChild(pSingleBestScore);
-    
+    pSingleBestScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
     //    tempStr = "best:"+tempStr;
     //    CCLabelTTF* pHightestLbl = CCLabelTTF::create(tempStr.c_str(), "ArialRoundedMTBold", 100);
     //    pHightestLbl->setPosition(ccp(s.width/2,s.height*0.5));
