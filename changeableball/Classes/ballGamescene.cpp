@@ -68,7 +68,7 @@ void BallGameScene::onEnter()
     
     CCSprite* pBg4 = Sprite::create("images/bg4.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
-    pBg4->setOpacity(220);
+    pBg4->setOpacity(230);
     addChild(pBg4);
     pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
@@ -103,7 +103,7 @@ void BallGameScene::onEnter()
     
     menu->alignItemsVerticallyWithPadding(10);
     
-    menu->setPosition(ccp(size.width/2,size.height/3));
+    menu->setPosition(ccp(size.width/2,size.height/5));
     
     
 //    auto backgroundButton = cocos2d::extension::Scale9Sprite::create("Images/button.png");
@@ -120,23 +120,23 @@ void BallGameScene::onEnter()
 //    button->addTargetWithActionForControlEvents(this, cccontrol_selector(BallGameScene::playingNow), cocos2d::extension::Control::EventType::TOUCH_DOWN);
 //    button->setPosition(ccp(size.width/2,size.height/3));
 
-    MenuItemFont::setFontName("American Typewriter");
-    MenuItemFont::setFontSize(30);
-    auto title1 = MenuItemFont::create("Sound");
-    title1->setEnabled(false);
-    MenuItemFont::setFontName( "fonts/Marker Felt.ttf" );
-    MenuItemFont::setFontSize(50);
-    auto item1 = MenuItemToggle::createWithCallback( CC_CALLBACK_1(BallGameScene::musicControl, this),
-                                                    MenuItemFont::create( "music On" ),
-                                                    MenuItemFont::create( "music Off"),
-                                                    nullptr );
-    item1->setEnabled(true);
-    auto musciMenu = Menu::create(item1, nullptr);
-    musciMenu->setPosition(ccp(size.width/2,size.height/5));
-    
-    //            musciMenu->alignItemsInColumns(2, 2, 2, 2, 1, NULL);
-//    musciMenu->setVisible(false);
-    addChild( musciMenu );
+//    MenuItemFont::setFontName("American Typewriter");
+//    MenuItemFont::setFontSize(30);
+//    auto title1 = MenuItemFont::create("Sound");
+//    title1->setEnabled(false);
+//    MenuItemFont::setFontName( "fonts/Marker Felt.ttf" );
+//    MenuItemFont::setFontSize(50);
+//    auto item1 = MenuItemToggle::createWithCallback( CC_CALLBACK_1(BallGameScene::musicControl, this),
+//                                                    MenuItemFont::create( "music On" ),
+//                                                    MenuItemFont::create( "music Off"),
+//                                                    nullptr );
+//    item1->setEnabled(true);
+//    auto musciMenu = Menu::create(item1, nullptr);
+//    musciMenu->setPosition(ccp(size.width/2,size.height/5));
+//    
+//    //            musciMenu->alignItemsInColumns(2, 2, 2, 2, 1, NULL);
+////    musciMenu->setVisible(false);
+//    addChild( musciMenu );
 
     
     this-> addChild(menu);
