@@ -46,7 +46,7 @@ bool BallGameScene::init()
         if (!cocos2d::CCLayer::init()) {
             return false;
         }
-        CCLayerColor* pBGLayer = CCLayerColor::create(ccc4(1,2,3,4));
+        CCLayerColor* pBGLayer = CCLayerColor::create(ccc4(88,34,241,255));
 //        pBGLayer->initWithColor(ccc4(111, 155, 160, 133));
 
         pBGLayer->setAnchorPoint(CCPoint(0,0));
@@ -68,6 +68,7 @@ void BallGameScene::onEnter()
     
     CCSprite* pBg4 = Sprite::create("images/bg4.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
+    pBg4->setOpacity(240);
     addChild(pBg4);
     pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
