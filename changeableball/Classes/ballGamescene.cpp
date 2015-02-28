@@ -68,13 +68,14 @@ void BallGameScene::onEnter()
     
     CCSprite* pBg4 = Sprite::create("images/bg4.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
-    pBg4->setOpacity(240);
+    pBg4->setOpacity(220);
     addChild(pBg4);
     pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
 //    CCSprite* pBg = Sprite::create("images/aiyisitanfudiao.png");
     CCSprite* pBg = Sprite::create("images/aystthinging.png");
-    pBg->setPosition(ccp(size.width/2,size.height/1.2));
+    pBg->setAnchorPoint(ccp(0.5,1));
+    pBg->setPosition(ccp(size.width/2,size.height));
     pBg->setOpacity(200);
     pBg->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pBg);

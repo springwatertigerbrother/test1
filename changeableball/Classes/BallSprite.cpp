@@ -108,11 +108,11 @@ void BallSprite::calcColor()
     m_selectNode = CCDrawNode::create();
     m_drawNode->addChild(m_selectNode);
     
-    ccColor4F col = ccc4f(m_BallColor.r, m_BallColor.g, m_BallColor.b, 255*0.75);
-    
-    m_selectNode->drawDot(ccp(0, 0),DRAWSPRITE_RADIUES*zoomvalue,col);
-    m_selectNode->setVisible(false);
-    //    [m_drawNode clear];
+//    ccColor4F col = ccc4f(m_BallColor.r, m_BallColor.g, m_BallColor.b, 255*0.75);
+//    
+//    m_selectNode->drawDot(ccp(0, 0),DRAWSPRITE_RADIUES*zoomvalue,col);
+//    m_selectNode->setVisible(false);
+//    m_drawNode->clear()
 }
 
 void BallSprite::respawn()
