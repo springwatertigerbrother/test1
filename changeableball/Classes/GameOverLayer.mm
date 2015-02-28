@@ -61,14 +61,14 @@ bool GameOverLayer::init()
     //    setTouchEnabled(true);
     CCSize s = CCDirector::sharedDirector()->getWinSize();
     
-    CCSprite* pBg = Sprite::create("images/bg3.png");
+    CCSprite* pBg = Sprite::create("Images/bg3.png");
     pBg->setPosition(ccp(s.width/2,s.height/2));
     pBg->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pBg);
     
-    MenuItemImage* pItem1 = MenuItemImage::create("images/restart.png", "images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
-    MenuItemImage* pItem2 = MenuItemImage::create("images/share.png", "images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
-    MenuItemImage* pItem3 = MenuItemImage::create("images/backHome.png", "images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
+    MenuItemImage* pItem1 = MenuItemImage::create("Images/restart.png", "Images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
+    MenuItemImage* pItem2 = MenuItemImage::create("Images/share.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
+    MenuItemImage* pItem3 = MenuItemImage::create("Images/backHome.png", "Images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
     pItem1->setScale(CC_CONTENT_SCALE_FACTOR());
     pItem2->setScale(CC_CONTENT_SCALE_FACTOR());
     pItem3->setScale(CC_CONTENT_SCALE_FACTOR());

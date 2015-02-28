@@ -171,11 +171,11 @@ bool DataManager::init()
     std::string bg_cstr ;
     if (DataHome::getInstance()->isCountDownModel)
     {
-        bg_cstr ="images/artwork_darkenergy-sm.jpg";
+        bg_cstr ="Images/artwork_darkenergy-sm.jpg";
     }
     else
     {
-        bg_cstr ="images/bg1.png";
+        bg_cstr ="Images/bg1.png";
     }
     
     m_pBg = Sprite::create(bg_cstr);
@@ -344,7 +344,7 @@ void DataManager:: touchMove(CCPoint local)
             }
             m_stackArray.pop_back();
             ds->selectedType();
-            playingSound(m_stackArray.size()+1);//play sounds
+            playingSound(m_stackArray.size());//play sounds
             return;
         }
 

@@ -20,14 +20,14 @@ bool UpStateLayer::init()
         {
             
             
-            CCSprite* pBg = Sprite::create("images/updatebg.png");
+            CCSprite* pBg = Sprite::create("Images/updatebg.png");
             pBg->setAnchorPoint(ccp(0.5,0));
             pBg->setOpacity(180);
             pBg->setPosition(ccp(s.width/2,0));
             pBg->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(pBg);
             
-            CCSprite* pAiyinsitan = Sprite::create("images/aiyinsitanhead.png");
+            CCSprite* pAiyinsitan = Sprite::create("Images/aiyinsitanhead.png");
             pAiyinsitan->setPosition(ccp(s.width/2  + 200,100));
             pAiyinsitan->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(pAiyinsitan);
@@ -103,7 +103,7 @@ bool UpStateLayer::init()
             addChild(m_labelNValue);
             
             //count down
-            CCSprite* pClock = Sprite::create("images/bagua1.png");
+            CCSprite* pClock = Sprite::create("Images/bagua1.png");
             pClock->setPosition(ccp(s.width/2 - 50,10));
             pClock->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(pClock);

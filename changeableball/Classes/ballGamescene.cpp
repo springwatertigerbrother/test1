@@ -66,21 +66,21 @@ void BallGameScene::onEnter()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
-    CCSprite* pBg4 = Sprite::create("images/bg4.png");
+    CCSprite* pBg4 = Sprite::create("Images/bg4.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
     pBg4->setOpacity(230);
     addChild(pBg4);
     pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
-//    CCSprite* pBg = Sprite::create("images/aiyisitanfudiao.png");
-    CCSprite* pBg = Sprite::create("images/aystthinging.png");
+//    CCSprite* pBg = Sprite::create("Images/aiyisitanfudiao.png");
+    CCSprite* pBg = Sprite::create("Images/aystthinging.png");
     pBg->setAnchorPoint(ccp(0.5,1));
     pBg->setPosition(ccp(size.width/2,size.height));
     pBg->setOpacity(200);
     pBg->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pBg);
 
-    CCSprite* pemc2 = Sprite::create("images/emc2.png");
+    CCSprite* pemc2 = Sprite::create("Images/emc2.png");
     pemc2->setPosition(ccp(size.width/2,size.height/1.3));
     pemc2->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pemc2);
