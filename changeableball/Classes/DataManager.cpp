@@ -168,15 +168,24 @@ bool DataManager::init()
     
     
     CCSize s = Director::getInstance()->getWinSize();
+    std::string bg_cstr ;
+    if (DataHome::getInstance()->isCountDownModel)
+    {
+        bg_cstr ="images/artwork_darkenergy-sm.jpg";
+    }
+    else
+    {
+        bg_cstr ="images/bg1.png";
+    }
     
-    m_pBg = Sprite::create("images/bg1.png");
-    m_pBg->setPosition(ccp(s.width/2,s.height/2));
+    m_pBg = Sprite::create(bg_cstr);
+    m_pBg->setPosition(ccp(s.width/2,s.height/2 - 120));
 //    m_pBg->setOpacity(170);
     addChild(m_pBg,-10);
     m_pBg->setZOrder(-100);
-    m_pBg->setScale(3, 3);
-    CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1), RotateBy::create(0.5, 360), NULL);
-    CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1), RotateBy::create(0.5,-360), NULL);
+    m_pBg->setScale(3*CC_CONTENT_SCALE_FACTOR(), 3*CC_CONTENT_SCALE_FACTOR());
+    CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5, 360), NULL);
+    CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5,-360), NULL);
     m_pBg->runAction(Sequence::create(spawn1,spawn2,NULL) );
 
     
@@ -416,11 +425,11 @@ void DataManager:: touchEnd()
 //        CCString* scoreStr = CCString::create("n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
         CCLabelTTF* pTotalScoreLabel = CCLabelTTF::create();
         pTotalScoreLabel->setString(scoreStr);
-        pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.7));
+        pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.66));
         pTotalScoreLabel->setColor(ccc3(242, 13, 43));
         pTotalScoreLabel->setScale(2);
         pTotalScoreLabel->setFontSize(30);
-        this->getParent()->addChild(pTotalScoreLabel);
+        this->getParent()->addChild(pTotalScoreLabel,1000);
         
         CCMoveTo* pMoveto1 = CCMoveTo::create(2,ccp(10, s.height));
         auto pScaleby = ScaleBy::create(0.5, 1.2);

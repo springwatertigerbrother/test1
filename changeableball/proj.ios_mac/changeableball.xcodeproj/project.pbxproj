@@ -89,6 +89,8 @@
 		FE438D7D19F48F0300D9C636 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7819F48F0300D9C636 /* DataManager.cpp */; };
 		FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
 		FE438D7F19F48F0300D9C636 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
+		FE7FF2971AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
+		FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE9A95941A9B5C2000D5C192 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */; };
 		FE9A959A1A9C385F00D5C192 /* log in Resources */ = {isa = PBXBuildFile; fileRef = FE9A95991A9C385F00D5C192 /* log */; };
 /* End PBXBuildFile section */
@@ -307,6 +309,8 @@
 		FE438D7919F48F0300D9C636 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		FE438D7A19F48F0300D9C636 /* BallSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallSprite.cpp; sourceTree = "<group>"; };
 		FE438D7B19F48F0300D9C636 /* BallSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallSprite.h; sourceTree = "<group>"; };
+		FE7FF2951AA06FE6009C8339 /* MUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MUtils.cpp; path = ../Classes/MUtils.cpp; sourceTree = "<group>"; };
+		FE7FF2961AA06FE6009C8339 /* MUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MUtils.h; path = ../Classes/MUtils.h; sourceTree = "<group>"; };
 		FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../Classes/GameOverLayer.h; sourceTree = "<group>"; };
 		FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameOverLayer.mm; path = ../Classes/GameOverLayer.mm; sourceTree = "<group>"; };
 		FE9A95991A9C385F00D5C192 /* log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = log; sourceTree = "<group>"; };
@@ -555,6 +559,8 @@
 				FE438D6A19F48EDC00D9C636 /* DataUpdateLayer.h */,
 				FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */,
 				FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */,
+				FE7FF2951AA06FE6009C8339 /* MUtils.cpp */,
+				FE7FF2961AA06FE6009C8339 /* MUtils.h */,
 			);
 			name = Ui;
 			sourceTree = "<group>";
@@ -777,6 +783,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				FE438D7519F48EEC00D9C636 /* GameCenterScene.cpp in Sources */,
 				FE438D6519F48ECF00D9C636 /* DataHome.cpp in Sources */,
+				FE7FF2971AA06FE6009C8339 /* MUtils.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				FE438D7319F48EEC00D9C636 /* ballGamescene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -799,6 +806,7 @@
 				FE438D7619F48EEC00D9C636 /* GameCenterScene.cpp in Sources */,
 				FE438D7F19F48F0300D9C636 /* BallSprite.cpp in Sources */,
 				FE438D7419F48EEC00D9C636 /* ballGamescene.cpp in Sources */,
+				FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

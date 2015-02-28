@@ -3,6 +3,7 @@
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
 #include "ballGamescene.h"
+#include "MUtils.h"
 
 USING_NS_CC;
 
@@ -16,12 +17,14 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
+    
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
         glview = GLView::create("My Game");
         director->setOpenGLView(glview);
     }
+    initialize_resolution();
 
     // turn on display FPS
     director->setDisplayStats(false);

@@ -9,6 +9,7 @@
 #include "ballGamescene.h"
 #include "GameCenterScene.h"
 #include "DataHome.h"
+#include "MUtils.h"
 
 using namespace cocos2d;
 
@@ -68,21 +69,27 @@ void BallGameScene::onEnter()
     CCSprite* pBg4 = Sprite::create("images/bg4.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
     addChild(pBg4);
+    pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
-    CCSprite* pBg = Sprite::create("images/aiyisitanfudiao.png");
-    pBg->setPosition(ccp(size.width/2,size.height/1.5));
+//    CCSprite* pBg = Sprite::create("images/aiyisitanfudiao.png");
+    CCSprite* pBg = Sprite::create("images/aystthinging.png");
+    pBg->setPosition(ccp(size.width/2,size.height/1.2));
+    pBg->setOpacity(200);
+    pBg->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pBg);
 
     CCSprite* pemc2 = Sprite::create("images/emc2.png");
     pemc2->setPosition(ccp(size.width/2,size.height/1.3));
+    pemc2->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pemc2);
 
     pemc2->setAnchorPoint(ccp(-0.5,-0.5));
     pemc2->runAction(RepeatForever::create(RotateBy::create(10, 360) ) );
     
     m_playnow = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BallGameScene::playingNow,this));
-
+    m_playnow->setScale(CC_CONTENT_SCALE_FACTOR());
     m_multiplayer = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BallGameScene::multiplePlayer,this));
+    m_multiplayer->setScale(CC_CONTENT_SCALE_FACTOR());
 //    
 //    m_highscore = CCMenuItemImage::create("Images/high_score.png","Images/high_score.png",CC_CALLBACK_1(BallGameScene::highScore,this));
 //    
@@ -95,6 +102,7 @@ void BallGameScene::onEnter()
     menu->alignItemsVerticallyWithPadding(10);
     
     menu->setPosition(ccp(size.width/2,size.height/3));
+    
     
 //    auto backgroundButton = cocos2d::extension::Scale9Sprite::create("Images/button.png");
 //    auto backgroundHighlightedButton = cocos2d::extension::Scale9Sprite::create("Images/buttonHighlighted.png");
