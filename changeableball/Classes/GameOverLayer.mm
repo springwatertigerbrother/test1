@@ -133,6 +133,7 @@ bool GameOverLayer::init()
     pTotalScore->setString(pTotalScoreStr->getCString());
     pTotalScore->setColor(ccYELLOW);
     addChild(pTotalScore);
+    pTotalScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
 
 //    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
     CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高获取能量","ArialRoundedMTBold",50);
@@ -148,7 +149,21 @@ bool GameOverLayer::init()
     String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);
     pSingleBestScore->setString(pSinggleBestScoreStr->getCString());
     addChild(pSingleBestScore);
-    pSingleBestScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    pSingleBestScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.6f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    
+    CCLabelTTF* pBestNTitle = CCLabelTTF::create("单次最佳状态", "ArialRoundedMTBold",50);
+    pBestNTitle->setPosition(ccp(s.width/2,s.height*0.48));
+    pBestNTitle->setColor(ccc3Red);
+    addChild(pBestNTitle);
+    
+    CCLabelTTF* pBestNvalue = CCLabelTTF::create("n", "ArialRoundedMTBold",60);
+    pBestNvalue->setPosition(ccp(s.width/2,s.height*0.43));
+    pBestNvalue->setColor(ccWHITE);
+    addChild(pBestNvalue);
+    String* pBestNvalueStr = String::createWithFormat("%d次元",(int)log2(bestSingleScore));
+    pBestNvalue->setString(pBestNvalueStr->getCString());
+    pBestNvalue->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+
     //    tempStr = "best:"+tempStr;
     //    CCLabelTTF* pHightestLbl = CCLabelTTF::create(tempStr.c_str(), "ArialRoundedMTBold", 100);
     //    pHightestLbl->setPosition(ccp(s.width/2,s.height*0.5));

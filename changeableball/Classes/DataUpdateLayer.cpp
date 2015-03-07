@@ -53,6 +53,8 @@ bool UpStateLayer::init()
             m_labelNciyuanTitle = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelTotalScoreTitle = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelNValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
+            m_labelCurrentNciyuanTitle = CCLabelTTF::create("0","ArialRoundedMTBold",30);
+            m_labelCurrentNValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCurrentScoreTitle = CCLabelTTF::create("本场获取能量：","ArialRoundedMTBold",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCountDown = CCLabelTTF::create("180","ArialRoundedMTBold",50);
@@ -83,7 +85,7 @@ bool UpStateLayer::init()
             m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
             m_labelNciyuanTitle->setPosition(ccp(10,
                                           80));
-            m_labelNciyuanTitle->setString("您已达到的次元N是：");
+            m_labelNciyuanTitle->setString("您累计已达到的次元N是：");
             m_labelNciyuanTitle->setColor(ccRED);
             addChild(m_labelNciyuanTitle);
             
@@ -101,6 +103,30 @@ bool UpStateLayer::init()
             }
             m_labelNValue->setString(temStr->getCString());
             addChild(m_labelNValue);
+            
+            
+            m_labelCurrentNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
+            m_labelCurrentNciyuanTitle->setColor(ccc3(0, 0, 0));
+            m_labelCurrentNciyuanTitle->setPosition(ccp(10,
+                                                 30));
+            m_labelCurrentNciyuanTitle->setString("当前状态是：");
+            m_labelCurrentNciyuanTitle->setColor(ccRED);
+            addChild(m_labelCurrentNciyuanTitle);
+            
+            m_labelCurrentNValue->setAnchorPoint(ccp(0, 0.5));
+            m_labelCurrentNValue->setColor(ccc3(0, 0, 0));
+            m_labelCurrentNValue->setPosition(ccp(m_labelCurrentNciyuanTitle->getPositionX()
+                                           + m_labelCurrentNciyuanTitle->getContentSize().width + 5,30)
+                                       );
+            m_labelCurrentNValue->setColor(ccORANGE);
+            
+            if (nTotalScore == 0)
+            {
+                temStr = String::createWithFormat("%d!",0);
+            }
+            m_labelNValue->setString(temStr->getCString());
+            addChild(m_labelCurrentNValue);
+
             
             //count down
             CCSprite* pClock = Sprite::create("Images/bagua1.png");
@@ -226,6 +252,8 @@ void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
 {
     String* temStr = String::createWithFormat("%lu",nValue);
     m_labelCurrentScoreValue->setString(temStr->getCString());
+    String* currentNvalueStr = String::createWithFormat("%d 次元",(int)(log2(nValue)));
+    m_labelCurrentNValue->setString(currentNvalueStr->getCString());
 }
 
 void UpStateLayer::resetCunntDownWithIntValue(unsigned long int nValue)
