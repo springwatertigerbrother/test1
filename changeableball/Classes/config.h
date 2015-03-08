@@ -24,7 +24,7 @@
 #define DRAWSPRITE_WIDTH 24.0
 #define DRAWSPRITE_HEIGH 24.0
 
-#define AddHeigh 100
+#define AddHeigh 130
 #define addWidth 40
 
 #define TOTAL_TYPE 5
@@ -43,6 +43,9 @@
 #define ccc4fYellow ccc4f(242/255.f,207/255.f,48/255.f,1)
 
 #define ccc3Red Color3B(242,13,43)
+
+#define USE_LIFE_LIQUID "use_life_liquid"
+#define BUY_LIFE_LIQUID "buy_life_liquid"
 
 typedef enum {
     tooltime = 0,
