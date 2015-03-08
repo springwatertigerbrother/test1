@@ -90,7 +90,7 @@ public:
     virtual void onTouchEnded(Touch *touch, Event *unused_event);
     virtual void onTouchCancelled(Touch *touch, Event *unused_event);
     
-    void playingSound(int count);
+    void playingSound(int count,int nType);
     
     //判断是否还有可消除的
     int shuzu[6][6];

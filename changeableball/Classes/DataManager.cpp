@@ -12,6 +12,7 @@
 #include "GameCenterScene.h"
 #include "GameOverLayer.h"
 #include "DataHome.h"
+#include "BuyLifeLayer.h"
 
 static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
@@ -310,7 +311,7 @@ bool DataManager::touchBegine(CCPoint local)
     if (ds && ds->selectedType()) {
         
         m_stackArray.push_back(ds);
-        playingSound(m_stackArray.size());
+        playingSound(m_stackArray.size(),ds->getType());
         m_currentDrawColor = ds->getBallColor();
         m_drawLine = true;
         return true;
@@ -344,7 +345,7 @@ void DataManager:: touchMove(CCPoint local)
             }
             m_stackArray.pop_back();
             ds->selectedType();
-            playingSound(m_stackArray.size());//play sounds
+            playingSound(m_stackArray.size(),ds->getType());//play sounds
             return;
         }
 
@@ -369,7 +370,8 @@ void DataManager:: touchMove(CCPoint local)
         if (absValue == 1 && ds->selectedType())
         {
             m_stackArray.push_back(ds);//play sounds
-             playingSound(m_stackArray.size());
+            ds->getType();
+             playingSound(m_stackArray.size(),ds->getType());
         }
         tds = NULL;
     }
@@ -468,10 +470,13 @@ void DataManager:: touchEnd()
     
     if(!enableDispel())
     {
-        auto scene = GameOverLayer::scene();
-        Director::getInstance()->replaceScene(scene);
+//        auto buyLayer = BuyLifeLayer::create();
+//        addChild(buyLayer);
         
-        log("gameover");
+//        auto scene = GameOverLayer::scene();
+//        Director::getInstance()->replaceScene(scene);
+//        
+//        log("gameover");
     }
 }
 void DataManager:: hideScoreEffect(CCNode* pSender)
@@ -570,8 +575,11 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
     
     if(!enableDispel() && ! (DataHome::getInstance()->isCountDownModel))
     {
-        auto scene = GameOverLayer::scene();
-        Director::getInstance()->replaceScene(scene);
+//        auto buyLayer = BuyLifeLayer::create();
+//        addChild(buyLayer);
+
+//        auto scene = GameOverLayer::scene();
+//        Director::getInstance()->replaceScene(scene);
         
         log("gameover");
     }
@@ -781,14 +789,51 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
          
 #pragma mark -
          
-    void DataManager::playingSound(int count)
+    void DataManager::playingSound(int count,int nType)
          {
          
          if (count>13) {
-         count = 13;
+         count = 15;
          }
-         
-         CCString * soundName = CCString::createWithFormat("Sounds/%d.aif",count);
+             std::string typeStr;
+             switch (nType) {
+                 case 1:
+                     typeStr = "A";
+                     count = count%4;
+                     if (count == 0)
+                     {
+                         count = 4;
+                     }
+                     break;
+                 case 2:
+                     typeStr = "B";
+                     count = count%4;
+                     if (count == 0)
+                     {
+                         count = 4;
+                     }
+                     break;
+                 case 3:
+                     typeStr = "C";
+                     count = count%7;
+                     if (count == 0)
+                     {
+                         count = 7;
+                     }
+                     break;
+                 case 4:
+                     typeStr = "D";
+                     break;
+                 case 5:
+                     typeStr = "E";
+                     break;
+                 case 6:
+                     typeStr = "F";
+                     break;
+                 default:
+                     break;
+             }
+         CCString * soundName = CCString::createWithFormat("Sounds/%s%d.aif",typeStr.c_str(), count);
          
          CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(soundName->getCString());
          
