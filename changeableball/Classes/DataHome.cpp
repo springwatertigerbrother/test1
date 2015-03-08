@@ -7,6 +7,7 @@
 //
 
 #include "DataHome.h"
+#include "cocos2d.h"
 
 static DataHome* m_s_data;
 

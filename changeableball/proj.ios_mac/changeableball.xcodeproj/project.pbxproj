@@ -69,6 +69,8 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		FE348B3F1AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */; };
+		FE348B401AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */; };
 		FE438D5919F48D7000D9C636 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5619F48D7000D9C636 /* Images */; };
 		FE438D5A19F48D7000D9C636 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5619F48D7000D9C636 /* Images */; };
 		FE438D5B19F48D7000D9C636 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5719F48D7000D9C636 /* Sounds */; };
@@ -291,6 +293,8 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BuyLifeLayer.cpp; path = ../Classes/BuyLifeLayer.cpp; sourceTree = "<group>"; };
+		FE348B3E1AAB4F6A00391F6E /* BuyLifeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuyLifeLayer.h; path = ../Classes/BuyLifeLayer.h; sourceTree = "<group>"; };
 		FE438D5619F48D7000D9C636 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		FE438D5719F48D7000D9C636 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		FE438D5819F48D7000D9C636 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -557,6 +561,8 @@
 				FE438D6819F48EDC00D9C636 /* ControllerLayer.h */,
 				FE438D6919F48EDC00D9C636 /* DataUpdateLayer.cpp */,
 				FE438D6A19F48EDC00D9C636 /* DataUpdateLayer.h */,
+				FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */,
+				FE348B3E1AAB4F6A00391F6E /* BuyLifeLayer.h */,
 				FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */,
 				FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */,
 				FE7FF2951AA06FE6009C8339 /* MUtils.cpp */,
@@ -779,6 +785,7 @@
 				FE9A95941A9B5C2000D5C192 /* GameOverLayer.mm in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */,
+				FE348B3F1AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */,
 				FE438D6B19F48EDC00D9C636 /* ControllerLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				FE438D7519F48EEC00D9C636 /* GameCenterScene.cpp in Sources */,
@@ -803,6 +810,7 @@
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				FE438D6C19F48EDC00D9C636 /* ControllerLayer.cpp in Sources */,
 				FE438D6E19F48EDC00D9C636 /* DataUpdateLayer.cpp in Sources */,
+				FE348B401AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */,
 				FE438D7619F48EEC00D9C636 /* GameCenterScene.cpp in Sources */,
 				FE438D7F19F48F0300D9C636 /* BallSprite.cpp in Sources */,
 				FE438D7419F48EEC00D9C636 /* ballGamescene.cpp in Sources */,

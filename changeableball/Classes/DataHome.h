@@ -24,6 +24,7 @@ public:
     float wCountDown;
     float wWinNum;
     int wAdjustBallPos;
+    int wLifeLiquid;
     bool isCountDownModel;
     static DataHome* getInstance();
 };

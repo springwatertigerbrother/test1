@@ -10,6 +10,7 @@
 #include "ControllerLayer.h"
 #include "GameOverLayer.h"
 #include "DataHome.h"
+#include "BuyLifeLayer.h"
 
 using namespace cocos2d;
 
@@ -47,6 +48,12 @@ bool GameCenterScene::init()
     {
         CC_BREAK_IF(! CCLayer::create() );
 
+        bool isFirst = !UserDefault::getInstance()->getBoolForKey("isFirstOpen");
+        if (isFirst)
+        {
+            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
+            UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
+        }
         CCSize s = Director::getInstance()->getWinSize();
                
         m_controllerLayer = ControllerLayer::create();
@@ -62,6 +69,47 @@ bool GameCenterScene::init()
         m_score = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 
         m_current_score = 0;
+        
+        buyLayer = BuyLifeLayer::create();
+        this->addChild(buyLayer,10);
+        buyLayer->setVisible(false);
+        
+        
+        auto Use_life_listener = EventListenerCustom::create(USE_LIFE_LIQUID, [=](EventCustom* event){
+//            std::string str("Custom event 1 received, ");
+            //        char* buf = static_cast<char*>(event->getUserData());
+            //        str += buf;
+            //        str += " times";
+            //        statusLabel->setString(str.c_str());
+            
+            
+
+            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+            
+            if (lifeLiquid > 0)
+            {
+                m_data->m_canPlaying = true;
+                buyLayer->setVisible(false);
+                m_data->initElements();
+                lifeLiquid--;
+                
+                if (lifeLiquid<0)
+                {
+                    lifeLiquid = 0;
+                }
+                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                
+                startGame();
+            }
+            else
+            {
+                "生命药水不够，请购买";
+            }
+
+        });
+        _eventDispatcher->addEventListenerWithFixedPriority(Use_life_listener, 1);
+
+        
         bRet = true;
     }
     while(0);
@@ -77,6 +125,7 @@ void GameCenterScene::startGame()
         startTimerCounter();
     }
 }
+
 void GameCenterScene::addScore(int nScore)
 {
     m_score += nScore;
@@ -114,10 +163,10 @@ void GameCenterScene:: tick(float dt)
     if (m_timeCounter <= 0)
     {
         unschedule(schedule_selector(GameCenterScene::tick));
-        
-        auto scene = GameOverLayer::scene();
-        Director::getInstance()->replaceScene(scene);
-        
+//        
+
+        buyLayer->setVisible(true);
+        m_data->m_canPlaying = false;
         log("gameover");
     }
     

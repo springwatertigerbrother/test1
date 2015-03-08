@@ -12,6 +12,8 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "DataManager.h"
+#include "BuyLifeLayer.h"
+
 //#include "ControllerLayer.h"
 class ControllerLayer;
 
@@ -26,7 +28,6 @@ class GameCenterScene:public cocos2d::CCLayer
     int m_timeCounter;
     
     bool m_pause;
-    
 public:
     virtual bool init();
     static cocos2d::CCScene* scene();
@@ -39,6 +40,8 @@ public:
     void resumeGame();
     void startTimerCounter();
     void tick(float dt);
+    
+    BuyLifeLayer* buyLayer;
 
 //    void registerWithTouchDispatcher();
 //    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);

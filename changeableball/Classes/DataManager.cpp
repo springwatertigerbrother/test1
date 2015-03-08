@@ -164,6 +164,7 @@ bool DataManager::init()
     listener->onTouchesEnded = CC_CALLBACK_2(DataManager::onTouchesEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
+
 //    m_pDrawNode = DrawNode::create();
 //    addChild(m_pDrawNode, 10);
     
@@ -246,19 +247,19 @@ bool DataManager::init()
 
 void DataManager::loadEffectSounds()
 {
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/1.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/2.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/3.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/4.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/5.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/6.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/7.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/8.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/9.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/10.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/11.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/12.aif");
-    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/13.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/1.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/2.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/3.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/4.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/5.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/6.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/7.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/8.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/9.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/10.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/11.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/12.aif");
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect("Sounds/13.aif");
 }
 
 
@@ -470,6 +471,13 @@ void DataManager:: touchEnd()
     
     if(!enableDispel())
     {
+        GameCenterScene* pGameCenter = dynamic_cast<GameCenterScene*>(this->getParent());
+        if (pGameCenter)
+        {
+            pGameCenter->buyLayer->setVisible(true);
+        }
+        m_canPlaying = false;
+        
 //        auto buyLayer = BuyLifeLayer::create();
 //        addChild(buyLayer);
         
@@ -575,6 +583,13 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
     
     if(!enableDispel() && ! (DataHome::getInstance()->isCountDownModel))
     {
+        GameCenterScene* pGameCenter = dynamic_cast<GameCenterScene*>(this->getParent());
+        if (pGameCenter)
+        {
+            pGameCenter->buyLayer->setVisible(true);
+        }
+        m_canPlaying = false;
+
 //        auto buyLayer = BuyLifeLayer::create();
 //        addChild(buyLayer);
 
