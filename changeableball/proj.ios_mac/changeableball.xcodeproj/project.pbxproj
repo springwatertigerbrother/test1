@@ -95,6 +95,59 @@
 		FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE9A95941A9B5C2000D5C192 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */; };
 		FE9A959A1A9C385F00D5C192 /* log in Resources */ = {isa = PBXBuildFile; fileRef = FE9A95991A9C385F00D5C192 /* log */; };
+		FEA72B5E1AAEE090009226A1 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77617EB970100C73F5D /* Icon-120.png */; };
+		FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77B17EB970100C73F5D /* Icon-76.png */; };
+		FEA72B601AAEE090009226A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77417EB970100C73F5D /* Default@2x.png */; };
+		FEA72B611AAEE090009226A1 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
+		FEA72B621AAEE090009226A1 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
+		FEA72B631AAEE090009226A1 /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77817EB970100C73F5D /* Icon-152.png */; };
+		FEA72B641AAEE090009226A1 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5619F48D7000D9C636 /* Images */; };
+		FEA72B651AAEE090009226A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77217EB970100C73F5D /* Default-568h@2x.png */; };
+		FEA72B661AAEE090009226A1 /* log in Resources */ = {isa = PBXBuildFile; fileRef = FE9A95991A9C385F00D5C192 /* log */; };
+		FEA72B671AAEE090009226A1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77A17EB970100C73F5D /* Icon-72.png */; };
+		FEA72B681AAEE090009226A1 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
+		FEA72B691AAEE090009226A1 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5819F48D7000D9C636 /* fonts */; };
+		FEA72B6A1AAEE090009226A1 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		FEA72B6B1AAEE090009226A1 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77517EB970100C73F5D /* Icon-114.png */; };
+		FEA72B6C1AAEE090009226A1 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
+		FEA72B6D1AAEE090009226A1 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
+		FEA72B6E1AAEE090009226A1 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629217ECD46A001EB2F8 /* Icon-40.png */; };
+		FEA72B6F1AAEE090009226A1 /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77717EB970100C73F5D /* Icon-144.png */; };
+		FEA72B701AAEE090009226A1 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5719F48D7000D9C636 /* Sounds */; };
+		FEA72B711AAEE090009226A1 /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629417ECD46A001EB2F8 /* Icon-80.png */; };
+		FEA72B721AAEE090009226A1 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77917EB970100C73F5D /* Icon-57.png */; };
+		FEA72B731AAEE090009226A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77317EB970100C73F5D /* Default.png */; };
+		FEA72B741AAEE090009226A1 /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629317ECD46A001EB2F8 /* Icon-58.png */; };
+		FEA72B761AAEE090009226A1 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */; };
+		FEA72B771AAEE090009226A1 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
+		FEA72B781AAEE090009226A1 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
+		FEA72B791AAEE090009226A1 /* BuyLifeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */; };
+		FEA72B7A1AAEE090009226A1 /* ControllerLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6719F48EDC00D9C636 /* ControllerLayer.cpp */; };
+		FEA72B7B1AAEE090009226A1 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
+		FEA72B7C1AAEE090009226A1 /* GameCenterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7119F48EEC00D9C636 /* GameCenterScene.cpp */; };
+		FEA72B7D1AAEE090009226A1 /* DataHome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6319F48ECF00D9C636 /* DataHome.cpp */; };
+		FEA72B7E1AAEE090009226A1 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
+		FEA72B7F1AAEE090009226A1 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
+		FEA72B801AAEE090009226A1 /* ballGamescene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6F19F48EEC00D9C636 /* ballGamescene.cpp */; };
+		FEA72B811AAEE090009226A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
+		FEA72B821AAEE090009226A1 /* DataUpdateLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6919F48EDC00D9C636 /* DataUpdateLayer.cpp */; };
+		FEA72B831AAEE090009226A1 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
+		FEA72B841AAEE090009226A1 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7819F48F0300D9C636 /* DataManager.cpp */; };
+		FEA72B861AAEE090009226A1 /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
+		FEA72B871AAEE090009226A1 /* libchipmunk iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0B180E9839004C840B /* libchipmunk iOS.a */; };
+		FEA72B881AAEE090009226A1 /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2dx iOS.a */; };
+		FEA72B891AAEE090009226A1 /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
+		FEA72B8A1AAEE090009226A1 /* libCocosDenshion iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0F180E9839004C840B /* libCocosDenshion iOS.a */; };
+		FEA72B8B1AAEE090009226A1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		FEA72B8C1AAEE090009226A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		FEA72B8D1AAEE090009226A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		FEA72B8E1AAEE090009226A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		FEA72B8F1AAEE090009226A1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
+		FEA72B901AAEE090009226A1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
+		FEA72B911AAEE090009226A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		FEA72B921AAEE090009226A1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
+		FEA72B931AAEE090009226A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
+		FEA72B941AAEE090009226A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,6 +291,41 @@
 			remoteGlobalIDString = A07A4F9F178387730073F6A7;
 			remoteInfo = "CocosDenshion iOS";
 		};
+		FEA72B541AAEE090009226A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4C241783777C0073F6A7;
+			remoteInfo = "cocos2dx iOS";
+		};
+		FEA72B561AAEE090009226A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4E111783867C0073F6A7;
+			remoteInfo = "cocos2dx-extensions iOS";
+		};
+		FEA72B581AAEE090009226A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4EFD178387670073F6A7;
+			remoteInfo = "chipmunk iOS";
+		};
+		FEA72B5A1AAEE090009226A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4F3C1783876B0073F6A7;
+			remoteInfo = "box2d iOS";
+		};
+		FEA72B5C1AAEE090009226A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4F9F178387730073F6A7;
+			remoteInfo = "CocosDenshion iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -318,6 +406,19 @@
 		FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../Classes/GameOverLayer.h; sourceTree = "<group>"; };
 		FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GameOverLayer.mm; path = ../Classes/GameOverLayer.mm; sourceTree = "<group>"; };
 		FE9A95991A9C385F00D5C192 /* log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = log; sourceTree = "<group>"; };
+		FEA72B2D1AAEE090009226A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEA72B2E1AAEE090009226A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FEA72B301AAEE090009226A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FEA72B311AAEE090009226A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FEA72B331AAEE090009226A1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FEA72B341AAEE090009226A1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FEA72B371AAEE090009226A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FEA72B391AAEE090009226A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FEA72B3C1AAEE090009226A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FEA72B471AAEE090009226A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEA72B481AAEE090009226A1 /* ballpaidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ballpaidTests.m; sourceTree = "<group>"; };
+		FEA72B981AAEE090009226A1 /* changeableball iOS copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEA72B991AAEE090009226A1 /* changeableball iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS copy-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +467,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEA72B851AAEE090009226A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEA72B861AAEE090009226A1 /* libbox2d iOS.a in Frameworks */,
+				FEA72B871AAEE090009226A1 /* libchipmunk iOS.a in Frameworks */,
+				FEA72B881AAEE090009226A1 /* libcocos2dx iOS.a in Frameworks */,
+				FEA72B891AAEE090009226A1 /* libcocos2dx-extensions iOS.a in Frameworks */,
+				FEA72B8A1AAEE090009226A1 /* libCocosDenshion iOS.a in Frameworks */,
+				FEA72B8B1AAEE090009226A1 /* CoreMotion.framework in Frameworks */,
+				FEA72B8C1AAEE090009226A1 /* Foundation.framework in Frameworks */,
+				FEA72B8D1AAEE090009226A1 /* UIKit.framework in Frameworks */,
+				FEA72B8E1AAEE090009226A1 /* CoreGraphics.framework in Frameworks */,
+				FEA72B8F1AAEE090009226A1 /* OpenGLES.framework in Frameworks */,
+				FEA72B901AAEE090009226A1 /* libz.dylib in Frameworks */,
+				FEA72B911AAEE090009226A1 /* QuartzCore.framework in Frameworks */,
+				FEA72B921AAEE090009226A1 /* OpenAL.framework in Frameworks */,
+				FEA72B931AAEE090009226A1 /* AVFoundation.framework in Frameworks */,
+				FEA72B941AAEE090009226A1 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -405,6 +528,7 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* changeableball iOS.app */,
 				5087E76F17EB910900C73F5D /* changeableball Mac.app */,
+				FEA72B981AAEE090009226A1 /* changeableball iOS copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,11 +556,14 @@
 				FE9A95991A9C385F00D5C192 /* log */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
+				FEA72B2B1AAEE090009226A1 /* ballpaid */,
+				FEA72B451AAEE090009226A1 /* ballpaidTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				080E96DDFE201D6D7F000001 /* ios */,
 				503AE10617EB990700D1A890 /* mac */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				78C7DDAA14EBA5050085D0C2 /* Resources */,
+				FEA72B991AAEE090009226A1 /* changeableball iOS copy-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -571,6 +698,47 @@
 			name = Ui;
 			sourceTree = "<group>";
 		};
+		FEA72B2B1AAEE090009226A1 /* ballpaid */ = {
+			isa = PBXGroup;
+			children = (
+				FEA72B301AAEE090009226A1 /* AppDelegate.h */,
+				FEA72B311AAEE090009226A1 /* AppDelegate.m */,
+				FEA72B331AAEE090009226A1 /* ViewController.h */,
+				FEA72B341AAEE090009226A1 /* ViewController.m */,
+				FEA72B361AAEE090009226A1 /* Main.storyboard */,
+				FEA72B391AAEE090009226A1 /* Images.xcassets */,
+				FEA72B3B1AAEE090009226A1 /* LaunchScreen.xib */,
+				FEA72B2C1AAEE090009226A1 /* Supporting Files */,
+			);
+			path = ballpaid;
+			sourceTree = "<group>";
+		};
+		FEA72B2C1AAEE090009226A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEA72B2D1AAEE090009226A1 /* Info.plist */,
+				FEA72B2E1AAEE090009226A1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FEA72B451AAEE090009226A1 /* ballpaidTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEA72B481AAEE090009226A1 /* ballpaidTests.m */,
+				FEA72B461AAEE090009226A1 /* Supporting Files */,
+			);
+			path = ballpaidTests;
+			sourceTree = "<group>";
+		};
+		FEA72B461AAEE090009226A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEA72B471AAEE090009226A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -618,6 +786,28 @@
 			productReference = 5087E76F17EB910900C73F5D /* changeableball Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FEA72B521AAEE090009226A1 /* changeableball iOS copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEA72B951AAEE090009226A1 /* Build configuration list for PBXNativeTarget "changeableball iOS copy" */;
+			buildPhases = (
+				FEA72B5D1AAEE090009226A1 /* Resources */,
+				FEA72B751AAEE090009226A1 /* Sources */,
+				FEA72B851AAEE090009226A1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEA72B531AAEE090009226A1 /* PBXTargetDependency */,
+				FEA72B551AAEE090009226A1 /* PBXTargetDependency */,
+				FEA72B571AAEE090009226A1 /* PBXTargetDependency */,
+				FEA72B591AAEE090009226A1 /* PBXTargetDependency */,
+				FEA72B5B1AAEE090009226A1 /* PBXTargetDependency */,
+			);
+			name = "changeableball iOS copy";
+			productName = iphone;
+			productReference = FEA72B981AAEE090009226A1 /* changeableball iOS copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -640,6 +830,7 @@
 				Japanese,
 				French,
 				German,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -653,6 +844,7 @@
 			targets = (
 				1D6058900D05DD3D006BFB54 /* changeableball iOS */,
 				5087E73D17EB910900C73F5D /* changeableball Mac */,
+				FEA72B521AAEE090009226A1 /* changeableball iOS copy */,
 			);
 		};
 /* End PBXProject section */
@@ -775,6 +967,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEA72B5D1AAEE090009226A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEA72B5E1AAEE090009226A1 /* Icon-120.png in Resources */,
+				FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */,
+				FEA72B601AAEE090009226A1 /* Default@2x.png in Resources */,
+				FEA72B611AAEE090009226A1 /* Icon-100.png in Resources */,
+				FEA72B621AAEE090009226A1 /* CloseNormal.png in Resources */,
+				FEA72B631AAEE090009226A1 /* Icon-152.png in Resources */,
+				FEA72B641AAEE090009226A1 /* Images in Resources */,
+				FEA72B651AAEE090009226A1 /* Default-568h@2x.png in Resources */,
+				FEA72B661AAEE090009226A1 /* log in Resources */,
+				FEA72B671AAEE090009226A1 /* Icon-72.png in Resources */,
+				FEA72B681AAEE090009226A1 /* CloseSelected.png in Resources */,
+				FEA72B691AAEE090009226A1 /* fonts in Resources */,
+				FEA72B6A1AAEE090009226A1 /* Icon-50.png in Resources */,
+				FEA72B6B1AAEE090009226A1 /* Icon-114.png in Resources */,
+				FEA72B6C1AAEE090009226A1 /* HelloWorld.png in Resources */,
+				FEA72B6D1AAEE090009226A1 /* Icon-29.png in Resources */,
+				FEA72B6E1AAEE090009226A1 /* Icon-40.png in Resources */,
+				FEA72B6F1AAEE090009226A1 /* Icon-144.png in Resources */,
+				FEA72B701AAEE090009226A1 /* Sounds in Resources */,
+				FEA72B711AAEE090009226A1 /* Icon-80.png in Resources */,
+				FEA72B721AAEE090009226A1 /* Icon-57.png in Resources */,
+				FEA72B731AAEE090009226A1 /* Default.png in Resources */,
+				FEA72B741AAEE090009226A1 /* Icon-58.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -816,6 +1038,28 @@
 				FE438D7419F48EEC00D9C636 /* ballGamescene.cpp in Sources */,
 				FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEA72B751AAEE090009226A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEA72B761AAEE090009226A1 /* GameOverLayer.mm in Sources */,
+				FEA72B771AAEE090009226A1 /* AppController.mm in Sources */,
+				FEA72B781AAEE090009226A1 /* BallSprite.cpp in Sources */,
+				FEA72B791AAEE090009226A1 /* BuyLifeLayer.cpp in Sources */,
+				FEA72B7A1AAEE090009226A1 /* ControllerLayer.cpp in Sources */,
+				FEA72B7B1AAEE090009226A1 /* RootViewController.mm in Sources */,
+				FEA72B7C1AAEE090009226A1 /* GameCenterScene.cpp in Sources */,
+				FEA72B7D1AAEE090009226A1 /* DataHome.cpp in Sources */,
+				FEA72B7E1AAEE090009226A1 /* MUtils.cpp in Sources */,
+				FEA72B7F1AAEE090009226A1 /* AppDelegate.cpp in Sources */,
+				FEA72B801AAEE090009226A1 /* ballGamescene.cpp in Sources */,
+				FEA72B811AAEE090009226A1 /* main.m in Sources */,
+				FEA72B821AAEE090009226A1 /* DataUpdateLayer.cpp in Sources */,
+				FEA72B831AAEE090009226A1 /* HelloWorldScene.cpp in Sources */,
+				FEA72B841AAEE090009226A1 /* DataManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,7 +1116,51 @@
 			name = "CocosDenshion iOS";
 			targetProxy = 1AC6FB2C180E99E1004C840B /* PBXContainerItemProxy */;
 		};
+		FEA72B531AAEE090009226A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cocos2dx iOS";
+			targetProxy = FEA72B541AAEE090009226A1 /* PBXContainerItemProxy */;
+		};
+		FEA72B551AAEE090009226A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cocos2dx-extensions iOS";
+			targetProxy = FEA72B561AAEE090009226A1 /* PBXContainerItemProxy */;
+		};
+		FEA72B571AAEE090009226A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "chipmunk iOS";
+			targetProxy = FEA72B581AAEE090009226A1 /* PBXContainerItemProxy */;
+		};
+		FEA72B591AAEE090009226A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "box2d iOS";
+			targetProxy = FEA72B5A1AAEE090009226A1 /* PBXContainerItemProxy */;
+		};
+		FEA72B5B1AAEE090009226A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CocosDenshion iOS";
+			targetProxy = FEA72B5C1AAEE090009226A1 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FEA72B361AAEE090009226A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEA72B371AAEE090009226A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FEA72B3B1AAEE090009226A1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEA72B3C1AAEE090009226A1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -1050,6 +1338,68 @@
 			};
 			name = Release;
 		};
+		FEA72B961AAEE090009226A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ios/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+					"COCOS2D_DEBUG=1",
+					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+				);
+				INFOPLIST_FILE = "changeableball iOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = "changeableball iOS copy";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		FEA72B971AAEE090009226A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ios/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+				);
+				INFOPLIST_FILE = "changeableball iOS copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = "changeableball iOS copy";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1076,6 +1426,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FEA72B951AAEE090009226A1 /* Build configuration list for PBXNativeTarget "changeableball iOS copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEA72B961AAEE090009226A1 /* Debug */,
+				FEA72B971AAEE090009226A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

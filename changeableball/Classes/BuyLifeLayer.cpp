@@ -61,7 +61,8 @@ void BuyLifeLayer::onEnter()
 }
 void BuyLifeLayer::CallBuyLife(void* sender)
 {
-    
+    EventCustom event(BUY_LIFE_LIQUID);
+    _eventDispatcher->dispatchEvent(&event);
 }
 void BuyLifeLayer::CallUseLife(void* sender)
 {
@@ -75,6 +76,8 @@ void BuyLifeLayer::CallUseLife(void* sender)
     else
     {
         m_labelLife->setVisible(true);
+        m_labelLife->runAction(FadeOut::create(1));
+//        CallFunc* call = [](){};
         "生命药水不够，请购买";
     }
         

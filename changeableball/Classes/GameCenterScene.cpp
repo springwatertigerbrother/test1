@@ -74,16 +74,17 @@ bool GameCenterScene::init()
         this->addChild(buyLayer,10);
         buyLayer->setVisible(false);
         
-        
-        auto Use_life_listener = EventListenerCustom::create(USE_LIFE_LIQUID, [=](EventCustom* event){
-//            std::string str("Custom event 1 received, ");
-            //        char* buf = static_cast<char*>(event->getUserData());
-            //        str += buf;
-            //        str += " times";
-            //        statusLabel->setString(str.c_str());
+        //buy life
+        auto buy_life_listener = EventListenerCustom::create(BUY_LIFE_LIQUID, [=](EventCustom* event){
+            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+            lifeLiquid += 10;
             
+            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
             
+        });
 
+        //use life
+        auto Use_life_listener = EventListenerCustom::create(USE_LIFE_LIQUID, [=](EventCustom* event){
             int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
             
             if (lifeLiquid > 0)
