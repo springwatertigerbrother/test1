@@ -183,7 +183,7 @@ bool DataManager::init()
     m_pBg = Sprite::create(bg_cstr);
     m_pBg->setPosition(ccp(s.width/2,s.height/2 - 120));
 //    m_pBg->setOpacity(170);
-    addChild(m_pBg,-10);
+//    addChild(m_pBg,-10);
     m_pBg->setZOrder(-100);
     m_pBg->setScale(3*CC_CONTENT_SCALE_FACTOR(), 3*CC_CONTENT_SCALE_FACTOR());
     CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5, 360), NULL);
@@ -841,6 +841,11 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
                      break;
                  case 5:
                      typeStr = "E";
+                     count = count%8;
+                     if (count == 0)
+                     {
+                         count = 8;
+                     }
                      break;
                  case 6:
                      typeStr = "F";

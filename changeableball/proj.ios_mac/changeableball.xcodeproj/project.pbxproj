@@ -148,6 +148,9 @@
 		FEA72B921AAEE090009226A1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		FEA72B931AAEE090009226A1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		FEA72B941AAEE090009226A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
+		FED28ACC1ABD639800C89B6F /* ccb in Resources */ = {isa = PBXBuildFile; fileRef = FED28ACB1ABD639800C89B6F /* ccb */; };
+		FED28ACD1ABD639800C89B6F /* ccb in Resources */ = {isa = PBXBuildFile; fileRef = FED28ACB1ABD639800C89B6F /* ccb */; };
+		FED28ACE1ABD639800C89B6F /* ccb in Resources */ = {isa = PBXBuildFile; fileRef = FED28ACB1ABD639800C89B6F /* ccb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,6 +422,7 @@
 		FEA72B481AAEE090009226A1 /* ballpaidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ballpaidTests.m; sourceTree = "<group>"; };
 		FEA72B981AAEE090009226A1 /* changeableball iOS copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA72B991AAEE090009226A1 /* changeableball iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS copy-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS copy-Info.plist"; sourceTree = "<absolute>"; };
+		FED28ACB1ABD639800C89B6F /* ccb */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -638,6 +642,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FED28ACB1ABD639800C89B6F /* ccb */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -930,6 +935,7 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				FED28ACC1ABD639800C89B6F /* ccb in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
@@ -960,6 +966,7 @@
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				FE438D5C19F48D7000D9C636 /* Sounds in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				FED28ACD1ABD639800C89B6F /* ccb in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				FE438D5E19F48D7000D9C636 /* fonts in Resources */,
 				FE438D5A19F48D7000D9C636 /* Images in Resources */,
@@ -974,6 +981,7 @@
 				FEA72B5E1AAEE090009226A1 /* Icon-120.png in Resources */,
 				FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */,
 				FEA72B601AAEE090009226A1 /* Default@2x.png in Resources */,
+				FED28ACE1ABD639800C89B6F /* ccb in Resources */,
 				FEA72B611AAEE090009226A1 /* Icon-100.png in Resources */,
 				FEA72B621AAEE090009226A1 /* CloseNormal.png in Resources */,
 				FEA72B631AAEE090009226A1 /* Icon-152.png in Resources */,
