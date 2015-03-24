@@ -149,7 +149,7 @@ public:
 	 *
 	 * @param appid 易信或者易信朋友圈的app id
 	 */
-	void setYiXinAppKey(const char* appid);
+//	void setYiXinAppKey(const char* appid);
 
 	/**
 	 * 设置来往和来往动态的app id
@@ -158,8 +158,8 @@ public:
 	 * @param appKey  来往的app key
 	 * @param appid	应用名, 一般为你的应用名
 	 */
-	void setLaiwangAppInfo(const char* appid, const char* appkey,
-			const char* appName);
+//	void setLaiwangAppInfo(const char* appid, const char* appkey,
+//			const char* appName);
 
 	/**
 	 * 设置Facebook的appid

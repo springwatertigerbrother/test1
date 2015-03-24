@@ -72,10 +72,10 @@ public:
                                  const char* targetUrl);
     
     //设置来往appid，appkey
-    static void setLaiwangAppInfo(const char *appId, const char *appKey, const char * appName);
+//    static void setLaiwangAppInfo(const char *appId, const char *appKey, const char * appName);
 
     //设置易信appid
-    static void setYiXinAppKey(const char *appKey);
+//    static void setYiXinAppKey(const char *appKey);
     
     //设置Facebook的appid
     static void setFacebookAppId(const char *appId);

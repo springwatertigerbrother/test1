@@ -11,6 +11,32 @@
 #include "DataHome.h"
 #include "MUtils.h"
 
+// 引入相关的头文件
+#include "Cocos2dx/Common/CCUMSocialSDK.h"
+#include "Cocos2dx/ShareButton/UMShareButton.h"
+// 使用友盟命令空间
+USING_NS_UM_SOCIAL;
+// ...... 代码省略
+
+void shareCallback(int platform, int stCode, string& errorMsg)
+{
+    if ( stCode == 100 )
+    {
+        CCLog("#### HelloWorld 开始分享");
+    }
+    else if ( stCode == 200 )
+    {
+        CCLog("#### HelloWorld 分享成功");
+    }
+    else
+    {
+        CCLog("#### HelloWorld 分享出错");
+    }
+    
+    CCLog("platform num is : %d.", platform);
+}
+
+
 using namespace cocos2d;
 
 CCScene* BallGameScene::scene()
@@ -52,6 +78,51 @@ bool BallGameScene::init()
         pBGLayer->setAnchorPoint(CCPoint(0,0));
         addChild(pBGLayer);
 
+        
+        
+        // 创建分享按钮, 参数1为按钮正常情况下的图片, 参数2为按钮选中时的图片,参数3为友盟appkey, 参数4为分享回调
+        UMShareButton *shareButton = UMShareButton::create("Images/share.png","Images/share.png", "你的友盟appkey", share_selector(shareCallback)) ;
+        
+        CCUMSocialSDK *sdk = shareButton->getSocialSDK();
+        // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
+        sdk->setWeiXinAppInfo("wx4709b0db1758b611",
+                              "e3bea36c663071278e45440d6e00f7c5");
+        // 显示在友盟分享面板上的平台
+        vector<int>* platforms = new vector<int>();
+        platforms->push_back(SINA);
+        platforms->push_back(RENREN) ;
+        platforms->push_back(DOUBAN) ;
+//        platforms->push_back(QZONE) ;
+//        platforms->push_back(QQ) ;
+        platforms->push_back(WEIXIN);
+        platforms->push_back(WEIXIN_CIRCLE);
+        // 设置友盟分享面板上显示的平台
+        shareButton->setPlatforms(platforms);
+        // 设置文本分享内容
+        shareButton->setShareContent("umeng social cocos2d-x sdk.") ;
+        // 设置要分享的图片, 图片支持本地图片和url图片, 但是url图片必须以http://或者https://开头
+        shareButton->setShareImage("/sdcard/header.jpeg") ;
+        // 设置按钮的位置
+        shareButton->setPosition(ccp(150, 180));
+        // 然后开发者需要将该按钮添加到游戏场景中
+        CCMenu* pMenu = CCMenu::create(shareButton, NULL);
+        pMenu->setPosition(CCPointZero);
+        this->addChild(pMenu, 1);
+        
+        // ********************** 设置平台信息 ***************************
+//         CCUMSocialSDK *sdk = shareButton->getSocialSDK();
+//        // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
+//         sdk->setWeiXinAppInfo("设置微信和朋友圈的app id","app key");
+        // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
+        // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
+        //                  "设置来往和来往动态的app key", "我的应用名");
+        // sdk->setFacebookAppId("你的facebook appid");
+        // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
+        // sdk->setTargetUrl("http://www.umeng.com/social");
+        //     // 打开或者关闭log
+        // sdk->setLogEnable(true) ;
+        // **********************   END ***************************
+        
     }
     while(0);
     return true;
@@ -168,10 +239,45 @@ void BallGameScene:: playingNow(void* sender)
 
 void BallGameScene:: multiplePlayer(void* sender)
 {
-    DataHome::getInstance()->isCountDownModel = true;
+    // 获取一个CCUMSocialSDK实例
+    CCUMSocialSDK *sdk = CCUMSocialSDK::create("你的友盟appkey");
+    // 设置友盟appkey,如果create中设置了不用调用该函数
+    // sdk->setAppKey("4eaee02c527015373b000003");
+    // **********************   设置平台信息  ***************************
+    // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
+     sdk->setWeiXinAppInfo("wx4709b0db1758b611","e3bea36c663071278e45440d6e00f7c5");
+    // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
+    // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
+    //              "设置来往和来往动态的app key", "我的应用名");
+    // sdk->setFacebookAppId("你的facebook appid");
+    //     // 打开或者关闭log
+    // sdk->setLogEnable(true) ;
+    // **********************   END ***************************
     
-    CCScene * playingScene = GameCenterScene::scene();
-    CCDirector::sharedDirector()->replaceScene(playingScene);
+    // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
+    sdk->setTargetUrl("http://www.umeng.com/social");
+    // 设置友盟分享面板上显示的平台
+    vector<int>* platforms = new vector<int>();
+    platforms->push_back(SINA);
+    platforms->push_back(RENREN) ;
+    platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(QZONE) ;
+    platforms->push_back(QQ) ;
+    // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
+    sdk->setPlatforms(platforms) ;
+    
+    // 打开分享面板, 注册分享回调, 参数1为分享面板上的平台, 参数2为要分享的文字内容，
+    // 参数3为要分享的图片路径(android和IOS的图片地址格式不一致，因此分平台设置), 参数4为分享回调.
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    sdk->openShare("要分享的文字内容", "/sdcard/image.png", share_selector(shareCallback));
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    sdk->openShare("要分享的文字内容","share.png", share_selector(shareCallback));
+#endif
+//    
+//    DataHome::getInstance()->isCountDownModel = true;
+//    
+//    CCScene * playingScene = GameCenterScene::scene();
+//    CCDirector::sharedDirector()->replaceScene(playingScene);
     
     //    [[NetWorkHandle getSharedNetWork] startMatchOppoent:self];
 //    CCScene * playingScene = MutablePlayerScene node];
@@ -208,3 +314,10 @@ void BallGameScene::musicControl(Ref* pSender)
     CocosDenshion::SimpleAudioEngine::sharedEngine()-> stopAllEffects();
 
 }
+
+/*
+ * 分享回调, 该回调不是某个类的成员函数， 而是一个普通的函数, 具体使用参考HelloWorldScene的例子
+ * @param platform 要分享到的目标平台
+ * @param stCode 返回码, 200代表分享成功, 100代表开始分享
+ * @param errorMsg 分享失败时的错误信息,android平台没有错误信息
+ */

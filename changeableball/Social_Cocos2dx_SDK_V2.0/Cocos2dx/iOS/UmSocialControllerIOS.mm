@@ -13,13 +13,13 @@
 
 #import "UMSocialQQHandler.h"
 #import "UMSocialWechatHandler.h"
-#import "UMSocialLaiwangHandler.h"
+//#import "UMSocialLaiwangHandler.h"
 #import "UMSocialYiXinHandler.h"
 #import "UMSocialFacebookHandler.h"
 #import "UMSocialTwitterHandler.h"
 #import "UMSocialInstagramHandler.h"
 #import "UMSocialSinaHandler.h"
-#import "UMSocialTencentWeiboHandler.h"
+//#import "UMSocialTencentWeiboHandler.h"
 
 string UmSocialControllerIOS::m_appKey = "";
 //UMSocialUIDelegateObject * UmSocialControllerIOS::m_socialDelegate = nil;
@@ -121,7 +121,7 @@ void UmSocialControllerIOS::openSSOAuthorization(int platform, const char * redi
         [UMSocialSinaHandler openSSOWithRedirectURL:getNSStringFromCString(redirectURL)];
     }
     if (platform == TENCENT_WEIBO) {
-        [UMSocialTencentWeiboHandler openSSOWithRedirectUrl:getNSStringFromCString(redirectURL)];
+//        [UMSocialTencentWeiboHandler openSSOWithRedirectUrl:getNSStringFromCString(redirectURL)];
     }
     if (platform == RENREN) {
         NSLog(@"由于人人网iOS SDK在横屏下有问题,不支持人人网SSO授权.");
@@ -170,19 +170,19 @@ void UmSocialControllerIOS::setPlatformShareContent(int platform, const char* te
         NSLog(@"pass platform type error!");
     }
 }
-
-void UmSocialControllerIOS::setLaiwangAppInfo(const char *appId, const char *appKey, const char *appName){
-    #if CC_ShareToLaiWang == 1
-    [UMSocialLaiwangHandler setLaiwangAppId:getNSStringFromCString(appId) appSecret:getNSStringFromCString(appKey) appDescription:getNSStringFromCString(appName) urlStirng:@"http://www.umeng.com/social"];
-    #endif
-}
-
-
-void UmSocialControllerIOS::setYiXinAppKey(const char *appKey){
-    #if CC_ShareToYiXin == 1
-    [UMSocialYixinHandler  setYixinAppKey:getNSStringFromCString(appKey) url:@"http://www.umeng.com/social"];
-    #endif
-}
+//
+//void UmSocialControllerIOS::setLaiwangAppInfo(const char *appId, const char *appKey, const char *appName){
+//    #if CC_ShareToLaiWang == 1
+//    [UMSocialLaiwangHandler setLaiwangAppId:getNSStringFromCString(appId) appSecret:getNSStringFromCString(appKey) appDescription:getNSStringFromCString(appName) urlStirng:@"http://www.umeng.com/social"];
+//    #endif
+//}
+//
+//
+//void UmSocialControllerIOS::setYiXinAppKey(const char *appKey){
+//    #if CC_ShareToYiXin == 1
+//    [UMSocialYixinHandler  setYixinAppKey:getNSStringFromCString(appKey) url:@"http://www.umeng.com/social"];
+//    #endif
+//}
 
 
 void UmSocialControllerIOS::setFacebookAppId(const char *appId){

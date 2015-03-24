@@ -8,8 +8,8 @@
 
 #include "IOSiAP_Bridge.h"
 #include "cocos2d.h"
-#include "CommonInclude.h"
-#include "UpdateCoins.h"
+//#include "CommonInclude.h"
+//#include "UpdateCoins.h"
 USING_NS_CC;
 
 IOSiAP_Bridge::IOSiAP_Bridge()
@@ -26,7 +26,7 @@ IOSiAP_Bridge::~IOSiAP_Bridge()
 void IOSiAP_Bridge:: requestProducts(int id)
 {
     productID = id;
-    vector<std::string> product;
+    std::vector<std::string> product;
     product.push_back("renminbi98");
     product.push_back("renminbi6");
     product.push_back("renminbi18");

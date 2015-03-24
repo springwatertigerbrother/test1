@@ -14,6 +14,9 @@ public:
     AppDelegate();
     virtual ~AppDelegate();
 
+    //初始化平台配置
+//    void initPlatformConfig();
+    
     /**
     @brief    Implement Director and Scene init code here.
     @return true    Initialize success, app continue.

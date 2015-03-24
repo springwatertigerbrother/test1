@@ -281,39 +281,39 @@ void CCUMSocialSDK::setWeiXinAppInfo(const char* appid, const char* appsecret) {
  *
  * @param appid
  */
-void CCUMSocialSDK::setYiXinAppKey(const char* appKey) {
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-
-	setYiXinPlatformAppKey(appKey);
-
-#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
-
-	UmSocialControllerIOS::setYiXinAppKey(appKey);
-
-#endif
-}
-
-/*
- * 设置来往和来往动态的app id
- *
- * @param appid	来往的app id
- * @param appKey  来往的app key
- * @param appid	应用名, 一般为你的应用名
- */
-void CCUMSocialSDK::setLaiwangAppInfo(const char* appid, const char* appKey,
-		const char* appName) {
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-
-	setLaiwangPlatformAppId(appid);
-	setLaiwangPlatformAppKey(appKey);
-	setLaiwangPlatformAppName(appName);
-
-#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
-
-	UmSocialControllerIOS::setLaiwangAppInfo(appid, appKey, appName);
-
-#endif
-}
+//void CCUMSocialSDK::setYiXinAppKey(const char* appKey) {
+//#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+//
+//	setYiXinPlatformAppKey(appKey);
+//
+//#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+//
+//	UmSocialControllerIOS::setYiXinAppKey(appKey);
+//
+//#endif
+//}
+//
+///*
+// * 设置来往和来往动态的app id
+// *
+// * @param appid	来往的app id
+// * @param appKey  来往的app key
+// * @param appid	应用名, 一般为你的应用名
+// */
+//void CCUMSocialSDK::setLaiwangAppInfo(const char* appid, const char* appKey,
+//		const char* appName) {
+//#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+//
+//	setLaiwangPlatformAppId(appid);
+//	setLaiwangPlatformAppKey(appKey);
+//	setLaiwangPlatformAppName(appName);
+//
+//#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+//
+//	UmSocialControllerIOS::setLaiwangAppInfo(appid, appKey, appName);
+//
+//#endif
+//}
 
 /*
  * 设置SDK的target url, 即用户点击某条分享时跳转到的目标页面
