@@ -10,6 +10,7 @@
 #include "GameCenterScene.h"
 #include "DataHome.h"
 #include "MUtils.h"
+#include "IOSiAP_Bridge.h"
 
 // 引入相关的头文件
 #include "Cocos2dx/Common/CCUMSocialSDK.h"
@@ -239,6 +240,13 @@ void BallGameScene:: playingNow(void* sender)
 
 void BallGameScene:: multiplePlayer(void* sender)
 {
+    if(0)
+    {
+        IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
+        bridge->requestProducts(6);
+    }
+    if(1)
+    {
     // 获取一个CCUMSocialSDK实例
     CCUMSocialSDK *sdk = CCUMSocialSDK::create("55121768fd98c588b0000a3e");
     // 设置友盟appkey,如果create中设置了不用调用该函数
@@ -277,6 +285,7 @@ void BallGameScene:: multiplePlayer(void* sender)
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     sdk->openShare("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png", share_selector(shareCallback));
 #endif
+    }
 //
 //    DataHome::getInstance()->isCountDownModel = true;
 //    

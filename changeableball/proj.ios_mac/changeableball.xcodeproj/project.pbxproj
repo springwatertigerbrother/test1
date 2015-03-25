@@ -261,12 +261,30 @@
 		FED2987A1AC112AF00C89B6F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298791AC112AF00C89B6F /* libz.dylib */; };
 		FED2987C1AC112B700C89B6F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2987B1AC112B700C89B6F /* Social.framework */; };
 		FED2987E1AC112C000C89B6F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2987D1AC112C000C89B6F /* Accounts.framework */; };
-		FED299C61AC266F000C89B6F /* libMobClickCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299C31AC266F000C89B6F /* libMobClickCpp.a */; };
-		FED299C71AC266F100C89B6F /* libMobClickCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299C31AC266F000C89B6F /* libMobClickCpp.a */; };
-		FED299C81AC266F100C89B6F /* libMobClickCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299C31AC266F000C89B6F /* libMobClickCpp.a */; };
-		FED299C91AC266F100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299C41AC266F000C89B6F /* libMobClickCppWithLibCpp.a */; };
-		FED299CA1AC266F100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299C41AC266F000C89B6F /* libMobClickCppWithLibCpp.a */; };
-		FED299CB1AC266F100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299C41AC266F000C89B6F /* libMobClickCppWithLibCpp.a */; };
+		FED299D61AC2B35100C89B6F /* libcurl_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */; };
+		FED299D71AC2B35100C89B6F /* libcurl_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */; };
+		FED299D81AC2B35100C89B6F /* libcurl_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */; };
+		FED299D91AC2B35100C89B6F /* libfreetype_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */; };
+		FED299DA1AC2B35100C89B6F /* libfreetype_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */; };
+		FED299DB1AC2B35100C89B6F /* libfreetype_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */; };
+		FED299DC1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */; };
+		FED299DD1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */; };
+		FED299DE1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */; };
+		FED299DF1AC2B35100C89B6F /* libpng_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D21AC2B35100C89B6F /* libpng_arm64.a */; };
+		FED299E01AC2B35100C89B6F /* libpng_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D21AC2B35100C89B6F /* libpng_arm64.a */; };
+		FED299E11AC2B35200C89B6F /* libpng_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D21AC2B35100C89B6F /* libpng_arm64.a */; };
+		FED299E21AC2B35200C89B6F /* libtiff_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D31AC2B35100C89B6F /* libtiff_arm64.a */; };
+		FED299E31AC2B35200C89B6F /* libtiff_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D31AC2B35100C89B6F /* libtiff_arm64.a */; };
+		FED299E41AC2B35200C89B6F /* libtiff_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D31AC2B35100C89B6F /* libtiff_arm64.a */; };
+		FED299E51AC2B35200C89B6F /* libwebp_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D41AC2B35100C89B6F /* libwebp_arm64.a */; };
+		FED299E61AC2B35200C89B6F /* libwebp_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D41AC2B35100C89B6F /* libwebp_arm64.a */; };
+		FED299E71AC2B35200C89B6F /* libwebp_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D41AC2B35100C89B6F /* libwebp_arm64.a */; };
+		FED299E81AC2B35200C89B6F /* libwebsockets_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */; };
+		FED299E91AC2B35200C89B6F /* libwebsockets_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */; };
+		FED299EA1AC2B35200C89B6F /* libwebsockets_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */; };
+		FED299F61AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
+		FED299F71AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
+		FED299F81AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -614,9 +632,15 @@
 		FED298791AC112AF00C89B6F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		FED2987B1AC112B700C89B6F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 		FED2987D1AC112C000C89B6F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
-		FED299C31AC266F000C89B6F /* libMobClickCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCpp.a; sourceTree = "<group>"; };
-		FED299C41AC266F000C89B6F /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCppWithLibCpp.a; sourceTree = "<group>"; };
-		FED299C51AC266F000C89B6F /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
+		FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl_arm64.a; sourceTree = "<group>"; };
+		FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfreetype_arm64.a; sourceTree = "<group>"; };
+		FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg_arm64.a; sourceTree = "<group>"; };
+		FED299D21AC2B35100C89B6F /* libpng_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng_arm64.a; sourceTree = "<group>"; };
+		FED299D31AC2B35100C89B6F /* libtiff_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff_arm64.a; sourceTree = "<group>"; };
+		FED299D41AC2B35100C89B6F /* libwebp_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebp_arm64.a; sourceTree = "<group>"; };
+		FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsockets_arm64.a; sourceTree = "<group>"; };
+		FED299EE1AC2B56800C89B6F /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
+		FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCppWithLibCpp.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -626,17 +650,20 @@
 			files = (
 				FED298501AC1114E00C89B6F /* libSocialQQ.a in Frameworks */,
 				1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */,
+				FED299DF1AC2B35100C89B6F /* libpng_arm64.a in Frameworks */,
 				1AC6FB2F180E99EB004C840B /* libchipmunk iOS.a in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */,
+				FED299F61AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */,
 				FED2984D1AC1114E00C89B6F /* libSocialSina.a in Frameworks */,
 				1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */,
 				FED298261AC1114D00C89B6F /* libUMSocial_Sdk_Comment_4.2.a in Frameworks */,
 				1AC6FB32180E99EB004C840B /* libCocosDenshion iOS.a in Frameworks */,
 				FED298471AC1114D00C89B6F /* libSocialInstagram.a in Frameworks */,
+				FED299E21AC2B35200C89B6F /* libtiff_arm64.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				FED299C61AC266F000C89B6F /* libMobClickCpp.a in Frameworks */,
 				FED298621AC1115000C89B6F /* libSocialYiXin.a in Frameworks */,
+				FED299DC1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				FED298591AC1114F00C89B6F /* libSocialTwitter.a in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -644,14 +671,17 @@
 				FED2985F1AC1115000C89B6F /* libWeChatSDK.a in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				FED2984A1AC1114E00C89B6F /* libSocialLine.a in Frameworks */,
+				FED299E51AC2B35200C89B6F /* libwebp_arm64.a in Frameworks */,
 				FED298531AC1114F00C89B6F /* TencentOpenAPI.framework in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				FED298651AC1115000C89B6F /* libYixinSDK_V2.2.a in Frameworks */,
 				FED298231AC1114D00C89B6F /* libUMSocial_Sdk_4.2.a in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
+				FED299D91AC2B35100C89B6F /* libfreetype_arm64.a in Frameworks */,
+				FED299E81AC2B35200C89B6F /* libwebsockets_arm64.a in Frameworks */,
 				FED2985C1AC1115000C89B6F /* libSocialWechat.a in Frameworks */,
+				FED299D61AC2B35100C89B6F /* libcurl_arm64.a in Frameworks */,
 				FED298441AC1114D00C89B6F /* libSocialFacebook.a in Frameworks */,
-				FED299C91AC266F100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -665,13 +695,16 @@
 				FED298241AC1114D00C89B6F /* libUMSocial_Sdk_4.2.a in Frameworks */,
 				1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */,
 				1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */,
+				FED299E01AC2B35100C89B6F /* libpng_arm64.a in Frameworks */,
+				FED299DD1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */,
 				FED2984E1AC1114E00C89B6F /* libSocialSina.a in Frameworks */,
 				1AC6FB22180E996B004C840B /* libcocos2dx-extensions Mac.a in Frameworks */,
-				FED299CA1AC266F100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */,
 				1AC6FB23180E996B004C840B /* libCocosDenshion Mac.a in Frameworks */,
 				503AE11217EB99EE00D1A890 /* libcurl.dylib in Frameworks */,
+				FED299D71AC2B35100C89B6F /* libcurl_arm64.a in Frameworks */,
 				FED298661AC1115000C89B6F /* libYixinSDK_V2.2.a in Frameworks */,
 				5087E76717EB910900C73F5D /* libz.dylib in Frameworks */,
+				FED299DA1AC2B35100C89B6F /* libfreetype_arm64.a in Frameworks */,
 				503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */,
 				5087E78B17EB975400C73F5D /* OpenGL.framework in Frameworks */,
 				FED298481AC1114D00C89B6F /* libSocialInstagram.a in Frameworks */,
@@ -682,16 +715,19 @@
 				FED298271AC1114D00C89B6F /* libUMSocial_Sdk_Comment_4.2.a in Frameworks */,
 				5087E76517EB910900C73F5D /* CoreGraphics.framework in Frameworks */,
 				FED298541AC1114F00C89B6F /* TencentOpenAPI.framework in Frameworks */,
+				FED299F71AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */,
 				5087E76817EB910900C73F5D /* QuartzCore.framework in Frameworks */,
 				FED2985A1AC1114F00C89B6F /* libSocialTwitter.a in Frameworks */,
+				FED299E91AC2B35200C89B6F /* libwebsockets_arm64.a in Frameworks */,
 				5087E76917EB910900C73F5D /* OpenAL.framework in Frameworks */,
-				FED299C71AC266F100C89B6F /* libMobClickCpp.a in Frameworks */,
 				FED2985D1AC1115000C89B6F /* libSocialWechat.a in Frameworks */,
 				FED298511AC1114F00C89B6F /* libSocialQQ.a in Frameworks */,
 				5087E76A17EB910900C73F5D /* AVFoundation.framework in Frameworks */,
 				FED2984B1AC1114E00C89B6F /* libSocialLine.a in Frameworks */,
+				FED299E31AC2B35200C89B6F /* libtiff_arm64.a in Frameworks */,
 				FED298631AC1115000C89B6F /* libSocialYiXin.a in Frameworks */,
 				5087E76B17EB910900C73F5D /* AudioToolbox.framework in Frameworks */,
+				FED299E61AC2B35200C89B6F /* libwebp_arm64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +739,7 @@
 				FED2987C1AC112B700C89B6F /* Social.framework in Frameworks */,
 				FED2987A1AC112AF00C89B6F /* libz.dylib in Frameworks */,
 				FED298781AC112A500C89B6F /* libstdc++.dylib in Frameworks */,
+				FED299DE1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */,
 				FED298761AC1129600C89B6F /* CoreTelephony.framework in Frameworks */,
 				FED298741AC1128A00C89B6F /* libsqlite3.dylib in Frameworks */,
 				FED298721AC1127A00C89B6F /* CoreGraphics.framework in Frameworks */,
@@ -710,12 +747,11 @@
 				FED2986E1AC1126700C89B6F /* libiconv.dylib in Frameworks */,
 				FED2986C1AC1125C00C89B6F /* Security.framework in Frameworks */,
 				FED28B0C1AC0101C00C89B6F /* StoreKit.framework in Frameworks */,
-				FED299CB1AC266F100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */,
 				FED298251AC1114D00C89B6F /* libUMSocial_Sdk_4.2.a in Frameworks */,
 				FEA72B861AAEE090009226A1 /* libbox2d iOS.a in Frameworks */,
-				FED299C81AC266F100C89B6F /* libMobClickCpp.a in Frameworks */,
 				FEA72B871AAEE090009226A1 /* libchipmunk iOS.a in Frameworks */,
 				FED2984F1AC1114E00C89B6F /* libSocialSina.a in Frameworks */,
+				FED299DB1AC2B35100C89B6F /* libfreetype_arm64.a in Frameworks */,
 				FEA72B881AAEE090009226A1 /* libcocos2dx iOS.a in Frameworks */,
 				FEA72B891AAEE090009226A1 /* libcocos2dx-extensions iOS.a in Frameworks */,
 				FEA72B8A1AAEE090009226A1 /* libCocosDenshion iOS.a in Frameworks */,
@@ -728,7 +764,9 @@
 				FED298461AC1114D00C89B6F /* libSocialFacebook.a in Frameworks */,
 				FEA72B8E1AAEE090009226A1 /* CoreGraphics.framework in Frameworks */,
 				FEA72B8F1AAEE090009226A1 /* OpenGLES.framework in Frameworks */,
+				FED299E71AC2B35200C89B6F /* libwebp_arm64.a in Frameworks */,
 				FED298281AC1114D00C89B6F /* libUMSocial_Sdk_Comment_4.2.a in Frameworks */,
+				FED299D81AC2B35100C89B6F /* libcurl_arm64.a in Frameworks */,
 				FEA72B901AAEE090009226A1 /* libz.dylib in Frameworks */,
 				FED298551AC1114F00C89B6F /* TencentOpenAPI.framework in Frameworks */,
 				FEA72B911AAEE090009226A1 /* QuartzCore.framework in Frameworks */,
@@ -738,8 +776,12 @@
 				FED298521AC1114F00C89B6F /* libSocialQQ.a in Frameworks */,
 				FEA72B931AAEE090009226A1 /* AVFoundation.framework in Frameworks */,
 				FED2984C1AC1114E00C89B6F /* libSocialLine.a in Frameworks */,
+				FED299E11AC2B35200C89B6F /* libpng_arm64.a in Frameworks */,
+				FED299EA1AC2B35200C89B6F /* libwebsockets_arm64.a in Frameworks */,
 				FED298641AC1115000C89B6F /* libSocialYiXin.a in Frameworks */,
+				FED299F81AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */,
 				FEA72B941AAEE090009226A1 /* AudioToolbox.framework in Frameworks */,
+				FED299E41AC2B35200C89B6F /* libtiff_arm64.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,9 +850,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				FED299EB1AC2B56800C89B6F /* iosumanalytics */,
 				FED293F21AC1114B00C89B6F /* Social_Cocos2dx_SDK_V2.0 */,
 				FE9A95991A9C385F00D5C192 /* log */,
-				FED299C21AC266F000C89B6F /* iosumanalytics */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
 				FEA72B2B1AAEE090009226A1 /* ballpaid */,
@@ -828,6 +870,13 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */,
+				FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */,
+				FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */,
+				FED299D21AC2B35100C89B6F /* libpng_arm64.a */,
+				FED299D31AC2B35100C89B6F /* libtiff_arm64.a */,
+				FED299D41AC2B35100C89B6F /* libwebp_arm64.a */,
+				FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */,
 				FED2987D1AC112C000C89B6F /* Accounts.framework */,
 				FED2987B1AC112B700C89B6F /* Social.framework */,
 				FED298791AC112AF00C89B6F /* libz.dylib */,
@@ -1239,12 +1288,11 @@
 			path = YiXin;
 			sourceTree = "<group>";
 		};
-		FED299C21AC266F000C89B6F /* iosumanalytics */ = {
+		FED299EB1AC2B56800C89B6F /* iosumanalytics */ = {
 			isa = PBXGroup;
 			children = (
-				FED299C31AC266F000C89B6F /* libMobClickCpp.a */,
-				FED299C41AC266F000C89B6F /* libMobClickCppWithLibCpp.a */,
-				FED299C51AC266F000C89B6F /* MobClickCpp.h */,
+				FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */,
+				FED299EE1AC2B56800C89B6F /* MobClickCpp.h */,
 			);
 			path = iosumanalytics;
 			sourceTree = "<group>";
@@ -1824,6 +1872,7 @@
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
 					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1906,6 +1955,7 @@
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
 					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1990,6 +2040,7 @@
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
 					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
 				);
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -2070,6 +2121,7 @@
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
 					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
 				);
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -2098,6 +2150,7 @@
 					"$(SRCROOT)/../cocos2d/extensions",
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
+					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2126,6 +2179,7 @@
 					"$(SRCROOT)/../cocos2d/extensions",
 					"$(SRCROOT)/../cocos2d/external",
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
+					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2212,6 +2266,7 @@
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
 					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
 				SDKROOT = iphoneos;
@@ -2296,6 +2351,7 @@
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
 					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
 				SDKROOT = iphoneos;

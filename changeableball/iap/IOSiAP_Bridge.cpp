@@ -27,10 +27,10 @@ void IOSiAP_Bridge:: requestProducts(int id)
 {
     productID = id;
     std::vector<std::string> product;
-    product.push_back("renminbi98");
-    product.push_back("renminbi6");
-    product.push_back("renminbi18");
-    product.push_back("renminbi50");
+    product.push_back("com.skyter.ndimpaid.ndp6");
+//    product.push_back("com.skyter.ndimpaid.ndp6");
+//    product.push_back("com.skyter.ndimpaid.ndp6");
+//    product.push_back("com.skyter.ndimpaid.ndp6");
 	//把需要付费的道具的所有product id都放到容器里面传进去
     iap->requestProducts(product);
 }
@@ -40,7 +40,7 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
     std::string identifier = "";
     switch (productID) {
         case 6:
-            identifier = "renminbi6";
+            identifier = "com.skyter.ndimpaid.ndp6";
             break;
         case 18:
             identifier = "renminbi186";
