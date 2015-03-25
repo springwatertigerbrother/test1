@@ -262,17 +262,20 @@ void BallGameScene:: multiplePlayer(void* sender)
     platforms->push_back(SINA);
     platforms->push_back(RENREN) ;
     platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(FACEBOOK);
     platforms->push_back(QZONE) ;
     platforms->push_back(QQ) ;
+    platforms->push_back(DOUBAN) ;
+
     // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
     sdk->setPlatforms(platforms) ;
     
     // 打开分享面板, 注册分享回调, 参数1为分享面板上的平台, 参数2为要分享的文字内容，
     // 参数3为要分享的图片路径(android和IOS的图片地址格式不一致，因此分平台设置), 参数4为分享回调.
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    sdk->openShare("要分享的文字内容", "/sdcard/image.png", share_selector(shareCallback));
+    sdk->openShare("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？", "/sdcard/image.png", share_selector(shareCallback));
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    sdk->openShare("要分享的文字内容","share.png", share_selector(shareCallback));
+    sdk->openShare("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png", share_selector(shareCallback));
 #endif
 //
 //    DataHome::getInstance()->isCountDownModel = true;

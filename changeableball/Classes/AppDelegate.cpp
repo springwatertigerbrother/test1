@@ -4,6 +4,7 @@
 #include "SimpleAudioEngine.h"
 #include "ballGamescene.h"
 #include "MUtils.h"
+#include "MobClickCpp.h"
 
 //#include "C2DXShareSDK.h"
 //using namespace cn::sharesdk;
@@ -15,6 +16,8 @@ AppDelegate::AppDelegate() {
 
 AppDelegate::~AppDelegate() 
 {
+    umeng::MobClickCpp::end();
+
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
@@ -24,6 +27,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    
 //    //初始化社交平台信息
 //    this -> initPlatformConfig();
+    
+    MOBCLICKCPP_START_WITH_APPKEY_AND_CHANNEL("55121768fd98c588b0000a3e", "你的渠道111111id");
+    //或者MOBCLICKCPP_START_WITH_APPKEY("你的appkey");
     
     // initialize director
     
@@ -54,6 +60,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
+    umeng::MobClickCpp::applicationDidEnterBackground();
 
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
@@ -62,6 +69,7 @@ void AppDelegate::applicationDidEnterBackground() {
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
+    umeng::MobClickCpp::applicationWillEnterForeground();
 
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
