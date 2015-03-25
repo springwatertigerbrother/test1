@@ -240,12 +240,13 @@ void BallGameScene:: playingNow(void* sender)
 void BallGameScene:: multiplePlayer(void* sender)
 {
     // 获取一个CCUMSocialSDK实例
-    CCUMSocialSDK *sdk = CCUMSocialSDK::create("你的友盟appkey");
+    CCUMSocialSDK *sdk = CCUMSocialSDK::create("55121768fd98c588b0000a3e");
     // 设置友盟appkey,如果create中设置了不用调用该函数
     // sdk->setAppKey("4eaee02c527015373b000003");
     // **********************   设置平台信息  ***************************
     // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
      sdk->setWeiXinAppInfo("wx4709b0db1758b611","e3bea36c663071278e45440d6e00f7c5");
+    
     // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
     // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
     //              "设置来往和来往动态的app key", "我的应用名");
@@ -273,7 +274,7 @@ void BallGameScene:: multiplePlayer(void* sender)
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     sdk->openShare("要分享的文字内容","share.png", share_selector(shareCallback));
 #endif
-//    
+//
 //    DataHome::getInstance()->isCountDownModel = true;
 //    
 //    CCScene * playingScene = GameCenterScene::scene();
