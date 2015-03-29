@@ -10,6 +10,12 @@
 #include "GameCenterScene.h"
 #include "DataHome.h"
 #include "ballGamescene.h"
+#import "UMSocialSnsData.h"
+
+// 引入相关的头文件
+#include "Cocos2dx/Common/CCUMSocialSDK.h"
+#include "Cocos2dx/ShareButton/UMShareButton.h"
+
 //#include "AdScenesDemo.h"
 //#include "AdViewToolX.h"
 //#include "IADSimple.h"
@@ -22,6 +28,28 @@
 //{
 //
 //}
+
+// 使用友盟命令空间
+USING_NS_UM_SOCIAL;
+// ...... 代码省略
+
+void shareCallback(int platform, int stCode, string& errorMsg)
+{
+    if ( stCode == 100 )
+    {
+        CCLog("#### HelloWorld 开始分享");
+    }
+    else if ( stCode == 200 )
+    {
+        CCLog("#### HelloWorld 分享成功");
+    }
+    else
+    {
+        CCLog("#### HelloWorld 分享出错");
+    }
+    
+    CCLog("platform num is : %d.", platform);
+}
 
 static int m_i_HistoryHighestScore;
 
@@ -217,6 +245,48 @@ void GameOverLayer::ExitGame()
 }
 void GameOverLayer::ShareGame()
 {
+    std::string outputFile = "";
+    outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
+    cocos2d::utils::captureScreen(nil,outputFile);
+    // 获取一个CCUMSocialSDK实例
+    CCUMSocialSDK *sdk = CCUMSocialSDK::create("55121768fd98c588b0000a3e");
+    // 设置友盟appkey,如果create中设置了不用调用该函数
+    // sdk->setAppKey("4eaee02c527015373b000003");
+    // **********************   设置平台信息  ***************************
+    // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
+    sdk->setWeiXinAppInfo("wx4709b0db1758b611","e3bea36c663071278e45440d6e00f7c5");
+    sdk->setFacebookAppId("378679852325190");
+    // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
+    // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
+    //              "设置来往和来往动态的app key", "我的应用名");
+    // sdk->setFacebookAppId("你的facebook appid");
+    //     // 打开或者关闭log
+    // sdk->setLogEnable(true) ;
+    // **********************   END ***************************
+    
+    // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
+    sdk->setTargetUrl("https://itunes.apple.com/us/app/kill-chimeny/id922862015?l=zh&ls=1&mt=8");
+    // 设置友盟分享面板上显示的平台
+    vector<int>* platforms = new vector<int>();
+    platforms->push_back(SINA);
+    platforms->push_back(RENREN) ;
+    platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(FACEBOOK);
+    platforms->push_back(QZONE) ;
+    platforms->push_back(QQ) ;
+    platforms->push_back(DOUBAN) ;
+    
+    // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
+    sdk->setPlatforms(platforms) ;
+    
+    // 打开分享面板, 注册分享回调, 参数1为分享面板上的平台, 参数2为要分享的文字内容，
+    // 参数3为要分享的图片路径(android和IOS的图片地址格式不一致，因此分平台设置), 参数4为分享回调.
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    sdk->openShare("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？", "/sdcard/image.png", share_selector(shareCallback));
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    //    sdk->setPlatformShareContent(WEIXIN_CIRCLE,"我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png");
+    sdk->openShare("我的世界已经进入了　%d 次元，小伙伴你呢？？？",outputFile.c_str(), share_selector(shareCallback));
+#endif
     log("share");
 }
 void GameOverLayer::GameCenter()
