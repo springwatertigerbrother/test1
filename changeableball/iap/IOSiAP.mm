@@ -158,6 +158,8 @@ void IOSiAP::requestProducts(std::vector <std::string> &productIdentifiers)
     NSMutableSet *set = [NSMutableSet setWithCapacity:productIdentifiers.size()];
     std::vector <std::string>::iterator iterator;
     for (iterator = productIdentifiers.begin(); iterator != productIdentifiers.end(); iterator++) {
+        
+        printf("id:%s",(*iterator).c_str());
         [set addObject:[NSString stringWithUTF8String:(*iterator).c_str()]];
        
     }

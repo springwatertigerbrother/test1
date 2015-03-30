@@ -206,7 +206,9 @@ bool GameOverLayer::init()
     //    CCDirector::sharedDirector()->pushScene(AdBottomDemo::scene(AdSceneDemo::DemoAdBottom));
     
     CCUserDefault::sharedUserDefault()->setIntegerForKey("HistoryHighestScore", m_i_HistoryHighestScore);
-    
+    CCUserDefault::sharedUserDefault()->flush();
+//    char buffer[32];
+//    sprintf(buffer, "%s%d", "Himi",iKey);
     return true;
 }
 

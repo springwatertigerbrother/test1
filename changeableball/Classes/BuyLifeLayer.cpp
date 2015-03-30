@@ -49,13 +49,13 @@ void BuyLifeLayer::onEnter()
     
     menu->setPosition(ccp(size.width/2,size.height/2));
     
-    m_labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",60);
-    m_labelLife->setAnchorPoint(ccp(0.5, 0.5));
-    m_labelLife->setColor(ccRED);
-    m_labelLife->setPosition(ccp(size.width/2,size.height/2));
-    m_labelLife->setString("生命药水不够\n请购买");
-    m_labelLife->setVisible(false);
-    addChild(m_labelLife,11);
+//    m_labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",60);
+//    m_labelLife->setAnchorPoint(ccp(0.5, 0.5));
+//    m_labelLife->setColor(ccRED);
+//    m_labelLife->setPosition(ccp(size.width/2,size.height/2));
+//    m_labelLife->setString("生命药水不够\n请购买");
+//    m_labelLife->setVisible(false);
+//    addChild(m_labelLife,11);
     
     this-> addChild(menu);
 }
@@ -75,8 +75,18 @@ void BuyLifeLayer::CallUseLife(void* sender)
     }
     else
     {
-        m_labelLife->setVisible(true);
-        m_labelLife->runAction(FadeOut::create(1));
+//        m_labelLife->setVisible(true);
+//        m_labelLife->runAction(FadeOut::create(1));
+//
+        CCSize size = Director::getInstance()->getWinSize();
+        CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",60);
+        labelLife->setAnchorPoint(ccp(0.5, 0.5));
+        labelLife->setColor(ccRED);
+        labelLife->setPosition(ccp(size.width/2,size.height/2));
+        labelLife->setString("生命药水不够\n请购买");
+//        labelLife->setVisible(false);
+        addChild(labelLife,11);
+        labelLife->runAction(FadeOut::create(1));
 //        CallFunc* call = [](){};
         "生命药水不够，请购买";
     }
