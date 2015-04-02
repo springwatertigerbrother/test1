@@ -181,7 +181,7 @@ bool DataManager::init()
     }
     
     m_pBg = Sprite::create(bg_cstr);
-    m_pBg->setPosition(ccp(s.width/2,s.height/2 - 120));
+    m_pBg->setPosition(ccp(s.width/2,s.height/2 - 0));
 //    m_pBg->setOpacity(170);
     addChild(m_pBg,-10);
     m_pBg->setZOrder(-100);
@@ -196,6 +196,17 @@ bool DataManager::init()
     {
         return false;
     }
+    
+    m_pTotalScoreLabel = CCLabelTTF::create();
+//    m_pTotalScoreLabel->setString(scoreStr);
+//    m_pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.66));
+    m_pTotalScoreLabel->setVisible(false);
+    m_pTotalScoreLabel->setColor(ccYELLOW);
+    m_pTotalScoreLabel->setScale(2);
+    m_pTotalScoreLabel->setFontSize(30);
+    this-> addChild(m_pTotalScoreLabel,10000);
+    
+    
     initElements();
 
 //    if (mCoreLayer)
@@ -376,6 +387,19 @@ void DataManager:: touchMove(CCPoint local)
         }
         tds = NULL;
     }
+    
+    int nSum = 0;
+    BallSprite* pLastElement =  getLastSelected();
+    int nTypeValue = pLastElement->getType();
+    int nNumber = m_stackArray.size();
+    //        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
+    nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
+    
+    char scoreStr[50] = {0};
+    std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
+    m_pTotalScoreLabel->setVisible(true);
+    m_pTotalScoreLabel->setString(scoreStr);
+    m_pTotalScoreLabel->setPosition(ccp(m_movePos.x,m_movePos.y + 70));
 }
 
 void DataManager:: touchEnd()
@@ -385,6 +409,8 @@ void DataManager:: touchEnd()
 
     int disappearCount = 0;
     
+    m_pTotalScoreLabel->setVisible(false);
+
     if (m_stackArray.size()>=ELIMINABLE_NUM) {
         if (m_removeAllSameColor) {
             
@@ -418,21 +444,15 @@ void DataManager:: touchEnd()
         
         //提示字 zhao
         CCSize s = CCDirector::sharedDirector()->getWinSize();
-        int nTypeValue = pLastElement->getType();
-        int nNumber = m_stackArray.size();
-//        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
-        nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
-        
-        char scoreStr[50] = {0};
-        std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
+//        int nTypeValue = pLastElement->getType();
+//        int nNumber = m_stackArray.size();
+////        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
+//        nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
+//        
+//        char scoreStr[50] = {0};
+//        std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
 //        CCString* scoreStr = CCString::create("n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
-        CCLabelTTF* pTotalScoreLabel = CCLabelTTF::create();
-        pTotalScoreLabel->setString(scoreStr);
-        pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.66));
-        pTotalScoreLabel->setColor(ccc3(242, 13, 43));
-        pTotalScoreLabel->setScale(2);
-        pTotalScoreLabel->setFontSize(30);
-        this->getParent()->addChild(pTotalScoreLabel,1000);
+ 
         
         CCMoveTo* pMoveto1 = CCMoveTo::create(2,ccp(10, s.height));
         auto pScaleby = ScaleBy::create(0.5, 1.2);
@@ -440,10 +460,10 @@ void DataManager:: touchEnd()
 //        CCCallFuncO* call = [CCCallBlockO actionWithBlock:^(id object){
 //                              [pTotalScoreLabel removeFromParent];
 //                              } object:self];
-        CCCallFuncN* call = CCCallFuncN::create(this, callfuncN_selector(DataManager::hideScoreEffect));
-        CCSpawn* pSp = CCSpawn::create(pMoveto1, NULL);
-        CCSequence* pSq = CCSequence::create(pScaleby,DelayTime::create(0.5), pScaleby->reverse(),call, NULL);
-        pTotalScoreLabel->runAction(pSq);
+//        CCCallFuncN* call = CCCallFuncN::create(this, callfuncN_selector(DataManager::hideScoreEffect));
+//        CCSpawn* pSp = CCSpawn::create(pMoveto1, NULL);
+//        CCSequence* pSq = CCSequence::create(pScaleby,DelayTime::create(0.5), pScaleby->reverse(),call, NULL);
+//        m_pTotalScoreLabel->runAction(pSq);
         
         //zhao
         std::vector<BallSprite*>::iterator it;

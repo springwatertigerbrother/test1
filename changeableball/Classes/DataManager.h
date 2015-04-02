@@ -109,6 +109,9 @@ public:
     CCSprite* m_pBg;
     //draw line
     DrawNode* m_pDrawNode;
+    
+    CCLabelTTF* m_pTotalScoreLabel;
+
 };
 
 #endif /* defined(__changeableball__DataManager__) */
