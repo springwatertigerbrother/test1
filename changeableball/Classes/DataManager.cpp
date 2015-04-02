@@ -390,7 +390,12 @@ void DataManager:: touchMove(CCPoint local)
     
     int nSum = 0;
     BallSprite* pLastElement =  getLastSelected();
-    int nTypeValue = pLastElement->getType();
+    int nTypeValue =  0;
+    if(pLastElement)
+    {
+        nTypeValue = pLastElement->getType();
+
+    }
     int nNumber = m_stackArray.size();
     //        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
     nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
