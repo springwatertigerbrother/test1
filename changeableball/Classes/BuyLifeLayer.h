@@ -17,6 +17,13 @@ class BuyLifeLayer :public cocos2d::CCLayer
     cocos2d::CCMenuItemImage * m_BuyItem;
     cocos2d::CCMenuItemImage * m_UseLife;
     cocos2d::CCMenuItemImage * m_GameOver;
+    
+    cocos2d::CCMenuItemImage * m_iap6;
+    
+    cocos2d::CCMenuItemImage * m_iap18;
+    cocos2d::CCMenuItemImage * m_iap24;
+    CCMenu *m_shopMenu;
+
     virtual void onEnter();
     virtual bool init();
 

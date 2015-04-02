@@ -43,6 +43,16 @@ void BuyLifeLayer::onEnter()
 
     m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
     m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
+    
+//    m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
+//    m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
+//    
+//    m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
+//    m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
+//    
+//    m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
+//    m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
+    
     CCMenu *menu = CCMenu::create(m_BuyItem,m_UseLife,m_GameOver, NULL);
     
     menu->alignItemsVerticallyWithPadding(10);
@@ -58,6 +68,27 @@ void BuyLifeLayer::onEnter()
 //    addChild(m_labelLife,11);
     
     this-> addChild(menu);
+    
+    m_iap6 = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
+    m_iap6->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_iap18  = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
+
+    m_iap18->setScale(CC_CONTENT_SCALE_FACTOR());
+
+    m_iap24 = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
+    m_iap24->setScale(CC_CONTENT_SCALE_FACTOR());
+
+    
+    m_shopMenu = CCMenu::create(m_iap6,m_iap18,m_iap24, NULL);
+    
+    int padding = 10;
+    m_shopMenu->alignItemsVerticallyWithPadding(padding);
+    
+    m_shopMenu->setPosition(ccp(size.width/2,2* (m_iap6->getContentSize().height + padding)));
+    this-> addChild(m_shopMenu);
+
+    
+    
 }
 void BuyLifeLayer::CallBuyLife(void* sender)
 {
