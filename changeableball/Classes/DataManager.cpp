@@ -444,11 +444,11 @@ void DataManager:: touchEnd()
         
         //提示字 zhao
         CCSize s = CCDirector::sharedDirector()->getWinSize();
-//        int nTypeValue = pLastElement->getType();
-//        int nNumber = m_stackArray.size();
-////        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
-//        nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
-//        
+        int nTypeValue = pLastElement->getType();
+        int nNumber = m_stackArray.size();
+//        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
+        nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
+//
 //        char scoreStr[50] = {0};
 //        std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
 //        CCString* scoreStr = CCString::create("n = %d X 2^%d = %d",nNumber,nTypeValue,nSum);
