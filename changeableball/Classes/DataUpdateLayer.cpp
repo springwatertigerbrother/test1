@@ -115,7 +115,7 @@ bool UpStateLayer::init()
             m_labelCurrentNciyuanTitle->setColor(ccc3(0, 0, 0));
             m_labelCurrentNciyuanTitle->setPosition(ccp(20,
                                                  60));
-            m_labelCurrentNciyuanTitle->setString("当前状态:");
+            m_labelCurrentNciyuanTitle->setString("当前状态：");
             m_labelCurrentNciyuanTitle->setColor(ccWHITE);
             addChild(m_labelCurrentNciyuanTitle);
             
@@ -136,13 +136,13 @@ bool UpStateLayer::init()
             
             //count down
             CCSprite* pClock = Sprite::create("Images/bagua1.png");
-            pClock->setPosition(ccp(s.width/2 - 50,10));
+            pClock->setPosition(ccp(s.width - 150,10));
             pClock->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(pClock);
             
             m_labelCountDown->setAnchorPoint(ccp(0.5, 0.5));
             m_labelCountDown->setColor(ccc3(0, 0, 0));
-            m_labelCountDown->setPosition(ccp(s.width/2+50,10));
+            m_labelCountDown->setPosition(ccp(s.width - 50,10));
             //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
             m_labelCountDown->setColor(ccWHITE);
             addChild(m_labelCountDown);
