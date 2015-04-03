@@ -98,10 +98,17 @@ bool GameOverLayer::init()
     
     MenuItemImage* pItem2 = MenuItemImage::create("Images/share.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
     MenuItemImage* pItem3 = MenuItemImage::create("Images/backHome.png", "Images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
-    pItem1->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
-    pItem2->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
-    pItem3->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
+    MenuItemImage* pItem4 = MenuItemImage::create("Images/paihang.png", "Images/paihang.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
+
     
+    pItem1->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
+    pItem2->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
+    pItem3->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
+    pItem4->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
+    
+    CCLabelTTF* testLabel = CCLabelTTF::create("排行榜 \n ranking","ArialRoundedMTBold",32);
+    testLabel->setPosition(ccp(pItem4->getContentSize().width/2,pItem4->getContentSize().height/2));
+    pItem4->addChild(testLabel);
     
     //    pItem2->setFontSize(180);
     //    CCMenu* pMenu2 = CCMenu::create(pItem2,NULL);
@@ -112,7 +119,7 @@ bool GameOverLayer::init()
     //    CCMenuItemFont* pItem1 = CCMenuItemFont::create("restart", this, menu_selector(GameOverLayer::ReStartGame));
     //    CCMenuItemFont* pItem2 = CCMenuItemFont::create("share",this,menu_selector(GameOverLayer::ExitGame));
     
-    CCMenu* pMenu = CCMenu::create(pItem2,pItem1,pItem3, NULL);
+    CCMenu* pMenu = CCMenu::create(pItem2,pItem1,pItem3, pItem4, NULL);
     pMenu->alignItemsHorizontallyWithPadding(10);
     //    pItem1->setFontSize(30);
     //    pItem2->setFontSize(30);
