@@ -47,6 +47,8 @@
 #define USE_LIFE_LIQUID "use_life_liquid"
 #define BUY_LIFE_LIQUID "buy_life_liquid"
 
+#define RIVIVE_COSUMED_DIAMOND  30
+
 typedef enum {
     tooltime = 0,
     toolDisappearAll = 1,

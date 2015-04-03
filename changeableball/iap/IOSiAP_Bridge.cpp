@@ -75,13 +75,29 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
 		//根据传入的参数就能知道购买的是哪种类型的金币
         switch (productID) {
             case 6:
-                
+            {
+                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+                lifeLiquid += 100;
+                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                UserDefault::getInstance()->flush();
+            }
                 break;
             case 18:
-               
+            {
+                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+                lifeLiquid += 500;
+                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                UserDefault::getInstance()->flush();
+            }
                 break;
             case 50:
-               
+            {
+                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+                lifeLiquid += 1500;
+                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                UserDefault::getInstance()->flush();
+            }
+
                 break;
             case 98:
                

@@ -9,6 +9,19 @@
 #include "BuyLifeLayer.h"
 #include "GameOverLayer.h"
 #include "config.h"
+#include "IOSiAP_Bridge.h"
+
+enum buttonTag
+{
+    rivive_button_tag = 1,
+    gameOver_button_tag = 2,
+    
+    buy6_tag = 6,
+    buy12_tag = 12,
+    buy18_tag = 18,
+    buy50_tag = 50
+};
+
 bool BuyLifeLayer::init()
 {
     do
@@ -38,9 +51,11 @@ void BuyLifeLayer::onEnter()
         
     m_BuyItem = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_BuyItem->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_BuyItem->setTag(0);
     m_UseLife = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::CallUseLife,this));
     m_UseLife->setScale(CC_CONTENT_SCALE_FACTOR());
-
+    m_UseLife->setTag(rivive_button_tag);
+    
     m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
     m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
     
@@ -53,11 +68,11 @@ void BuyLifeLayer::onEnter()
 //    m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
 //    m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
     
-    CCMenu *menu = CCMenu::create(m_BuyItem,m_UseLife,m_GameOver, NULL);
-    
-    menu->alignItemsVerticallyWithPadding(10);
-    
-    menu->setPosition(ccp(size.width/2,size.height/2));
+//    CCMenu *menu = CCMenu::create(m_BuyItem,m_UseLife,m_GameOver, NULL);
+//    
+//    menu->alignItemsVerticallyWithPadding(10);
+//    
+//    menu->setPosition(ccp(size.width/2,size.height/2));
     
 //    m_labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",60);
 //    m_labelLife->setAnchorPoint(ccp(0.5, 0.5));
@@ -67,31 +82,69 @@ void BuyLifeLayer::onEnter()
 //    m_labelLife->setVisible(false);
 //    addChild(m_labelLife,11);
     
-    this-> addChild(menu);
     
     m_iap6 = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_iap6->setScale(CC_CONTENT_SCALE_FACTOR());
-    m_iap18  = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
-
+    m_iap6->setTag(buy6_tag);
+    m_iap18  = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_iap18->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_iap18->setTag(buy18_tag);
 
-    m_iap24 = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
+    m_iap24 = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_iap24->setScale(CC_CONTENT_SCALE_FACTOR());
-
+    m_iap24->setTag(buy50_tag);
     
-    m_shopMenu = CCMenu::create(m_iap6,m_iap18,m_iap24, NULL);
+    CCMenu *menu = CCMenu::create(m_UseLife,m_iap6,m_iap18,m_iap24, m_GameOver, NULL);
     
-    int padding = 10;
-    m_shopMenu->alignItemsVerticallyWithPadding(padding);
+    menu->alignItemsVerticallyWithPadding(10);
     
-    m_shopMenu->setPosition(ccp(size.width/2,2* (m_iap6->getContentSize().height + padding)));
-    this-> addChild(m_shopMenu);
+    menu->setPosition(ccp(size.width/2,size.height/2));
+    this-> addChild(menu);
+    
+    Sprite* pDiamond = Sprite::create("Images/clock.png");
+    pDiamond->setAnchorPoint(ccp(1,1));
+    pDiamond->setPosition(ccp(size.width*0.5 - 15,size.height-10));
+    addChild(pDiamond);
+    
+    m_labelDiamond = CCLabelTTF::create("60","ArialRoundedMTBold",60);
+    m_labelDiamond->setAnchorPoint(ccp(0,1));
+    m_labelDiamond->setPosition(ccp(size.width*0.5 ,size.height-10));
+    
+    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    char tempStr[10];
+    sprintf(tempStr,"%d", lifeLiquid);
+    m_labelDiamond->setString(tempStr);
+    addChild(m_labelDiamond);
+    
+    CCLabelTTF* pConsumedDiamond = CCLabelTTF::create("30","ArialRoundedMTBold",30);
+    pConsumedDiamond->setAnchorPoint(ccp(0.5,1));
+    pConsumedDiamond->setPosition(ccp(size.width*0.5,size.height-100));
+    
+    sprintf(tempStr,"小伙伴使用%d钻石复活吧 ^O^", RIVIVE_COSUMED_DIAMOND);
+    pConsumedDiamond->setString(tempStr);
+    addChild(pConsumedDiamond);
+    pConsumedDiamond->runAction(CCRepeatForever::create(Sequence::create(ScaleTo::create(0.5, 0.5), ScaleTo::create(0.5,1),DelayTime::create(1),NULL)));
+    
+//    m_shopMenu = CCMenu::create(m_iap6,m_iap18,m_iap24, NULL);
+//    
+//    int padding = 10;
+//    m_shopMenu->alignItemsVerticallyWithPadding(padding);
+//    
+//    m_shopMenu->setPosition(ccp(size.width/2,2* (m_iap6->getContentSize().height + padding)));
+//    this-> addChild(m_shopMenu);
 
     
     
 }
 void BuyLifeLayer::CallBuyLife(void* sender)
 {
+
+    Node* pNode = (Node*)(sender);
+    int price = pNode->getTag();
+    
+    IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
+    bridge->requestProducts(price);
+    
     EventCustom event(BUY_LIFE_LIQUID);
     _eventDispatcher->dispatchEvent(&event);
 }
@@ -99,7 +152,7 @@ void BuyLifeLayer::CallUseLife(void* sender)
 {
     int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
     
-    if (lifeLiquid > 0)
+    if (lifeLiquid > RIVIVE_COSUMED_DIAMOND)
     {
         EventCustom event(USE_LIFE_LIQUID);
         _eventDispatcher->dispatchEvent(&event);
@@ -114,10 +167,10 @@ void BuyLifeLayer::CallUseLife(void* sender)
         labelLife->setAnchorPoint(ccp(0.5, 0.5));
         labelLife->setColor(ccRED);
         labelLife->setPosition(ccp(size.width/2,size.height/2));
-        labelLife->setString("生命药水不够\n请购买");
+        labelLife->setString("钻石不够\n请购买");
 //        labelLife->setVisible(false);
         addChild(labelLife,11);
-        labelLife->runAction(FadeOut::create(1));
+        labelLife->runAction(FadeOut::create(2));
 //        CallFunc* call = [](){};
         "生命药水不够，请购买";
     }

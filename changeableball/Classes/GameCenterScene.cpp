@@ -87,19 +87,19 @@ bool GameCenterScene::init()
         auto Use_life_listener = EventListenerCustom::create(USE_LIFE_LIQUID, [=](EventCustom* event){
             int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
             
-            if (lifeLiquid > 0)
+            if (lifeLiquid > RIVIVE_COSUMED_DIAMOND)
             {
                 m_data->m_canPlaying = true;
                 buyLayer->setVisible(false);
                 m_data->initElements();
-                lifeLiquid--;
+                lifeLiquid -= RIVIVE_COSUMED_DIAMOND;
                 
                 if (lifeLiquid<0)
                 {
                     lifeLiquid = 0;
                 }
                 UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
-                
+                UserDefault::getInstance()->flush();
                 startGame();
             }
             else
