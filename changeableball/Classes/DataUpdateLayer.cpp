@@ -12,7 +12,7 @@
 
 bool UpStateLayer::init()
 {
-    if ( CCLayerColor::initWithColor( ccc4(88,34,241,255) ) )
+    if ( CCLayerColor::initWithColor( ccc4(88,34,241,0) ) )
 	{
         
         CCSize s = CCDirector::sharedDirector()->getWinSize();
@@ -25,7 +25,7 @@ bool UpStateLayer::init()
             pBg->setOpacity(180);
             pBg->setPosition(ccp(s.width/2,0));
             pBg->setScale(CC_CONTENT_SCALE_FACTOR());
-            addChild(pBg);
+//            addChild(pBg);
             
             CCSprite* pAiyinsitan = Sprite::create("Images/aiyinsitanhead.png");
             pAiyinsitan->setPosition(ccp(s.width/2  + 200,100));
@@ -48,6 +48,12 @@ bool UpStateLayer::init()
             menu->setVisible(false);
             addChild(menu);
             
+            Sprite* pFrame = Sprite::create("Images/bg_campaign_mask_blue.png");
+            pFrame->setAnchorPoint(ccp(0,0.5));
+            pFrame->setPosition(ccp(5,120));
+            pFrame->setScale(CC_CONTENT_SCALE_FACTOR());
+            addChild(pFrame);
+            
             m_labelScore = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelTime  = CCLabelTTF::create("60","ArialRoundedMTBold",30);
             m_labelNciyuanTitle = CCLabelTTF::create("0","ArialRoundedMTBold",30);
@@ -55,7 +61,7 @@ bool UpStateLayer::init()
             m_labelNValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCurrentNciyuanTitle = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCurrentNValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
-            m_labelCurrentScoreTitle = CCLabelTTF::create("本场获取能量：","ArialRoundedMTBold",30);
+            m_labelCurrentScoreTitle = CCLabelTTF::create("当前能量：","ArialRoundedMTBold",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCountDown = CCLabelTTF::create("180","ArialRoundedMTBold",50);
             
@@ -68,31 +74,31 @@ bool UpStateLayer::init()
             m_labelScore->setColor(ccORANGE);
             m_labelTotalScoreTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelTotalScoreTitle->setColor(ccc3(0, 0, 0));
-            m_labelTotalScoreTitle->setPosition(ccp(10,
-                                                    150));
+            m_labelTotalScoreTitle->setPosition(ccp(20,
+                                                    160));
             m_labelTotalScoreTitle->setColor(ccBLACK);
             m_labelTotalScoreTitle->setString("总能量：");
-            m_labelTotalScoreTitle->setColor(ccRED);
+            m_labelTotalScoreTitle->setColor(ccWHITE);
             addChild(m_labelTotalScoreTitle);
             
             m_labelScore->setAnchorPoint(ccp(0, 0.5));
             m_labelScore->setPosition(ccp(m_labelTotalScoreTitle->getPositionX()
                                           + m_labelTotalScoreTitle->getContentSize().width,
-                                          150));
+                                          160));
             addChild(m_labelScore);
             
             m_labelNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
-            m_labelNciyuanTitle->setPosition(ccp(10,
-                                          80));
-            m_labelNciyuanTitle->setString("您累计已达到的次元N是：");
-            m_labelNciyuanTitle->setColor(ccRED);
+            m_labelNciyuanTitle->setPosition(ccp(20,
+                                          110));
+            m_labelNciyuanTitle->setString("累计次元：");
+            m_labelNciyuanTitle->setColor(ccWHITE);
             addChild(m_labelNciyuanTitle);
             
             m_labelNValue->setAnchorPoint(ccp(0, 0.5));
             m_labelNValue->setColor(ccc3(0, 0, 0));
             m_labelNValue->setPosition(ccp(m_labelNciyuanTitle->getPositionX()
-                                           + m_labelNciyuanTitle->getContentSize().width + 5,80)
+                                           + m_labelNciyuanTitle->getContentSize().width + 5,110)
                                            );
             m_labelNValue->setColor(ccORANGE);
             String* temStr = String::createWithFormat("%d",(int)(log2(nTotalScore)));
@@ -107,16 +113,16 @@ bool UpStateLayer::init()
             
             m_labelCurrentNciyuanTitle->setAnchorPoint(ccp(0, 0.5));
             m_labelCurrentNciyuanTitle->setColor(ccc3(0, 0, 0));
-            m_labelCurrentNciyuanTitle->setPosition(ccp(10,
-                                                 30));
-            m_labelCurrentNciyuanTitle->setString("当前状态是：");
-            m_labelCurrentNciyuanTitle->setColor(ccRED);
+            m_labelCurrentNciyuanTitle->setPosition(ccp(20,
+                                                 60));
+            m_labelCurrentNciyuanTitle->setString("当前状态:");
+            m_labelCurrentNciyuanTitle->setColor(ccWHITE);
             addChild(m_labelCurrentNciyuanTitle);
             
             m_labelCurrentNValue->setAnchorPoint(ccp(0, 0.5));
             m_labelCurrentNValue->setColor(ccc3(0, 0, 0));
             m_labelCurrentNValue->setPosition(ccp(m_labelCurrentNciyuanTitle->getPositionX()
-                                           + m_labelCurrentNciyuanTitle->getContentSize().width + 5,30)
+                                           + m_labelCurrentNciyuanTitle->getContentSize().width + 5,60)
                                        );
             m_labelCurrentNValue->setColor(ccORANGE);
             
@@ -138,7 +144,7 @@ bool UpStateLayer::init()
             m_labelCountDown->setColor(ccc3(0, 0, 0));
             m_labelCountDown->setPosition(ccp(s.width/2+50,10));
             //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
-            m_labelCountDown->setColor(ccRED);
+            m_labelCountDown->setColor(ccWHITE);
             addChild(m_labelCountDown);
 
             m_labelCountDown->setVisible(DataHome::getInstance()->isCountDownModel);
@@ -146,8 +152,8 @@ bool UpStateLayer::init()
             
             // current
             m_labelCurrentScoreTitle->setAnchorPoint(ccp(0, 0.5));
-            m_labelCurrentScoreTitle->setColor(ccc3(242, 13, 43));
-            m_labelCurrentScoreTitle->setPosition(ccp(10,
+            m_labelCurrentScoreTitle->setColor(ccWHITE);
+            m_labelCurrentScoreTitle->setPosition(ccp(20,
                                                  210));
 //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
 //            m_labelCurrentScoreTitle->setColor(ccBLACK);
