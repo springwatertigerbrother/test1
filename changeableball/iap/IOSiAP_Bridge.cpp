@@ -45,10 +45,10 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
             identifier = "com.skyter.ndimpaid.ndp6";
             break;
         case 18:
-            identifier = "renminbi186";
+            identifier = "com.skyter.ndimpaid.ndp18";
             break;
-        case 50:
-            identifier = "renminbi50";
+        case 68:
+            identifier = "com.skyter.ndimpaid.ndp68  ";
             break;
         case 98:
             identifier = "renminbi98";

@@ -19,7 +19,7 @@ enum buttonTag
     buy6_tag = 6,
     buy12_tag = 12,
     buy18_tag = 18,
-    buy50_tag = 50
+    buy68_tag = 68
 };
 
 bool BuyLifeLayer::init()
@@ -100,9 +100,11 @@ void BuyLifeLayer::onEnter()
 
     m_iap24 = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_iap24->setScale(CC_CONTENT_SCALE_FACTOR());
-    m_iap24->setTag(buy50_tag);
+    m_iap24->setTag(buy68_tag);
     
-    CCMenu *menu = CCMenu::create(m_UseLife,m_iap6,m_iap18,m_iap24, m_GameOver, NULL);
+    auto item7= MenuItemFont::create("Quit", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife, this));
+
+    CCMenu *menu = CCMenu::create(m_UseLife,m_iap6,m_iap18,m_iap24, m_GameOver,item7, NULL);
     
     menu->alignItemsVerticallyWithPadding(10);
     
