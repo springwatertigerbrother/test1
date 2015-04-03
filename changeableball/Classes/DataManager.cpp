@@ -177,7 +177,7 @@ bool DataManager::init()
     }
     else
     {
-        bg_cstr ="Images/bg1.png";
+        bg_cstr ="Images/gamebg.png";
     }
     
     m_pBg = Sprite::create(bg_cstr);
@@ -190,7 +190,7 @@ bool DataManager::init()
     CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5,-360), NULL);
     m_pBg->runAction(Sequence::create(spawn1,spawn2,NULL) );
 
-    
+       
     mCoreLayer = CCLayerColor::create(ccc4(255, 255, 255, 255));//WithColor:ccc4(230, 230, 230, 255)
     if ( !mCoreLayer )
     {
@@ -206,6 +206,11 @@ bool DataManager::init()
     m_pTotalScoreLabel->setFontSize(30);
     this-> addChild(m_pTotalScoreLabel,10000);
     
+    Sprite* pMoon = Sprite::create("Images/yueliang.png");
+    pMoon->setAnchorPoint(ccp(1,1));
+    pMoon->setPosition(ccp(s.width - 10,s.height - 10));
+    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
+    addChild(pMoon);
     
     initElements();
 
