@@ -21,9 +21,11 @@ class BuyLifeLayer :public cocos2d::CCLayer
     cocos2d::CCMenuItemImage * m_iap6;
     
     cocos2d::CCMenuItemImage * m_iap18;
-    cocos2d::CCMenuItemImage * m_iap24;
+    cocos2d::CCMenuItemImage * m_iap68;
     CCMenu *m_shopMenu;
-
+    
+    CCLabelTTF* pLabelUpload;
+    
     virtual void onEnter();
     virtual bool init();
 

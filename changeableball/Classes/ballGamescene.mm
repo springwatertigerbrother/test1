@@ -173,7 +173,7 @@ void BallGameScene::onEnter()
     
     CCMenu *menu = CCMenu::create(m_playnow,m_multiplayer, NULL);
     
-    menu->alignItemsVerticallyWithPadding(20);
+    menu->alignItemsVerticallyWithPadding(30);
     
     menu->setPosition(ccp(size.width/2,size.height/2));
     

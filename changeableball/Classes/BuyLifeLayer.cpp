@@ -46,6 +46,9 @@ void BuyLifeLayer::reload(Ref* obj)
     char tempStr[10];
     sprintf(tempStr,"%d", lifeLiquid);
     m_labelDiamond->setString(tempStr);
+    
+    m_shopMenu->setEnabled(true);
+    pLabelUpload->setVisible(false);
 }
 
 void BuyLifeLayer::onEnter()
@@ -60,10 +63,19 @@ void BuyLifeLayer::onEnter()
     m_BuyItem = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_BuyItem->setScale(CC_CONTENT_SCALE_FACTOR());
     m_BuyItem->setTag(0);
+    
+    CCLabelTTF* testLabel1 = CCLabelTTF::create("复活 \n revive","ArialRoundedMTBold",16);
+    testLabel1->setPosition(ccp(m_BuyItem->getContentSize().width/2,m_BuyItem->getContentSize().height/2));
+    m_BuyItem->addChild(testLabel1);
+    
+    
     m_UseLife = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::CallUseLife,this));
     m_UseLife->setScale(CC_CONTENT_SCALE_FACTOR());
     m_UseLife->setTag(rivive_button_tag);
-    
+    CCLabelTTF* testLabel2 = CCLabelTTF::create("复活 \n revive","ArialRoundedMTBold",16);
+    testLabel2->setPosition(ccp(m_BuyItem->getContentSize().width/2,m_BuyItem->getContentSize().height/2));
+    m_UseLife->addChild(testLabel2);
+
     m_GameOver = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::gameOver,this));
     m_GameOver->setScale(CC_CONTENT_SCALE_FACTOR());
     
@@ -94,25 +106,29 @@ void BuyLifeLayer::onEnter()
     m_iap6 = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_iap6->setScale(CC_CONTENT_SCALE_FACTOR());
     m_iap6->setTag(buy6_tag);
+    CCLabelTTF* testLabel = CCLabelTTF::create("复活 \n revive","ArialRoundedMTBold",16);
+    testLabel->setPosition(ccp(m_iap6->getContentSize().width/2,m_iap6->getContentSize().height/2));
+    m_iap6->addChild(testLabel);
     m_iap18  = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
     m_iap18->setScale(CC_CONTENT_SCALE_FACTOR());
     m_iap18->setTag(buy18_tag);
 
-    m_iap24 = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
-    m_iap24->setScale(CC_CONTENT_SCALE_FACTOR());
-    m_iap24->setTag(buy68_tag);
+    m_iap68 = CCMenuItemImage::create("Images/countdown.png","Images/countdown.png",CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
+    m_iap68->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_iap68->setTag(buy68_tag);
     
     auto item7= MenuItemFont::create("Quit", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife, this));
 
-    CCMenu *menu = CCMenu::create(m_UseLife,m_iap6,m_iap18,m_iap24, m_GameOver,item7, NULL);
+//    CCMenu *menu = CCMenu::create(m_UseLife,m_iap6,m_iap18,m_iap68, m_GameOver, NULL);
+    m_shopMenu = CCMenu::create(m_UseLife,m_iap6,m_iap18,m_iap68, m_GameOver, NULL);
+    m_shopMenu->alignItemsVerticallyWithPadding(10);
     
-    menu->alignItemsVerticallyWithPadding(10);
-    
-    menu->setPosition(ccp(size.width/2,size.height/2));
-    this-> addChild(menu);
+    m_shopMenu->setPosition(ccp(size.width/2,size.height/2));
+    this-> addChild(m_shopMenu);
     
     Sprite* pDiamond = Sprite::create("Images/clock.png");
     pDiamond->setAnchorPoint(ccp(1,1));
+    pDiamond->setScale(CC_CONTENT_SCALE_FACTOR());
     pDiamond->setPosition(ccp(size.width*0.5 - 15,size.height-10));
     addChild(pDiamond);
     
@@ -143,7 +159,11 @@ void BuyLifeLayer::onEnter()
 //    m_shopMenu->setPosition(ccp(size.width/2,2* (m_iap6->getContentSize().height + padding)));
 //    this-> addChild(m_shopMenu);
 
-    
+    pLabelUpload = CCLabelTTF::create("正在去往商店。。。","ArialRoundedMTBold",50);
+    pLabelUpload->setAnchorPoint(ccp(0.5,1));
+    pLabelUpload->setPosition(ccp(size.width*0.5,size.height*0.5));
+    pLabelUpload->setVisible(false);
+    addChild(pLabelUpload);
     
 }
 void BuyLifeLayer::CallBuyLife(void* sender)
@@ -155,8 +175,12 @@ void BuyLifeLayer::CallBuyLife(void* sender)
     IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
     bridge->requestProducts(price);
     
-    EventCustom event(BUY_LIFE_LIQUID);
-    _eventDispatcher->dispatchEvent(&event);
+    m_shopMenu->setEnabled(false);
+    pLabelUpload->setVisible(true);
+
+//
+//    EventCustom event(BUY_LIFE_LIQUID);
+//    _eventDispatcher->dispatchEvent(&event);
 }
 void BuyLifeLayer::CallUseLife(void* sender)
 {

@@ -30,8 +30,8 @@ void IOSiAP_Bridge:: requestProducts(int id)
     productID = id;
     std::vector<std::string> product;
     product.push_back("com.skyter.ndimpaid.ndp6");
-//    product.push_back("com.skyter.ndimpaid.ndp6");
-//    product.push_back("com.skyter.ndimpaid.ndp6");
+    product.push_back("com.skyter.ndimpaid.ndp18");
+    product.push_back("com.skyter.ndimpaid.ndp68");
 //    product.push_back("com.skyter.ndimpaid.ndp6");
 	//把需要付费的道具的所有product id都放到容器里面传进去
     iap->requestProducts(product);
@@ -48,7 +48,7 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
             identifier = "com.skyter.ndimpaid.ndp18";
             break;
         case 68:
-            identifier = "com.skyter.ndimpaid.ndp68  ";
+            identifier = "com.skyter.ndimpaid.ndp68";
             break;
         case 98:
             identifier = "renminbi98";
@@ -66,7 +66,8 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
 void IOSiAP_Bridge::onRequestProductsError(int code)
 {
     //这里requestProducts出错了，不能进行后面的所有操作。
-    
+    NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
+
     log("付款失败");
 }
 
@@ -93,10 +94,10 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
                 UserDefault::getInstance()->flush();
             }
                 break;
-            case 50:
+            case 68:
             {
                 int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-                lifeLiquid += 1500;
+                lifeLiquid += 4000;
                 UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
             }
@@ -115,5 +116,7 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
         log("付款成功");
         
     }
+    NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
+
     //其他状态依情况处理掉。
 }

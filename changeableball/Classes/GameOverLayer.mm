@@ -95,11 +95,14 @@ bool GameOverLayer::init()
     addChild(pBg);
     
     MenuItemImage* pItem1 = MenuItemImage::create("Images/restart.png", "Images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
+    
     MenuItemImage* pItem2 = MenuItemImage::create("Images/share.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
     MenuItemImage* pItem3 = MenuItemImage::create("Images/backHome.png", "Images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
-    pItem1->setScale(CC_CONTENT_SCALE_FACTOR());
-    pItem2->setScale(CC_CONTENT_SCALE_FACTOR());
-    pItem3->setScale(CC_CONTENT_SCALE_FACTOR());
+    pItem1->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
+    pItem2->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
+    pItem3->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
+    
+    
     //    pItem2->setFontSize(180);
     //    CCMenu* pMenu2 = CCMenu::create(pItem2,NULL);
     //    pItem2->setPosition(ccp(s.width/2, s.height/5));
