@@ -40,13 +40,21 @@ bool BuyLifeLayer::init()
     return true;
 }
 
-
+void BuyLifeLayer::reload(Ref* obj)
+{
+    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    char tempStr[10];
+    sprintf(tempStr,"%d", lifeLiquid);
+    m_labelDiamond->setString(tempStr);
+}
 
 void BuyLifeLayer::onEnter()
 {
     
     CCLayer::onEnter();
     
+    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(BuyLifeLayer::reload), REFESH_BUYLIFE_UI, NULL);
+
     CCSize size = CCDirector::sharedDirector()->getWinSize();
         
     m_BuyItem = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));

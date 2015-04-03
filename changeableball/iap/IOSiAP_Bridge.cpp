@@ -8,6 +8,8 @@
 
 #include "IOSiAP_Bridge.h"
 #include "cocos2d.h"
+#include "config.h"
+
 //#include "CommonInclude.h"
 //#include "UpdateCoins.h"
 USING_NS_CC;
@@ -64,6 +66,7 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
 void IOSiAP_Bridge::onRequestProductsError(int code)
 {
     //这里requestProducts出错了，不能进行后面的所有操作。
+    
     log("付款失败");
 }
 
@@ -104,7 +107,11 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
                 break;
             default:
                 break;
-        }        
+        }
+        NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
+
+//        EventCustom event(REFESH_BUYLIFE_UI);
+//        _eventDispatcher->dispatchEvent(&event);
         log("付款成功");
         
     }
