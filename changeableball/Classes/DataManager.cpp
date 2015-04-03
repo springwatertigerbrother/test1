@@ -171,11 +171,11 @@ bool DataManager::init()
     
     CCSize s = Director::getInstance()->getWinSize();
     std::string bg_cstr ;
-    if (DataHome::getInstance()->isCountDownModel)
-    {
-        bg_cstr ="Images/artwork_darkenergy-sm.jpg";
-    }
-    else
+//    if (DataHome::getInstance()->isCountDownModel)
+//    {
+//        bg_cstr ="Images/artwork_darkenergy-sm.jpg";
+//    }
+//    else
     {
         bg_cstr ="Images/gamebg.png";
     }
