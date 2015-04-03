@@ -138,7 +138,7 @@ void BallGameScene::onEnter()
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
-    CCSprite* pBg4 = Sprite::create("Images/bg4.png");
+    CCSprite* pBg4 = Sprite::create("Images/bg1.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
     pBg4->setOpacity(230);
     addChild(pBg4);
@@ -150,7 +150,7 @@ void BallGameScene::onEnter()
     pBg->setPosition(ccp(size.width/2,size.height));
     pBg->setOpacity(200);
     pBg->setScale(CC_CONTENT_SCALE_FACTOR());
-    addChild(pBg);
+//    addChild(pBg);
 
     CCSprite* pemc2 = Sprite::create("Images/emc2.png");
     pemc2->setPosition(ccp(size.width/2,size.height/1.3));
@@ -173,9 +173,9 @@ void BallGameScene::onEnter()
     
     CCMenu *menu = CCMenu::create(m_playnow,m_multiplayer, NULL);
     
-    menu->alignItemsVerticallyWithPadding(10);
+    menu->alignItemsVerticallyWithPadding(20);
     
-    menu->setPosition(ccp(size.width/2,size.height/5));
+    menu->setPosition(ccp(size.width/2,size.height/2));
     
     
 //    auto backgroundButton = cocos2d::extension::Scale9Sprite::create("Images/button.png");
@@ -240,13 +240,19 @@ void BallGameScene:: playingNow(void* sender)
 
 void BallGameScene:: multiplePlayer(void* sender)
 {
+//    NSString *str = [NSString stringWithFormat:
+//                     
+//                     @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa /wa/viewContentsUserReviews?type=Purple+Software&id=%d",
+//                     
+//                     m_appleID ];
+//    
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
     
-    
-    if(1)
-    {
-        IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
-        bridge->requestProducts(6);
-    }
+//    if(1)
+//    {
+//        IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
+//        bridge->requestProducts(6);
+//    }
 //    if(0)
 //    {
 //        std::string outputFile = "";
@@ -293,15 +299,10 @@ void BallGameScene:: multiplePlayer(void* sender)
 //#endif
 //    }
 //
-//    DataHome::getInstance()->isCountDownModel = true;
-//    
-//    CCScene * playingScene = GameCenterScene::scene();
-//    CCDirector::sharedDirector()->replaceScene(playingScene);
+    DataHome::getInstance()->isCountDownModel = true;
     
-    //    [[NetWorkHandle getSharedNetWork] startMatchOppoent:self];
-//    CCScene * playingScene = MutablePlayerScene node];
-//    
-//    [[CCDirector sharedDirector] pushScene:[CCTransitionMoveInR transitionWithDuration:0.2 scene:playingScene]];
+    CCScene * playingScene = GameCenterScene::scene();
+    CCDirector::sharedDirector()->replaceScene(playingScene);
 }
 
 void BallGameScene:: highScore(void* sender)
