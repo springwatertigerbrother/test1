@@ -92,6 +92,7 @@ public:
     
     void playingSound(int count,int nType);
     
+    void metetors();
     //判断是否还有可消除的
     int shuzu[6][6];
     int sum[6][6];
@@ -111,6 +112,9 @@ public:
     DrawNode* m_pDrawNode;
     
     CCLabelTTF* m_pTotalScoreLabel;
+    CCLabelTTF* m_pLabelHelp;
+    LayerColor* m_helpLayer;
+    void help(void* sender);
 
 };
 

@@ -33,7 +33,7 @@
 #define TOTAL_TYPE 5
 #define MAX_TYPE_VALUE 5
 #define CONTINIOUS_NUM 3
-#define DEFAULT_COUNT_TIME 180 
+#define DEFAULT_COUNT_TIME 3
 
 #define ccc4fBlue ccc4f(88/255.f,34/255.f,241/255.f,1)
 #define ccc4fOrange ccc4f(244/255.f,148/255.f,37/255.f,1)
@@ -50,6 +50,7 @@
 
 #define RIVIVE_COSUMED_DIAMOND  30
 
+#define GAME_RULE "游戏规则\n     1,有连续三个以上相同元素便可以消除，且最后一个元素在当前值下加1后进化成相应元素，消除3个加1，消除4个加2，依此类推，最大进化为5；\n     2，比如消除3个1变成2，消除4个1变成3，消除五个1变成4，消除6个和六个以上的1变成5；\n    3，消除3个2进化为3。。。。。。"
 typedef enum {
     tooltime = 0,
     toolDisappearAll = 1,

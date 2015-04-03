@@ -163,7 +163,8 @@ bool DataManager::init()
     listener->onTouchesMoved = CC_CALLBACK_2(DataManager::onTouchesMoved, this);
     listener->onTouchesEnded = CC_CALLBACK_2(DataManager::onTouchesEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-    
+   
+
 
 //    m_pDrawNode = DrawNode::create();
 //    addChild(m_pDrawNode, 10);
@@ -256,7 +257,36 @@ bool DataManager::init()
 //    this->addChild(mCoreLayer);
     loadEffectSounds();
 //    setTouchEnabled(true);
+//    metetors();
 
+    m_pLabelHelp = CCLabelTTF::create();
+    //    m_pTotalScoreLabel->setString(scoreStr);
+    m_pLabelHelp->setPosition(ccp(s.width/2, s.height*0.66));
+    m_pLabelHelp->setVisible(true);
+    m_pLabelHelp->setColor(ccYELLOW);
+//    m_pLabelHelp->setScale(2);
+    m_pLabelHelp->setFontSize(30);
+    m_pLabelHelp->setString(GAME_RULE);
+    m_pLabelHelp->setDimensions(CCSizeMake(500,0));
+    m_pLabelHelp->setAnchorPoint(ccp(0.5,1));
+    m_helpLayer = CCLayerColor::create(ccc4(88,34,241,200));
+    
+    m_helpLayer->setAnchorPoint(CCPoint(0.5,1));
+    addChild(m_helpLayer);
+    
+    m_helpLayer-> addChild(m_pLabelHelp,10000);
+    m_helpLayer->setVisible(false);
+    
+    auto helpItem= MenuItemFont::create("??", CC_CALLBACK_1(DataManager::help, this));
+    helpItem->setFontSize(200);
+    CCMenu *menu = CCMenu::create(helpItem, NULL);
+    
+    menu->alignItemsVerticallyWithPadding(10);
+    
+    menu->setPosition(ccp(s.width/2,s.height-100));
+    this-> addChild(menu);
+
+    
 //    registerWithTouchDispatcher();
     return true;
 }
@@ -900,8 +930,35 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
              m_ballSpriteArray.pop_back();
          }
 
+void DataManager::metetors()
+{
+    Size s = Director::getInstance()->getWinSize();
+    for (int i = 0; i<10;i++)
+    {
+        CCSprite* pMeteor = Sprite::create("Images/meteor.png");
+        float x = s.width*0.5 + random()%(int)(s.width);
+        float y = s.height - random()%(int)(200);
+        
+        pMeteor->setPosition(ccp(x,y));
+        pMeteor->setScale(CC_CONTENT_SCALE_FACTOR()*(random()%5));
+        
+        pMeteor->runAction(Sequence::create(MoveBy::create(0.8, ccp(-500,-500)), NULL));
+        addChild(pMeteor);
+    }
+
+}
 //void DataManager::registerWithTouchDispatcher()
 //{
 //    CCDirector::sharedDirector()->getEventDispatcher()->addTargetedDelegate(this, -128, false);
 //}
-
+void DataManager::help(void *sender)
+{
+    if (m_helpLayer->isVisible())
+    {
+        m_helpLayer->setVisible(false);
+    }
+    else
+    {
+        m_helpLayer->setVisible(true);
+    }
+}
