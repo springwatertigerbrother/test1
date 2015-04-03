@@ -283,11 +283,24 @@ void GameOverLayer::ShareGame()
     
     // 打开分享面板, 注册分享回调, 参数1为分享面板上的平台, 参数2为要分享的文字内容，
     // 参数3为要分享的图片路径(android和IOS的图片地址格式不一致，因此分平台设置), 参数4为分享回调.
+//    int nDimension = UserDefault()->getInstance->geti
+//    char tempStr[100] ="";
+    
+    unsigned long  nTotalScore = 0;
+    //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
+    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    if (nTotalScore<0)
+    {
+        nTotalScore = 0;
+    }
+    String* pCongratulationScoreStr = String::createWithFormat("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？",
+                                                               (int)(log2(nTotalScore)));
+    
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    sdk->openShare("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？", "/sdcard/image.png", share_selector(shareCallback));
+    sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     //    sdk->setPlatformShareContent(WEIXIN_CIRCLE,"我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png");
-    sdk->openShare("我的世界已经进入了　%d 次元，小伙伴你呢？？？",outputFile.c_str(), share_selector(shareCallback));
+    sdk->openShare(pCongratulationScoreStr->getCString(),outputFile.c_str(), share_selector(shareCallback));
 #endif
     log("share");
 }
