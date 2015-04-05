@@ -63,7 +63,7 @@ bool UpStateLayer::init()
             m_labelCurrentNValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCurrentScoreTitle = CCLabelTTF::create("当前能量：","ArialRoundedMTBold",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
-            m_labelCountDown = CCLabelTTF::create("180","ArialRoundedMTBold",50);
+            m_labelCountDown = CCLabelTTF::create("300","ArialRoundedMTBold",50);
             
             unsigned long nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 //            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
@@ -135,16 +135,16 @@ bool UpStateLayer::init()
 
             
             //count down
-            CCSprite* pClock = Sprite::create("Images/bagua1.png");
-            pClock->setPosition(ccp(s.width - 150,10));
+            CCSprite* pClock = Sprite::create("Images/clock.png");
+            pClock->setPosition(ccp(s.width - 250,10));
             pClock->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(pClock);
             
-            m_labelCountDown->setAnchorPoint(ccp(0.5, 0.5));
+            m_labelCountDown->setAnchorPoint(ccp(0.0, 0.5));
             m_labelCountDown->setColor(ccc3(0, 0, 0));
-            m_labelCountDown->setPosition(ccp(s.width - 50,10));
+            m_labelCountDown->setPosition(ccp(s.width - 220,10));
             //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
-            m_labelCountDown->setColor(ccWHITE);
+            m_labelCountDown->setColor(ccRED);
             addChild(m_labelCountDown);
 
             m_labelCountDown->setVisible(DataHome::getInstance()->isCountDownModel);

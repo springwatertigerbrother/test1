@@ -94,12 +94,13 @@ bool GameOverLayer::init()
     pBg->setPosition(ccp(s.width/2,s.height/2));
     pBg->setScale(CC_CONTENT_SCALE_FACTOR());
     addChild(pBg);
+//    pBg->setColor(Color3B(255, 0, 0));
+    pBg->setOpacity(200);
+    MenuItemImage* pItem1 = MenuItemImage::create("Images/restartn.png", "Images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
     
-    MenuItemImage* pItem1 = MenuItemImage::create("Images/restart.png", "Images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
-    
-    MenuItemImage* pItem2 = MenuItemImage::create("Images/share.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
-    MenuItemImage* pItem3 = MenuItemImage::create("Images/backHome.png", "Images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
-    MenuItemImage* pItem4 = MenuItemImage::create("Images/paihang.png", "Images/paihang.png", CC_CALLBACK_0(GameOverLayer::ranking,this)) ;
+    MenuItemImage* pItem2 = MenuItemImage::create("Images/sharen.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
+    MenuItemImage* pItem3 = MenuItemImage::create("Images/backHome.png", "Images/backHomep.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
+    MenuItemImage* pItem4 = MenuItemImage::create("Images/rankingn.png", "Images/paihang.png", CC_CALLBACK_0(GameOverLayer::ranking,this)) ;
 
     
     pItem1->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
@@ -291,6 +292,7 @@ void GameOverLayer::ShareGame()
 //    platforms->push_back(QZONE) ;
 //    platforms->push_back(QQ) ;
     platforms->push_back(DOUBAN) ;
+
     
     // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
     sdk->setPlatforms(platforms) ;
