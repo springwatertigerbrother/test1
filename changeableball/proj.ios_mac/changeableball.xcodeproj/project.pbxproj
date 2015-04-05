@@ -17,11 +17,8 @@
 		1AC6FB30180E99EB004C840B /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2dx iOS.a */; };
 		1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
 		1AC6FB32180E99EB004C840B /* libCocosDenshion iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0F180E9839004C840B /* libCocosDenshion iOS.a */; };
-		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
+		1AFAF8B716D35DE700DB1158 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.mm */; };
 		1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
-		1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
-		1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
-		1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -32,10 +29,7 @@
 		503AE10517EB98FF00D1A890 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503AE10317EB98FF00D1A890 /* main.cpp */; };
 		503AE11217EB99EE00D1A890 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AE11117EB99EE00D1A890 /* libcurl.dylib */; };
 		503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AE11A17EB9C5A00D1A890 /* IOKit.framework */; };
-		5087E75317EB910900C73F5D /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
-		5087E75417EB910900C73F5D /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
-		5087E75517EB910900C73F5D /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
-		5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
+		5087E75717EB910900C73F5D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.mm */; };
 		5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
 		5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		5087E76517EB910900C73F5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
@@ -91,6 +85,10 @@
 		FE438D7D19F48F0300D9C636 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7819F48F0300D9C636 /* DataManager.cpp */; };
 		FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
 		FE438D7F19F48F0300D9C636 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
+		FE512D561ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
+		FE512D571ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
+		FE512D581ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
+		FE512D5B1ACFE33400B7232F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE512D5A1ACFE33400B7232F /* GameKit.framework */; };
 		FE7FF2971AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE9A95941A9B5C2000D5C192 /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */; };
@@ -99,17 +97,14 @@
 		FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77B17EB970100C73F5D /* Icon-76.png */; };
 		FEA72B601AAEE090009226A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77417EB970100C73F5D /* Default@2x.png */; };
 		FEA72B611AAEE090009226A1 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
-		FEA72B621AAEE090009226A1 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
 		FEA72B631AAEE090009226A1 /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77817EB970100C73F5D /* Icon-152.png */; };
 		FEA72B641AAEE090009226A1 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5619F48D7000D9C636 /* Images */; };
 		FEA72B651AAEE090009226A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77217EB970100C73F5D /* Default-568h@2x.png */; };
 		FEA72B661AAEE090009226A1 /* log in Resources */ = {isa = PBXBuildFile; fileRef = FE9A95991A9C385F00D5C192 /* log */; };
 		FEA72B671AAEE090009226A1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77A17EB970100C73F5D /* Icon-72.png */; };
-		FEA72B681AAEE090009226A1 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
 		FEA72B691AAEE090009226A1 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5819F48D7000D9C636 /* fonts */; };
 		FEA72B6A1AAEE090009226A1 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		FEA72B6B1AAEE090009226A1 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77517EB970100C73F5D /* Icon-114.png */; };
-		FEA72B6C1AAEE090009226A1 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
 		FEA72B6D1AAEE090009226A1 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		FEA72B6E1AAEE090009226A1 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629217ECD46A001EB2F8 /* Icon-40.png */; };
 		FEA72B6F1AAEE090009226A1 /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77717EB970100C73F5D /* Icon-144.png */; };
@@ -127,7 +122,7 @@
 		FEA72B7C1AAEE090009226A1 /* GameCenterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7119F48EEC00D9C636 /* GameCenterScene.cpp */; };
 		FEA72B7D1AAEE090009226A1 /* DataHome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6319F48ECF00D9C636 /* DataHome.cpp */; };
 		FEA72B7E1AAEE090009226A1 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
-		FEA72B7F1AAEE090009226A1 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
+		FEA72B7F1AAEE090009226A1 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.mm */; };
 		FEA72B801AAEE090009226A1 /* ballGamescene.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6F19F48EEC00D9C636 /* ballGamescene.mm */; };
 		FEA72B811AAEE090009226A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		FEA72B821AAEE090009226A1 /* DataUpdateLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6919F48EDC00D9C636 /* DataUpdateLayer.cpp */; };
@@ -468,13 +463,10 @@
 /* Begin PBXFileReference section */
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
-		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
+		1AFAF8B316D35DE700DB1158 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ../Classes/AppDelegate.mm; sourceTree = "<group>"; };
 		1AFAF8B416D35DE700DB1158 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
 		1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = ../Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
 		1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = ../Classes/HelloWorldScene.h; sourceTree = "<group>"; };
-		1AFAF8B916D35E4900DB1158 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
-		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
-		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* changeableball iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -538,6 +530,9 @@
 		FE438D7919F48F0300D9C636 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		FE438D7A19F48F0300D9C636 /* BallSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallSprite.cpp; sourceTree = "<group>"; };
 		FE438D7B19F48F0300D9C636 /* BallSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallSprite.h; sourceTree = "<group>"; };
+		FE512D551ACFE25C00B7232F /* NCSGameCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCSGameCenter.m; path = ../Classes/NCSGameCenter.m; sourceTree = "<group>"; };
+		FE512D591ACFE2AC00B7232F /* NCSGameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSGameCenter.h; path = ../Classes/NCSGameCenter.h; sourceTree = "<group>"; };
+		FE512D5A1ACFE33400B7232F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		FE7FF2951AA06FE6009C8339 /* MUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MUtils.cpp; path = ../Classes/MUtils.cpp; sourceTree = "<group>"; };
 		FE7FF2961AA06FE6009C8339 /* MUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MUtils.h; path = ../Classes/MUtils.h; sourceTree = "<group>"; };
 		FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = ../Classes/GameOverLayer.h; sourceTree = "<group>"; };
@@ -735,6 +730,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE512D5B1ACFE33400B7232F /* GameKit.framework in Frameworks */,
 				FED2987E1AC112C000C89B6F /* Accounts.framework in Frameworks */,
 				FED2987C1AC112B700C89B6F /* Social.framework in Frameworks */,
 				FED2987A1AC112AF00C89B6F /* libz.dylib in Frameworks */,
@@ -806,8 +802,9 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FE512D541ACFE1FD00B7232F /* gamecenter */,
 				FED28AFC1AC00FBA00C89B6F /* iap */,
-				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
+				1AFAF8B316D35DE700DB1158 /* AppDelegate.mm */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
 				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
@@ -870,6 +867,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE512D5A1ACFE33400B7232F /* GameKit.framework */,
 				FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */,
 				FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */,
 				FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */,
@@ -955,9 +953,6 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
-				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
-				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 				FE438D5619F48D7000D9C636 /* Images */,
 				FE438D5719F48D7000D9C636 /* Sounds */,
 				FE438D5819F48D7000D9C636 /* fonts */,
@@ -1013,6 +1008,15 @@
 				FE7FF2961AA06FE6009C8339 /* MUtils.h */,
 			);
 			name = Ui;
+			sourceTree = "<group>";
+		};
+		FE512D541ACFE1FD00B7232F /* gamecenter */ = {
+			isa = PBXGroup;
+			children = (
+				FE512D551ACFE25C00B7232F /* NCSGameCenter.m */,
+				FE512D591ACFE2AC00B7232F /* NCSGameCenter.h */,
+			);
+			name = gamecenter;
 			sourceTree = "<group>";
 		};
 		FEA72B2B1AAEE090009226A1 /* ballpaid */ = {
@@ -1495,7 +1499,6 @@
 				FED2983B1AC1114D00C89B6F /* UMSnsAccountViewController.xib in Resources */,
 				FED298561AC1114F00C89B6F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				FED2982F1AC1114D00C89B6F /* UMSCommentInputControlleriPad.xib in Resources */,
-				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				FE438D5919F48D7000D9C636 /* Images in Resources */,
 				FED298411AC1114D00C89B6F /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -1504,7 +1507,6 @@
 				FED28B081AC00FBA00C89B6F /* IOSƒ⁄÷ß∏∂IAPœÍœ∏∑Ω∑®.docx in Resources */,
 				FE9A959A1A9C385F00D5C192 /* log in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
-				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				FED295741AC1114C00C89B6F /* doc.html in Resources */,
 				FE438D5D19F48D7000D9C636 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
@@ -1512,7 +1514,6 @@
 				FED298291AC1114D00C89B6F /* UMSCommentDetailController.xib in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				FED295771AC1114C00C89B6F /* markdown.css in Resources */,
-				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				FED298381AC1114D00C89B6F /* UMSLoginViewController.xib in Resources */,
 				FED298201AC1114D00C89B6F /* UMSocialLocalizable.strings in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
@@ -1532,7 +1533,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED28B091AC00FBA00C89B6F /* IOSƒ⁄÷ß∏∂IAPœÍœ∏∑Ω∑®.docx in Resources */,
-				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				FE438D5C19F48D7000D9C636 /* Sounds in Resources */,
 				FED2983C1AC1114D00C89B6F /* UMSnsAccountViewController.xib in Resources */,
 				FED2982D1AC1114D00C89B6F /* UMSCommentInputController.xib in Resources */,
@@ -1542,14 +1542,12 @@
 				FED2983F1AC1114D00C89B6F /* UMSShareListController.xib in Resources */,
 				FED298301AC1114D00C89B6F /* UMSCommentInputControlleriPad.xib in Resources */,
 				FED298361AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
-				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
 				FED298211AC1114D00C89B6F /* UMSocialLocalizable.strings in Resources */,
 				FED295751AC1114C00C89B6F /* doc.html in Resources */,
 				FE438D5E19F48D7000D9C636 /* fonts in Resources */,
 				FE438D5A19F48D7000D9C636 /* Images in Resources */,
 				FED298391AC1114D00C89B6F /* UMSLoginViewController.xib in Resources */,
 				FED2982A1AC1114D00C89B6F /* UMSCommentDetailController.xib in Resources */,
-				5087E75517EB910900C73F5D /* HelloWorld.png in Resources */,
 				FED298331AC1114D00C89B6F /* UMShareEditViewController.xib in Resources */,
 				FED298571AC1114F00C89B6F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
@@ -1567,7 +1565,6 @@
 				FED2983D1AC1114D00C89B6F /* UMSnsAccountViewController.xib in Resources */,
 				FED298581AC1114F00C89B6F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				FED298311AC1114D00C89B6F /* UMSCommentInputControlleriPad.xib in Resources */,
-				FEA72B621AAEE090009226A1 /* CloseNormal.png in Resources */,
 				FEA72B631AAEE090009226A1 /* Icon-152.png in Resources */,
 				FEA72B641AAEE090009226A1 /* Images in Resources */,
 				FED298431AC1114D00C89B6F /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -1576,7 +1573,6 @@
 				FED28B0A1AC00FBA00C89B6F /* IOSƒ⁄÷ß∏∂IAPœÍœ∏∑Ω∑®.docx in Resources */,
 				FEA72B661AAEE090009226A1 /* log in Resources */,
 				FEA72B671AAEE090009226A1 /* Icon-72.png in Resources */,
-				FEA72B681AAEE090009226A1 /* CloseSelected.png in Resources */,
 				FED295761AC1114C00C89B6F /* doc.html in Resources */,
 				FEA72B691AAEE090009226A1 /* fonts in Resources */,
 				FEA72B6A1AAEE090009226A1 /* Icon-50.png in Resources */,
@@ -1584,7 +1580,6 @@
 				FED2982B1AC1114D00C89B6F /* UMSCommentDetailController.xib in Resources */,
 				FEA72B6B1AAEE090009226A1 /* Icon-114.png in Resources */,
 				FED295791AC1114C00C89B6F /* markdown.css in Resources */,
-				FEA72B6C1AAEE090009226A1 /* HelloWorld.png in Resources */,
 				FED2983A1AC1114D00C89B6F /* UMSLoginViewController.xib in Resources */,
 				FED298221AC1114D00C89B6F /* UMSocialLocalizable.strings in Resources */,
 				FEA72B6D1AAEE090009226A1 /* Icon-29.png in Resources */,
@@ -1621,12 +1616,13 @@
 				FED295711AC1114C00C89B6F /* UMShareButton.cpp in Sources */,
 				FE7FF2971AA06FE6009C8339 /* MUtils.cpp in Sources */,
 				FED2956E1AC1114C00C89B6F /* UMSocialUIObject.mm in Sources */,
-				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				1AFAF8B716D35DE700DB1158 /* AppDelegate.mm in Sources */,
 				FE438D7319F48EEC00D9C636 /* ballGamescene.mm in Sources */,
 				FED295681AC1114C00C89B6F /* CCUMSocialSDK.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				FE438D6D19F48EDC00D9C636 /* DataUpdateLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				FE512D561ACFE25C00B7232F /* NCSGameCenter.m in Sources */,
 				FE438D7C19F48F0300D9C636 /* DataManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1640,10 +1636,11 @@
 				FED295721AC1114C00C89B6F /* UMShareButton.cpp in Sources */,
 				FED2956C1AC1114C00C89B6F /* UmSocialControllerIOS.mm in Sources */,
 				FED2956F1AC1114C00C89B6F /* UMSocialUIObject.mm in Sources */,
-				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				5087E75717EB910900C73F5D /* AppDelegate.mm in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				FE438D6C19F48EDC00D9C636 /* ControllerLayer.cpp in Sources */,
 				FED28B061AC00FBA00C89B6F /* IOSiAP_Bridge.cpp in Sources */,
+				FE512D571ACFE25C00B7232F /* NCSGameCenter.m in Sources */,
 				FE438D6E19F48EDC00D9C636 /* DataUpdateLayer.cpp in Sources */,
 				FED295691AC1114C00C89B6F /* CCUMSocialSDK.cpp in Sources */,
 				FE348B401AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */,
@@ -1676,12 +1673,13 @@
 				FED295731AC1114C00C89B6F /* UMShareButton.cpp in Sources */,
 				FEA72B7E1AAEE090009226A1 /* MUtils.cpp in Sources */,
 				FED295701AC1114C00C89B6F /* UMSocialUIObject.mm in Sources */,
-				FEA72B7F1AAEE090009226A1 /* AppDelegate.cpp in Sources */,
+				FEA72B7F1AAEE090009226A1 /* AppDelegate.mm in Sources */,
 				FEA72B801AAEE090009226A1 /* ballGamescene.mm in Sources */,
 				FED2956A1AC1114C00C89B6F /* CCUMSocialSDK.cpp in Sources */,
 				FEA72B811AAEE090009226A1 /* main.m in Sources */,
 				FEA72B821AAEE090009226A1 /* DataUpdateLayer.cpp in Sources */,
 				FEA72B831AAEE090009226A1 /* HelloWorldScene.cpp in Sources */,
+				FE512D581ACFE25C00B7232F /* NCSGameCenter.m in Sources */,
 				FEA72B841AAEE090009226A1 /* DataManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2192,7 +2190,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2269,6 +2267,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
+				PROVISIONING_PROFILE = "a7c09261-582b-4345-881c-ec43147a9b93";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2279,7 +2278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2354,6 +2353,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
+				PROVISIONING_PROFILE = "a7c09261-582b-4345-881c-ec43147a9b93";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
