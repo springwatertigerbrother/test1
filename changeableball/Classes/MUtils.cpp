@@ -126,3 +126,81 @@ void initialize_resolution()
     pEGLView->setDesignResolutionSize(drSize.width, drSize.height, cocos2d::kResolutionShowAll);
     
 }
+
+ControlButton *standardButtonWithTitle(const char * title)
+{
+    /** Creates and return a button with a default background and title color. */
+    auto backgroundButton = Scale9Sprite::create("Images/buttonbg.png");
+    auto backgroundHighlightedButton = Scale9Sprite::create("Images/buttonbg.png");
+    
+    auto titleButton = Label::createWithTTF(title, "fonts/Marker Felt.ttf", 30);
+    
+    //    titleButton->setColor(Color3B(159, 168, 176));
+    
+    ControlButton *button = ControlButton::create(titleButton, backgroundButton);
+    button->setBackgroundSpriteForState(backgroundHighlightedButton, Control::State::HIGH_LIGHTED);
+    button->setTitleColorForState(Color3B::WHITE, Control::State::HIGH_LIGHTED);
+    button->setPreferredSize(Size(400,150));
+    return button;
+}
+
+bool ControlButtoninit(Node* obj,std::vector<std::string> vec)
+{
+        auto screenSize = Director::getInstance()->getWinSize();
+        
+        // Defines an array of title to create buttons dynamically
+//        std::vector<std::string> vec;
+        //        vec.push_back("Hello");
+        //        vec.push_back("Variable");
+        //        vec.push_back("Size");
+//        vec.push_back("!trteerterreer\nndf");
+    
+        auto layer = Node::create();
+        obj->addChild(layer, 1);
+        
+        double total_width = 0, height = 0;
+        
+        int i = 0;
+        
+        for (auto& title : vec)
+        {
+            // Creates a button with this string as title
+            ControlButton *button = standardButtonWithTitle(title.c_str());
+            
+//            button->addTargetWithActionForControlEvents(this, cccontrol_selector(ControlButtonTest_Event::touchDownAction), Control::EventType::TOUCH_DOWN);
+            if (i == 0)
+            {
+                button->setOpacity(50);
+                //                button->setColor(Color3B(0, 255, 0));
+            }
+            else if (i == 1)
+            {
+                button->setOpacity(200);
+                button->setColor(Color3B(0, 255, 0));
+            }
+            else if (i == 2)
+            {
+                button->setOpacity(100);
+                button->setColor(Color3B(0, 0, 255));
+            }
+            
+            button->setPosition(Vec2 (total_width + button->getContentSize().width / 2, button->getContentSize().height / 2));
+            layer->addChild(button);
+            
+            // Compute the size of the layer
+            height = button->getContentSize().height;
+            total_width += button->getContentSize().width;
+            i++;
+        }
+        
+        layer->setAnchorPoint(Vec2 (0.5, 0.5));
+        layer->setContentSize(Size(total_width, height));
+        layer->setPosition(Vec2(screenSize.width / 2.0f, screenSize.height / 2.0f));
+        
+//        // Add the black background
+//        auto background = Scale9Sprite::create("extensions/buttonBackground.png");
+//        background->setContentSize(Size(total_width + 14, height + 14));
+//        background->setPosition(Vec2(screenSize.width / 2.0f, screenSize.height / 2.0f));
+//        addChild(background);
+    return false;
+}

@@ -12,13 +12,20 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "cocos-ext.h"
+#include "extensions/cocos-ext.h"
+
+using namespace cocos2d::extension;
+
 class BallGameScene : public cocos2d::CCLayer
 {
     cocos2d::CCMenuItemImage * m_playnow;
-    cocos2d::CCMenuItemImage * m_multiplayer;
+    cocos2d::CCMenuItemImage * m_countdown;
     cocos2d::CCMenuItemImage * m_highscore;
     cocos2d::CCMenuItemImage * m_settings;
     cocos2d::CCMenuItemImage * m_aboutus;
+    cocos2d::CCMenuItemImage * m_share;
+    cocos2d::CCMenuItemImage * m_ranking;
+    
 
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
@@ -27,6 +34,10 @@ public:
     
     void startGame();
     void playingNow(void* sender);
+    void countDownModel(void* sender);
+    void ranking(void* sender);
+    void share(void* sender);
+
     void multiplePlayer(void* sender);
     void highScore(void* sender);
     void aboutus(void* sender);
@@ -44,7 +55,9 @@ public:
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(BallGameScene);
 
-    
+    ControlButton* standardButtonWithTitle(const char * title);
+    bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
+    void touchDownAction(Ref *senderz, Control::EventType controlEvent);
 };
 
 #endif /* defined(__changeableball__ballGamescene__) */

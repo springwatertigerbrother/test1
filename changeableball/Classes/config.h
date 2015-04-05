@@ -51,6 +51,9 @@
 #define RIVIVE_COSUMED_DIAMOND  30
 
 #define GAME_RULE "游戏规则\n     1,有连续三个以上相同元素便可以消除，且最后一个元素在当前值下加1后进化成相应元素，消除3个加1，消除4个加2，依此类推，最大进化为5；\n     2，比如消除3个1变成2，消除4个1变成3，消除五个1变成4，消除6个和六个以上的1变成5；\n    3，消除3个2进化为3。。。。。。"
+
+
+
 typedef enum {
     tooltime = 0,
     toolDisappearAll = 1,
