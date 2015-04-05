@@ -145,11 +145,11 @@ void BallGameScene::onEnter()
     pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
 //    CCSprite* pBg = Sprite::create("Images/aiyisitanfudiao.png");
-    CCSprite* pBg = Sprite::create("Images/aystthinging.png");
-    pBg->setAnchorPoint(ccp(0.5,1));
-    pBg->setPosition(ccp(size.width/2,size.height));
-    pBg->setOpacity(200);
-    pBg->setScale(CC_CONTENT_SCALE_FACTOR());
+//    CCSprite* pBg = Sprite::create("Images/aystthinging.png");
+//    pBg->setAnchorPoint(ccp(0.5,1));
+//    pBg->setPosition(ccp(size.width/2,size.height));
+//    pBg->setOpacity(200);
+//    pBg->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pBg);
 
     CCSprite* pemc2 = Sprite::create("Images/emc2.png");
