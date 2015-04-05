@@ -207,11 +207,11 @@ bool DataManager::init()
     m_pTotalScoreLabel->setFontSize(30);
     this-> addChild(m_pTotalScoreLabel,10000);
     
-    Sprite* pMoon = Sprite::create("Images/yueliang.png");
-    pMoon->setAnchorPoint(ccp(1,1));
-    pMoon->setPosition(ccp(s.width - 10,s.height - 10));
-    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
-    addChild(pMoon);
+//    Sprite* pMoon = Sprite::create("Images/yueliang.png");
+//    pMoon->setAnchorPoint(ccp(1,1));
+//    pMoon->setPosition(ccp(s.width - 10,s.height - 10));
+//    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
+//    addChild(pMoon);
     
     initElements();
 
