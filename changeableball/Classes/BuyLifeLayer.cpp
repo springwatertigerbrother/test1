@@ -104,17 +104,17 @@ void BuyLifeLayer::onEnter()
     
     
     m_iap6 = CCMenuItemImage::create("Images/zuan100.png","Images/zuan100.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
-    m_iap6->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_iap6->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
     m_iap6->setTag(buy6_tag);
 //    CCLabelTTF* testLabel = CCLabelTTF::create("复活 \n revive","ArialRoundedMTBold",16);
 //    testLabel->setPosition(ccp(m_iap6->getContentSize().width/2,m_iap6->getContentSize().height/2));
 //    m_iap6->addChild(testLabel);
     m_iap18  = CCMenuItemImage::create("Images/zuan500.png","Images/zuan500.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
-    m_iap18->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_iap18->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
     m_iap18->setTag(buy18_tag);
 
     m_iap68 = CCMenuItemImage::create("Images/zuan2000.png","Images/zuan2000.png",CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
-    m_iap68->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_iap68->setScale(CC_CONTENT_SCALE_FACTOR()*0.8);
     m_iap68->setTag(buy68_tag);
     
 //    auto item7= MenuItemFont::create("Quit", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife, this));
