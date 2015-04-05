@@ -99,7 +99,7 @@ bool GameOverLayer::init()
     
     MenuItemImage* pItem2 = MenuItemImage::create("Images/share.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
     MenuItemImage* pItem3 = MenuItemImage::create("Images/backHome.png", "Images/backHome.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
-    MenuItemImage* pItem4 = MenuItemImage::create("Images/paihang.png", "Images/paihang.png", CC_CALLBACK_0(GameOverLayer::backToHome,this)) ;
+    MenuItemImage* pItem4 = MenuItemImage::create("Images/paihang.png", "Images/paihang.png", CC_CALLBACK_0(GameOverLayer::ranking,this)) ;
 
     
     pItem1->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
@@ -330,11 +330,13 @@ void GameOverLayer::RateMe()
 }
 void GameOverLayer::backToHome()
 {
+    auto scene = BallGameScene::scene();
+    Director::getInstance()->replaceScene(scene);
+}
+void GameOverLayer::ranking()
+{
     [[ NCSGameCenter sharedGameCenter] registerForAuthenticationNotification];
     [[ NCSGameCenter sharedGameCenter] showLeaderboard];
-//
-//    auto scene = BallGameScene::scene();
-//    Director::getInstance()->replaceScene(scene);
 }
 //
 //void GameOverLayer::registerWithTouchDispatcher()

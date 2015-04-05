@@ -32,6 +32,7 @@ public:
     void RateMe();
     void GameCenter();
     void backToHome();
+    void ranking();
     static cocos2d::CCScene* scene();
 
 };
