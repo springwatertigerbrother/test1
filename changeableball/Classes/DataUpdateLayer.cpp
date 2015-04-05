@@ -27,10 +27,10 @@ bool UpStateLayer::init()
             pBg->setScale(CC_CONTENT_SCALE_FACTOR());
 //            addChild(pBg);
             
-            CCSprite* pAiyinsitan = Sprite::create("Images/aiyinsitanhead.png");
-            pAiyinsitan->setPosition(ccp(s.width/2  + 200,100));
-            pAiyinsitan->setScale(CC_CONTENT_SCALE_FACTOR());
-            addChild(pAiyinsitan);
+            m_pAiyinsitan = Sprite::create("Images/aiyinsitanhead.png");
+            m_pAiyinsitan->setPosition(ccp(s.width/2  + 200,100));
+            m_pAiyinsitan->setScale(CC_CONTENT_SCALE_FACTOR());
+            addChild(m_pAiyinsitan);
             
             m_scoreItem = CCMenuItemImage::create("Images/scorebutton.png", "Images/score_unselect.png",CC_CALLBACK_1 (UpStateLayer::menuBePressed,this));
             m_timeItem = CCMenuItemImage::create("Images/timebutton.png","Images/time_unselect.png", CC_CALLBACK_1(UpStateLayer::menuBePressed,this));
@@ -253,6 +253,10 @@ void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
 
     String* temStr = String::createWithFormat("%d",(unsigned int)(log2(nValue)));
     m_labelNValue->setString(temStr->getCString());
+    
+    auto aiyinsitanswing = Sequence::create(RotateBy::create(0.2, 45),RotateBy::create(0.2, -45), NULL);
+    m_pAiyinsitan->runAction(CCRepeat::create(aiyinsitanswing,3));
+
 }
 void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
 {

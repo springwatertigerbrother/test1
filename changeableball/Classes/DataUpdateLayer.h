@@ -28,6 +28,9 @@ class UpStateLayer :public cocos2d::CCLayerColor {
     
     CCMenuItemImage * m_scoreItem;
     CCMenuItemImage * m_timeItem;
+    
+    CCSprite* m_pAiyinsitan;
+
 public:
     virtual bool init();
     CREATE_FUNC(UpStateLayer);
