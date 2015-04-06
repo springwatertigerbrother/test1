@@ -272,7 +272,7 @@ bool DataManager::init()
     
     Sprite* helpSprite = Sprite::create("Images/helppicture.png");
     helpSprite->setPosition(ccp(s.width/2,s.height/2));
-
+    helpSprite->setScale(CC_CONTENT_SCALE_FACTOR()*0.5);
     m_pLabelHelp = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
     m_pLabelHelp->setPosition(ccp(s.width/2, s.height*0.76));
