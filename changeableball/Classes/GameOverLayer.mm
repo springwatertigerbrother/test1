@@ -146,7 +146,7 @@ bool GameOverLayer::init()
     pCongratulation->setPosition(ccp(s.width/2,s.height*0.8));
     unsigned long  nTotalScore = 0;
 //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
-    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
     if (nTotalScore<0)
     {
         nTotalScore = 0;
@@ -219,8 +219,8 @@ bool GameOverLayer::init()
 //    [simple.bannerView setHidden:false];
     
     //    CCDirector::sharedDirector()->pushScene(AdBottomDemo::scene(AdSceneDemo::DemoAdBottom));
-    
-    CCUserDefault::sharedUserDefault()->setIntegerForKey("HistoryHighestScore", m_i_HistoryHighestScore);
+    setIntegerForKey("HistoryHighestScore", m_i_HistoryHighestScore);
+//    CCUserDefault::sharedUserDefault()->setIntegerForKey("HistoryHighestScore", m_i_HistoryHighestScore);
     CCUserDefault::sharedUserDefault()->flush();
 //    char buffer[32];
 //    sprintf(buffer, "%s%d", "Himi",iKey);
@@ -307,7 +307,7 @@ void GameOverLayer::ShareGame()
     
     unsigned long  nTotalScore = 0;
     //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
-    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
     if (nTotalScore<0)
     {
         nTotalScore = 0;

@@ -9,6 +9,7 @@
 #include "DataUpdateLayer.h"
 #include "ControllerLayer.h"
 #include "DataHome.h"
+#include "DataBase64.h"
 
 bool UpStateLayer::init()
 {
@@ -65,7 +66,7 @@ bool UpStateLayer::init()
             m_labelCurrentScoreValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCountDown = CCLabelTTF::create("300","ArialRoundedMTBold",50);
             
-            unsigned long nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+            unsigned long nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 //            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
            
             // total

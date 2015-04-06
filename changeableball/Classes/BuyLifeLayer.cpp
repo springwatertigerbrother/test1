@@ -193,7 +193,7 @@ void BuyLifeLayer::CallUseLife(void* sender)
 
 //    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
     
-    if (lifeLiquid > RIVIVE_COSUMED_DIAMOND)
+    if (lifeLiquid >= RIVIVE_COSUMED_DIAMOND)
     {
         EventCustom event(USE_LIFE_LIQUID);
         _eventDispatcher->dispatchEvent(&event);

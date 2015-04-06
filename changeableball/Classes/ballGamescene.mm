@@ -16,6 +16,7 @@
 // 引入相关的头文件
 #include "Cocos2dx/Common/CCUMSocialSDK.h"
 #include "Cocos2dx/ShareButton/UMShareButton.h"
+#include "DataBase64.h"
 
 using namespace cocos2d;
 
@@ -242,7 +243,8 @@ void BallGameScene::onEnter()
     pCongratulation->setPosition(ccp(size.width/2 + 10,size.height*0.8));
     unsigned long  nTotalScore = 0;
     //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
-    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+//    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
     if (nTotalScore<0)
     {
         nTotalScore = 0;
@@ -339,7 +341,7 @@ void BallGameScene:: share(void* sender)
     
     unsigned long  nTotalScore = 0;
     //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
-    nTotalScore = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
     if (nTotalScore<0)
     {
         nTotalScore = 0;

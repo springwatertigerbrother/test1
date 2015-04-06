@@ -49,13 +49,15 @@ bool GameCenterScene::init()
     {
         CC_BREAK_IF(! CCLayer::create() );
 
-        bool isFirst = !UserDefault::getInstance()->getBoolForKey("isFirstOpen");
+//        bool isFirst = !UserDefault::getInstance()->getBoolForKey("isFirstOpen");
+        bool isFirst = !getIntegerForKey("isFirstOpen");
         if (isFirst)
         {
-            setIntegerForKey("LIFE_LIQUID", 3);
+            setIntegerForKey("LIFE_LIQUID", 60);
 
 //            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
-            UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
+//            UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
+            setIntegerForKey("isFirstOpen", 1);
             UserDefault::getInstance()->flush();
         }
         CCSize s = Director::getInstance()->getWinSize();
@@ -70,7 +72,7 @@ bool GameCenterScene::init()
         m_data = DataManager::create();
         this->addChild(m_data,1);
         
-        m_score = strtoul((CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+        m_score = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 
         m_current_score = 0;
         
@@ -96,7 +98,7 @@ bool GameCenterScene::init()
 
 //            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
             
-            if (lifeLiquid > RIVIVE_COSUMED_DIAMOND)
+            if (lifeLiquid >= RIVIVE_COSUMED_DIAMOND)
             {
                 m_data->m_canPlaying = true;
                 buyLayer->setVisible(false);
@@ -157,8 +159,8 @@ void GameCenterScene::addScore(int nScore)
     auto num = m_score;
     char str[100];
     sprintf(str, " %lu" , num);
-    
-    UserDefault::getInstance()->setStringForKey("TOTALSCORE", str);
+    setStringForKey("TOTALSCORE", str);
+//    UserDefault::getInstance()->setStringForKey("TOTALSCORE", str);
 //    CCString* scores = CCString::createWithFormat("%d",m_score);
 //    m_controllerLayer->resetScoreString(StringMake(str));
     m_controllerLayer->resetScoreWithIntValue(m_score);
