@@ -49,17 +49,7 @@ bool GameCenterScene::init()
     {
         CC_BREAK_IF(! CCLayer::create() );
 
-//        bool isFirst = !UserDefault::getInstance()->getBoolForKey("isFirstOpen");
-        bool isFirst = !getIntegerForKey("isFirstOpen");
-        if (isFirst)
-        {
-            setIntegerForKey("LIFE_LIQUID", 60);
 
-//            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
-//            UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
-            setIntegerForKey("isFirstOpen", 1);
-            UserDefault::getInstance()->flush();
-        }
         CCSize s = Director::getInstance()->getWinSize();
                
         m_controllerLayer = ControllerLayer::create();
@@ -71,6 +61,19 @@ bool GameCenterScene::init()
         setAnchorPoint(CCPoint(0,0));
         m_data = DataManager::create();
         this->addChild(m_data,1);
+
+        //        bool isFirst = !UserDefault::getInstance()->getBoolForKey("isFirstOpen");
+        bool isFirst = !getIntegerForKey("isFirstOpen");
+        if (isFirst)
+        {
+            setIntegerForKey("LIFE_LIQUID", 60);
+            m_data->m_helpLayer->setVisible(true);
+            setIntegerForKey("isFirstOpen", 1);
+            UserDefault::getInstance()->flush();
+            //            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
+            //            UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
+            
+        }
         
         m_score = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 

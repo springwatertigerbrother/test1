@@ -50,7 +50,7 @@
 #define kLeaderboardID @"ndimpaid_Leaderboard"
 #define RIVIVE_COSUMED_DIAMOND  30
 
-#define GAME_RULE "  游戏规则\n     1,有连续三个以上相同元素便可以消除，且最后一个元素在当前值下加1后进化成相应元素，消除3个加1，消除4个加2，依此类推，最大进化为5；\n     2，比如消除3个1变成2，消除4个1变成3，消除五个1变成4，消除6个和六个以上的1变成5；\n    3，消除3个2进化为3。。。。。。\n \n积分方式：\n    1，E = m乘以c的平方, m为一次所消除的元素的个数，c为元素对应的值；\n    2，次元值是是根据生命光波的跃迁来计算的，公式为：(value = RECURSION_N + (nScore - ENERGY_LEVEL)/2048),RECURSION_N 为回归值n，它等于12，nScore为你所得分数，ENERGY_LEVEL为能级值等于4096 \n \n          小伙伴们，像电子一样跃迁吧"
+#define GAME_RULE "  游戏规则\n     1,按住屏幕不放滑动手指，有连续三个以上相同元素便可以消除，且最后一个元素在当前值下加1后进化成相应元素，消除3个加1，消除4个加2，依此类推，最大进化为5；\n     2，比如消除3个1变成2，消除4个1变成3，消除五个1变成4，消除6个和六个以上的1变成5；\n    3，消除3个2进化为3。。。。。。\n \n积分方式：\n    1，E = m乘以c的平方, m为一次所消除的元素的个数，c为元素对应的值；\n    2，次元值是是根据生命光波的跃迁来计算的，公式为：(value = RECURSION_N + (nScore - ENERGY_LEVEL)/2048),RECURSION_N 为回归值n，它等于12，nScore为你所得分数，ENERGY_LEVEL为能级值等于4096\n \n       小伙伴们，像电子一样跃迁吧 \n \n      "
 
 
 #define SCORE_FORMULA(SCORE)   (if(SCORE<=0) SCORE = 1; int value = (int)(log2(SCORE)); return value;)

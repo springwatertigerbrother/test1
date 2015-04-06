@@ -108,6 +108,7 @@ public:
     void initElements();
     
     CCSprite* m_pBg;
+    CCSprite* m_pGood;
     //draw line
     DrawNode* m_pDrawNode;
     

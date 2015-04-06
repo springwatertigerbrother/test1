@@ -86,7 +86,11 @@ void DataManager::findNeighborMark(int i,int j,int color){
         findNeighborMark(i+1,j,color);
         findNeighborMark(i,j-1,color);
         findNeighborMark(i,j+1,color);
-        
+//        findNeighborMark(i-1,j-1,color);
+//        findNeighborMark(i-1,j+1,color);
+//        findNeighborMark(i+1,j+1,color);
+//        findNeighborMark(i+1,j-1,color);
+
     }
 }
 
@@ -207,6 +211,13 @@ bool DataManager::init()
     m_pTotalScoreLabel->setFontSize(30);
     this-> addChild(m_pTotalScoreLabel,10000);
     
+    m_pGood = Sprite::create("Images/good.png");
+    m_pGood->setPosition(ccp(s.width/2, s.height/2 + 50));
+    m_pGood->setScale(CC_CONTENT_SCALE_FACTOR());
+    m_pGood->setVisible(false);
+    m_pGood->runAction(FadeOut::create(0.1));
+    addChild(m_pGood,1000);
+    
 //    Sprite* pMoon = Sprite::create("Images/yueliang.png");
 //    pMoon->setAnchorPoint(ccp(1,1));
 //    pMoon->setPosition(ccp(s.width - 10,s.height - 10));
@@ -258,6 +269,9 @@ bool DataManager::init()
     loadEffectSounds();
 //    setTouchEnabled(true);
 //    metetors();
+    
+    Sprite* helpSprite = Sprite::create("Images/helppicture.png");
+    helpSprite->setPosition(ccp(s.width/2,s.height/2));
 
     m_pLabelHelp = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
@@ -265,13 +279,32 @@ bool DataManager::init()
     m_pLabelHelp->setVisible(true);
     m_pLabelHelp->setColor(ccYELLOW);
 //    m_pLabelHelp->setScale(2);
-    m_pLabelHelp->setFontSize(30);
+    m_pLabelHelp->setFontSize(28);
     m_pLabelHelp->setString(GAME_RULE);
     m_pLabelHelp->setDimensions(CCSizeMake(600,0));
     m_pLabelHelp->setAnchorPoint(ccp(0.5,1));
+    
+    CCLabelTTF* pLabelHelpCancel = CCLabelTTF::create();
+    //    m_pTotalScoreLabel->setString(scoreStr);
+    pLabelHelpCancel->setPosition(ccp(s.width/2, 50));
+    pLabelHelpCancel->setVisible(true);
+    pLabelHelpCancel->setColor(ccRED);
+    //    m_pLabelHelp->setScale(2);
+    pLabelHelpCancel->setFontSize(28);
+    pLabelHelpCancel->setString("点击最上方的 “??” 使文字消失或出现");
+    pLabelHelpCancel->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    
     m_helpLayer = CCLayerColor::create(ccc4(88,34,241,200));
     
     m_helpLayer->setAnchorPoint(CCPoint(0.5,1));
+    
+    m_helpLayer-> addChild(helpSprite);
+    CCLayerColor* colorLayer = CCLayerColor::create(ccc4(88,34,241,100));
+    colorLayer->setAnchorPoint(CCPoint(0,0));
+    m_helpLayer-> addChild(colorLayer);
+
+    m_helpLayer-> addChild(pLabelHelpCancel);
+
     addChild(m_helpLayer);
     
     m_helpLayer-> addChild(m_pLabelHelp,10000);
@@ -415,7 +448,8 @@ void DataManager:: touchMove(CCPoint local)
         }
 
         int absValue = abs(ds->getX() - tds->getX()) + abs(ds->getY() - tds->getY());
-        if (absValue == 1 && ds->selectedType())
+        //        if ((absValue == 1 ||absValue == 2) && ds->selectedType())
+        if ((absValue == 1) && ds->selectedType())
         {
             m_stackArray.push_back(ds);//play sounds
             ds->getType();
@@ -526,6 +560,23 @@ void DataManager:: touchEnd()
             
         }
     }
+    if (m_stackArray.size() >= 5)
+    {
+        m_pGood->setVisible(true);
+        auto action1 = FadeIn::create(0.50f);
+        auto action1Back = action1->reverse();
+        auto action2 = ScaleBy::create(0.5,1.5);
+        auto action2Back = action2->reverse();
+        
+        m_pGood->runAction(Sequence::create(action1,action2,action2Back,action1Back,NULL));
+        
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/good.mp3");
+    }
+    if (m_stackArray.size() >= 6)
+    {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/youbang.wav");
+    }
+
     m_stackArray.clear();
     
     this->clear();
