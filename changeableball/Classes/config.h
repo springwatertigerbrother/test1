@@ -25,7 +25,7 @@
 #define DRAWSPRITE_HEIGH 24.0
 
 #define AddHeigh 130
-#define addWidth 40
+#define addWidth 35
 
 #define TOTAL_TYPE 5
 #define ELIMINABLE_NUM 3
@@ -33,7 +33,7 @@
 #define TOTAL_TYPE 5
 #define MAX_TYPE_VALUE 5
 #define CONTINIOUS_NUM 3
-#define DEFAULT_COUNT_TIME 1
+#define DEFAULT_COUNT_TIME 300
 
 #define ccc4fBlue ccc4f(88/255.f,34/255.f,241/255.f,1)
 #define ccc4fOrange ccc4f(244/255.f,148/255.f,37/255.f,1)

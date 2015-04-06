@@ -12,6 +12,7 @@
 #include "ballGamescene.h"
 #import "UMSocialSnsData.h"
 #include "NCSGameCenter.h"
+#include "DataBase64.h"
 
 // 引入相关的头文件
 #include "Cocos2dx/Common/CCUMSocialSDK.h"
@@ -108,9 +109,9 @@ bool GameOverLayer::init()
     pItem3->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
     pItem4->setScale(CC_CONTENT_SCALE_FACTOR()*0.7);
     
-    CCLabelTTF* testLabel = CCLabelTTF::create("排行榜 \n ranking","ArialRoundedMTBold",32);
-    testLabel->setPosition(ccp(pItem4->getContentSize().width/2,pItem4->getContentSize().height/2));
-    pItem4->addChild(testLabel);
+//    CCLabelTTF* testLabel = CCLabelTTF::create("排行榜 \n ranking","ArialRoundedMTBold",32);
+//    testLabel->setPosition(ccp(pItem4->getContentSize().width/2,pItem4->getContentSize().height/2));
+//    pItem4->addChild(testLabel);
     
     //    pItem2->setFontSize(180);
     //    CCMenu* pMenu2 = CCMenu::create(pItem2,NULL);
@@ -185,7 +186,9 @@ bool GameOverLayer::init()
     pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.55- 60));
     pSingleBestScore->setColor(ccBLUE);
     
-    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
+    int bestSingleScore = getIntegerForKey("SINGLE_BEST_SCORE");
+
+//    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
     String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);
     pSingleBestScore->setString(pSinggleBestScoreStr->getCString());
     addChild(pSingleBestScore);

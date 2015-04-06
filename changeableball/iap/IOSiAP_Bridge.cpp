@@ -9,10 +9,21 @@
 #include "IOSiAP_Bridge.h"
 #include "cocos2d.h"
 #include "config.h"
+#include "DataBase64.h"
 
 //#include "CommonInclude.h"
 //#include "UpdateCoins.h"
 USING_NS_CC;
+
+static IOSiAP_Bridge* instance;
+ IOSiAP_Bridge* IOSiAP_Bridge::getInstance()
+{
+    if(instance == NULL)
+    {
+        instance = new IOSiAP_Bridge();
+    }
+    return instance;
+}
 
 IOSiAP_Bridge::IOSiAP_Bridge()
 {
@@ -29,7 +40,7 @@ void IOSiAP_Bridge:: requestProducts(int id)
 {
     productID = id;
     std::vector<std::string> product;
-    product.push_back("com.skyter.ndimpaid.ndp6");
+    product.push_back("com.skyter.ndimpaid.ndp6b");
     product.push_back("com.skyter.ndimpaid.ndp18");
     product.push_back("com.skyter.ndimpaid.ndp68");
 //    product.push_back("com.skyter.ndimpaid.ndp6");
@@ -42,7 +53,7 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
     std::string identifier = "";
     switch (productID) {
         case 6:
-            identifier = "com.skyter.ndimpaid.ndp6";
+            identifier = "com.skyter.ndimpaid.ndp6b";
             break;
         case 18:
             identifier = "com.skyter.ndimpaid.ndp18";
@@ -80,25 +91,36 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
         switch (productID) {
             case 6:
             {
-                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+                int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
                 lifeLiquid += 100;
-                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+
+//                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
             }
                 break;
             case 18:
             {
-                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+                int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
                 lifeLiquid += 500;
-                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+//                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
             }
                 break;
             case 68:
             {
-                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-                lifeLiquid += 4000;
-                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+                lifeLiquid += 2000;
+                setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+
+//                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
             }
 
@@ -109,7 +131,7 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
             default:
                 break;
         }
-        NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
+//        NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
 
 //        EventCustom event(REFESH_BUYLIFE_UI);
 //        _eventDispatcher->dispatchEvent(&event);

@@ -12,8 +12,9 @@
 #import "IOSiAP.h"
 class IOSiAP_Bridge : public IOSiAPDelegate
 {
-public:
+private:
     IOSiAP_Bridge();
+public:
     ~IOSiAP_Bridge();
     IOSiAP *iap;
     int productID;
@@ -21,5 +22,8 @@ public:
     virtual void onRequestProductsFinish(void);
     virtual void onRequestProductsError(int code);
     virtual void onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent event, int quantity);
+    
+    
+    static IOSiAP_Bridge* getInstance();
 };
 #endif /* defined(__LongChengDaRen__IOSiAP_Bridge__) */

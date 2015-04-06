@@ -10,6 +10,7 @@
 #include "GameOverLayer.h"
 #include "config.h"
 #include "IOSiAP_Bridge.h"
+#include "DataBase64.h"
 
 enum buttonTag
 {
@@ -42,7 +43,8 @@ bool BuyLifeLayer::init()
 
 void BuyLifeLayer::reload(Ref* obj)
 {
-    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+     int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+//    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
     char tempStr[10];
     sprintf(tempStr,"%d", lifeLiquid);
     m_labelDiamond->setString(tempStr);
@@ -136,7 +138,9 @@ void BuyLifeLayer::onEnter()
     m_labelDiamond->setAnchorPoint(ccp(0,1));
     m_labelDiamond->setPosition(ccp(size.width*0.5 ,size.height-10));
     
-    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
     char tempStr[10];
     sprintf(tempStr,"%d", lifeLiquid);
     m_labelDiamond->setString(tempStr);
@@ -172,11 +176,12 @@ void BuyLifeLayer::CallBuyLife(void* sender)
     Node* pNode = (Node*)(sender);
     int price = pNode->getTag();
     
-    IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
-    bridge->requestProducts(price);
-    
     m_shopMenu->setEnabled(false);
     pLabelUpload->setVisible(true);
+//    IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
+    IOSiAP_Bridge* bridge = IOSiAP_Bridge::getInstance();
+    bridge->requestProducts(price);
+
 
 //
 //    EventCustom event(BUY_LIFE_LIQUID);
@@ -184,7 +189,9 @@ void BuyLifeLayer::CallBuyLife(void* sender)
 }
 void BuyLifeLayer::CallUseLife(void* sender)
 {
-    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
     
     if (lifeLiquid > RIVIVE_COSUMED_DIAMOND)
     {

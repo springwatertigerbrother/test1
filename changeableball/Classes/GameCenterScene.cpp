@@ -11,6 +11,7 @@
 #include "GameOverLayer.h"
 #include "DataHome.h"
 #include "BuyLifeLayer.h"
+#include "DataBase64.h"
 
 using namespace cocos2d;
 
@@ -51,8 +52,11 @@ bool GameCenterScene::init()
         bool isFirst = !UserDefault::getInstance()->getBoolForKey("isFirstOpen");
         if (isFirst)
         {
-            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
+            setIntegerForKey("LIFE_LIQUID", 3);
+
+//            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
             UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
+            UserDefault::getInstance()->flush();
         }
         CCSize s = Director::getInstance()->getWinSize();
                
@@ -76,16 +80,21 @@ bool GameCenterScene::init()
         
         //buy life
         auto buy_life_listener = EventListenerCustom::create(BUY_LIFE_LIQUID, [=](EventCustom* event){
-            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+            int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
             lifeLiquid += 10;
-            
-            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+            setIntegerForKey("LIFE_LIQUID", lifeLiquid);
+
+//            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
             
         });
 
         //use life
         auto Use_life_listener = EventListenerCustom::create(USE_LIFE_LIQUID, [=](EventCustom* event){
-            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+            int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+
+//            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
             
             if (lifeLiquid > RIVIVE_COSUMED_DIAMOND)
             {
@@ -98,8 +107,12 @@ bool GameCenterScene::init()
                 {
                     lifeLiquid = 0;
                 }
-                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+                setIntegerForKey("LIFE_LIQUID", lifeLiquid);
+
+//                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
+                NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
+
                 startGame();
             }
             else
@@ -131,10 +144,14 @@ void GameCenterScene::addScore(int nScore)
 {
     m_score += nScore;
     m_current_score += nScore;
-    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
+    int bestSingleScore = getIntegerForKey("SINGLE_BEST_SCORE");
+
+//    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
     if (bestSingleScore < m_current_score)
     {
-        UserDefault::getInstance()->setIntegerForKey("SINGLE_BEST_SCORE",m_current_score);
+        setIntegerForKey("SINGLE_BEST_SCORE",m_current_score);
+
+//        UserDefault::getInstance()->setIntegerForKey("SINGLE_BEST_SCORE",m_current_score);
     }
 
     auto num = m_score;
