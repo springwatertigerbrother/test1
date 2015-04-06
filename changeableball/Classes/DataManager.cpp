@@ -902,7 +902,14 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
                      }
                      break;
                  case 4:
+                 {
                      typeStr = "D";
+                     count = count%11;
+                     if (count == 0)
+                     {
+                         count = 11;
+                     }
+                 }
                      break;
                  case 5:
                      typeStr = "E";
