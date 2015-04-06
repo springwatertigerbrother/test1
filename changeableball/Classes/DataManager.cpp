@@ -279,6 +279,7 @@ bool DataManager::init()
     
     auto helpItem= MenuItemFont::create("??", CC_CALLBACK_1(DataManager::help, this));
     helpItem->setFontSize(200);
+    helpItem->setScale(2);
     CCMenu *menu = CCMenu::create(helpItem, NULL);
     
     menu->alignItemsVerticallyWithPadding(10);

@@ -255,8 +255,10 @@ void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
     String* temStr = String::createWithFormat("%d",(unsigned int)(log2(nValue)));
     m_labelNValue->setString(temStr->getCString());
     
-    auto aiyinsitanswing = Sequence::create(RotateBy::create(0.2, 45),RotateBy::create(0.2, -45), NULL);
-    m_pAiyinsitan->runAction(CCRepeat::create(aiyinsitanswing,3));
+    auto rotation = RotateBy::create(0.1, 30);
+    auto aiyinsitanswing = Sequence::create(rotation,rotation->reverse(), NULL);
+    m_pAiyinsitan->stopAllActions();
+    m_pAiyinsitan->runAction(CCRepeat::create(aiyinsitanswing,2));
 
 }
 void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
