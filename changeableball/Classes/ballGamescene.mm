@@ -258,6 +258,16 @@ void BallGameScene::onEnter()
     pCongratulation->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
     
     
+    CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",15);
+    labelLife->setAnchorPoint(ccp(0, 0.5));
+    labelLife->setColor(ccRED);
+    labelLife->setPosition(ccp(size.width/2 - 150,230));
+    labelLife->setString("人生如同骑单车，要想保持平衡就必须前行");
+    //        labelLife->setVisible(false);
+    addChild(labelLife,11);
+    auto scaleAction = ScaleBy::create(2, 1.5);
+    labelLife->runAction(RepeatForever::create(Sequence::create(scaleAction,scaleAction->reverse(), nil)));
+    
     [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
 
 }
