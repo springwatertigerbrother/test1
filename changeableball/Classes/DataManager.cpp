@@ -647,6 +647,8 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
         GameCenterScene* pGameCenter = dynamic_cast<GameCenterScene*>(this->getParent());
         if (pGameCenter)
         {
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/success.mp3");
+
             pGameCenter->buyLayer->setVisible(true);
         }
         m_canPlaying = false;
@@ -665,9 +667,11 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
         startAnimtionDisplay();
         startPlaying();
     }
+
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/fall.mp3");
  }
- 
-         
+
+
 void DataManager::calcDropDownResultArray (BallSprite* ball,std::vector<BallSprite*> &resultArray)
         {
          
@@ -902,6 +906,11 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
                      break;
                  case 5:
                      typeStr = "E";
+                     count = count%7;
+                     if (count == 0)
+                     {
+                         count = 8;
+                     }
                      break;
                  case 6:
                      typeStr = "F";
@@ -910,7 +919,10 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
                      break;
              }
          CCString * soundName = CCString::createWithFormat("Sounds/%s%d.aif",typeStr.c_str(), count);
-         
+         if(typeStr == "B")
+         {
+             soundName = CCString::createWithFormat("Sounds/%s.wav",typeStr.c_str());
+         }
          CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect(soundName->getCString());
          
          }

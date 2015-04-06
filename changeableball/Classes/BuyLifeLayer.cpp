@@ -204,14 +204,14 @@ void BuyLifeLayer::CallUseLife(void* sender)
 //        m_labelLife->runAction(FadeOut::create(1));
 //
         CCSize size = Director::getInstance()->getWinSize();
-        CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",60);
+        CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",80);
         labelLife->setAnchorPoint(ccp(0.5, 0.5));
         labelLife->setColor(ccRED);
         labelLife->setPosition(ccp(size.width/2,size.height/2));
         labelLife->setString("钻石不够\n请购买");
 //        labelLife->setVisible(false);
         addChild(labelLife,11);
-        labelLife->runAction(FadeOut::create(2));
+        labelLife->runAction(FadeOut::create(3));
 //        CallFunc* call = [](){};
         "生命药水不够，请购买";
     }

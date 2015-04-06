@@ -88,6 +88,9 @@ bool GameOverLayer::init()
     {
         return false;
     }
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/good.mp3");
+
     //    setTouchEnabled(true);
     CCSize s = CCDirector::sharedDirector()->getWinSize();
     
