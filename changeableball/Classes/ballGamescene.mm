@@ -249,7 +249,7 @@ void BallGameScene::onEnter()
     {
         nTotalScore = 0;
     }
-    int scoreValue = calculate_score(6144,0);
+    int scoreValue = calculate_score(nTotalScore,0);
     String* pCongratulationScoreStr = String::createWithFormat("%d 次元",scoreValue);
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
