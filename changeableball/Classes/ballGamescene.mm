@@ -249,11 +249,12 @@ void BallGameScene::onEnter()
     {
         nTotalScore = 0;
     }
-    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",(int)(log2(nTotalScore)));
+    int scoreValue = calculate_score(6144,0);
+    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",scoreValue);
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
-    
+     
     pCongratulation->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
     
     
@@ -348,8 +349,10 @@ void BallGameScene:: share(void* sender)
     }
     //    char shareContent[200] = "";
     //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
+    int nValue = calculate_score(nTotalScore,0);
+
     String* pCongratulationScoreStr = String::createWithFormat("我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？",
-                                                               (int)(log2(nTotalScore)));
+                                                               nValue);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));

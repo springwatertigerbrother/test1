@@ -6,6 +6,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
+#include "config.h"
 
 using namespace cocos2d::extension;
 using namespace cocos2d;
@@ -16,6 +17,8 @@ float get_resolution_scale();
 void initialize_resolution();
 ControlButton* standardButtonWithTitle(const char * title);
 bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
+
+int calculate_score(int nScore,int n);
 //
 //void shareCallback(int platform, int stCode, std::string& errorMsg)
 //{

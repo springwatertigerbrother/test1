@@ -13,7 +13,7 @@
 #import "UMSocialSnsData.h"
 #include "NCSGameCenter.h"
 #include "DataBase64.h"
-
+#include "MUtils.h"
 // 引入相关的头文件
 #include "Cocos2dx/Common/CCUMSocialSDK.h"
 #include "Cocos2dx/ShareButton/UMShareButton.h"
@@ -151,7 +151,9 @@ bool GameOverLayer::init()
     {
         nTotalScore = 0;
     }
-    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",(int)(log2(nTotalScore)));
+    
+    int nciValue = calculate_score(nTotalScore,0);
+    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",nciValue);
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
@@ -314,8 +316,10 @@ void GameOverLayer::ShareGame()
     }
 //    char shareContent[200] = "";
 //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
+    
+    int nciValue = calculate_score(nTotalScore,0);
     String* pCongratulationScoreStr = String::createWithFormat("我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？",
-                                                               (int)(log2(nTotalScore)));
+                                                               nciValue);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));

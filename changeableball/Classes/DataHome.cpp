@@ -25,4 +25,5 @@ DataHome::DataHome()
  wFontSize = wZoomvalue*24;
     isCountDownModel = false;
     wAdjustBallPos = 0;
+    nciyuanValue = 0;
 }

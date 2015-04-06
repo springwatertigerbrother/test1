@@ -204,3 +204,22 @@ bool ControlButtoninit(Node* obj,std::vector<std::string> vec)
 //        addChild(background);
     return false;
 }
+
+int calculate_score(int nScore,int n)
+{
+    if(nScore<=0) nScore = 1;
+    
+    int value = 0;
+    if(nScore > ENERGY_LEVEL)
+    {
+        value = RECURSION_N + (nScore - ENERGY_LEVEL - n)/2048;
+    }
+    else
+    {
+        value = (int)(log2(nScore));
+    }
+    return value;
+}
+
+
+

@@ -10,6 +10,7 @@
 #include "ControllerLayer.h"
 #include "DataHome.h"
 #include "DataBase64.h"
+#include "MUtils.h"
 
 bool UpStateLayer::init()
 {
@@ -102,7 +103,9 @@ bool UpStateLayer::init()
                                            + m_labelNciyuanTitle->getContentSize().width + 5,110)
                                            );
             m_labelNValue->setColor(ccORANGE);
-            String* temStr = String::createWithFormat("%d",(int)(log2(nTotalScore)));
+            
+            int nValue = calculate_score(nTotalScore,0);
+            String* temStr = String::createWithFormat("%d",nValue);
 
             if (nTotalScore == 0)
             {
@@ -265,7 +268,9 @@ void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
 {
     String* temStr = String::createWithFormat("%lu",nValue);
     m_labelCurrentScoreValue->setString(temStr->getCString());
-    String* currentNvalueStr = String::createWithFormat("%d 次元",(int)(log2(nValue)));
+    
+    int nciValue = calculate_score(nValue,0);
+    String* currentNvalueStr = String::createWithFormat("%d 次元",nciValue);
     m_labelCurrentNValue->setString(currentNvalueStr->getCString());
 }
 

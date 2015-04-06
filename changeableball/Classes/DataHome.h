@@ -26,6 +26,7 @@ public:
     int wAdjustBallPos;
     int wLifeLiquid;
     bool isCountDownModel;
+    int nciyuanValue;
     static DataHome* getInstance();
 };
 

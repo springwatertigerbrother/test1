@@ -160,6 +160,7 @@ void GameCenterScene::addScore(int nScore)
     char str[100];
     sprintf(str, " %lu" , num);
     setStringForKey("TOTALSCORE", str);
+    
 //    UserDefault::getInstance()->setStringForKey("TOTALSCORE", str);
 //    CCString* scores = CCString::createWithFormat("%d",m_score);
 //    m_controllerLayer->resetScoreString(StringMake(str));
