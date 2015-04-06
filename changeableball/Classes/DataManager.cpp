@@ -261,13 +261,13 @@ bool DataManager::init()
 
     m_pLabelHelp = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
-    m_pLabelHelp->setPosition(ccp(s.width/2, s.height*0.66));
+    m_pLabelHelp->setPosition(ccp(s.width/2, s.height*0.76));
     m_pLabelHelp->setVisible(true);
     m_pLabelHelp->setColor(ccYELLOW);
 //    m_pLabelHelp->setScale(2);
     m_pLabelHelp->setFontSize(30);
     m_pLabelHelp->setString(GAME_RULE);
-    m_pLabelHelp->setDimensions(CCSizeMake(500,0));
+    m_pLabelHelp->setDimensions(CCSizeMake(600,0));
     m_pLabelHelp->setAnchorPoint(ccp(0.5,1));
     m_helpLayer = CCLayerColor::create(ccc4(88,34,241,200));
     
