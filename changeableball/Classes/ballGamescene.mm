@@ -17,6 +17,8 @@
 #include "Cocos2dx/Common/CCUMSocialSDK.h"
 #include "Cocos2dx/ShareButton/UMShareButton.h"
 #include "DataBase64.h"
+#include "AdViewToolX.h"
+#include "IADSimple.h"
 
 using namespace cocos2d;
 
@@ -146,6 +148,9 @@ void BallGameScene::onEnter()
     
     CCLayer::onEnter();
     
+    IADSimple* simple = [IADSimple IADSimple];
+    [simple.bannerView setHidden:false];
+    
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
     CCSprite* pBg4 = Sprite::create("Images/bg1.png");
@@ -258,7 +263,7 @@ void BallGameScene::onEnter()
     pCongratulation->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
     
     
-    CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",15);
+    CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",22);
     labelLife->setAnchorPoint(ccp(0, 0.5));
     labelLife->setColor(ccRED);
     labelLife->setPosition(ccp(size.width/2 - 150,230));
@@ -289,6 +294,10 @@ void BallGameScene:: startGame()
 
 void BallGameScene:: playingNow(void* sender)
 {
+    AdViewToolX::setAdHidden(false);
+    IADSimple* simple = [IADSimple IADSimple];
+    [simple.bannerView setHidden:false];
+    
     DataHome::getInstance()->isCountDownModel = false;
 
     CCScene * playingScene = GameCenterScene::scene();
@@ -297,6 +306,10 @@ void BallGameScene:: playingNow(void* sender)
 }
 void BallGameScene:: countDownModel(void* sender)
 {
+    AdViewToolX::setAdHidden(true);
+    IADSimple* simple = [IADSimple IADSimple];
+    [simple.bannerView setHidden:true];
+    
     DataHome::getInstance()->isCountDownModel = true;
     
     CCScene * playingScene = GameCenterScene::scene();
@@ -433,6 +446,10 @@ void BallGameScene:: multiplePlayer(void* sender)
 //#endif
 //    }
 //
+    AdViewToolX::setAdHidden(true);
+    IADSimple* simple = [IADSimple IADSimple];
+    [simple.bannerView setHidden:true];
+    
     DataHome::getInstance()->isCountDownModel = true;
     
     CCScene * playingScene = GameCenterScene::scene();

@@ -27,6 +27,8 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#include "IADSimple.h"
+#import "AdViewController.h"
 
 @implementation AppController
 
@@ -78,6 +80,28 @@ static AppDelegate s_sharedApplication;
     cocos2d::Director::getInstance()->setOpenGLView(glview);
 
     cocos2d::Application::getInstance()->run();
+
+    AdViewController *controller = [AdViewController sharedController];
+    [controller setAdViewKey:@"SDK20142021080958wueclkiozzw4hcq"]; //SDK20111022530129m85is43b70r4iyc
+    [controller setModeTest:NO Log:YES];
+    [controller setOrientationUp:NO Down:NO Left:NO Right:YES];
+    [controller setAdBannerSize:AdviewBannerSize_Auto];
+    [controller setAdRootController:_viewController];
+    controller.bSuperOrientFix = YES;
+    
+    [controller loadView];
+    [_viewController.view addSubview:controller.adView];
+    [controller setAdPosition:CGPointMake([_viewController.view frame].size.width, [_viewController.view frame].size.height) ];
+    //    [controller setAdHidden:true];
+    //    [controller setAdHidden:false];
+    [controller setAdHidden:true];
+//    [controller setAdHidden:false];
+    //        [Flurry startSession: @"5523Y5FQM8WV8Q4QRCD6"];
+    
+    IADSimple* simple = [IADSimple IADSimple];
+    simple.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    [_viewController.view addSubview: simple.bannerView];
+    [simple.bannerView setHidden:false];
 
     return YES;
 }
