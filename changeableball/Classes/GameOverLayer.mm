@@ -89,6 +89,30 @@ bool GameOverLayer::init()
         return false;
     }
     
+    std::string yourworld;
+    std::string nciyuan;
+    std::string totalScoreTitleStr;
+    std::string sigleMost;
+    std::string sigleState;
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    if (currentLanguageType == cocos2d::LanguageType::CHINESE)
+    {
+        yourworld = "恭喜您的世界已进入";
+        nciyuan = "%d 次元";
+        totalScoreTitleStr = "总能量：";
+        sigleMost = "单次最高能量";
+        sigleState ="单次最佳状态";
+    }
+    else
+    {
+        yourworld = "hi,your world is";
+        nciyuan = "%d dimension";
+        totalScoreTitleStr = "total energy";
+        sigleMost = "peak energy";
+        sigleState ="most DIMENSION";
+
+    }
+    
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/good.mp3");
 
     //    setTouchEnabled(true);
@@ -141,11 +165,11 @@ bool GameOverLayer::init()
     
     CCLabelTTF* pCongratulationTitle = CCLabelTTF::create("0","ArialRoundedMTBold",50);
     pCongratulationTitle->setPosition(ccp(s.width/2,s.height*0.8 + 70));
-    String* pCongratulationTitleStr = String::createWithFormat("恭喜您的世界已进入");
+    String* pCongratulationTitleStr = String::createWithFormat(yourworld.c_str());
     pCongratulationTitle->setString(pCongratulationTitleStr->getCString());
     addChild(pCongratulationTitle);
     
-    CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",60);
+    CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",40);
     pCongratulation->setPosition(ccp(s.width/2,s.height*0.8));
     unsigned long  nTotalScore = 0;
 //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
@@ -156,7 +180,7 @@ bool GameOverLayer::init()
     }
     
     int nciValue = calculate_score(nTotalScore,0);
-    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",nciValue);
+    String* pCongratulationScoreStr = String::createWithFormat(nciyuan.c_str(),nciValue);
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
@@ -168,12 +192,12 @@ bool GameOverLayer::init()
     //    pGameoverLbl->setPosition(ccp(s.width/2,s.height*0.7));
     //    addChild(pGameoverLbl);
     
-    CCLabelTTF* pScoreTitle = CCLabelTTF::create("总能量","ArialRoundedMTBold",50);
+    CCLabelTTF* pScoreTitle = CCLabelTTF::create(totalScoreTitleStr.c_str(),"ArialRoundedMTBold",50);
     pScoreTitle->setPosition(ccp(s.width/2,s.height*0.7));
     pScoreTitle->setColor(ccc3Red);
     addChild(pScoreTitle);
     
-    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","ArialRoundedMTBold",46);
+    CCLabelTTF* pTotalScore = CCLabelTTF::create("0","ArialRoundedMTBold",40);
     pTotalScore->setPosition(ccp(s.width/2,s.height*0.7 - 60));
     String* pTotalScoreStr = String::createWithFormat("%d",(nTotalScore));
     pTotalScore->setString(pTotalScoreStr->getCString());
@@ -182,12 +206,12 @@ bool GameOverLayer::init()
     pTotalScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
 
 //    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
-    CCLabelTTF* pBestTitle = CCLabelTTF::create("单次最高获取能量","ArialRoundedMTBold",50);
+    CCLabelTTF* pBestTitle = CCLabelTTF::create(sigleMost.c_str(),"ArialRoundedMTBold",50);
     pBestTitle->setPosition(ccp(s.width/2,s.height*0.55));
     pBestTitle->setColor(ccc3Red);
     addChild(pBestTitle);
     
-    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","ArialRoundedMTBold",60);
+    CCLabelTTF* pSingleBestScore = CCLabelTTF::create("0","ArialRoundedMTBold",40);
     pSingleBestScore->setPosition(ccp(s.width/2,s.height*0.55- 60));
     pSingleBestScore->setColor(ccBLUE);
     
@@ -199,16 +223,16 @@ bool GameOverLayer::init()
     addChild(pSingleBestScore);
     pSingleBestScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.6f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
     
-    CCLabelTTF* pBestNTitle = CCLabelTTF::create("单次最佳状态", "ArialRoundedMTBold",50);
+    CCLabelTTF* pBestNTitle = CCLabelTTF::create(sigleState.c_str(), "ArialRoundedMTBold",50);
     pBestNTitle->setPosition(ccp(s.width/2,s.height*0.40));
     pBestNTitle->setColor(ccc3Red);
     addChild(pBestNTitle);
     
-    CCLabelTTF* pBestNvalue = CCLabelTTF::create("n", "ArialRoundedMTBold",60);
+    CCLabelTTF* pBestNvalue = CCLabelTTF::create("n", "ArialRoundedMTBold",40);
     pBestNvalue->setPosition(ccp(s.width/2,s.height*0.40-60));
     pBestNvalue->setColor(ccWHITE);
     addChild(pBestNvalue);
-    String* pBestNvalueStr = String::createWithFormat("%d次元",(int)log2(bestSingleScore));
+    String* pBestNvalueStr = String::createWithFormat(nciyuan.c_str(),calculate_score(bestSingleScore,0));
     pBestNvalue->setString(pBestNvalueStr->getCString());
     pBestNvalue->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
 
@@ -270,6 +294,22 @@ void GameOverLayer::ExitGame()
 }
 void GameOverLayer::ShareGame()
 {
+    std::string shareStr;
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+            
+            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+            
+            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+            break;
+        default:
+            break;
+    }
+    
     std::string outputFile = "";
     outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
     cocos2d::utils::captureScreen(nil,outputFile);
@@ -321,7 +361,7 @@ void GameOverLayer::ShareGame()
 //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
     
     int nciValue = calculate_score(nTotalScore,0);
-    String* pCongratulationScoreStr = String::createWithFormat("我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？",
+    String* pCongratulationScoreStr = String::createWithFormat(shareStr.c_str(),
                                                                nciValue);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)

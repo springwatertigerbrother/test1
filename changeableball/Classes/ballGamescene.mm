@@ -235,7 +235,35 @@ void BallGameScene::onEnter()
     
     CCLabelTTF* pCongratulationTitle = CCLabelTTF::create("0","ArialRoundedMTBold",30);
     pCongratulationTitle->setPosition(ccp(size.width/2 + 10,size.height*0.8 + 70));
-    String* pCongratulationTitleStr = String::createWithFormat("您的世界已进入");
+    
+    std::string yourworld;
+    std::string nciyuan;
+    std::string bicicle;
+    std::string shareStr;
+    yourworld = "your world is";
+    nciyuan = "%d dimension";
+    bicicle = "Life is like riding a bicycle.To keep your balance you must keep moving";
+    shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+    
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+            yourworld = "您的世界已进入";
+            nciyuan = "%d 次元";
+            bicicle = "人生如同骑单车，要想保持平衡就必须前行";
+            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+            yourworld = "your world is";
+            nciyuan = "%d dimension";
+            bicicle = "Life is like riding a bicycle.To keep your balance you must keep moving";
+            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+            break;
+        default:
+            break;
+    }
+    String* pCongratulationTitleStr = String::createWithFormat(yourworld.c_str());
     pCongratulationTitle->setString(pCongratulationTitleStr->getCString());
     addChild(pCongratulationTitle);
     
@@ -250,7 +278,7 @@ void BallGameScene::onEnter()
         nTotalScore = 0;
     }
     int scoreValue = calculate_score(nTotalScore,0);
-    String* pCongratulationScoreStr = String::createWithFormat("%d 次元",scoreValue);
+    String* pCongratulationScoreStr = String::createWithFormat(nciyuan.c_str(),scoreValue);
     pCongratulation->setString(pCongratulationScoreStr->getCString());
     pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
@@ -262,7 +290,8 @@ void BallGameScene::onEnter()
     labelLife->setAnchorPoint(ccp(0, 0.5));
     labelLife->setColor(ccRED);
     labelLife->setPosition(ccp(size.width/2 - 150,230));
-    labelLife->setString("人生如同骑单车，要想保持平衡就必须前行");
+    labelLife->setString(bicicle);
+    labelLife->setDimensions(CCSize(400,0));
     //        labelLife->setVisible(false);
     addChild(labelLife,11);
     auto scaleAction = ScaleBy::create(2, 1.5);
@@ -311,6 +340,24 @@ void BallGameScene:: ranking(void* sender)
 }
 void BallGameScene:: share(void* sender)
 {
+    std::string shareStr;
+    shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+          
+            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+           
+            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+            break;
+        default:
+            break;
+    }
+    
     std::string outputFile = "";
     outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
     cocos2d::utils::captureScreen(nil,outputFile);
@@ -361,7 +408,7 @@ void BallGameScene:: share(void* sender)
     //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
     int nValue = calculate_score(nTotalScore,0);
 
-    String* pCongratulationScoreStr = String::createWithFormat("我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？",
+    String* pCongratulationScoreStr = String::createWithFormat(shareStr.c_str(),
                                                                nValue);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)

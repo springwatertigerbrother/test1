@@ -270,8 +270,38 @@ bool DataManager::init()
 //    setTouchEnabled(true);
 //    metetors();
     
+    std::string clearaway;
+    std::string clearaway2;
+    std::string helpStr;
+    clearaway = "click ?? top of screen to clear away words";
+    clearaway2 = "click ?? ";
+    helpStr = GAME_RULE_CHINISE;
+
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+        {
+            clearaway = "点击右上方的 “??” 使文字消失或出现";
+            clearaway2 = "点击 ?? ";
+            helpStr = GAME_RULE_CHINISE;
+        }
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+        {
+            clearaway = "click ?? right top of screen to clear away words";
+            clearaway2 = "click ?? ";
+            helpStr = GAME_RULE_ENGLISH;
+        }
+            break;
+        default:
+            break;
+    }
+    
+    
     Sprite* helpSprite = Sprite::create("Images/helppicture.png");
-    helpSprite->setPosition(ccp(s.width/2,s.height/2));
+    helpSprite->setAnchorPoint(ccp(0.5,0));
+    helpSprite->setPosition(ccp(s.width/2,100));
     helpSprite->setScale(CC_CONTENT_SCALE_FACTOR()*0.5);
     m_pLabelHelp = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
@@ -280,19 +310,32 @@ bool DataManager::init()
     m_pLabelHelp->setColor(ccYELLOW);
 //    m_pLabelHelp->setScale(2);
     m_pLabelHelp->setFontSize(28);
-    m_pLabelHelp->setString(GAME_RULE);
+    m_pLabelHelp->setString(helpStr);
     m_pLabelHelp->setDimensions(CCSizeMake(600,0));
     m_pLabelHelp->setAnchorPoint(ccp(0.5,1));
     
+
     CCLabelTTF* pLabelHelpCancel = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
-    pLabelHelpCancel->setPosition(ccp(s.width/2, 50));
+    pLabelHelpCancel->setPosition(ccp(s.width/2+50, s.height-50));
     pLabelHelpCancel->setVisible(true);
     pLabelHelpCancel->setColor(ccRED);
     //    m_pLabelHelp->setScale(2);
     pLabelHelpCancel->setFontSize(28);
-    pLabelHelpCancel->setString("点击最上方的 “??” 使文字消失或出现");
+    pLabelHelpCancel->setString(clearaway2.c_str());
     pLabelHelpCancel->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    
+    
+    CCLabelTTF* pLabelHelpCancel2 = CCLabelTTF::create();
+    //    m_pTotalScoreLabel->setString(scoreStr);
+    pLabelHelpCancel2->setPosition(ccp(s.width/2, 100));
+    pLabelHelpCancel2->setVisible(true);
+    pLabelHelpCancel2->setColor(ccRED);
+    //    m_pLabelHelp->setScale(2);
+    pLabelHelpCancel2->setFontSize(28);
+    pLabelHelpCancel2->setString(clearaway.c_str());
+    pLabelHelpCancel2->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+
     
     m_helpLayer = CCLayerColor::create(ccc4(88,34,241,200));
     
@@ -304,7 +347,7 @@ bool DataManager::init()
     m_helpLayer-> addChild(colorLayer);
 
     m_helpLayer-> addChild(pLabelHelpCancel);
-
+    m_helpLayer->addChild(pLabelHelpCancel2);
     addChild(m_helpLayer);
     
     m_helpLayer-> addChild(m_pLabelHelp,10000);
@@ -317,7 +360,7 @@ bool DataManager::init()
     
     menu->alignItemsVerticallyWithPadding(10);
     
-    menu->setPosition(ccp(s.width/2,s.height-100));
+    menu->setPosition(ccp(s.width/2 + 150,s.height-50));
     this-> addChild(menu);
 
     

@@ -17,6 +17,7 @@ float get_resolution_scale();
 void initialize_resolution();
 ControlButton* standardButtonWithTitle(const char * title);
 bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
+//std::string localLanguage(std::string language);
 
 int calculate_score(int nScore,int n);
 //
