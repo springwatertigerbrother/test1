@@ -59,7 +59,6 @@ void BuyLifeLayer::onEnter()
     CCLayer::onEnter();
     
     NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(BuyLifeLayer::reload), REFESH_BUYLIFE_UI, NULL);
-
     CCSize size = CCDirector::sharedDirector()->getWinSize();
         
 //    m_BuyItem = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(BuyLifeLayer::CallBuyLife,this));
@@ -150,7 +149,30 @@ void BuyLifeLayer::onEnter()
     pConsumedDiamond->setAnchorPoint(ccp(0.5,1));
     pConsumedDiamond->setPosition(ccp(size.width*0.5,size.height-100));
     
-    sprintf(tempStr,"小伙伴使用%d钻石复活吧 ^O^", RIVIVE_COSUMED_DIAMOND);
+    std::string xiaohuoban;
+    std::string shoping;
+    xiaohuoban = "Dear you can relive by %d diamonds";
+    shoping = "shopping";
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+        {
+            xiaohuoban = "小伙伴使用%d钻石复活吧 ^O^";
+            shoping = "正在去往商店。。。";
+        }
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+        {
+            xiaohuoban = "Dear you can relive by %d diamonds";
+            shoping = "shopping";
+        }
+            break;
+        default:
+            break;
+    }
+    
+    sprintf(tempStr,xiaohuoban.c_str(), RIVIVE_COSUMED_DIAMOND);
     pConsumedDiamond->setString(tempStr);
     addChild(pConsumedDiamond);
     pConsumedDiamond->runAction(CCRepeatForever::create(Sequence::create(ScaleTo::create(0.5, 0.5), ScaleTo::create(0.5,1),DelayTime::create(1),NULL)));
@@ -163,7 +185,7 @@ void BuyLifeLayer::onEnter()
 //    m_shopMenu->setPosition(ccp(size.width/2,2* (m_iap6->getContentSize().height + padding)));
 //    this-> addChild(m_shopMenu);
 
-    pLabelUpload = CCLabelTTF::create("正在去往商店。。。","ArialRoundedMTBold",50);
+    pLabelUpload = CCLabelTTF::create(shoping,"ArialRoundedMTBold",50);
     pLabelUpload->setAnchorPoint(ccp(0.5,1));
     pLabelUpload->setPosition(ccp(size.width*0.5,size.height*0.5));
     pLabelUpload->setVisible(false);
@@ -191,6 +213,26 @@ void BuyLifeLayer::CallUseLife(void* sender)
 {
     int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
 
+    std::string enoughDiamond;
+    enoughDiamond = "insufficient\ndiamond\nshoping ^O^";
+
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+        {
+            enoughDiamond = "钻石不够\n请购买";
+        }
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+        {
+            enoughDiamond = "insufficient\ndiamond\nshoping ^O^";
+        }
+            break;
+        default:
+            break;
+    }
+    
 //    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
     
     if (lifeLiquid >= RIVIVE_COSUMED_DIAMOND)
@@ -208,7 +250,7 @@ void BuyLifeLayer::CallUseLife(void* sender)
         labelLife->setAnchorPoint(ccp(0.5, 0.5));
         labelLife->setColor(ccRED);
         labelLife->setPosition(ccp(size.width/2,size.height/2));
-        labelLife->setString("钻石不够\n请购买");
+        labelLife->setString(enoughDiamond);
 //        labelLife->setVisible(false);
         addChild(labelLife,11);
         labelLife->runAction(FadeOut::create(3));

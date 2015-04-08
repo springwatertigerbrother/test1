@@ -3,6 +3,12 @@
 #include "MUtils.h"
 #include "cocos2d.h"
 
+//enum LanguageType
+//{
+//    kchinese,
+//    kenglish
+//};
+
 float get_content_scale_factor()
 {
     auto director = cocos2d::Director::getInstance();
@@ -221,5 +227,9 @@ int calculate_score(int nScore,int n)
     return value;
 }
 
-
-
+//std::string localLanguage(std::string language)
+//{
+//
+//    ccLanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+//
+//}

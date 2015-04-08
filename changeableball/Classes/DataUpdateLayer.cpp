@@ -67,6 +67,34 @@ bool UpStateLayer::init()
             m_labelCurrentScoreValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCountDown = CCLabelTTF::create("300","ArialRoundedMTBold",50);
             
+            std::string nicyuantitleStr;
+            std::string totalScoreTitleStr;
+            std::string currentNciyuanTitleStr;
+            std::string currentEnergyStr;
+            nicyuantitleStr = "total dimension:";
+            totalScoreTitleStr = "total energy:";
+            currentNciyuanTitleStr = "current state:";
+            currentEnergyStr = "current energy:";
+            
+            LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+            switch (currentLanguageType)
+            {
+                case cocos2d::LanguageType::CHINESE:
+                    nicyuantitleStr = "累计次元：";
+                    totalScoreTitleStr = "总能量：";
+                    currentNciyuanTitleStr = "当前状态：";
+                    currentEnergyStr = "当前能量：";
+                    break;
+                case cocos2d::LanguageType::ENGLISH:
+                    nicyuantitleStr = "total dimension:";
+                    totalScoreTitleStr = "total energy:";
+                    currentNciyuanTitleStr = "current state:";
+                    currentEnergyStr = "current energy:";
+                    break;
+                default:
+                    break;
+            }
+            
             unsigned long nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 //            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
            
@@ -79,7 +107,7 @@ bool UpStateLayer::init()
             m_labelTotalScoreTitle->setPosition(ccp(20,
                                                     160));
             m_labelTotalScoreTitle->setColor(ccBLACK);
-            m_labelTotalScoreTitle->setString("总能量：");
+            m_labelTotalScoreTitle->setString(totalScoreTitleStr.c_str());
             m_labelTotalScoreTitle->setColor(ccWHITE);
             addChild(m_labelTotalScoreTitle);
             
@@ -93,7 +121,7 @@ bool UpStateLayer::init()
             m_labelNciyuanTitle->setColor(ccc3(0, 0, 0));
             m_labelNciyuanTitle->setPosition(ccp(20,
                                           110));
-            m_labelNciyuanTitle->setString("累计次元：");
+            m_labelNciyuanTitle->setString(nicyuantitleStr.c_str());
             m_labelNciyuanTitle->setColor(ccWHITE);
             addChild(m_labelNciyuanTitle);
             
@@ -119,7 +147,7 @@ bool UpStateLayer::init()
             m_labelCurrentNciyuanTitle->setColor(ccc3(0, 0, 0));
             m_labelCurrentNciyuanTitle->setPosition(ccp(20,
                                                  60));
-            m_labelCurrentNciyuanTitle->setString("当前状态：");
+            m_labelCurrentNciyuanTitle->setString(currentNciyuanTitleStr);
             m_labelCurrentNciyuanTitle->setColor(ccWHITE);
             addChild(m_labelCurrentNciyuanTitle);
             
@@ -159,6 +187,7 @@ bool UpStateLayer::init()
             m_labelCurrentScoreTitle->setColor(ccWHITE);
             m_labelCurrentScoreTitle->setPosition(ccp(20,
                                                  210));
+            m_labelCurrentScoreTitle->setString(currentEnergyStr.c_str());
 //            m_labelNciyuanTitle->setString("您已达到的次元N是：");
 //            m_labelCurrentScoreTitle->setColor(ccBLACK);
             addChild(m_labelCurrentScoreTitle);
