@@ -7,11 +7,11 @@
 #import "AdViewAdapterAdMob.h"
 #import "AdViewAdNetworkConfig.h"
 #import "AdViewViewImpl.h"
-#import "GADBannerView.h"
 #import "AdViewLog.h"
 #import "AdViewAdNetworkAdapter+Helpers.h"
 #import "AdViewAdNetworkRegistry.h"
 #import "AdViewExtraManager.h"
+#import <GoogleMobileAds/GADBannerView.h>
 
 @interface AdViewAdapterAdMob (PRIVATE)
 
@@ -63,8 +63,8 @@
     [adMobView performSelector:@selector(setRootViewController:) withObject:[adViewDelegate viewControllerForPresentingModalView]];
     //[adMobView loadRequest:[GADRequestClass performSelector: @selector(request)]];
 	GADRequest *request = [GADRequestClass request];
-	//request.testDevices = [self testDevices];
-	request.testing = [self isTestMode];
+    request.testDevices = nil;
+//	request.testing = [self isTestMode];
 	if ([self helperUseGpsMode] && nil != [AdViewExtraManager sharedManager]) {
 		CLLocation *loc = [[AdViewExtraManager sharedManager] getLocation];
 		if (nil != loc)
@@ -74,8 +74,7 @@
 	}
     [adMobView loadRequest:request];
     self.adNetworkView = adMobView;
-    [adMobView release];
-}
+ }
 
 - (void)stopBeingDelegate {
   GADBannerView *adMobView = (GADBannerView *)self.adNetworkView;
@@ -103,7 +102,7 @@
 }
 
 - (void)dealloc {
-  [super dealloc];
+  
 }
 
 #pragma mark GADBannerViewDelegate
@@ -128,14 +127,14 @@
     [self helperNotifyDelegateOfFullScreenModalDismissal];
 }
 
-- (NSArray *)testDevices {
-  if ([adViewDelegate respondsToSelector:@selector(adViewTestMode)]
-      && [adViewDelegate adViewTestMode]) {
-    return [NSArray arrayWithObjects:
-            GAD_SIMULATOR_ID,                             // Simulator
-            nil];
-  }
-  return nil;
-}
+//- (NSArray *)testDevices {
+//  if ([adViewDelegate respondsToSelector:@selector(adViewTestMode)]
+//      && [adViewDelegate adViewTestMode]) {
+//    return [NSArray arrayWithObjects:
+//            GAD_SIMULATOR_ID,                             // Simulator
+//            nil];
+//  }
+//  return nil;
+//}
 
 @end
