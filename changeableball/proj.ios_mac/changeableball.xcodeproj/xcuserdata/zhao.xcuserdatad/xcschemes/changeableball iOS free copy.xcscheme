@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE7A7E961AD6C0D1009CE223"
-               BuildableName = "changeableball iOS paid copy.app"
+               BuildableName = "changeableball iOS free copy.app"
                BlueprintName = "changeableball iOS free copy"
                ReferencedContainer = "container:changeableball.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE7A7E961AD6C0D1009CE223"
-            BuildableName = "changeableball iOS paid copy.app"
+            BuildableName = "changeableball iOS free copy.app"
             BlueprintName = "changeableball iOS free copy"
             ReferencedContainer = "container:changeableball.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE7A7E961AD6C0D1009CE223"
-            BuildableName = "changeableball iOS paid copy.app"
+            BuildableName = "changeableball iOS free copy.app"
             BlueprintName = "changeableball iOS free copy"
             ReferencedContainer = "container:changeableball.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE7A7E961AD6C0D1009CE223"
-            BuildableName = "changeableball iOS paid copy.app"
+            BuildableName = "changeableball iOS free copy.app"
             BlueprintName = "changeableball iOS free copy"
             ReferencedContainer = "container:changeableball.xcodeproj">
          </BuildableReference>
