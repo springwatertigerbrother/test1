@@ -702,13 +702,13 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
 
 //            pGameCenter->buyLayer->setVisible(true);
         }
-        m_canPlaying = false;
+//        m_canPlaying = false;
 
 //        auto buyLayer = BuyLifeLayer::create();
 //        addChild(buyLayer);
 
-//        auto scene = GameOverLayer::scene();
-//        Director::getInstance()->replaceScene(scene);
+        auto scene = GameOverLayer::scene();
+        Director::getInstance()->replaceScene(scene);
         
         log("gameover");
     }

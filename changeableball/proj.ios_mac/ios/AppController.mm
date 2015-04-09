@@ -101,10 +101,10 @@ static AppDelegate s_sharedApplication;
 //    [controller setAdHidden:false];
     //        [Flurry startSession: @"5523Y5FQM8WV8Q4QRCD6"];
     
-    IADSimple* simple = [IADSimple IADSimple];
-    simple.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-    [_viewController.view addSubview: simple.bannerView];
-    [simple.bannerView setHidden:false];
+//    IADSimple* simple = [IADSimple IADSimple];
+//    simple.bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+//    [_viewController.view addSubview: simple.bannerView];
+//    [simple.bannerView setHidden:false];
 
     // Replace this ad unit ID with your own ad unit ID.
     

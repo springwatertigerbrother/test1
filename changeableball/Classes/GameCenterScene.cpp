@@ -192,6 +192,8 @@ void GameCenterScene:: tick(float dt)
 
 //        buyLayer->setVisible(true);
 //        m_data->m_canPlaying = false;
+        auto scene = GameOverLayer::scene();
+        Director::getInstance()->replaceScene(scene);
         log("gameover");
     }
     

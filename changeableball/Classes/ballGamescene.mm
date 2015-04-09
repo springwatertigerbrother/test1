@@ -18,7 +18,7 @@
 #include "Cocos2dx/ShareButton/UMShareButton.h"
 #include "DataBase64.h"
 #include "AdViewToolX.h"
-#include "IADSimple.h"
+//#include "IADSimple.h"
 
 using namespace cocos2d;
 
@@ -148,8 +148,8 @@ void BallGameScene::onEnter()
     
     CCLayer::onEnter();
     
-    IADSimple* simple = [IADSimple IADSimple];
-    [simple.bannerView setHidden:false];
+//    IADSimple* simple = [IADSimple IADSimple];
+//    [simple.bannerView setHidden:false];
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
@@ -299,8 +299,8 @@ void BallGameScene:: startGame()
 void BallGameScene:: playingNow(void* sender)
 {
     AdViewToolX::setAdHidden(false);
-    IADSimple* simple = [IADSimple IADSimple];
-    [simple.bannerView setHidden:false];
+//    IADSimple* simple = [IADSimple IADSimple];
+//    [simple.bannerView setHidden:false];
     
     DataHome::getInstance()->isCountDownModel = false;
 
@@ -311,8 +311,8 @@ void BallGameScene:: playingNow(void* sender)
 void BallGameScene:: countDownModel(void* sender)
 {
     AdViewToolX::setAdHidden(false);
-    IADSimple* simple = [IADSimple IADSimple];
-    [simple.bannerView setHidden:true];
+//    IADSimple* simple = [IADSimple IADSimple];
+//    [simple.bannerView setHidden:true];
     
     DataHome::getInstance()->isCountDownModel = true;
     
@@ -453,8 +453,8 @@ void BallGameScene:: multiplePlayer(void* sender)
     AdViewToolX::setAdHidden(false);
     AdViewToolX::setAdPosition(AdViewToolX::AD_POS_CENTER, AdViewToolX::AD_POS_BOTTOM);
 
-    IADSimple* simple = [IADSimple IADSimple];
-    [simple.bannerView setHidden:true];
+//    IADSimple* simple = [IADSimple IADSimple];
+//    [simple.bannerView setHidden:true];
     
     DataHome::getInstance()->isCountDownModel = true;
     
