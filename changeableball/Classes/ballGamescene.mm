@@ -66,76 +66,6 @@ bool BallGameScene::init()
         pBGLayer->setAnchorPoint(CCPoint(0,0));
         addChild(pBGLayer);
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Sounds/finaldream.mp3", true);
-
-//        std::string outputFile = "";
-//        outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
-//        
-//        NSFileManager* fileManager=[NSFileManager defaultManager];
-//        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
-//        
-//        //文件名
-//        NSString *uniquePath=[[paths objectAtIndex:0] stringByAppendingPathComponent:@"screenShot.png"];
-//        BOOL blHave=[[NSFileManager defaultManager] fileExistsAtPath:uniquePath];
-//        if (!blHave) {
-//            NSLog(@"no  have");
-//        }else {
-//            NSLog(@" have");
-//            BOOL blDele= [fileManager removeItemAtPath:uniquePath error:nil];
-//            if (blDele) {
-//                NSLog(@"dele success");
-//            }else {
-//                NSLog(@"dele fail");
-//            }
-//            
-//        }
-        
-//        // 创建分享按钮, 参数1为按钮正常情况下的图片, 参数2为按钮选中时的图片,参数3为友盟appkey, 参数4为分享回调
-//        UMShareButton *shareButton = UMShareButton::create("Images/share.png","Images/share.png", "你的友盟appkey", share_selector(shareCallback)) ;
-//        
-//        CCUMSocialSDK *sdk = shareButton->getSocialSDK();
-//        // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
-//        sdk->setWeiXinAppInfo("wx4709b0db1758b611",
-//                              "e3bea36c663071278e45440d6e00f7c5");
-//        // 显示在友盟分享面板上的平台
-//        vector<int>* platforms = new vector<int>();
-//        platforms->push_back(SINA);
-//        platforms->push_back(RENREN) ;
-//        platforms->push_back(DOUBAN) ;
-////        platforms->push_back(QZONE) ;
-////        platforms->push_back(QQ) ;
-//        platforms->push_back(WEIXIN);
-//        platforms->push_back(WEIXIN_CIRCLE);
-//        platforms->push_back(FACEBOOK);
-//
-//        // 设置友盟分享面板上显示的平台
-//        shareButton->setPlatforms(platforms);
-//        // 设置文本分享内容
-//        shareButton->setShareContent("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？") ;
-//        // 设置要分享的图片, 图片支持本地图片和url图片, 但是url图片必须以http://或者https://开头
-////        shareButton->setShareImage("/sdcard/header.jpeg") ;
-//        shareButton->setShareImage("Images/emc2.png") ;
-////        sdk->openShare("我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png", share_selector(shareCallback));
-//
-//        // 设置按钮的位置
-//        shareButton->setPosition(ccp(150, 180));
-//        // 然后开发者需要将该按钮添加到游戏场景中
-//        CCMenu* pMenu = CCMenu::create(shareButton, NULL);
-//        pMenu->setPosition(CCPointZero);
-//        this->addChild(pMenu, 1);
-//        
-//        // ********************** 设置平台信息 ***************************
-////         CCUMSocialSDK *sdk = shareButton->getSocialSDK();
-////        // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
-////         sdk->setWeiXinAppInfo("设置微信和朋友圈的app id","app key");
-//        // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
-//        // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
-//        //                  "设置来往和来往动态的app key", "我的应用名");
-//        // sdk->setFacebookAppId("你的facebook appid");
-//        // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
-//        // sdk->setTargetUrl("http://www.umeng.com/social");
-//        //     // 打开或者关闭log
-//        // sdk->setLogEnable(true) ;
-//        // **********************   END ***************************
         
     }
     
@@ -282,9 +212,37 @@ void BallGameScene::onEnter()
     AdViewToolX::setAdHidden(false);
     AdViewToolX::setAdPosition(AdViewToolX::AD_POS_CENTER, AdViewToolX::AD_POS_BOTTOM);
     
+    // Create the switch
+    ControlSwitch *switchControl = ControlSwitch::create
+    (
+     Sprite::create("Images/switch-mask.png"),
+     Sprite::create("Images/switch-on.png"),
+     Sprite::create("Images/switch-off.png"),
+     Sprite::create("Images/sound_thumb.png"),
+     Label::createWithSystemFont("On", "Arial-BoldMT", 16),
+     Label::createWithSystemFont("Off", "Arial-BoldMT", 16)
+     );
+    switchControl->setPosition(ccp(size.width/1.2,300));
+    addChild(switchControl);
+    
+    switchControl->addTargetWithActionForControlEvents(this, cccontrol_selector(BallGameScene::valueChanged), Control::EventType::VALUE_CHANGED);
+
 
 }
+void BallGameScene::valueChanged(Ref* sender, Control::EventType controlEvent)
+{
+    ControlSwitch* pSwitch = (ControlSwitch*)sender;
+    if (pSwitch->isOn())
+    {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Sounds/finaldream.mp3", true);
 
+    }
+    else
+    {
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+
+    }
+}
 
 void BallGameScene:: startGame()
 {

@@ -58,6 +58,8 @@ public:
     ControlButton* standardButtonWithTitle(const char * title);
     bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
     void touchDownAction(Ref *senderz, Control::EventType controlEvent);
+    void valueChanged(Ref* sender, Control::EventType controlEvent);
+    
 };
 
 #endif /* defined(__changeableball__ballGamescene__) */
