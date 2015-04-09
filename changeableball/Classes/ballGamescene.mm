@@ -65,6 +65,7 @@ bool BallGameScene::init()
 
         pBGLayer->setAnchorPoint(CCPoint(0,0));
         addChild(pBGLayer);
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Sounds/finaldream.mp3", true);
 
 //        std::string outputFile = "";
 //        outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
@@ -137,7 +138,10 @@ bool BallGameScene::init()
 //        // **********************   END ***************************
         
     }
+    
+
     while(0);
+
     return true;
 }
 

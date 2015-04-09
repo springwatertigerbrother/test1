@@ -575,6 +575,7 @@ void DataManager:: touchEnd()
     if (m_stackArray.size() >= 6)
     {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/youbang.wav");
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xibanya.mp3");
     }
 
     m_stackArray.clear();
@@ -698,7 +699,7 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
         GameCenterScene* pGameCenter = dynamic_cast<GameCenterScene*>(this->getParent());
         if (pGameCenter)
         {
-            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/success.mp3");
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xiaoxinjiayou.mp3");
 
 //            pGameCenter->buyLayer->setVisible(true);
         }
