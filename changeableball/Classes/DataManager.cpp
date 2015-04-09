@@ -317,7 +317,7 @@ bool DataManager::init()
 
     CCLabelTTF* pLabelHelpCancel = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
-    pLabelHelpCancel->setPosition(ccp(s.width/2+50, s.height-50));
+    pLabelHelpCancel->setPosition(ccp(s.width/2+100, s.height-50));
     pLabelHelpCancel->setVisible(true);
     pLabelHelpCancel->setColor(ccRED);
     //    m_pLabelHelp->setScale(2);
