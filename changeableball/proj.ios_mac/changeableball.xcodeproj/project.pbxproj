@@ -777,7 +777,6 @@
 		FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsockets_arm64.a; sourceTree = "<group>"; };
 		FED299EE1AC2B56800C89B6F /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
 		FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCppWithLibCpp.a; sourceTree = "<group>"; };
-		FEF172021AD4DE79000A2C50 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		FEF1720E1AD508B4000A2C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
 		FEF172101AD508D6000A2C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings.strings"; sourceTree = "<group>"; };
 		FEF172111AD51CF7000A2C50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
@@ -2060,7 +2059,6 @@
 			children = (
 				FED295291AC1114C00C89B6F /* en */,
 				FED295421AC1114C00C89B6F /* zh-Hans */,
-				FEF172021AD4DE79000A2C50 /* da */,
 			);
 			name = UMSocialLocalizable.strings;
 			sourceTree = "<group>";
