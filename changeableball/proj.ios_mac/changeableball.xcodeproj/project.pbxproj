@@ -2812,9 +2812,9 @@
 			productReference = FE7A7F7A1AD6C0D1009CE223 /* changeableball iOS free copy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FE9A38FA1AD3C9C70066BE03 /* changeableball iOS free */ = {
+		FE9A38FA1AD3C9C70066BE03 /* changeableball zanting iOS free */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE9A39721AD3C9C70066BE03 /* Build configuration list for PBXNativeTarget "changeableball iOS free" */;
+			buildConfigurationList = FE9A39721AD3C9C70066BE03 /* Build configuration list for PBXNativeTarget "changeableball zanting iOS free" */;
 			buildPhases = (
 				FE9A39051AD3C9C70066BE03 /* Resources */,
 				FE9A39281AD3C9C70066BE03 /* Sources */,
@@ -2829,7 +2829,7 @@
 				FE9A39011AD3C9C70066BE03 /* PBXTargetDependency */,
 				FE9A39031AD3C9C70066BE03 /* PBXTargetDependency */,
 			);
-			name = "changeableball iOS free";
+			name = "changeableball zanting iOS free";
 			productName = iphone;
 			productReference = FE9A39751AD3C9C70066BE03 /* changeableball iOS paid copy.app */;
 			productType = "com.apple.product-type.application";
@@ -2898,7 +2898,7 @@
 				1D6058900D05DD3D006BFB54 /* changeableball iOS */,
 				5087E73D17EB910900C73F5D /* changeableball Mac */,
 				FEA72B521AAEE090009226A1 /* changeableball iOS paid */,
-				FE9A38FA1AD3C9C70066BE03 /* changeableball iOS free */,
+				FE9A38FA1AD3C9C70066BE03 /* changeableball zanting iOS free */,
 				FE7A7E961AD6C0D1009CE223 /* changeableball iOS free copy */,
 			);
 		};
@@ -4350,6 +4350,7 @@
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
 					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a7c09261-582b-4345-881c-ec43147a9b93";
@@ -4381,6 +4382,7 @@
 					"$(SRCROOT)/../cocos2d/external/chipmunk/include/chipmunk",
 					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a7c09261-582b-4345-881c-ec43147a9b93";
@@ -4393,8 +4395,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4514,8 +4516,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5136,7 +5138,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		FE9A39721AD3C9C70066BE03 /* Build configuration list for PBXNativeTarget "changeableball iOS free" */ = {
+		FE9A39721AD3C9C70066BE03 /* Build configuration list for PBXNativeTarget "changeableball zanting iOS free" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE9A39731AD3C9C70066BE03 /* Debug */,
