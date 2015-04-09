@@ -275,6 +275,10 @@ void BallGameScene::onEnter()
     
     [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
 
+    AdViewToolX::setAdHidden(false);
+    AdViewToolX::setAdPosition(AdViewToolX::AD_POS_CENTER, AdViewToolX::AD_POS_BOTTOM);
+    
+
 }
 
 
@@ -306,7 +310,7 @@ void BallGameScene:: playingNow(void* sender)
 }
 void BallGameScene:: countDownModel(void* sender)
 {
-    AdViewToolX::setAdHidden(true);
+    AdViewToolX::setAdHidden(false);
     IADSimple* simple = [IADSimple IADSimple];
     [simple.bannerView setHidden:true];
     
@@ -446,7 +450,9 @@ void BallGameScene:: multiplePlayer(void* sender)
 //#endif
 //    }
 //
-    AdViewToolX::setAdHidden(true);
+    AdViewToolX::setAdHidden(false);
+    AdViewToolX::setAdPosition(AdViewToolX::AD_POS_CENTER, AdViewToolX::AD_POS_BOTTOM);
+
     IADSimple* simple = [IADSimple IADSimple];
     [simple.bannerView setHidden:true];
     

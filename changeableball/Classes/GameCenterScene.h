@@ -41,7 +41,7 @@ public:
     void startTimerCounter();
     void tick(float dt);
     
-    BuyLifeLayer* buyLayer;
+//    BuyLifeLayer* buyLayer;
 
 //    void registerWithTouchDispatcher();
 //    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);

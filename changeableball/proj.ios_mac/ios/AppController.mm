@@ -30,6 +30,8 @@
 #include "IADSimple.h"
 #import "AdViewController.h"
 
+//@class GADBannerView;
+
 @implementation AppController
 
 #pragma mark -
@@ -94,7 +96,8 @@ static AppDelegate s_sharedApplication;
     [controller setAdPosition:CGPointMake([_viewController.view frame].size.width, [_viewController.view frame].size.height) ];
     //    [controller setAdHidden:true];
     //    [controller setAdHidden:false];
-    [controller setAdHidden:true];
+    [controller setAdHidden:false];
+    
 //    [controller setAdHidden:false];
     //        [Flurry startSession: @"5523Y5FQM8WV8Q4QRCD6"];
     
@@ -103,6 +106,22 @@ static AppDelegate s_sharedApplication;
     [_viewController.view addSubview: simple.bannerView];
     [simple.bannerView setHidden:false];
 
+    // Replace this ad unit ID with your own ad unit ID.
+    
+//    GADBannerView* bannerView;
+//
+//    bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+//    bannerView.rootViewController = self;
+//    
+//    GADRequest *request = [GADRequest request];
+//    // Requests test ads on devices you specify. Your test device ID is printed to the console when
+//    // an ad request is made. GADBannerView automatically returns test ads when running on a
+//    // simulator.
+//    request.testDevices = @[
+//                            @"2077ef9a63d2b398840261c8221a0c9a"  // Eric's iPod Touch
+//                            ];
+//    [self.bannerView loadRequest:request];
+    
     return YES;
 }
 

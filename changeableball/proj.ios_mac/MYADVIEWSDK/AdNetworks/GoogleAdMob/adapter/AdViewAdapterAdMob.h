@@ -5,7 +5,7 @@
  */
 
 #import "AdViewAdNetworkAdapter.h"
-#import "GADBannerViewDelegate.h"
+#import <GoogleMobileAds/GADBannerViewDelegate.h>
 
 @class AdMobView;
 

@@ -79,9 +79,9 @@ bool GameCenterScene::init()
 
         m_current_score = 0;
         
-        buyLayer = BuyLifeLayer::create();
-        this->addChild(buyLayer,10);
-        buyLayer->setVisible(false);
+//        buyLayer = BuyLifeLayer::create();
+//        this->addChild(buyLayer,10);
+//        buyLayer->setVisible(false);
         
         //buy life
         auto buy_life_listener = EventListenerCustom::create(BUY_LIFE_LIQUID, [=](EventCustom* event){
@@ -104,7 +104,7 @@ bool GameCenterScene::init()
             if (lifeLiquid >= RIVIVE_COSUMED_DIAMOND)
             {
                 m_data->m_canPlaying = true;
-                buyLayer->setVisible(false);
+//                buyLayer->setVisible(false);
                 m_data->initElements();
                 lifeLiquid -= RIVIVE_COSUMED_DIAMOND;
                 
@@ -190,8 +190,8 @@ void GameCenterScene:: tick(float dt)
 //        
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/success.mp3");
 
-        buyLayer->setVisible(true);
-        m_data->m_canPlaying = false;
+//        buyLayer->setVisible(true);
+//        m_data->m_canPlaying = false;
         log("gameover");
     }
     

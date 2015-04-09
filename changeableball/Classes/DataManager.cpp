@@ -586,7 +586,7 @@ void DataManager:: touchEnd()
         GameCenterScene* pGameCenter = dynamic_cast<GameCenterScene*>(this->getParent());
         if (pGameCenter)
         {
-            pGameCenter->buyLayer->setVisible(true);
+//            pGameCenter->buyLayer->setVisible(true);
         }
         m_canPlaying = false;
         
@@ -700,7 +700,7 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
         {
             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/success.mp3");
 
-            pGameCenter->buyLayer->setVisible(true);
+//            pGameCenter->buyLayer->setVisible(true);
         }
         m_canPlaying = false;
 
