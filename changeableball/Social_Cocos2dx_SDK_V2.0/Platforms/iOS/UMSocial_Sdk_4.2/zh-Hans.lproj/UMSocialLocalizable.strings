@@ -5,6 +5,8 @@
   Created by yeahugo on 13-6-17.
   Copyright (c) 2013年 Umeng. All rights reserved.
 */
+"CFBundleDisplayName" = "chinese";
+
 "button_cancel" = "取消";
 "button_ok" = "确定";
 "button_start" = "开启";
