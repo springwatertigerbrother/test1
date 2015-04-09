@@ -4,10 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ballpaid.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>changeableball Mac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>changeableball iOS free copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
+		<key>changeableball iOS free.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>changeableball iOS paid.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
 		</dict>
 		<key>changeableball iOS.xcscheme</key>
 		<dict>
@@ -23,6 +43,21 @@
 			<true/>
 		</dict>
 		<key>5087E73D17EB910900C73F5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE7A7E961AD6C0D1009CE223</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE9A38FA1AD3C9C70066BE03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEA72B521AAEE090009226A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
