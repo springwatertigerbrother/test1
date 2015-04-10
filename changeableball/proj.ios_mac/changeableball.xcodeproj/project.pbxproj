@@ -2155,6 +2155,7 @@
 					"$(PROJECT_DIR)/iosumanalytics",
 					"$(PROJECT_DIR)",
 				);
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2238,6 +2239,7 @@
 					"$(PROJECT_DIR)/iosumanalytics",
 					"$(PROJECT_DIR)",
 				);
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2728,7 +2730,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2814,7 +2816,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

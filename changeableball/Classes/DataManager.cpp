@@ -741,7 +741,7 @@ void DataManager::draw(cocos2d::Renderer *renderer,const cocos2d::Mat4& transfor
         GameCenterScene* pGameCenter = dynamic_cast<GameCenterScene*>(this->getParent());
         if (pGameCenter)
         {
-            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/success.mp3");
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xiaoxinjiayou.mp3");
 
             pGameCenter->buyLayer->setVisible(true);
         }

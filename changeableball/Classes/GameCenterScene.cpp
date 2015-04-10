@@ -188,7 +188,7 @@ void GameCenterScene:: tick(float dt)
     {
         unschedule(schedule_selector(GameCenterScene::tick));
 //        
-        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/success.mp3");
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xiaoxinjiayou.mp3");
 
         buyLayer->setVisible(true);
         m_data->m_canPlaying = false;
