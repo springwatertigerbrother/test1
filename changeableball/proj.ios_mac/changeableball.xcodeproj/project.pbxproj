@@ -2653,7 +2653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2730,7 +2730,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
+				PROVISIONING_PROFILE = "ed56f239-27d4-464e-a6bc-0f67b4c74527";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2741,7 +2741,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2816,7 +2816,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
+				PROVISIONING_PROFILE = "ed56f239-27d4-464e-a6bc-0f67b4c74527";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
