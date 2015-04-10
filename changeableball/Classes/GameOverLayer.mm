@@ -336,12 +336,12 @@ void GameOverLayer::ShareGame()
     // 设置友盟分享面板上显示的平台
     vector<int>* platforms = new vector<int>();
     platforms->push_back(SINA);
-    platforms->push_back(RENREN) ;
-    platforms->push_back(WEIXIN_CIRCLE) ;
-//    platforms->push_back(FACEBOOK);
+//    platforms->push_back(RENREN) ;
+//    platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(FACEBOOK);
 //    platforms->push_back(QZONE) ;
 //    platforms->push_back(QQ) ;
-    platforms->push_back(DOUBAN) ;
+//    platforms->push_back(DOUBAN) ;
 
     
     // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台

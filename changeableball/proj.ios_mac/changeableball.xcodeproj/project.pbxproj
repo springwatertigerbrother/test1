@@ -3503,6 +3503,7 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
 				);
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -3616,6 +3617,7 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
 				);
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
