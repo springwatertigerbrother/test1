@@ -25,7 +25,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450266006.486639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -94,7 +94,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "236"
-            endingLineNumber = "236">
+            endingLineNumber = "236"
+            landmarkName = "BuyLifeLayer::CallUseLife(void* sender)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -279,7 +281,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450279279.986871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -295,7 +297,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450279279.986871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -333,7 +335,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "198"
             endingLineNumber = "198"
-            landmarkName = "BuyLifeLayer::CallUseLife(void* sender)"
+            landmarkName = "BuyLifeLayer::CallBuyLife(void* sender)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -375,7 +377,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450266006.486639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -391,7 +393,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450266006.486639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -407,7 +409,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450279279.986871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -423,7 +425,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
+            filePath = "../classes/ballGamescene.cpp"
             timestampString = "450277875.759894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

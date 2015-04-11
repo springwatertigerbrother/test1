@@ -9,7 +9,7 @@
 #include "BuyLifeLayer.h"
 #include "GameOverLayer.h"
 #include "config.h"
-#include "IOSiAP_Bridge.h"
+//#include "IOSiAP_Bridge.h"
 #include "DataBase64.h"
 
 enum buttonTag
@@ -201,8 +201,8 @@ void BuyLifeLayer::CallBuyLife(void* sender)
     m_shopMenu->setEnabled(false);
     pLabelUpload->setVisible(true);
 //    IOSiAP_Bridge* bridge = new IOSiAP_Bridge();
-    IOSiAP_Bridge* bridge = IOSiAP_Bridge::getInstance();
-    bridge->requestProducts(price);
+//    IOSiAP_Bridge* bridge = IOSiAP_Bridge::getInstance();
+//    bridge->requestProducts(price);
 
 
 //

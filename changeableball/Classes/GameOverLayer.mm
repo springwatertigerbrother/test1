@@ -11,7 +11,7 @@
 #include "DataHome.h"
 #include "ballGamescene.h"
 #import "UMSocialSnsData.h"
-#include "NCSGameCenter.h"
+//#include "NCSGameCenter.h"
 #include "DataBase64.h"
 #include "MUtils.h"
 // 引入相关的头文件
@@ -254,7 +254,7 @@ bool GameOverLayer::init()
 //    char buffer[32];
 //    sprintf(buffer, "%s%d", "Himi",iKey);
     
-        [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
+//        [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
 
     return true;
 }
@@ -389,8 +389,8 @@ void GameOverLayer::backToHome()
 }
 void GameOverLayer::ranking()
 {
-    [[ NCSGameCenter sharedGameCenter] registerForAuthenticationNotification];
-    [[ NCSGameCenter sharedGameCenter] showLeaderboard];
+//    [[ NCSGameCenter sharedGameCenter] registerForAuthenticationNotification];
+//    [[ NCSGameCenter sharedGameCenter] showLeaderboard];
 }
 //
 //void GameOverLayer::registerWithTouchDispatcher()

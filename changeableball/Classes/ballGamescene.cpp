@@ -10,12 +10,12 @@
 #include "GameCenterScene.h"
 #include "DataHome.h"
 #include "MUtils.h"
-#include "IOSiAP_Bridge.h"
-#import "UMSocialSnsData.h"
-#include "NCSGameCenter.h"
+//#include "IOSiAP_Bridge.h"
+//#import "UMSocialSnsData.h"
+//#include "NCSGameCenter.h"
 // 引入相关的头文件
-#include "Cocos2dx/Common/CCUMSocialSDK.h"
-#include "Cocos2dx/ShareButton/UMShareButton.h"
+//#include "Cocos2dx/Common/CCUMSocialSDK.h"
+//#include "Cocos2dx/ShareButton/UMShareButton.h"
 #include "DataBase64.h"
 #include "AdViewToolX.h"
 //#include "IADSimple.h"
@@ -23,7 +23,7 @@
 using namespace cocos2d;
 
 // 使用友盟命令空间
-USING_NS_UM_SOCIAL;
+//USING_NS_UM_SOCIAL;
 // ...... 代码省略
 
 
@@ -234,9 +234,9 @@ void BallGameScene::onEnter()
     //        labelLife->setVisible(false);
     addChild(labelLife,11);
     auto scaleAction = ScaleBy::create(2, 1.5);
-    labelLife->runAction(RepeatForever::create(Sequence::create(scaleAction,scaleAction->reverse(), nil)));
+    labelLife->runAction(RepeatForever::create(Sequence::create(scaleAction,scaleAction->reverse(), NULL)));
     
-    [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
+//    [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
 
     AdViewToolX::setAdHidden(false);
     AdViewToolX::setAdPosition(AdViewToolX::AD_POS_CENTER, AdViewToolX::AD_POS_BOTTOM);
@@ -313,90 +313,90 @@ void BallGameScene:: countDownModel(void* sender)
 
 void BallGameScene:: ranking(void* sender)
 {
-    [[ NCSGameCenter sharedGameCenter] registerForAuthenticationNotification];
-    [[ NCSGameCenter sharedGameCenter] showLeaderboard];
+//    [[ NCSGameCenter sharedGameCenter] registerForAuthenticationNotification];
+//    [[ NCSGameCenter sharedGameCenter] showLeaderboard];
 
 }
 void BallGameScene:: share(void* sender)
 {
-    std::string shareStr;
-    shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
-
-    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
-    switch (currentLanguageType)
-    {
-        case cocos2d::LanguageType::CHINESE:
-          
-            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
-            break;
-        case cocos2d::LanguageType::ENGLISH:
-           
-            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
-            break;
-        default:
-            break;
-    }
-    
-    std::string outputFile = "";
-    outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
-    cocos2d::utils::captureScreen(nil,outputFile);
-    // 获取一个CCUMSocialSDK实例
-    CCUMSocialSDK *sdk = CCUMSocialSDK::create("55121768fd98c588b0000a3e");
-    // 设置友盟appkey,如果create中设置了不用调用该函数
-    // sdk->setAppKey("4eaee02c527015373b000003");
-    // **********************   设置平台信息  ***************************
-    // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
-    sdk->setWeiXinAppInfo("wx4709b0db1758b611","e3bea36c663071278e45440d6e00f7c5");
-    sdk->setFacebookAppId("378679852325190");
-    // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
-    // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
-    //              "设置来往和来往动态的app key", "我的应用名");
-    // sdk->setFacebookAppId("你的facebook appid");
-    //     // 打开或者关闭log
-    // sdk->setLogEnable(true) ;
-    // **********************   END ***************************
-    
-    // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
-    sdk->setTargetUrl("https://itunes.apple.com/us/app/n-dimension/id983646428?l=zh&ls=1&mt=8");
-    // 设置友盟分享面板上显示的平台
-    vector<int>* platforms = new vector<int>();
-    platforms->push_back(SINA);
-    platforms->push_back(RENREN) ;
-    platforms->push_back(WEIXIN_CIRCLE) ;
-    //    platforms->push_back(FACEBOOK);
-    //    platforms->push_back(QZONE) ;
-    //    platforms->push_back(QQ) ;
-    platforms->push_back(DOUBAN) ;
-    
-    // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
-    sdk->setPlatforms(platforms) ;
-    
-    // 打开分享面板, 注册分享回调, 参数1为分享面板上的平台, 参数2为要分享的文字内容，
-    // 参数3为要分享的图片路径(android和IOS的图片地址格式不一致，因此分平台设置), 参数4为分享回调.
-    //    int nDimension = UserDefault()->getInstance->geti
-    //    char tempStr[100] ="";
-    
-    unsigned long  nTotalScore = 0;
-    //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
-    nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
-    if (nTotalScore<0)
-    {
-        nTotalScore = 0;
-    }
-    //    char shareContent[200] = "";
-    //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
-    int nValue = calculate_score(nTotalScore,0);
-
-    String* pCongratulationScoreStr = String::createWithFormat(shareStr.c_str(),
-                                                               nValue);
-    
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));
-#elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    //    sdk->setPlatformShareContent(WEIXIN_CIRCLE,"我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png");
-    sdk->openShare(pCongratulationScoreStr->getCString(),outputFile.c_str(), nullptr);
-#endif
-    log("share");
+//    std::string shareStr;
+//    shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+//
+//    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+//    switch (currentLanguageType)
+//    {
+//        case cocos2d::LanguageType::CHINESE:
+//          
+//            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+//            break;
+//        case cocos2d::LanguageType::ENGLISH:
+//           
+//            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+//            break;
+//        default:
+//            break;
+//    }
+//    
+//    std::string outputFile = "";
+//    outputFile = FileUtils::getInstance()->getWritablePath() + "screenShot.png";
+//    cocos2d::utils::captureScreen(nil,outputFile);
+//    // 获取一个CCUMSocialSDK实例
+//    CCUMSocialSDK *sdk = CCUMSocialSDK::create("55121768fd98c588b0000a3e");
+//    // 设置友盟appkey,如果create中设置了不用调用该函数
+//    // sdk->setAppKey("4eaee02c527015373b000003");
+//    // **********************   设置平台信息  ***************************
+//    // sdk->setQQAppIdAndAppKey("设置QQ的app id", "appkey");
+//    sdk->setWeiXinAppInfo("wx4709b0db1758b611","e3bea36c663071278e45440d6e00f7c5");
+//    sdk->setFacebookAppId("378679852325190");
+//    // sdk->setYiXinAppKey("设置易信和易信朋友圈的app id");
+//    // sdk->setLaiwangAppInfo("设置来往和来往动态的app id",
+//    //              "设置来往和来往动态的app key", "我的应用名");
+//    // sdk->setFacebookAppId("你的facebook appid");
+//    //     // 打开或者关闭log
+//    // sdk->setLogEnable(true) ;
+//    // **********************   END ***************************
+//    
+//    // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
+//    sdk->setTargetUrl("https://itunes.apple.com/us/app/n-dimension/id983646428?l=zh&ls=1&mt=8");
+//    // 设置友盟分享面板上显示的平台
+//    vector<int>* platforms = new vector<int>();
+//    platforms->push_back(SINA);
+//    platforms->push_back(RENREN) ;
+//    platforms->push_back(WEIXIN_CIRCLE) ;
+//    //    platforms->push_back(FACEBOOK);
+//    //    platforms->push_back(QZONE) ;
+//    //    platforms->push_back(QQ) ;
+//    platforms->push_back(DOUBAN) ;
+//    
+//    // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
+//    sdk->setPlatforms(platforms) ;
+//    
+//    // 打开分享面板, 注册分享回调, 参数1为分享面板上的平台, 参数2为要分享的文字内容，
+//    // 参数3为要分享的图片路径(android和IOS的图片地址格式不一致，因此分平台设置), 参数4为分享回调.
+//    //    int nDimension = UserDefault()->getInstance->geti
+//    //    char tempStr[100] ="";
+//    
+//    unsigned long  nTotalScore = 0;
+//    //    char tempStr[100] = (CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE")).c_str();
+//    nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+//    if (nTotalScore<0)
+//    {
+//        nTotalScore = 0;
+//    }
+//    //    char shareContent[200] = "";
+//    //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
+//    int nValue = calculate_score(nTotalScore,0);
+//
+//    String* pCongratulationScoreStr = String::createWithFormat(shareStr.c_str(),
+//                                                               nValue);
+//    
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+//    sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));
+//#elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+//    //    sdk->setPlatformShareContent(WEIXIN_CIRCLE,"我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png");
+//    sdk->openShare(pCongratulationScoreStr->getCString(),outputFile.c_str(), nullptr);
+//#endif
+//    log("share");
 }
 void BallGameScene:: multiplePlayer(void* sender)
 {
