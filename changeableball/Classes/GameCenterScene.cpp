@@ -66,7 +66,7 @@ bool GameCenterScene::init()
         bool isFirst = !getIntegerForKey("isFirstOpen");
         if (isFirst)
         {
-            setIntegerForKey("LIFE_LIQUID", 60);
+            setIntegerForKey("LIFE_LIQUID", DONATE_DIAMOND);
             m_data->m_helpLayer->setVisible(true);
             setIntegerForKey("isFirstOpen", 1);
             UserDefault::getInstance()->flush();

@@ -47,6 +47,7 @@
 #define USE_LIFE_LIQUID "use_life_liquid"
 #define BUY_LIFE_LIQUID "buy_life_liquid"
 #define REFESH_BUYLIFE_UI "refresh_buylife_ui"
+#define DONATE_DIAMOND  300
 //#define kLeaderboardID @"ndimpaid_Leaderboard"
 #define kLeaderboardID @"ndimpaid_Leaderboard_en"
 
