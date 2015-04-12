@@ -318,7 +318,8 @@ obj/local/armeabi/objs-debug/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../Classes/ballGamescene.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/MUtils.h jni/../../Classes/config.h
+ jni/../../Classes/MUtils.h jni/../../Classes/config.h \
+ jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -961,3 +962,5 @@ jni/../../Classes/ballGamescene.h:
 jni/../../Classes/MUtils.h:
 
 jni/../../Classes/config.h:
+
+jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h:

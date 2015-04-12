@@ -24,7 +24,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/GameCenterScene.cpp \
                    ../../Classes/GameOverLayer.cpp \
                    ../../Classes/MUtils.cpp \
-                   
+                   ../../Classes/AdviewAd.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

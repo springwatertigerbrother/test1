@@ -93,6 +93,8 @@
 		FE438D7D19F48F0300D9C636 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7819F48F0300D9C636 /* DataManager.cpp */; };
 		FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
 		FE438D7F19F48F0300D9C636 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
+		FE7459441ADA45D600D625AA /* AdviewAd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7459421ADA45D600D625AA /* AdviewAd.cpp */; };
+		FE7459451ADA45D600D625AA /* AdviewAd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7459421ADA45D600D625AA /* AdviewAd.cpp */; };
 		FE7A7E711AD65C62009CE223 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7A7E701AD65C62009CE223 /* EventKitUI.framework */; };
 		FE7A7EA41AD6C0D1009CE223 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77617EB970100C73F5D /* Icon-120.png */; };
 		FE7A7EA51AD6C0D1009CE223 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1228081AD3EBF10075F4F6 /* Icon@2x.png */; };
@@ -1004,6 +1006,8 @@
 		FE438D7919F48F0300D9C636 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		FE438D7A19F48F0300D9C636 /* BallSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallSprite.cpp; sourceTree = "<group>"; };
 		FE438D7B19F48F0300D9C636 /* BallSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallSprite.h; sourceTree = "<group>"; };
+		FE7459421ADA45D600D625AA /* AdviewAd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdviewAd.cpp; path = ../Classes/AdviewAd.cpp; sourceTree = "<group>"; };
+		FE7459431ADA45D600D625AA /* AdviewAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdviewAd.h; path = ../Classes/AdviewAd.h; sourceTree = "<group>"; };
 		FE7A7E701AD65C62009CE223 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
 		FE7A7F7A1AD6C0D1009CE223 /* changeableball iOS free copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS free copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7A7F7B1AD6C0D1009CE223 /* changeableball iOS free copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS free copy-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS free copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -1837,6 +1841,8 @@
 				FE9A95931A9B5C2000D5C192 /* GameOverLayer.cpp */,
 				FE7FF2951AA06FE6009C8339 /* MUtils.cpp */,
 				FE7FF2961AA06FE6009C8339 /* MUtils.h */,
+				FE7459421ADA45D600D625AA /* AdviewAd.cpp */,
+				FE7459431ADA45D600D625AA /* AdviewAd.h */,
 			);
 			name = Ui;
 			sourceTree = "<group>";
@@ -2997,6 +3003,7 @@
 			files = (
 				FE9A95941A9B5C2000D5C192 /* GameOverLayer.cpp in Sources */,
 				FED298681AC1115000C89B6F /* readme.md in Sources */,
+				FE7459441ADA45D600D625AA /* AdviewAd.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */,
 				FE348B3F1AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */,
@@ -3066,6 +3073,7 @@
 				FEF8F4FC1AD7651600C0CAC3 /* CJSONDeserializer.m in Sources */,
 				FE7A7EFB1AD6C0D1009CE223 /* UmSocialControllerIOS.mm in Sources */,
 				FE7A7EFC1AD6C0D1009CE223 /* DataHome.cpp in Sources */,
+				FE7459451ADA45D600D625AA /* AdviewAd.cpp in Sources */,
 				FEF8F4F21AD7651600C0CAC3 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
 				FEF8F4DA1AD7651600C0CAC3 /* AdViewToolX.mm in Sources */,
 				FEF8F4D81AD7651600C0CAC3 /* AdViewController.m in Sources */,
