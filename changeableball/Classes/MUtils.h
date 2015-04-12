@@ -5,18 +5,18 @@
 
 #include <iostream>
 #include "cocos2d.h"
-#include "extensions/cocos-ext.h"
+//#include "extensions/cocos-ext.h"
 #include "config.h"
 
-using namespace cocos2d::extension;
+//using namespace cocos2d::extension;
 using namespace cocos2d;
 
 float get_content_scale_factor();
 cocos2d::Size get_design_resolution_size();
 float get_resolution_scale();
 void initialize_resolution();
-ControlButton* standardButtonWithTitle(const char * title);
-bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
+//ControlButton* standardButtonWithTitle(const char * title);
+//bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
 //std::string localLanguage(std::string language);
 
 int calculate_score(int nScore,int n);

@@ -1020,7 +1020,7 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
                  default:
                      break;
              }
-         CCString * soundName = CCString::createWithFormat("Sounds/%s%d.aif",typeStr.c_str(), count);
+         CCString * soundName = CCString::createWithFormat("Sounds/%s%d.wav",typeStr.c_str(), count);
          if(typeStr == "B")
          {
              soundName = CCString::createWithFormat("Sounds/%s.wav",typeStr.c_str());

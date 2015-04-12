@@ -11,12 +11,12 @@
 
 #include <iostream>
 #include "cocos2d.h"
-#include "cocos-ext.h"
-#include "extensions/cocos-ext.h"
+//#include "cocos-ext.h"
+//#include "extensions/cocos-ext.h"
+//
+//using namespace cocos2d::extension;
 
-using namespace cocos2d::extension;
-
-class BallGameScene : public cocos2d::CCLayer
+class BallGameScene : public cocos2d::Layer
 {
     cocos2d::CCMenuItemImage * m_playnow;
     cocos2d::CCMenuItemImage * m_countdown;
@@ -25,13 +25,14 @@ class BallGameScene : public cocos2d::CCLayer
     cocos2d::CCMenuItemImage * m_aboutus;
     cocos2d::CCMenuItemImage * m_share;
     cocos2d::CCMenuItemImage * m_ranking;
-    
+
 
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
     virtual bool init();
     virtual void onEnter();
-    
+    static cocos2d::Scene* createScene();
+
     void startGame();
     void playingNow(void* sender);
     void countDownModel(void* sender);
@@ -43,22 +44,22 @@ public:
     void aboutus(void* sender);
     void onEnterTransitionDidFinish();
     void settings(void* sender);
-    
+
 //    void playingNow(Ref *senderz, cocos2d::extension::Control::EventType controlEvent);
 
     // there's no 'id' in cpp, so we recommend to return the class instance pointer
-    static cocos2d::CCScene* scene();
-    
+//    static cocos2d::CCScene* scene();
+
     // a selector callback
     void menuCloseCallback(cocos2d::CCObject* pSender);
     void musicControl(Ref* pSender);
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(BallGameScene);
 
-    ControlButton* standardButtonWithTitle(const char * title);
-    bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
-    void touchDownAction(Ref *senderz, Control::EventType controlEvent);
-    void valueChanged(Ref* sender, Control::EventType controlEvent);
+//    ControlButton* standardButtonWithTitle(const char * title);
+//    bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
+//    void touchDownAction(Ref *senderz, Control::EventType controlEvent);
+//    void valueChanged(Ref* sender, Control::EventType controlEvent);
     
 };
 
