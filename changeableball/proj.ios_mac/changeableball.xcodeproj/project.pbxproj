@@ -89,6 +89,14 @@
 		FE512D571ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
 		FE512D581ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
 		FE512D5B1ACFE33400B7232F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE512D5A1ACFE33400B7232F /* GameKit.framework */; };
+		FE74594D1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
+		FE74594E1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
+		FE74594F1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
+		FE7459501ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
+		FE7459511ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
+		FE7459521ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
+		FE7459531ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
+		FE7459541ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
 		FE7FF2971AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE9A39061AD3C9C70066BE03 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77617EB970100C73F5D /* Icon-120.png */; };
@@ -681,6 +689,8 @@
 		FE512D551ACFE25C00B7232F /* NCSGameCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCSGameCenter.m; path = ../Classes/NCSGameCenter.m; sourceTree = "<group>"; };
 		FE512D591ACFE2AC00B7232F /* NCSGameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSGameCenter.h; path = ../Classes/NCSGameCenter.h; sourceTree = "<group>"; };
 		FE512D5A1ACFE33400B7232F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		FE74594B1ADA774F00D625AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FE74594C1ADA774F00D625AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		FE7FF2951AA06FE6009C8339 /* MUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MUtils.cpp; path = ../Classes/MUtils.cpp; sourceTree = "<group>"; };
 		FE7FF2961AA06FE6009C8339 /* MUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MUtils.h; path = ../Classes/MUtils.h; sourceTree = "<group>"; };
 		FE9A39751AD3C9C70066BE03 /* changeableball iOS paid copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS paid copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1146,6 +1156,8 @@
 				5087E77917EB970100C73F5D /* Icon-57.png */,
 				5087E77A17EB970100C73F5D /* Icon-72.png */,
 				5087E77B17EB970100C73F5D /* Icon-76.png */,
+				FE74594B1ADA774F00D625AA /* Icon.png */,
+				FE74594C1ADA774F00D625AA /* Icon@2x.png */,
 				5087E77C17EB970100C73F5D /* Info.plist */,
 			);
 			name = Icons;
@@ -1676,6 +1688,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE74594D1ADA774F00D625AA /* Icon.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				FED298351AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
@@ -1708,6 +1721,7 @@
 				FE438D5B19F48D7000D9C636 /* Sounds in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				FED2983E1AC1114D00C89B6F /* UMSShareListController.xib in Resources */,
+				FE7459511ADA774F00D625AA /* Icon@2x.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
@@ -1730,9 +1744,11 @@
 				FED298361AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				FED298211AC1114D00C89B6F /* UMSocialLocalizable.strings in Resources */,
 				FED295751AC1114C00C89B6F /* doc.html in Resources */,
+				FE74594E1ADA774F00D625AA /* Icon.png in Resources */,
 				FE438D5E19F48D7000D9C636 /* fonts in Resources */,
 				FE438D5A19F48D7000D9C636 /* Images in Resources */,
 				FED298391AC1114D00C89B6F /* UMSLoginViewController.xib in Resources */,
+				FE7459521ADA774F00D625AA /* Icon@2x.png in Resources */,
 				FED2982A1AC1114D00C89B6F /* UMSCommentDetailController.xib in Resources */,
 				FEF172091AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */,
 				FED298331AC1114D00C89B6F /* UMShareEditViewController.xib in Resources */,
@@ -1744,6 +1760,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7459501ADA774F00D625AA /* Icon.png in Resources */,
 				FE9A39061AD3C9C70066BE03 /* Icon-120.png in Resources */,
 				FE9A39071AD3C9C70066BE03 /* UMShareEditViewControlleriPad.xib in Resources */,
 				FE9A39081AD3C9C70066BE03 /* Icon-76.png in Resources */,
@@ -1776,6 +1793,7 @@
 				FE9A39221AD3C9C70066BE03 /* Sounds in Resources */,
 				FE9A39231AD3C9C70066BE03 /* Icon-80.png in Resources */,
 				FE9A39241AD3C9C70066BE03 /* UMSShareListController.xib in Resources */,
+				FE7459541ADA774F00D625AA /* Icon@2x.png in Resources */,
 				FE9A39251AD3C9C70066BE03 /* Icon-57.png in Resources */,
 				FE9A39261AD3C9C70066BE03 /* Default.png in Resources */,
 				FE9A39271AD3C9C70066BE03 /* Icon-58.png in Resources */,
@@ -1786,6 +1804,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE74594F1ADA774F00D625AA /* Icon.png in Resources */,
 				FEA72B5E1AAEE090009226A1 /* Icon-120.png in Resources */,
 				FED298371AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */,
@@ -1818,6 +1837,7 @@
 				FEA72B701AAEE090009226A1 /* Sounds in Resources */,
 				FEA72B711AAEE090009226A1 /* Icon-80.png in Resources */,
 				FED298401AC1114D00C89B6F /* UMSShareListController.xib in Resources */,
+				FE7459531ADA774F00D625AA /* Icon@2x.png in Resources */,
 				FEA72B721AAEE090009226A1 /* Icon-57.png in Resources */,
 				FEA72B731AAEE090009226A1 /* Default.png in Resources */,
 				FEA72B741AAEE090009226A1 /* Icon-58.png in Resources */,
@@ -2687,7 +2707,7 @@
 					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
 				);
 				INFOPLIST_FILE = "changeableball iOS copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/LaiWang,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/TencentWeibo,
@@ -2773,7 +2793,7 @@
 					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
 				);
 				INFOPLIST_FILE = "changeableball iOS copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/LaiWang,
 					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/TencentWeibo,
