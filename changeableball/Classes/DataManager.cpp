@@ -48,7 +48,8 @@ void DataManager::clear(){
     }
 }
 //mark all
-int DataManager::markMinusOne(int i,int j){
+int DataManager::markMinusOne(int i,int j)
+{
     
     int color=shuzu[i][j];
     sum[i][j]=0;
@@ -77,7 +78,8 @@ int DataManager::markMinusOne(int i,int j){
 }
 
 
-void DataManager::findNeighborMark(int i,int j,int color){
+void DataManager::findNeighborMark(int i,int j,int color)
+{
     if(i>=0&&i<6	&&j>= 0	&&j< 6){}else{return ;}
     if(shuzu[i][j]==color){
         
@@ -107,6 +109,8 @@ bool DataManager::enableDispel()
 DataManager::DataManager()
 {
     m_drawLine = false;
+    m_selectedTool = 0;
+    
 }
 bool DataManager::containObject(BallSprite* object,std::vector<BallSprite*> container)
 {
@@ -224,6 +228,19 @@ bool DataManager::init()
 //    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pMoon);
     
+    MenuItemImage* pItem1 = MenuItemImage::create("Images/restartn.png", "Images/restart.png", CC_CALLBACK_1(DataManager::selectedTool, this)) ;
+    pItem1 ->setTag(bomb);
+    
+    MenuItemImage* pItem2 = MenuItemImage::create("Images/sharen.png", "Images/share.png", CC_CALLBACK_1(DataManager::selectedTool,this)) ;
+    pItem2->setTag(wave);
+    Menu* pMenu = Menu::create(pItem1,pItem2, NULL);
+    pMenu->alignItemsHorizontallyWithPadding(10);
+    //    pItem1->setFontSize(30);
+    //    pItem2->setFontSize(30);
+    
+    pMenu->setPosition(ccp(s.width/2, s.height - 250));
+    addChild(pMenu);
+                       
     initElements();
 
 //    if (mCoreLayer)
@@ -524,8 +541,15 @@ void DataManager:: touchMove(CCPoint local)
     m_pTotalScoreLabel->setPosition(ccp(m_movePos.x,m_movePos.y + 70));
 }
 
-void DataManager:: touchEnd()
+void DataManager:: touchEnd(CCPoint local)
 {
+    if (m_selectedTool == bomb)
+    {
+        BallSprite * ds = getCurrentSelectSprite(local);
+        ds->disappear(true);
+        m_selectedTool = none;
+    }
+    
     m_drawLine = false;
     m_pBg->setOpacity(255);
 
@@ -533,6 +557,7 @@ void DataManager:: touchEnd()
     
     m_pTotalScoreLabel->setVisible(false);
 
+    
     if (m_stackArray.size()>=ELIMINABLE_NUM) {
         if (m_removeAllSameColor) {
             
@@ -945,12 +970,20 @@ void DataManager:: onTouchMoved(Touch *touch, Event *unused_event)
          
     void DataManager:: onTouchEnded(Touch *touch, Event *unused_event)
          {
-            touchEnd();
+             CCPoint touchLocation = touch->getLocation();
+             //         touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
+             CCPoint local =  convertToNodeSpace(touchLocation);
+
+            touchEnd(local);
          }
          
     void DataManager::onTouchCancelled(Touch *touch, Event *unused_event)
          {
-          touchEnd();
+             CCPoint touchLocation = touch->getLocation();
+             //         touchLocation = CCDirector::sharedDirector()->convertToGL(touchLocation);
+             CCPoint local =  convertToNodeSpace(touchLocation);
+             
+             touchEnd(local);
          }
          
     void DataManager:: moveOut()
@@ -1080,4 +1113,43 @@ void DataManager::help(void *sender)
     {
         m_helpLayer->setVisible(true);
     }
+}
+
+// tools
+void DataManager::selectedTool(void* sender)
+{
+    Node* pNode = ((Node*)sender);
+    if (!pNode)
+    {
+        return;
+    }
+    int tag = pNode->getTag();
+    m_selectedTool = tag;
+
+    pNode->runAction(Sequence::create(ScaleTo::create(0.5, 1.3),ScaleTo::create(0.5, 1),NULL));
+}
+void DataManager::useWave()
+{
+    
+}
+void DataManager::usebomb()
+{
+    
+}
+void DataManager::useTool()
+{
+    switch (m_selectedTool)
+    {
+        case bomb:
+            usebomb();
+            break;
+            
+        case wave:
+            useWave();
+            break;
+            
+        default:
+            break;
+    }
+    m_selectedTool = none;
 }
