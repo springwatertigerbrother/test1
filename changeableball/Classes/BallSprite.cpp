@@ -406,5 +406,45 @@ void BallSprite::BallSprite::changeType(int nNum)
     }
 }
 
+void BallSprite::changeTypeWithType(int objectType)
+{
 
+    //self.scaleX = 1.5;
+    int type = objectType - 1;
+    switch (type) {
+        case 0:
+            m_BallColor = ccc4fRed;
+            //m_type = 1;
+            break;
+        case 1:
+            m_BallColor = ccc4fOrange;   //m_type = 2;
+            break;
+        case 2:
+            m_BallColor = ccc4fGreen;  //m_type = 3;
+            break;
+        case 3:
+            m_BallColor = ccc4fBlue; // m_type = 4;
+            break;
+        case 4:
+            m_BallColor = ccc4fPurple;  //m_type = 5;
+            break;
+            
+        default:
+            m_BallColor = ccc4fPurple;  //m_type = 6;
+            break;
+    }
+    m_type = objectType;
+    m_drawNode->drawDot(this->getPosition(),DRAWSPRITE_RADIUES*zoomvalue,m_BallColor);
+    
+    ccColor4F col = ccc4f(m_BallColor.r, m_BallColor.g, m_BallColor.b, 255*0.75);
+    
+    m_selectNode->drawDot(ccp(0, 0),DRAWSPRITE_RADIUES*zoomvalue,col);
+    
+    CCString* typeStr = CCString::createWithFormat("%d",m_type);
+    if (m_ValueLabel)
+    {
+        m_ValueLabel->setString(typeStr->getCString());
+        m_ValueLabel->setFontSize(wFontSize);
+    }
+}
 

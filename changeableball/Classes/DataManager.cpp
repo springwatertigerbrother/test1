@@ -1129,12 +1129,50 @@ void DataManager::selectedTool(void* sender)
 }
 void DataManager::useWave(CCPoint local)
 {
+    BallSprite * ds = getCurrentSelectSprite(local);
+
+    if (ds)
+    {
+        int type = ds->getType();
+        int x = ds->getX();
+        int y = ds->getY();
+        int index1 = x-1+y*TOTALY;
+        int index2 = x+1+y*TOTALY;
+        int index3 = x+(y+1)*TOTALY;
+        int index4 = x+(y-1)*TOTALY;
+        int index5 = x-1+(y-1)*TOTALY;
+        int index6 = x+1+(y+1)*TOTALY;
+        int index7 = x-1+(y+1)*TOTALY;
+        int index8 = x+1+(y-1)*TOTALY;
+        
+        std::vector<int>  indexVec;
+        indexVec.push_back(index1);
+        indexVec.push_back(index2);
+        indexVec.push_back(index3);
+        indexVec.push_back(index4);
+        indexVec.push_back(index5);
+        indexVec.push_back(index6);
+        indexVec.push_back(index7);
+        indexVec.push_back(index8);
+        for (int i = 0; i<indexVec.size(); i++)
+        {
+            BallSprite* pLastElement = m_ballSpriteArray[indexVec[i]];
+            if(pLastElement)
+            {
+                pLastElement->changeTypeWithType(type);
+                m_selectedTool = none;
+            }
+        }
+
+    }
+
     
 }
 void DataManager::usebomb(CCPoint local)
 {
     BallSprite * ds = getCurrentSelectSprite(local);
     ds->disappear(true);
+    
     m_selectedTool = none;
 
 }
