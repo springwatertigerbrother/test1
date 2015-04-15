@@ -57,7 +57,7 @@ public:
     void startPlaying();
     bool touchBegine(CCPoint local);
     void touchMove(CCPoint local);
-    void touchEnd();
+    void touchEnd(CCPoint local);
     void disappearEnd();// 消除结束
 
     bool allDrawNodeBeSelected(bool disappearType);//全部选中
@@ -106,6 +106,14 @@ public:
     
     // init elements
     void initElements();
+    
+    // tools
+    void selectedTool(void* sender);
+    void useWave();
+    void usebomb();
+    int m_selectedTool;
+    void useTool();
+    
     
     CCSprite* m_pBg;
     CCSprite* m_pGood;
