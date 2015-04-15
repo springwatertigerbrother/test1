@@ -70,7 +70,7 @@ public:
     void unKeepSelectedCallback();
 
     void changeType(int nNum);//更换类型
-    
+    void changeTypeWithType(int objectType);
 };
 
 
