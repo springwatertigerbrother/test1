@@ -539,12 +539,7 @@ void DataManager:: touchMove(CCPoint local)
 
 void DataManager:: touchEnd(CCPoint local)
 {
-    if (m_selectedTool == bomb)
-    {
-        BallSprite * ds = getCurrentSelectSprite(local);
-        ds->disappear(true);
-        m_selectedTool = none;
-    }
+    useTool(local);
     
     m_drawLine = false;
     m_pBg->setOpacity(255);
@@ -1123,24 +1118,27 @@ void DataManager::selectedTool(void* sender)
 
     pNode->runAction(Sequence::create(ScaleTo::create(0.5, 1.3),ScaleTo::create(0.5, 1),NULL));
 }
-void DataManager::useWave()
+void DataManager::useWave(CCPoint local)
 {
     
 }
-void DataManager::usebomb()
+void DataManager::usebomb(CCPoint local)
 {
-    
+    BallSprite * ds = getCurrentSelectSprite(local);
+    ds->disappear(true);
+    m_selectedTool = none;
+
 }
-void DataManager::useTool()
+void DataManager::useTool(CCPoint local)
 {
     switch (m_selectedTool)
     {
         case bomb:
-            usebomb();
+            usebomb(local);
             break;
             
         case wave:
-            useWave();
+            useWave(local);
             break;
             
         default:

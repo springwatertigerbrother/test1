@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "450764083.292589"
+            timestampString = "450764481.024518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1090"
-            endingLineNumber = "1090"
+            startingLineNumber = "1085"
+            endingLineNumber = "1085"
             landmarkName = "DataManager::metetors()"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "450764083.292589"
+            timestampString = "450764481.024518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1086"
-            endingLineNumber = "1086"
+            startingLineNumber = "1081"
+            endingLineNumber = "1081"
             landmarkName = "DataManager::metetors()"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,27 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "450764034.135489"
+            timestampString = "450764481.024518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "544"
-            endingLineNumber = "544"
-            landmarkName = "DataManager:: touchEnd(CCPoint local)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/DataManager.cpp"
-            timestampString = "450764083.292589"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1116"
-            endingLineNumber = "1116"
+            startingLineNumber = "1111"
+            endingLineNumber = "1111"
             landmarkName = "DataManager::selectedTool(void* sender)"
             landmarkType = "5">
          </BreakpointContent>

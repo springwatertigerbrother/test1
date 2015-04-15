@@ -109,10 +109,10 @@ public:
     
     // tools
     void selectedTool(void* sender);
-    void useWave();
-    void usebomb();
+    void useWave(CCPoint local);
+    void usebomb(CCPoint local);
     int m_selectedTool;
-    void useTool();
+    void useTool(CCPoint local);
     
     
     CCSprite* m_pBg;
