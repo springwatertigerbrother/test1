@@ -282,8 +282,7 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/DataManager.o: \
  jni/../../cocos2d/cocos/./deprecated/CCString.h \
  jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
  jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
- jni/../../Classes/BallSprite.h \
- jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
+ jni/../../Classes/BallSprite.h jni/../../Classes/SimpleAudioEngine.h \
  jni/../../Classes/GameCenterScene.h jni/../../Classes/BuyLifeLayer.h \
  jni/../../Classes/GameOverLayer.h jni/../../Classes/DataHome.h
 
@@ -855,7 +854,7 @@ jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h:
 
 jni/../../Classes/BallSprite.h:
 
-jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
+jni/../../Classes/SimpleAudioEngine.h:
 
 jni/../../Classes/GameCenterScene.h:
 

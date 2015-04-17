@@ -315,11 +315,9 @@ obj/local/armeabi/objs/cocos2dcpp_shared/__/__/Classes/AppDelegate.o: \
  jni/../../cocos2d/cocos/./deprecated/CCNotificationCenter.h \
  jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h \
  jni/../../Classes/HelloWorldScene.h \
- jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
- jni/../../Classes/ballGamescene.h \
+ jni/../../Classes/SimpleAudioEngine.h jni/../../Classes/ballGamescene.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/iostream \
- jni/../../Classes/MUtils.h jni/../../Classes/config.h \
- jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h
+ jni/../../Classes/MUtils.h jni/../../Classes/config.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -953,7 +951,7 @@ jni/../../cocos2d/cocos/./deprecated/CCDeprecated.h:
 
 jni/../../Classes/HelloWorldScene.h:
 
-jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
+jni/../../Classes/SimpleAudioEngine.h:
 
 jni/../../Classes/ballGamescene.h:
 
@@ -962,5 +960,3 @@ jni/../../Classes/ballGamescene.h:
 jni/../../Classes/MUtils.h:
 
 jni/../../Classes/config.h:
-
-jni/../../cocos2d/cocos/./platform/android/jni/JniHelper.h:

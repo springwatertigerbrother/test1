@@ -1,6 +1,6 @@
 obj/local/armeabi/objs/cocosdenshion_static/cddSimpleAudioEngine.o: \
  jni/../../cocos2d/cocos/audio/android/cddSimpleAudioEngine.cpp \
- jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
+ jni/../../cocos2d/cocos/audio/android/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../include/Export.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/typeinfo \
  /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/ctype.h \
@@ -10,6 +10,7 @@ obj/local/armeabi/objs/cocosdenshion_static/cddSimpleAudioEngine.o: \
  /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/string.h \
  /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/malloc.h \
  jni/../../cocos2d/cocos/audio/android/jni/cddandroidAndroidJavaEngine.h \
+ jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
  jni/../../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h \
  /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/jni.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/string \
@@ -20,7 +21,7 @@ obj/local/armeabi/objs/cocosdenshion_static/cddSimpleAudioEngine.o: \
  /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/audio/android/ccdandroidUtils.h
 
-jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
+jni/../../cocos2d/cocos/audio/android/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 
@@ -39,6 +40,8 @@ jni/../../cocos2d/cocos/audio/android/../include/Export.h:
 /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/malloc.h:
 
 jni/../../cocos2d/cocos/audio/android/jni/cddandroidAndroidJavaEngine.h:
+
+jni/../../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
 
 jni/../../cocos2d/cocos/audio/android/../../platform/android/jni/JniHelper.h:
 

@@ -13,7 +13,7 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/HelloWorldScene.cpp \
-                   ../../Classes/ballGamescene.cpp \
+ 					../../Classes/ballGamescene.cpp \
                    ../../Classes/BallSprite.cpp \
                    ../../Classes/BuyLifeLayer.cpp \
                    ../../Classes/ControllerLayer.cpp \
@@ -24,7 +24,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/GameCenterScene.cpp \
                    ../../Classes/GameOverLayer.cpp \
                    ../../Classes/MUtils.cpp \
-
+                   
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
