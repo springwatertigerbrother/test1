@@ -138,7 +138,7 @@ void BallGameScene::onEnter()
 //
 //    m_aboutus = CCMenuItemImage::create("Images/about_us.png","Images/about_us.png", CC_CALLBACK_1(BallGameScene::aboutus,this));
 
-    CCMenu *menu = CCMenu::create(m_playnow,m_countdown,m_ranking,m_share, NULL);
+    CCMenu *menu = CCMenu::create(m_playnow,m_countdown, NULL);
 
     menu->alignItemsVerticallyWithPadding(30);
 

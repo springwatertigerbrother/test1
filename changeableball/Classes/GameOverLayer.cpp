@@ -149,7 +149,7 @@ bool GameOverLayer::init()
     //    CCMenuItemFont* pItem1 = CCMenuItemFont::create("restart", this, menu_selector(GameOverLayer::ReStartGame));
     //    CCMenuItemFont* pItem2 = CCMenuItemFont::create("share",this,menu_selector(GameOverLayer::ExitGame));
     
-    CCMenu* pMenu = CCMenu::create(pItem2,pItem1,pItem3, pItem4, NULL);
+    CCMenu* pMenu = CCMenu::create(pItem1,pItem3, NULL);
     pMenu->alignItemsHorizontallyWithPadding(10);
     //    pItem1->setFontSize(30);
     //    pItem2->setFontSize(30);
@@ -165,9 +165,9 @@ bool GameOverLayer::init()
     
     CCLabelTTF* pCongratulationTitle = CCLabelTTF::create("0","ArialRoundedMTBold",50);
     pCongratulationTitle->setPosition(ccp(s.width/2,s.height*0.8 + 70));
-//    String* pCongratulationTitleStr = String::createWithFormat(yourworld.c_str());
-//    pCongratulationTitle->setString(pCongratulationTitleStr->getCString());
-//    addChild(pCongratulationTitle);
+    String* pCongratulationTitleStr = String::create(yourworld);
+    pCongratulationTitle->setString(pCongratulationTitleStr->getCString());
+    addChild(pCongratulationTitle);
     
     CCLabelTTF* pCongratulation = CCLabelTTF::create("0","ArialRoundedMTBold",40);
     pCongratulation->setPosition(ccp(s.width/2,s.height*0.8));
@@ -199,7 +199,7 @@ bool GameOverLayer::init()
     
     CCLabelTTF* pTotalScore = CCLabelTTF::create("0","ArialRoundedMTBold",40);
     pTotalScore->setPosition(ccp(s.width/2,s.height*0.7 - 60));
-    String* pTotalScoreStr = String::createWithFormat("%d",(nTotalScore));
+    String* pTotalScoreStr = String::createWithFormat("%ld",(nTotalScore));
     pTotalScore->setString(pTotalScoreStr->getCString());
     pTotalScore->setColor(ccYELLOW);
     addChild(pTotalScore);

@@ -514,7 +514,7 @@ void DataManager:: touchMove(CCPoint local)
     nSum = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
     
     char scoreStr[50] = {0};
-//    std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
+    std::sprintf(scoreStr," %d X %d^2 = %d",nNumber,nTypeValue,nSum);
     m_pTotalScoreLabel->setVisible(true);
     m_pTotalScoreLabel->setString(scoreStr);
     m_pTotalScoreLabel->setPosition(ccp(m_movePos.x,m_movePos.y + 70));
