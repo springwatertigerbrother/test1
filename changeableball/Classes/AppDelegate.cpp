@@ -5,7 +5,7 @@
 #include "ballGamescene.h"
 #include "MUtils.h"
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include <jni.h>
 #include "platform/android/jni/JniHelper.h"
 #include <android/log.h>
@@ -84,7 +84,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     director->runWithScene(scene);
 
-//    showBanner();
+    showBanner();
     
     return true;
 }
@@ -106,22 +106,22 @@ void AppDelegate::applicationWillEnterForeground() {
     // if you use SimpleAudioEngine, it must resume here
     // SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
 }
-//void AppDelegate::showBanner() {
-//#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-//	JniMethodInfo showBanner;
-//	//第二个参数 "org/cocos2dx/cpp/AdViewCocos2dx"表示引入的类名
-//	//第三个参数 "showBannerStatic"表示该类下需要执行的方法
-//	//第四个参数 "()V" 表示"showBannerStatic"不需要传入参数并且返回值类型void类型
-//	bool isHave = JniHelper::getStaticMethodInfo(showBanner,"org/cocos2dx/cpp/AdViewCocos2dx","showBannerStatic","()V");
-//	if (!isHave) {
-//		CCLog("jni:showBannerStatic false");
-//	} else {
-//
-//		showBanner.env->CallStaticVoidMethod(showBanner.classID, showBanner.methodID);
-//	}
-//#endif
-//}
-//
+void AppDelegate::showBanner() {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+	JniMethodInfo showBanner;
+	//第二个参数 "org/cocos2dx/cpp/AdViewCocos2dx"表示引入的类名
+	//第三个参数 "showBannerStatic"表示该类下需要执行的方法
+	//第四个参数 "()V" 表示"showBannerStatic"不需要传入参数并且返回值类型void类型
+	bool isHave = JniHelper::getStaticMethodInfo(showBanner,"org/cocos2dx/cpp/AdViewCocos2dx","showBannerStatic","()V");
+	if (!isHave) {
+		CCLog("jni:showBannerStatic false");
+	} else {
+
+		showBanner.env->CallStaticVoidMethod(showBanner.classID, showBanner.methodID);
+	}
+#endif
+}
+
 //void AppDelegate::initPlatformConfig()
 //{
 //    //新浪微博
