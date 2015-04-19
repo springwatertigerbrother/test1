@@ -638,6 +638,8 @@ void DataManager:: touchEnd(CCPoint local)
     if (m_stackArray.size() >= 6)
     {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/youbang.wav");
+        CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xibanya.mp3");
+        
     }
 
     m_stackArray.clear();
