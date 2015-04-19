@@ -643,6 +643,10 @@ void DataManager:: touchEnd(CCPoint local)
     {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/youbang.wav");
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xibanya.mp3");
+<<<<<<< HEAD
+=======
+        
+>>>>>>> b281c4a... add matador music
     }
 
     m_stackArray.clear();
