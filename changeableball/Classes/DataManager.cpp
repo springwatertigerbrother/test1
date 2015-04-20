@@ -1146,10 +1146,10 @@ void DataManager::selectedTool(void* sender)
             break;
     }
 
-//    if (!checkDiamondWithConsume(consumeDiamond, this))
-//    {
-//        return;
-//    }
+    if (!checkDiamondWithConsume(consumeDiamond, this))
+    {
+        return;
+    }
     m_selectedTool = tag;
 
     pNode->runAction(Sequence::create(ScaleTo::create(0.3, 1.6*CC_CONTENT_SCALE_FACTOR()),ScaleTo::create(0.3, 1*CC_CONTENT_SCALE_FACTOR()),NULL));
