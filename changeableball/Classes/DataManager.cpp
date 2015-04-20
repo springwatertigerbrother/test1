@@ -1276,7 +1276,7 @@ void DataManager::waveChangeType(Node* pNode)
         if (y-1>=0) {
             indexVec.push_back(index4);
         }
-        if (x-1>=0&&y-1>0) {
+        if (x-1>=0&&y-1>=0) {
             indexVec.push_back(index5);
         }
         if (x+1<6&&y+1<6) {
@@ -1287,7 +1287,7 @@ void DataManager::waveChangeType(Node* pNode)
             indexVec.push_back(index7);
 
         }
-        if (x+1<6&&y-1>0) {
+        if (x+1<6&&y-1>=0) {
             indexVec.push_back(index8);
         }
         for (int i = 0; i<indexVec.size(); i++)
