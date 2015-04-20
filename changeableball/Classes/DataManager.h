@@ -124,7 +124,11 @@ public:
     CCLabelTTF* m_pLabelHelp;
     LayerColor* m_helpLayer;
     void help(void* sender);
+    ParticleSystemQuad*    _emitter;
+    ccColor4F calcColorWithType(int nType);
 
+    void waveChangeType(Node* pNode);
+    void waveParticles(Node* pNode);
 };
 
 #endif /* defined(__changeableball__DataManager__) */

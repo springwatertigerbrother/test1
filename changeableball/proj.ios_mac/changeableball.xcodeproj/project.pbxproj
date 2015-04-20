@@ -702,6 +702,14 @@
 		FEF8F4FF1AD7651600C0CAC3 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F34B1AD7651000C0CAC3 /* CJSONSerializer.m */; };
 		FEF8F5001AD7651600C0CAC3 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F34B1AD7651000C0CAC3 /* CJSONSerializer.m */; };
 		FEF8F5021AD765EF00C0CAC3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F5011AD765EF00C0CAC3 /* GameKit.framework */; };
+		FEDC36C11AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C21AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C31AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C41AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEF172081AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
+		FEF172091AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
+		FEF1720A1AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
+		FEF1720B1AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1317,6 +1325,10 @@
 		FEF8F34C1AD7651000C0CAC3 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		FEF8F5011AD765EF00C0CAC3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		FEF8F5031AD777E300C0CAC3 /* changeableball iOS free copy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "changeableball iOS free copy.entitlements"; sourceTree = "<group>"; };
+		FEDC36C01AE4F93B00BDE41A /* Particles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Particles; sourceTree = "<group>"; };
+		FEF1720E1AD508B4000A2C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
+		FEF172101AD508D6000A2C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings.strings"; sourceTree = "<group>"; };
+		FEF172111AD51CF7000A2C50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1814,6 +1826,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FEDC36C01AE4F93B00BDE41A /* Particles */,
 				FE438D5619F48D7000D9C636 /* Images */,
 				FE438D5719F48D7000D9C636 /* Sounds */,
 				FE438D5819F48D7000D9C636 /* fonts */,
@@ -2748,6 +2761,7 @@
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				FE12280D1AD3EBF10075F4F6 /* Icon@2x.png in Resources */,
+				FEDC36C11AE4F93B00BDE41A /* Particles in Resources */,
 				FED298351AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -2797,6 +2811,7 @@
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				FED295781AC1114C00C89B6F /* markdown.css in Resources */,
 				FED2983F1AC1114D00C89B6F /* UMSShareListController.xib in Resources */,
+				FEDC36C21AE4F93B00BDE41A /* Particles in Resources */,
 				FED298301AC1114D00C89B6F /* UMSCommentInputControlleriPad.xib in Resources */,
 				FE12280E1AD3EBF10075F4F6 /* Icon@2x.png in Resources */,
 				FED298361AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
@@ -2921,6 +2936,7 @@
 				FEF8F3531AD7651000C0CAC3 /* adchina_back@2x.png in Resources */,
 				FEF8F3671AD7651000C0CAC3 /* adchina_full_backgrand.png in Resources */,
 				FEF8F35B1AD7651000C0CAC3 /* adchina_closeButton.png in Resources */,
+				FEDC36C41AE4F93B00BDE41A /* Particles in Resources */,
 				FE9A39071AD3C9C70066BE03 /* UMShareEditViewControlleriPad.xib in Resources */,
 				FEF8F4C51AD7651600C0CAC3 /* AdInStLClOsE.png in Resources */,
 				FE9A39081AD3C9C70066BE03 /* Icon-76.png in Resources */,
@@ -3012,6 +3028,7 @@
 			files = (
 				FEA72B5E1AAEE090009226A1 /* Icon-120.png in Resources */,
 				FE12280F1AD3EBF10075F4F6 /* Icon@2x.png in Resources */,
+				FEDC36C31AE4F93B00BDE41A /* Particles in Resources */,
 				FED298371AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */,
 				FEA72B601AAEE090009226A1 /* Default@2x.png in Resources */,

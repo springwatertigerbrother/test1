@@ -21,7 +21,6 @@ class BallSprite:public CCSprite
     
     bool m_hasSelected;//可否被选择
     
-    CCDrawNode * m_drawNode;// 画当前颜色的圆点
     
     CCDrawNode * m_selectNode;// 用于 被选中时播放动画
     CCLabelTTF * m_ValueLabel;// 球的值
@@ -30,6 +29,8 @@ public:
     BallSprite();
     virtual ~BallSprite();
     CREATE_FUNC(BallSprite);
+
+    CCDrawNode * m_drawNode;// 画当前颜色的圆点
 
 public:
     CC_SYNTHESIZE(int,m_x,X);
