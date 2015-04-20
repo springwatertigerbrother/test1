@@ -1123,6 +1123,84 @@ void DataManager::selectedTool(void* sender)
 void DataManager::useWave(CCPoint local)
 {
     BallSprite * ds = getCurrentSelectSprite(local);
+    
+    if (ds) {
+        ds->runAction(Sequence::create(CallFuncN::create(CC_CALLBACK_1(DataManager::waveParticles,this)),DelayTime::create(1),CallFuncN::create(CC_CALLBACK_1(DataManager::waveChangeType,this)), NULL));
+    }
+    
+    
+}
+void DataManager::usebomb(CCPoint local)
+{
+    BallSprite * ds = getCurrentSelectSprite(local);
+    
+    _emitter = ParticleSystemQuad::create("Particles/ExplodingRing.plist");
+    
+    //    _emitter = ParticleExplosion::create();
+    _emitter->retain();
+    addChild(_emitter, 1000);
+    
+    //    _emitter->setTexture( Director::getInstance()->getTextureCache()->addImage(s_stars1) );
+    _emitter->setPosition(ds->m_drawNode->getPosition());
+    _emitter->setAutoRemoveOnFinish(true);
+    _emitter->setEndColor(calcColorWithType(ds->getType()-1));
+    _emitter->setStartColor(calcColorWithType(ds->getType()-1));
+    
+    
+    if (ds) {
+        ds->disappear(true);
+    }
+    m_selectedTool = none;
+    
+}
+void DataManager::useTool(CCPoint local)
+{
+    switch (m_selectedTool)
+    {
+        case bomb:
+            usebomb(local);
+            break;
+            
+        case wave:
+            useWave(local);
+            break;
+            
+        default:
+            break;
+    }
+    m_selectedTool = none;
+}
+ccColor4F DataManager::calcColorWithType(int nType)
+{
+    ccColor4F retColor;
+
+    switch (nType) {
+        case 0:
+            retColor = ccc4fRed;
+            break;
+        case 1:
+            retColor = ccc4fOrange;
+            break;
+        case 2:
+            retColor = ccc4fGreen;
+            break;
+        case 3:
+            retColor = ccc4fBlue;
+            break;
+        case 4:
+            retColor = ccc4fPurple;
+            break;
+
+        default:
+            retColor = ccc4fPurple;
+            break;
+    }
+    return retColor;
+}
+
+void DataManager::waveChangeType(Node* pNode)
+{
+    BallSprite * ds = (BallSprite*)(pNode);
 
     if (ds)
     {
@@ -1156,33 +1234,23 @@ void DataManager::useWave(CCPoint local)
                 m_selectedTool = none;
             }
         }
-
-    }
-
-    
 }
-void DataManager::usebomb(CCPoint local)
-{
-    BallSprite * ds = getCurrentSelectSprite(local);
-    ds->disappear(true);
-    
-    m_selectedTool = none;
-
 }
-void DataManager::useTool(CCPoint local)
-{
-    switch (m_selectedTool)
+    void DataManager::waveParticles(Node* pNode)
     {
-        case bomb:
-            usebomb(local);
-            break;
-            
-        case wave:
-            useWave(local);
-            break;
-            
-        default:
-            break;
+        
+        BallSprite * ds = (BallSprite*)(pNode);
+        
+        if (ds)
+        {
+        _emitter = ParticleExplosion::create();
+        _emitter->retain();
+        addChild(_emitter, 1000);
+        
+        _emitter->setTexture( Director::getInstance()->getTextureCache()->addImage(s_stars1) );
+        _emitter->setPosition(ds->m_drawNode->getPosition());
+        _emitter->setEndColor(calcColorWithType(ds->getType()-1));
+        _emitter->setStartColor(calcColorWithType(ds->getType()-1));
+        _emitter->setAutoRemoveOnFinish(true);
+        }
     }
-    m_selectedTool = none;
-}

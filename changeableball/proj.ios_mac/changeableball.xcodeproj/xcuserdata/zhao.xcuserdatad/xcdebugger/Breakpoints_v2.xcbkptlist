@@ -329,22 +329,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../classes/DataManager.cpp"
-            timestampString = "451139298.827374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1164"
-            endingLineNumber = "1164"
-            landmarkName = "DataManager::usebomb(CCPoint local)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../classes/BallSprite.cpp"
             timestampString = "450770151.627189"
             startingColumnNumber = "9223372036854775807"
@@ -352,22 +336,6 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
             landmarkName = "BallSprite::spawnAtXY(int x ,int y, float w, float h)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/DataManager.cpp"
-            timestampString = "451139298.827374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1127"
-            endingLineNumber = "1127"
-            landmarkName = "DataManager::useWave(CCPoint local)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

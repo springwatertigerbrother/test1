@@ -397,6 +397,10 @@
 		FED299F61AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
 		FED299F71AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
 		FED299F81AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
+		FEDC36C11AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C21AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C31AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C41AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
 		FEF172081AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
 		FEF172091AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
 		FEF1720A1AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
@@ -787,6 +791,7 @@
 		FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsockets_arm64.a; sourceTree = "<group>"; };
 		FED299EE1AC2B56800C89B6F /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
 		FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCppWithLibCpp.a; sourceTree = "<group>"; };
+		FEDC36C01AE4F93B00BDE41A /* Particles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Particles; sourceTree = "<group>"; };
 		FEF1720E1AD508B4000A2C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
 		FEF172101AD508D6000A2C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings.strings"; sourceTree = "<group>"; };
 		FEF172111AD51CF7000A2C50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
@@ -1167,6 +1172,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FEDC36C01AE4F93B00BDE41A /* Particles */,
 				FE438D5619F48D7000D9C636 /* Images */,
 				FE438D5719F48D7000D9C636 /* Sounds */,
 				FE438D5819F48D7000D9C636 /* fonts */,
@@ -1690,6 +1696,7 @@
 			files = (
 				FE74594D1ADA774F00D625AA /* Icon.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				FEDC36C11AE4F93B00BDE41A /* Particles in Resources */,
 				FED298351AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -1740,6 +1747,7 @@
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				FED295781AC1114C00C89B6F /* markdown.css in Resources */,
 				FED2983F1AC1114D00C89B6F /* UMSShareListController.xib in Resources */,
+				FEDC36C21AE4F93B00BDE41A /* Particles in Resources */,
 				FED298301AC1114D00C89B6F /* UMSCommentInputControlleriPad.xib in Resources */,
 				FED298361AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				FED298211AC1114D00C89B6F /* UMSocialLocalizable.strings in Resources */,
@@ -1762,6 +1770,7 @@
 			files = (
 				FE7459501ADA774F00D625AA /* Icon.png in Resources */,
 				FE9A39061AD3C9C70066BE03 /* Icon-120.png in Resources */,
+				FEDC36C41AE4F93B00BDE41A /* Particles in Resources */,
 				FE9A39071AD3C9C70066BE03 /* UMShareEditViewControlleriPad.xib in Resources */,
 				FE9A39081AD3C9C70066BE03 /* Icon-76.png in Resources */,
 				FE9A39091AD3C9C70066BE03 /* Default@2x.png in Resources */,
@@ -1806,6 +1815,7 @@
 			files = (
 				FE74594F1ADA774F00D625AA /* Icon.png in Resources */,
 				FEA72B5E1AAEE090009226A1 /* Icon-120.png in Resources */,
+				FEDC36C31AE4F93B00BDE41A /* Particles in Resources */,
 				FED298371AC1114D00C89B6F /* UMShareEditViewControlleriPad.xib in Resources */,
 				FEA72B5F1AAEE090009226A1 /* Icon-76.png in Resources */,
 				FEA72B601AAEE090009226A1 /* Default@2x.png in Resources */,
