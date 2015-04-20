@@ -269,12 +269,12 @@ bool BallSprite::selectedType()
     m_selectNode->setScale(1.0);
     m_selectNode->setVisible(true);
     
-    CCScaleBy * scaleBy = CCScaleBy::create(0.1,1.5);
+    CCScaleBy * scaleBy = CCScaleBy::create(0.3,1.5);
     CCCallFunc* callB = CCCallFunc::create(this, callfunc_selector(BallSprite::selectedTypeCallback));
     
     CCSequence * seq = CCSequence::create(scaleBy,scaleBy->reverse(), callB, NULL);
     seq->setTag(caleActiontag);
-    m_selectNode->runAction(seq);
+    m_drawNode->runAction(seq);
     
     return true;
 }
@@ -313,6 +313,10 @@ void BallSprite::disappearCallback()
 void BallSprite::unselected()
 {
     m_hasSelected = false;
+    CCScaleTo * scaleTo = CCScaleTo::create(0.1,1);
+    
+    CCSequence * seq = CCSequence::create(scaleTo, NULL);
+    m_drawNode->runAction(seq);
 }
 
 CCPoint BallSprite::getDrawNodePosition()
