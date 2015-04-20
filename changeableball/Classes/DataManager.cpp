@@ -228,17 +228,18 @@ bool DataManager::init()
 //    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pMoon);
     
-    MenuItemImage* pItem1 = MenuItemImage::create("Images/restartn.png", "Images/restart.png", CC_CALLBACK_1(DataManager::selectedTool, this)) ;
+    MenuItemImage* pItem1 = MenuItemImage::create("Images/bombbtn.png", "Images/bombbtn.png", CC_CALLBACK_1(DataManager::selectedTool, this)) ;
     pItem1 ->setTag(bomb);
     
-    MenuItemImage* pItem2 = MenuItemImage::create("Images/sharen.png", "Images/share.png", CC_CALLBACK_1(DataManager::selectedTool,this)) ;
+    MenuItemImage* pItem2 = MenuItemImage::create("Images/mushroom.png", "Images/mushroom.png", CC_CALLBACK_1(DataManager::selectedTool,this)) ;
     pItem2->setTag(wave);
     Menu* pMenu = Menu::create(pItem1,pItem2, NULL);
-    pMenu->alignItemsHorizontallyWithPadding(10);
+    pMenu->alignItemsHorizontallyWithPadding(1);
+//    pMenu->setAnchorPoint(ccp(0,0.5));
     //    pItem1->setFontSize(30);
     //    pItem2->setFontSize(30);
     
-    pMenu->setPosition(ccp(s.width/2, s.height - 250));
+    pMenu->setPosition(ccp(s.width/2  + 180, s.height - 250));
     addChild(pMenu);
                        
     initElements();
@@ -1125,7 +1126,7 @@ void DataManager::selectedTool(void* sender)
     int tag = pNode->getTag();
     m_selectedTool = tag;
 
-    pNode->runAction(Sequence::create(ScaleTo::create(0.5, 1.3),ScaleTo::create(0.5, 1),NULL));
+    pNode->runAction(Sequence::create(ScaleTo::create(0.3, 1.6),ScaleTo::create(0.3, 1),NULL));
 }
 void DataManager::useWave(CCPoint local)
 {
@@ -1141,20 +1142,22 @@ void DataManager::usebomb(CCPoint local)
 {
     BallSprite * ds = getCurrentSelectSprite(local);
     
-    _emitter = ParticleSystemQuad::create("Particles/ExplodingRing.plist");
-    
-    //    _emitter = ParticleExplosion::create();
-    _emitter->retain();
-    addChild(_emitter, 1000);
-    
-    //    _emitter->setTexture( Director::getInstance()->getTextureCache()->addImage(s_stars1) );
-    _emitter->setPosition(ds->m_drawNode->getPosition());
-    _emitter->setAutoRemoveOnFinish(true);
-    _emitter->setEndColor(calcColorWithType(ds->getType()-1));
-    _emitter->setStartColor(calcColorWithType(ds->getType()-1));
+ 
     
     
     if (ds) {
+        _emitter = ParticleSystemQuad::create("Particles/ExplodingRing.plist");
+        
+        //    _emitter = ParticleExplosion::create();
+        _emitter->retain();
+        addChild(_emitter, 1000);
+        
+        //    _emitter->setTexture( Director::getInstance()->getTextureCache()->addImage(s_stars1) );
+        _emitter->setPosition(ds->m_drawNode->getPosition());
+        _emitter->setAutoRemoveOnFinish(true);
+        _emitter->setEndColor(calcColorWithType(ds->getType()-1));
+        _emitter->setStartColor(calcColorWithType(ds->getType()-1));
+        
         ds->disappear(true);
     }
     m_selectedTool = none;
