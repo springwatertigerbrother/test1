@@ -18,7 +18,7 @@ void initialize_resolution();
 ControlButton* standardButtonWithTitle(const char * title);
 bool ControlButtoninit(Node* obj,std::vector<std::string> vec);
 //std::string localLanguage(std::string language);
-
+bool checkDiamondWithConsume(int nDiamond,Node* pNode);
 int calculate_score(int nScore,int n);
 //
 //void shareCallback(int platform, int stCode, std::string& errorMsg)

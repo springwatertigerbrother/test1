@@ -2,7 +2,7 @@
 
 #include "MUtils.h"
 #include "cocos2d.h"
-
+#include "DataBase64.h"
 //enum LanguageType
 //{
 //    kchinese,
@@ -226,7 +226,58 @@ int calculate_score(int nScore,int n)
     }
     return value;
 }
-
+bool checkDiamondWithConsume(int nDiamond,Node* pNode)
+{
+    bool ret = false;
+    
+    
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+    
+    std::string enoughDiamond;
+    enoughDiamond = "insufficient\ndiamond\nshoping ^O^";
+    
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+        {
+            enoughDiamond = "钻石不够\n请购买";
+        }
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+        {
+            enoughDiamond = "insufficient\ndiamond\nshoping ^O^";
+        }
+            break;
+        default:
+            break;
+    }
+    
+    //    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    
+    if (lifeLiquid >= nDiamond)
+    {
+        ret = true;
+    }
+    else
+    {
+        //        m_labelLife->setVisible(true);
+        //        m_labelLife->runAction(FadeOut::create(1));
+        //
+        CCSize size = Director::getInstance()->getWinSize();
+        CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",80);
+        labelLife->setAnchorPoint(ccp(0.5, 0.5));
+        labelLife->setColor(ccWHITE);
+        labelLife->setPosition(ccp(size.width/2,size.height/2));
+        labelLife->setString(enoughDiamond);
+        //        labelLife->setVisible(false);
+        pNode->addChild(labelLife,11);
+        labelLife->runAction(FadeOut::create(3));
+        //        CallFunc* call = [](){};
+    }
+    
+    return ret;
+}
 //std::string localLanguage(std::string language)
 //{
 //

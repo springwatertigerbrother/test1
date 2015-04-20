@@ -213,6 +213,20 @@ bool UpStateLayer::init()
                                          m_timeItem->getContentSize().height/2));
             m_labelTime->setVisible(false);
             addChild(m_labelTime);
+           
+            
+            Sprite* pDiamond = Sprite::create("Images/icon_cash_l.png");
+            pDiamond->setAnchorPoint(ccp(0.5,0.5));
+            pDiamond->setScale(CC_CONTENT_SCALE_FACTOR());
+            pDiamond->setPosition(ccp(100,-15));
+            addChild(pDiamond);
+            
+            m_labelDiamond = CCLabelTTF::create("0","ArialRoundedMTBold",50);
+            m_labelDiamond->setAnchorPoint(ccp(0, 0.5));
+            m_labelDiamond->setColor(ccc3(255, 255, 255));
+            m_labelDiamond->setPosition(ccp(pDiamond->getPosition().x + pDiamond->getContentSize().width/2 + 15,-15));
+            addChild(m_labelDiamond);
+            
             
             MenuItemFont::setFontName("American Typewriter");
             MenuItemFont::setFontSize(18);
@@ -237,6 +251,9 @@ bool UpStateLayer::init()
 //            m_scoreItem->addChild(m_labelScore ,11);
             
             setVisible(true);
+            reload(nullptr);
+            NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(UpStateLayer::reload), REFESH_USE_TOOL, NULL);
+
         }
 
 		return true;
@@ -245,6 +262,7 @@ bool UpStateLayer::init()
 	{
 		return false;
 	}
+    
 }
 
 
@@ -325,4 +343,14 @@ void UpStateLayer::menuBePressed(Ref* pSender)
 void UpStateLayer::musicControl(Ref* pSender)
 {
     CocosDenshion::SimpleAudioEngine::sharedEngine()-> pauseAllEffects();
+}
+
+void UpStateLayer::reload(Ref* obj)
+{
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+    
+    //    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    char tempStr[10];
+    sprintf(tempStr,"%d", lifeLiquid);
+    m_labelDiamond->setString(tempStr);
 }

@@ -4615,7 +4615,7 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "ed56f239-27d4-464e-a6bc-0f67b4c74527";
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4729,7 +4729,7 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "ed56f239-27d4-464e-a6bc-0f67b4c74527";
+				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
