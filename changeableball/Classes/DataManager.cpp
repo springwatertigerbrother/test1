@@ -1246,6 +1246,7 @@ void DataManager::waveChangeType(Node* pNode)
         int type = ds->getType();
         int x = ds->getX();
         int y = ds->getY();
+        
         int index1 = x-1+y*TOTALY;
         int index2 = x+1+y*TOTALY;
         int index3 = x+(y+1)*TOTALY;
@@ -1256,14 +1257,32 @@ void DataManager::waveChangeType(Node* pNode)
         int index8 = x+1+(y-1)*TOTALY;
         
         std::vector<int>  indexVec;
-        indexVec.push_back(index1);
-        indexVec.push_back(index2);
-        indexVec.push_back(index3);
-        indexVec.push_back(index4);
-        indexVec.push_back(index5);
-        indexVec.push_back(index6);
-        indexVec.push_back(index7);
-        indexVec.push_back(index8);
+        if (x-1>=0) {
+            indexVec.push_back(index1);
+        }
+        if (x+1<6) {
+            indexVec.push_back(index2);
+        }
+        if (y+1<6) {
+            indexVec.push_back(index3);
+        }
+        if (y-1>=0) {
+            indexVec.push_back(index4);
+        }
+        if (x-1>=0&&y-1>0) {
+            indexVec.push_back(index5);
+        }
+        if (x+1<6&&y+1<6) {
+            indexVec.push_back(index6);
+
+        }
+        if (x-1>=0&&y+1<6) {
+            indexVec.push_back(index7);
+
+        }
+        if (x+1<6&&y-1>0) {
+            indexVec.push_back(index8);
+        }
         for (int i = 0; i<indexVec.size(); i++)
         {
             BallSprite* pLastElement = m_ballSpriteArray[indexVec[i]];
