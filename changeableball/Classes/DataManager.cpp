@@ -13,7 +13,8 @@
 #include "GameOverLayer.h"
 #include "DataHome.h"
 #include "BuyLifeLayer.h"
-
+#include "MUtils.h"
+#include "DataBase64.h"
 static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
 }
@@ -230,9 +231,11 @@ bool DataManager::init()
     
     MenuItemImage* pItem1 = MenuItemImage::create("Images/bombbtn.png", "Images/bombbtn.png", CC_CALLBACK_1(DataManager::selectedTool, this)) ;
     pItem1 ->setTag(bomb);
-    
+    pItem1->setScale(CC_CONTENT_SCALE_FACTOR());
     MenuItemImage* pItem2 = MenuItemImage::create("Images/mushroom.png", "Images/mushroom.png", CC_CALLBACK_1(DataManager::selectedTool,this)) ;
     pItem2->setTag(wave);
+    pItem2->setScale(CC_CONTENT_SCALE_FACTOR());
+
     Menu* pMenu = Menu::create(pItem1,pItem2, NULL);
     pMenu->alignItemsHorizontallyWithPadding(1);
 //    pMenu->setAnchorPoint(ccp(0,0.5));
@@ -1117,9 +1120,32 @@ void DataManager::selectedTool(void* sender)
         return;
     }
     int tag = pNode->getTag();
+    int consumeDiamond = 0;
+    switch (tag)
+    {
+        case bomb:
+        {
+            consumeDiamond = BOMB_COSUMED_DIAMOND;
+        }
+            break;
+            
+        case wave:
+        {
+            consumeDiamond = PULSE_COSUMED_DIAMOND;
+        }
+            break;
+            
+        default:
+            break;
+    }
+
+    if (!checkDiamondWithConsume(consumeDiamond, this))
+    {
+        return;
+    }
     m_selectedTool = tag;
 
-    pNode->runAction(Sequence::create(ScaleTo::create(0.3, 1.6),ScaleTo::create(0.3, 1),NULL));
+    pNode->runAction(Sequence::create(ScaleTo::create(0.3, 1.6*CC_CONTENT_SCALE_FACTOR()),ScaleTo::create(0.3, 1*CC_CONTENT_SCALE_FACTOR()),NULL));
 }
 void DataManager::useWave(CCPoint local)
 {
@@ -1134,8 +1160,6 @@ void DataManager::useWave(CCPoint local)
 void DataManager::usebomb(CCPoint local)
 {
     BallSprite * ds = getCurrentSelectSprite(local);
-    
- 
     
     
     if (ds) {
@@ -1161,17 +1185,25 @@ void DataManager::useTool(CCPoint local)
     switch (m_selectedTool)
     {
         case bomb:
+        {
             usebomb(local);
+            consumeDiamond(BOMB_COSUMED_DIAMOND);
+        }
             break;
             
         case wave:
+        {
             useWave(local);
+            consumeDiamond(PULSE_COSUMED_DIAMOND);
+        }
             break;
             
         default:
             break;
     }
     m_selectedTool = none;
+    NotificationCenter::getInstance()->postNotification(REFESH_USE_TOOL);
+
 }
 ccColor4F DataManager::calcColorWithType(int nType)
 {
@@ -1237,6 +1269,7 @@ void DataManager::waveChangeType(Node* pNode)
                 m_selectedTool = none;
             }
         }
+
 }
 }
     void DataManager::waveParticles(Node* pNode)
@@ -1257,3 +1290,19 @@ void DataManager::waveChangeType(Node* pNode)
         _emitter->setAutoRemoveOnFinish(true);
         }
     }
+void DataManager::consumeDiamond(int nDiamond)
+{
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+    
+    
+    if (lifeLiquid >= nDiamond)
+    {
+        lifeLiquid -= nDiamond;
+        
+        if (lifeLiquid<0)
+        {
+            lifeLiquid = 0;
+        }
+        setIntegerForKey("LIFE_LIQUID", lifeLiquid);
+    }
+}

@@ -129,6 +129,7 @@ public:
 
     void waveChangeType(Node* pNode);
     void waveParticles(Node* pNode);
+    void consumeDiamond(int nDiamond);
 };
 
 #endif /* defined(__changeableball__DataManager__) */
