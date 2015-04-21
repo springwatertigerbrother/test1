@@ -101,7 +101,7 @@ bool GameOverLayer::init()
         nciyuan = "%d 次元";
         totalScoreTitleStr = "总能量：";
         sigleMost = "单次最高能量";
-        sigleState ="单次最佳状态";
+        sigleState ="最佳战斗力";
     }
     else
     {
@@ -300,7 +300,7 @@ void GameOverLayer::ShareGame()
     {
         case cocos2d::LanguageType::CHINESE:
             
-            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，最佳战斗力是 %d 次元，小伙伴你呢？？？";
             break;
         case cocos2d::LanguageType::ENGLISH:
             
@@ -335,12 +335,12 @@ void GameOverLayer::ShareGame()
     // 设置友盟分享面板上显示的平台
     vector<int>* platforms = new vector<int>();
     platforms->push_back(SINA);
-//    platforms->push_back(RENREN) ;
-//    platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(RENREN) ;
+    platforms->push_back(WEIXIN_CIRCLE) ;
     platforms->push_back(FACEBOOK);
 //    platforms->push_back(QZONE) ;
 //    platforms->push_back(QQ) ;
-//    platforms->push_back(DOUBAN) ;
+    platforms->push_back(DOUBAN) ;
 
     
     // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
@@ -362,8 +362,10 @@ void GameOverLayer::ShareGame()
 //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
     
     int nciValue = calculate_score(nTotalScore,0);
+    int bestSingleScore = getIntegerForKey("SINGLE_BEST_SCORE");
+    int nbestciValue = calculate_score(bestSingleScore,0);
     String* pCongratulationScoreStr = String::createWithFormat(shareStr.c_str(),
-                                                               nciValue);
+                                                               nciValue,nbestciValue);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));

@@ -348,7 +348,7 @@ void BallGameScene:: share(void* sender)
     {
         case cocos2d::LanguageType::CHINESE:
           
-            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，最佳战斗力是 %d 次元，小伙伴你呢？？？";
             break;
         case cocos2d::LanguageType::ENGLISH:
            
@@ -382,12 +382,12 @@ void BallGameScene:: share(void* sender)
     // 设置友盟分享面板上显示的平台
     vector<int>* platforms = new vector<int>();
     platforms->push_back(SINA);
-//    platforms->push_back(RENREN) ;
-//    platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(RENREN) ;
+    platforms->push_back(WEIXIN_CIRCLE) ;
         platforms->push_back(FACEBOOK);
     //    platforms->push_back(QZONE) ;
     //    platforms->push_back(QQ) ;
-//    platforms->push_back(DOUBAN) ;
+    platforms->push_back(DOUBAN) ;
     
     // 设置平台, 在调用分享、授权相关的函数前必须设置SDK支持的平台
     sdk->setPlatforms(platforms) ;
@@ -407,9 +407,11 @@ void BallGameScene:: share(void* sender)
     //    char shareContent[200] = "";
     //    sprintf(shareContent, "我在 n 次元 游戏中已经进入了　%d 次元，小伙伴你呢？？？",)
     int nValue = calculate_score(nTotalScore,0);
+    int bestSingleScore = getIntegerForKey("SINGLE_BEST_SCORE");
+    int nbestciValue = calculate_score(bestSingleScore,0);
 
     String* pCongratulationScoreStr = String::createWithFormat(shareStr.c_str(),
-                                                               nValue);
+                                                               nValue,nbestciValue);
     
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));
