@@ -1182,6 +1182,11 @@ void DataManager::usebomb(CCPoint local)
 }
 void DataManager::useTool(CCPoint local)
 {
+    BallSprite * ds = getCurrentSelectSprite(local);
+    if (!ds)
+    {
+        return;
+    }
     switch (m_selectedTool)
     {
         case bomb:
