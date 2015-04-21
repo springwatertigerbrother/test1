@@ -252,10 +252,10 @@ bool BallSprite::positionInContent(CCPoint pos)
     //    CGFloat width = DRAWSPRITE_WIDTH;
     //    CGFloat height = DRAWSPRITE_HEIGH;
     
-    float orgx = m_drawNode->getPosition().x - DRAWSPRITE_WIDTH;
-    float orgy = m_drawNode->getPosition().y - DRAWSPRITE_HEIGH;
+    float orgx = m_drawNode->getPosition().x - DRAWSPRITE_WIDTH-10;
+    float orgy = m_drawNode->getPosition().y - DRAWSPRITE_HEIGH-10;
     
-    CCRect rect = CCRectMake(orgx, orgy, DRAWSPRITE_WIDTH*2, DRAWSPRITE_HEIGH*2);
+    CCRect rect = CCRectMake(orgx, orgy, DRAWSPRITE_WIDTH*3, DRAWSPRITE_HEIGH*3);
     
     return  rect.containsPoint(pos);;
 }
