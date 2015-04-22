@@ -72,6 +72,7 @@ bool GameCenterScene::init()
             UserDefault::getInstance()->flush();
             //            UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID", 3);
             //            UserDefault::getInstance()->setBoolForKey("isFirstOpen", true);
+            NotificationCenter::getInstance()->postNotification(REFESH_USE_TOOL);
             
         }
         
