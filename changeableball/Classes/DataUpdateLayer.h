@@ -50,6 +50,6 @@ void resetTimeString(CCString* string);
 void menuBePressed(Ref* pSender);
 void startAnimationDisplay(Ref* pSender);
     void musicControl(Ref* pSender);
-    
+//    void removeSelf(Node* pNode);
 };
 #endif /* defined(__changeableball__DataUpdateLayer__) */

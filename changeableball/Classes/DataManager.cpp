@@ -540,10 +540,44 @@ void DataManager:: touchMove(CCPoint local)
     m_pTotalScoreLabel->setString(scoreStr);
     m_pTotalScoreLabel->setPosition(ccp(m_movePos.x,m_movePos.y + 70));
 }
-
+void DataManager::removeSelf(Node* pNode)
+{
+    Node* tempNode = (Node*)pNode;
+    if (tempNode) {
+        tempNode->removeFromParentAndCleanup(true);
+    }
+}
 void DataManager:: touchEnd(CCPoint local)
 {
     useTool(local);
+    
+     if (m_stackArray.size()>=ELIMINABLE_NUM)
+     {
+         
+    int nSum2 = 0;
+    BallSprite* pLastElement =  getLastSelected();
+    int nTypeValue =  0;
+    if(pLastElement)
+    {
+        nTypeValue = pLastElement->getType();
+        
+    }
+    int nNumber = m_stackArray.size();
+    //        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
+    nSum2 = nNumber*pow(nTypeValue,2); //nTypeValue ^ 2
+    
+    char scoreStr[50] = {0};
+    std::sprintf(scoreStr,"+ %d",nSum2);
+    m_pTotalScoreLabel->setVisible(true);
+    m_pTotalScoreLabel->setString(scoreStr);
+    
+    CCSize size = Director::getInstance()->getWinSize();
+    CCLabelTTF * labelScore = CCLabelTTF::create("0","ArialRoundedMTBold",60);
+    labelScore->setString(scoreStr);
+    addChild(labelScore,1000);
+    labelScore->setPosition(m_pTotalScoreLabel->getPosition());
+    labelScore->runAction(Sequence::create(MoveTo::create(0.9, ccp(250,size.height-50)),CCCallFuncN::create( CC_CALLBACK_1(DataManager::removeSelf, this)), NULL));
+     }
     
     m_drawLine = false;
     m_pBg->setOpacity(255);
@@ -667,6 +701,8 @@ void DataManager:: touchEnd(CCPoint local)
 //        
 //        log("gameover");
     }
+    
+
 }
 void DataManager:: hideScoreEffect(CCNode* pSender)
 {
