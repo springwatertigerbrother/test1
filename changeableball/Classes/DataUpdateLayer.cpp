@@ -288,7 +288,7 @@ void UpStateLayer::AfterStartAnimationDisplayCall()
 }
 void UpStateLayer::resetScoreString(CCString*string)
 {
-    m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCJumpTo::create(0.3f, m_labelScore->getPosition(), 5.0f, 3), CCScaleTo::create(0.3f, 1.0f),NULL));
+//    m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCJumpTo::create(0.3f, m_labelScore->getPosition(), 5.0f, 3), CCScaleTo::create(0.3f, 1.0f),NULL));
     m_labelScore->setString(string->getCString());
     
     String* temStr = String::createWithFormat("%d",(unsigned int)(log2(string->uintValue())));
@@ -297,7 +297,7 @@ void UpStateLayer::resetScoreString(CCString*string)
 
 void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
 {
-    m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCJumpTo::create(0.3f, m_labelScore->getPosition(), 5.0f, 3), CCScaleTo::create(0.3f, 1.0f),NULL));
+//    m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f), CCScaleTo::create(0.3f, 1.0f),NULL));
     
     String* scoreStr = String::createWithFormat("%d",nValue);
     m_labelScore->setString(scoreStr->getCString());
@@ -309,6 +309,8 @@ void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
     auto aiyinsitanswing = Sequence::create(rotation,rotation->reverse(), NULL);
     m_pAiyinsitan->stopAllActions();
     m_pAiyinsitan->runAction(CCRepeat::create(aiyinsitanswing,2));
+
+    
 
 }
 void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
@@ -354,3 +356,10 @@ void UpStateLayer::reload(Ref* obj)
     sprintf(tempStr,"%d", lifeLiquid);
     m_labelDiamond->setString(tempStr);
 }
+
+//void removeSelf(Ref* pNode)
+//{
+//    if (pNode) {
+//        pNode->removeFromParentAndCleanup(true);
+//    }
+//}
