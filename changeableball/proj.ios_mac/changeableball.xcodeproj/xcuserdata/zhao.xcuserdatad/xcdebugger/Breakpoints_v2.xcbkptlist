@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/GameCenterScene.cpp"
-            timestampString = "450010443.207257"
+            timestampString = "451391304.518051"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "GameCenterScene::init()"
             landmarkType = "5">
          </BreakpointContent>
@@ -191,7 +191,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1057"
             endingLineNumber = "1057"
-            landmarkName = "DataManager::metetors()"
+            landmarkName = "DataManager::playingSound(int count,int nType)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1053"
             endingLineNumber = "1053"
-            landmarkName = "DataManager::metetors()"
+            landmarkName = "DataManager::playingSound(int count,int nType)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -313,13 +313,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios/AppController.mm"
-            timestampString = "450236524.452034"
+            filePath = "../Classes/GameOverLayer.cpp"
+            timestampString = "450329321.755329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "GameOverLayer::init()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -329,13 +329,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/GameOverLayer.cpp"
-            timestampString = "450329321.755329"
+            filePath = "../classes/GameCenterScene.cpp"
+            timestampString = "451388945.267171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "257"
-            endingLineNumber = "257"
-            landmarkName = "GameOverLayer::init()"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "GameCenterScene::init()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
