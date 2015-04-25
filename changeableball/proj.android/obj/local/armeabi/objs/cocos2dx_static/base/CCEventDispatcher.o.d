@@ -5,7 +5,7 @@ obj/local/armeabi/objs/cocos2dx_static/base/CCEventDispatcher.o: \
  jni/../../cocos2d/cocos/./base/ccConfig.h \
  jni/../../cocos2d/cocos/./base/CCPlatformConfig.h \
  jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/log.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/android/log.h \
  jni/../../cocos2d/cocos/./base/CCEventListener.h \
  jni/../../cocos2d/cocos/./base/CCRef.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/functional \
@@ -13,11 +13,11 @@ obj/local/armeabi/objs/cocos2dx_static/base/CCEventDispatcher.o: \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/set \
  jni/../../cocos2d/cocos/./base/CCEvent.h \
  jni/../../cocos2d/cocos/./platform/android/CCStdC.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/math.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/stdlib.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/alloca.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/strings.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/memory.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/math.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/stdlib.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/alloca.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/strings.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/memory.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/unordered_map \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/list \
@@ -27,7 +27,7 @@ obj/local/armeabi/objs/cocos2dx_static/base/CCEventDispatcher.o: \
  jni/../../cocos2d/cocos/./math/CCGeometry.h \
  jni/../../cocos2d/cocos/./base/ccMacros.h \
  jni/../../cocos2d/cocos/./base/CCConsole.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/sys/select.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/sys/select.h \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/thread \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/map \
  /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/mutex \
@@ -53,10 +53,10 @@ obj/local/armeabi/objs/cocos2dx_static/base/CCEventDispatcher.o: \
  jni/../../cocos2d/cocos/./base/CCEventListenerAcceleration.h \
  jni/../../cocos2d/cocos/./base/ccTypes.h \
  jni/../../cocos2d/cocos/./platform/android/CCGL.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h \
- /Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/GLES2/gl2platform.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/KHR/khrplatform.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/GLES2/gl2.h \
+ /Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/GLES2/gl2ext.h \
  jni/../../cocos2d/cocos/./base/CCEventListenerMouse.h \
  jni/../../cocos2d/cocos/./base/CCEventMouse.h \
  jni/../../cocos2d/cocos/./base/CCEventListenerKeyboard.h \
@@ -94,7 +94,7 @@ jni/../../cocos2d/cocos/./base/CCPlatformConfig.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCPlatformDefine.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/android/log.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/android/log.h:
 
 jni/../../cocos2d/cocos/./base/CCEventListener.h:
 
@@ -110,15 +110,15 @@ jni/../../cocos2d/cocos/./base/CCEvent.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCStdC.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/math.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/math.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/stdlib.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/stdlib.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/alloca.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/alloca.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/strings.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/strings.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/memory.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/memory.h:
 
 /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/cassert:
 
@@ -138,7 +138,7 @@ jni/../../cocos2d/cocos/./base/ccMacros.h:
 
 jni/../../cocos2d/cocos/./base/CCConsole.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/sys/select.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/sys/select.h:
 
 /Users/zhao/game/android/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.8/include/thread:
 
@@ -190,13 +190,13 @@ jni/../../cocos2d/cocos/./base/ccTypes.h:
 
 jni/../../cocos2d/cocos/./platform/android/CCGL.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2platform.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/GLES2/gl2platform.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/KHR/khrplatform.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/KHR/khrplatform.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/GLES2/gl2.h:
 
-/Users/zhao/game/android/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/GLES2/gl2ext.h:
+/Users/zhao/game/android/android-ndk-r10d/platforms/android-17/arch-arm/usr/include/GLES2/gl2ext.h:
 
 jni/../../cocos2d/cocos/./base/CCEventListenerMouse.h:
 
