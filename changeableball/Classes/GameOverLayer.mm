@@ -109,7 +109,7 @@ bool GameOverLayer::init()
         nciyuan = "%d dimension";
         totalScoreTitleStr = "total energy";
         sigleMost = "peak energy";
-        sigleState ="most DIMENSION";
+        sigleState ="most power";
 
     }
     
@@ -185,7 +185,7 @@ bool GameOverLayer::init()
     pCongratulation->setColor(ccColor3B::ORANGE);
     addChild(pCongratulation);
     
-    pCongratulation->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+//    pCongratulation->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
     
     //    CCLabelTTF* pGameoverLbl = CCLabelTTF::create("Game Over", "ArialRoundedMTBold", 100);
     //    pGameoverLbl->setColor(ccRED);
@@ -203,7 +203,7 @@ bool GameOverLayer::init()
     pTotalScore->setString(pTotalScoreStr->getCString());
     pTotalScore->setColor(ccYELLOW);
     addChild(pTotalScore);
-    pTotalScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+//    pTotalScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.3f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
 
 //    CCLabelBMFont* pBestTitle = CCLabelBMFont::create("best",  "fonts/bitmapFontTest.fnt", 1, kCCTextAlignmentCenter, CCPointZero);
     CCLabelTTF* pBestTitle = CCLabelTTF::create(sigleMost.c_str(),"ArialRoundedMTBold",50);
@@ -221,7 +221,7 @@ bool GameOverLayer::init()
     String* pSinggleBestScoreStr = String::createWithFormat("%d",bestSingleScore);
     pSingleBestScore->setString(pSinggleBestScoreStr->getCString());
     addChild(pSingleBestScore);
-    pSingleBestScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.6f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    pSingleBestScore->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.6f), CCScaleTo::create(0.3f, 2.0f),DelayTime::create(1),CCScaleTo::create(0.3f, 1.0f),NULL)));
     
     CCLabelTTF* pBestNTitle = CCLabelTTF::create(sigleState.c_str(), "ArialRoundedMTBold",50);
     pBestNTitle->setPosition(ccp(s.width/2,s.height*0.40));
@@ -234,7 +234,7 @@ bool GameOverLayer::init()
     addChild(pBestNvalue);
     String* pBestNvalueStr = String::createWithFormat(nciyuan.c_str(),calculate_score(bestSingleScore,0));
     pBestNvalue->setString(pBestNvalueStr->getCString());
-    pBestNvalue->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),CCScaleTo::create(0.3f, 1.0f),NULL)));
+    pBestNvalue->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),DelayTime::create(1), CCScaleTo::create(0.3f, 1.0f),NULL)));
 
     //    tempStr = "best:"+tempStr;
     //    CCLabelTTF* pHightestLbl = CCLabelTTF::create(tempStr.c_str(), "ArialRoundedMTBold", 100);
