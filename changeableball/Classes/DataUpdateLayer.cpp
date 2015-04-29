@@ -82,7 +82,7 @@ bool UpStateLayer::init()
                 case cocos2d::LanguageType::CHINESE:
                     nicyuantitleStr = "累计次元：";
                     totalScoreTitleStr = "总能量：";
-                    currentNciyuanTitleStr = "当前状态：";
+                    currentNciyuanTitleStr = "当前战斗力：";
                     currentEnergyStr = "当前能量：";
                     break;
                 case cocos2d::LanguageType::ENGLISH:
