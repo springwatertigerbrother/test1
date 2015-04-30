@@ -73,7 +73,7 @@ bool UpStateLayer::init()
             std::string currentEnergyStr;
             nicyuantitleStr = "total dimension:";
             totalScoreTitleStr = "total energy:";
-            currentNciyuanTitleStr = "current state:";
+            currentNciyuanTitleStr = "current power:";
             currentEnergyStr = "current energy:";
             
             LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
@@ -88,7 +88,7 @@ bool UpStateLayer::init()
                 case cocos2d::LanguageType::ENGLISH:
                     nicyuantitleStr = "total dimension:";
                     totalScoreTitleStr = "total energy:";
-                    currentNciyuanTitleStr = "current state:";
+                    currentNciyuanTitleStr = "current power:";
                     currentEnergyStr = "current energy:";
                     break;
                 default:
