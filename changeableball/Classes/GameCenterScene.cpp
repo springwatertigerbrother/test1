@@ -148,6 +148,12 @@ void GameCenterScene::startGame()
 
 void GameCenterScene::addScore(int nScore)
 {
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+    
+    //            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    lifeLiquid += nScore/ADD_DIAMOND_N;
+    setIntegerForKey("LIFE_LIQUID", lifeLiquid);
+    
     m_score += nScore;
     m_current_score += nScore;
     int bestSingleScore = getIntegerForKey("SINGLE_BEST_SCORE");
@@ -170,6 +176,9 @@ void GameCenterScene::addScore(int nScore)
 //    m_controllerLayer->resetScoreString(StringMake(str));
     m_controllerLayer->resetScoreWithIntValue(m_score);
     m_controllerLayer->resetCurrentScoreWithIntValue(m_current_score);
+    
+    NotificationCenter::getInstance()->postNotification(REFESH_USE_TOOL);
+
 }
 
 
