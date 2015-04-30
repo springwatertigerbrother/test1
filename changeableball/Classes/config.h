@@ -50,16 +50,17 @@
 #define kLeaderboardID @"ndimfree_cn"
 //#define kLeaderboardID @"com.skyter.ndimfreeEN"
 #define REFESH_USE_TOOL "refresh_use_tool"
-#define DONATE_DIAMOND  300
+#define DONATE_DIAMOND  3000
 //#define kLeaderboardID @"ndimpaid_Leaderboard"
 #define kLeaderboardID @"ndimpaid_Leaderboard_en"
 
 //#define SHARED_URL "https://itunes.apple.com/us/app/n-ci-yuan/id975972814?l=zh&ls=1&mt=8"
 #define SHARED_URL "https://itunes.apple.com/us/app/n-dimension/id984346293?l=zh&ls=1&mt=8"
 
-#define RIVIVE_COSUMED_DIAMOND  30
-#define BOMB_COSUMED_DIAMOND  20
-#define PULSE_COSUMED_DIAMOND  60
+#define RIVIVE_COSUMED_DIAMOND 300
+#define BOMB_COSUMED_DIAMOND   200
+#define PULSE_COSUMED_DIAMOND  600
+#define ADD_DIAMOND_N           10
 
 #define GAME_RULE_CHINISE "  游戏规则:\n     1,按住屏幕不放滑动手指，有连续三个以上相同元素便可以消除，且最后一个元素在当前值下加1后进化成相应元素，消除3个加1，消除4个加2，依此类推，最大进化为5；\n\n\积分方式：\n    1，E=mc², m为一次所消除的元素的个数，c为元素对应的值；\n    2，次元值是是根据生命光波的跃迁来计算的，公式为：(value = 12 + (nScore - 4096)/2048)\n \n       小伙伴们，像电子一样跃迁吧 \n \n      "
 #define GAME_RULE_ENGLISH "RULE\n    move your finger on screen,if >= 3 same color elements selected,they will disappear,and the last element value will be add 1 or more; \n\n SCORE: \n E=mc²,m equal  num of disappearred elements,c equal value of selected element , DIMENSION value = 12 + (nScore - 4096)/2048\n \n       friends，let us like eletronic transitions!!\n \n      "
