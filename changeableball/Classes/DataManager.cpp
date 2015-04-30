@@ -1195,6 +1195,7 @@ void DataManager::useWave(CCPoint local)
 }
 void DataManager::usebomb(CCPoint local)
 {
+    
     BallSprite * ds = getCurrentSelectSprite(local);
     
     
@@ -1216,6 +1217,22 @@ void DataManager::usebomb(CCPoint local)
     m_selectedTool = none;
     
 }
+
+void DataManager::superTool(CCPoint local)
+{
+    CCSize size = Director::getInstance()->getWinSize();
+    CCPoint pos = ccp(size.width/2,size.height/2);
+    
+    super_emitter = ParticleSystemQuad::create("Particles/ball5.plist");
+        
+        //    _emitter = ParticleExplosion::create();
+        super_emitter->retain();
+        addChild(super_emitter, 1000);
+
+    m_selectedTool = none;
+    
+}
+
 void DataManager::useTool(CCPoint local)
 {
     BallSprite * ds = getCurrentSelectSprite(local);

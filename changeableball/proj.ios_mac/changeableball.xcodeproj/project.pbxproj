@@ -89,6 +89,8 @@
 		FE512D571ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
 		FE512D581ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
 		FE512D5B1ACFE33400B7232F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE512D5A1ACFE33400B7232F /* GameKit.framework */; };
+		FE6AB8931AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
+		FE6AB8941AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
 		FE74594D1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
 		FE74594E1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
 		FE74594F1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
@@ -693,6 +695,8 @@
 		FE512D551ACFE25C00B7232F /* NCSGameCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCSGameCenter.m; path = ../Classes/NCSGameCenter.m; sourceTree = "<group>"; };
 		FE512D591ACFE2AC00B7232F /* NCSGameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSGameCenter.h; path = ../Classes/NCSGameCenter.h; sourceTree = "<group>"; };
 		FE512D5A1ACFE33400B7232F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = buyDiamond.cpp; path = ../Classes/buyDiamond.cpp; sourceTree = "<group>"; };
+		FE6AB8921AF28E6A00FA1818 /* buyDiamond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buyDiamond.h; path = ../Classes/buyDiamond.h; sourceTree = "<group>"; };
 		FE74594B1ADA774F00D625AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FE74594C1ADA774F00D625AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		FE7FF2951AA06FE6009C8339 /* MUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MUtils.cpp; path = ../Classes/MUtils.cpp; sourceTree = "<group>"; };
@@ -1222,6 +1226,8 @@
 				FE438D6A19F48EDC00D9C636 /* DataUpdateLayer.h */,
 				FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */,
 				FE348B3E1AAB4F6A00391F6E /* BuyLifeLayer.h */,
+				FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */,
+				FE6AB8921AF28E6A00FA1818 /* buyDiamond.h */,
 				FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */,
 				FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */,
 				FE7FF2951AA06FE6009C8339 /* MUtils.cpp */,
@@ -1869,6 +1875,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */,
 				FE348B3F1AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */,
+				FE6AB8931AF28E6A00FA1818 /* buyDiamond.cpp in Sources */,
 				FE438D6B19F48EDC00D9C636 /* ControllerLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				FED28B021AC00FBA00C89B6F /* IOSiAP.mm in Sources */,
@@ -1959,6 +1966,7 @@
 				FEA72B771AAEE090009226A1 /* AppController.mm in Sources */,
 				FEA72B781AAEE090009226A1 /* BallSprite.cpp in Sources */,
 				FEA72B791AAEE090009226A1 /* BuyLifeLayer.cpp in Sources */,
+				FE6AB8941AF28E6A00FA1818 /* buyDiamond.cpp in Sources */,
 				FEA72B7A1AAEE090009226A1 /* ControllerLayer.cpp in Sources */,
 				FEA72B7B1AAEE090009226A1 /* RootViewController.mm in Sources */,
 				FED28B041AC00FBA00C89B6F /* IOSiAP.mm in Sources */,

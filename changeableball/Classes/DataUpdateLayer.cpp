@@ -11,6 +11,7 @@
 #include "DataHome.h"
 #include "DataBase64.h"
 #include "MUtils.h"
+#include "buyDiamond.h"
 
 bool UpStateLayer::init()
 {
@@ -221,6 +222,16 @@ bool UpStateLayer::init()
             pDiamond->setPosition(ccp(100,-15));
             addChild(pDiamond);
             
+            auto buyDiamond = CCMenuItemImage::create("Images/icon_cash_l.png","Images/icon_cash_l.png",CC_CALLBACK_1(UpStateLayer::buyDiamond,this));
+            buyDiamond->setScale(CC_CONTENT_SCALE_FACTOR());
+            CCMenu* pMenu = CCMenu::create(buyDiamond, NULL);
+            pMenu->alignItemsHorizontallyWithPadding(10);
+            //    pItem1->setFontSize(30);
+            //    pItem2->setFontSize(30);
+            
+            pMenu->setPosition(ccp(100,-15));
+            addChild(pMenu);
+            
             m_labelDiamond = CCLabelTTF::create("0","ArialRoundedMTBold",50);
             m_labelDiamond->setAnchorPoint(ccp(0, 0.5));
             m_labelDiamond->setColor(ccc3(255, 255, 255));
@@ -357,6 +368,14 @@ void UpStateLayer::reload(Ref* obj)
     m_labelDiamond->setString(tempStr);
 }
 
+void UpStateLayer::buyDiamond(void* sender)
+{
+    NotificationCenter::getInstance()->postNotification(DISPLAY_BUY_DIAMOND);
+//
+//    
+//    auto buyLayer = buyDiamond)::create();
+//    addChild(buyLayer);
+}
 //void removeSelf(Ref* pNode)
 //{
 //    if (pNode) {

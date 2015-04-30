@@ -84,6 +84,11 @@ bool GameCenterScene::init()
         this->addChild(buyLayer,10);
         buyLayer->setVisible(false);
         
+        m_buyDiamond = buyDiamond::create();
+        addChild(m_buyDiamond,10);
+        m_buyDiamond->setVisible(false);
+ 
+        NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(GameCenterScene::reload), DISPLAY_BUY_DIAMOND, NULL);
         //buy life
         auto buy_life_listener = EventListenerCustom::create(BUY_LIFE_LIQUID, [=](EventCustom* event){
             int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
@@ -210,7 +215,10 @@ void GameCenterScene:: tick(float dt)
         log("gameover");
     }
     
-    
+    if (!m_buyDiamond->isVisible())
+    {
+        m_data->m_canPlaying = true;
+    }
 //
 //    if (!m_pause) {
 //        m_delta +=dt;
@@ -247,7 +255,12 @@ void GameCenterScene::resumeGame()
     m_pause = false;
     m_data->moveIn();
 }
+void GameCenterScene::reload(Ref* obj)
+{
+    m_data->m_canPlaying = false;
 
+    m_buyDiamond->setVisible(true);
+}
 //
 //void GameCenterScene:: playerUsedToolDisappear(PLAYERTOOLTYPE type)
 //{
