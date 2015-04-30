@@ -13,12 +13,14 @@
 #include "cocos2d.h"
 #include "DataManager.h"
 #include "BuyLifeLayer.h"
+#include "buyDiamond.h"
 
 //#include "ControllerLayer.h"
 class ControllerLayer;
 
 class GameCenterScene:public cocos2d::CCLayer
 {
+public:
     DataManager* m_data;
     ControllerLayer* m_controllerLayer;
     
@@ -40,9 +42,16 @@ public:
     void resumeGame();
     void startTimerCounter();
     void tick(float dt);
+    void reload(Ref* obj);
     
+<<<<<<< HEAD
 //    BuyLifeLayer* buyLayer;
 
+=======
+    BuyLifeLayer* buyLayer;
+    buyDiamond* m_buyDiamond;
+    
+>>>>>>> 923ad67... add buy diamond layer
 //    void registerWithTouchDispatcher();
 //    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
 //    virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);

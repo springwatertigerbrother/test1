@@ -111,6 +111,7 @@ public:
     void selectedTool(void* sender);
     void useWave(CCPoint local);
     void usebomb(CCPoint local);
+    void superTool(CCPoint local);
     int m_selectedTool;
     void useTool(CCPoint local);
     
@@ -125,6 +126,7 @@ public:
     LayerColor* m_helpLayer;
     void help(void* sender);
     ParticleSystemQuad*    _emitter;
+    ParticleSystemQuad*    super_emitter;
     ccColor4F calcColorWithType(int nType);
 
     void waveChangeType(Node* pNode);

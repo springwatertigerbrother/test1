@@ -50,6 +50,8 @@
 #define kLeaderboardID @"ndimfree_cn"
 //#define kLeaderboardID @"com.skyter.ndimfreeEN"
 #define REFESH_USE_TOOL "refresh_use_tool"
+#define DISPLAY_BUY_DIAMOND "display_buy_diamond"
+
 #define DONATE_DIAMOND  3000
 //#define kLeaderboardID @"ndimpaid_Leaderboard"
 #define kLeaderboardID @"ndimpaid_Leaderboard_en"
