@@ -12,7 +12,7 @@
 #include "DataHome.h"
 #include "BuyLifeLayer.h"
 #include "DataBase64.h"
-
+#include "MUtils.h"
 using namespace cocos2d;
 
 CCScene* GameCenterScene::scene()
@@ -118,6 +118,7 @@ bool GameCenterScene::init()
 //                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
                 NotificationCenter::getInstance()->postNotification(REFESH_BUYLIFE_UI);
+                NotificationCenter::getInstance()->postNotification(REFESH_USE_TOOL);
 
                 startGame();
             }
@@ -148,14 +149,18 @@ void GameCenterScene::startGame()
 
 void GameCenterScene::addScore(int nScore)
 {
-    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
-    
-    //            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-    lifeLiquid += nScore/ADD_DIAMOND_N;
-    setIntegerForKey("LIFE_LIQUID", lifeLiquid);
-    
+
     m_score += nScore;
     m_current_score += nScore;
+    
+    int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+    int nciValue = calculate_score(m_current_score,0);
+
+    //            int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
+    lifeLiquid += nScore/ADD_DIAMOND_N*(nciValue*0.1f);
+    setIntegerForKey("LIFE_LIQUID", lifeLiquid);
+    
+    
     int bestSingleScore = getIntegerForKey("SINGLE_BEST_SCORE");
 
 //    int bestSingleScore = UserDefault::getInstance()->getIntegerForKey("SINGLE_BEST_SCORE");
