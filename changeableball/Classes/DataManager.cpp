@@ -369,7 +369,7 @@ bool DataManager::init()
     helpSprite->setScale(CC_CONTENT_SCALE_FACTOR()*0.5);
     m_pLabelHelp = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
-    m_pLabelHelp->setPosition(ccp(s.width/2, s.height*0.76));
+    m_pLabelHelp->setPosition(ccp(s.width/2, s.height*0.7));
     m_pLabelHelp->setVisible(true);
     m_pLabelHelp->setColor(ccYELLOW);
 //    m_pLabelHelp->setScale(2);
@@ -668,7 +668,8 @@ void DataManager:: touchEnd(CCPoint local)
             (*it)->unselected();
         }
     }
-    
+    CCSize s = CCDirector::sharedDirector()->getWinSize();
+
     //zhao
     int nSum = 0;
     if (m_stackArray.size()>=ELIMINABLE_NUM)
@@ -676,7 +677,6 @@ void DataManager:: touchEnd(CCPoint local)
         BallSprite* pLastElement =  getLastSelected();
         
         //提示字 zhao
-        CCSize s = CCDirector::sharedDirector()->getWinSize();
         int nTypeValue = pLastElement->getType();
         int nNumber = m_stackArray.size();
 //        nSum = nNumber*pow(2, nTypeValue); //2^nTypeValue
@@ -720,13 +720,21 @@ void DataManager:: touchEnd(CCPoint local)
     }
     if (m_stackArray.size() >= 5)
     {
-        m_pGood->setVisible(true);
+//        m_pGood->setVisible(true);
+        CallFuncN* call1 = CallFuncN::create(CC_CALLBACK_1(DataManager::removeSelf,this));
+        auto pGood = Sprite::create("Images/good.png");
+        pGood->setPosition(ccp(s.width/2, s.height/2 + 50));
+        pGood->setScale(CC_CONTENT_SCALE_FACTOR());
+//        pGood->setVisible(false);
+        pGood->runAction(Sequence::create(FadeOut::create(0.1), NULL));
+        addChild(pGood,1000);
+        
         auto action1 = FadeIn::create(0.50f);
         auto action1Back = action1->reverse();
         auto action2 = ScaleBy::create(0.5,1.5);
         auto action2Back = action2->reverse();
         
-        m_pGood->runAction(Sequence::create(action1,action2,action2Back,action1Back,NULL));
+        pGood->runAction(Sequence::create(action1,action2,action2Back,action1Back,call1,NULL));
         
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/good.mp3");
     }
@@ -1474,9 +1482,57 @@ void DataManager::consumeDiamond(int nDiamond)
 }
 void DataManager::useSuperTool(Ref* obj)
 {
-    superTool(CCPointZero);
+    consumeDiamond(SUPER_COSUMED_DIAMOND);
+    NotificationCenter::getInstance()->postNotification(REFESH_USE_TOOL);
+
+    int randValue = rand()%10;
     
-    runAction(Sequence::create(CCDelayTime::create(10),CallFuncN::create(CC_CALLBACK_1(DataManager::removeSuperEffect, this)),CallFuncN::create(CC_CALLBACK_1(DataManager::changeAllElements,this)), NULL ));
+    if (randValue == 1)
+    {
+        
+        superTool(CCPointZero);
+        
+        runAction(Sequence::create(CCDelayTime::create(3),CallFuncN::create(CC_CALLBACK_1(DataManager::removeSuperEffect, this)),CallFuncN::create(CC_CALLBACK_1(DataManager::changeAllElements,this)), NULL ));    }
+    else
+    {
+        std::string enoughDiamond;
+        enoughDiamond = "insufficient\ndiamond\nshoping ^O^";
+        
+        LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+        switch (currentLanguageType)
+        {
+            case cocos2d::LanguageType::CHINESE:
+            {
+                enoughDiamond = "运气不佳，没有成功获取道具，下次再来！";
+            }
+                break;
+            case cocos2d::LanguageType::ENGLISH:
+            {
+                enoughDiamond = "sorry,you can not get the tool,next time";
+            }
+                break;
+            default:
+                break;
+        }
+        
+        //        m_labelLife->setVisible(true);
+        //        m_labelLife->runAction(FadeOut::create(1));
+        //
+        CCSize size = Director::getInstance()->getWinSize();
+        CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",40);
+        labelLife->setAnchorPoint(ccp(0.5, 0.5));
+        labelLife->setColor(ccRED);
+        labelLife->setPosition(ccp(size.width/2,size.height/2 + 150));
+        labelLife->setString(enoughDiamond);
+        labelLife->setDimensions(CCSize(500,0));
+        //        labelLife->setVisible(false);
+        addChild(labelLife,11);
+        labelLife->runAction(Sequence::create(DelayTime::create(2), FadeOut::create(3), NULL));
+        //        CallFunc* call = [](){};
+        "生命药水不够，请购买";
+    }
+    
+    
 }
 void DataManager::removeSuperEffect(Node* pNode)
 {
