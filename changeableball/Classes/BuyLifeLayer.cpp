@@ -145,7 +145,7 @@ void BuyLifeLayer::onEnter()
     m_labelDiamond->setString(tempStr);
     addChild(m_labelDiamond);
     
-    CCLabelTTF* pConsumedDiamond = CCLabelTTF::create("30","ArialRoundedMTBold",30);
+    CCLabelTTF* pConsumedDiamond = CCLabelTTF::create("30","ArialRoundedMTBold",20);
     pConsumedDiamond->setAnchorPoint(ccp(0.5,1));
     pConsumedDiamond->setPosition(ccp(size.width*0.5,size.height-100));
     
@@ -174,8 +174,9 @@ void BuyLifeLayer::onEnter()
     
     sprintf(tempStr,xiaohuoban.c_str(), RIVIVE_COSUMED_DIAMOND);
     pConsumedDiamond->setString(tempStr);
+    pConsumedDiamond->setDimensions(CCSize(500,0));
     addChild(pConsumedDiamond);
-    pConsumedDiamond->runAction(CCRepeatForever::create(Sequence::create(ScaleTo::create(0.5, 0.5), ScaleTo::create(0.5,1),DelayTime::create(1),NULL)));
+    pConsumedDiamond->runAction(CCRepeatForever::create(Sequence::create(ScaleTo::create(0.5, 0.8), ScaleTo::create(0.5,1),DelayTime::create(1),NULL)));
     
 //    m_shopMenu = CCMenu::create(m_iap6,m_iap18,m_iap24, NULL);
 //    

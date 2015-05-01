@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>angle</key>
-	<real>144.47000122070312</real>
+	<real>92.160003662109375</real>
 	<key>angleVariance</key>
-	<real>360</real>
+	<real>0.0</real>
 	<key>blendFuncDestination</key>
 	<integer>771</integer>
 	<key>blendFuncSource</key>
-	<integer>770</integer>
+	<integer>1</integer>
 	<key>duration</key>
 	<real>-1</real>
 	<key>emitterType</key>
-	<real>0.0</real>
+	<real>1</real>
 	<key>finishColorAlpha</key>
-	<real>1</real>
+	<real>0.6600000262260437</real>
 	<key>finishColorBlue</key>
-	<real>0.0</real>
+	<real>0.37999999523162842</real>
 	<key>finishColorGreen</key>
-	<real>1</real>
+	<real>0.30000001192092896</real>
 	<key>finishColorRed</key>
 	<real>1</real>
 	<key>finishColorVarianceAlpha</key>
-	<real>0.0</real>
+	<real>1</real>
 	<key>finishColorVarianceBlue</key>
 	<real>1</real>
 	<key>finishColorVarianceGreen</key>
@@ -31,33 +31,33 @@
 	<key>finishColorVarianceRed</key>
 	<real>1</real>
 	<key>finishParticleSize</key>
-	<real>64</real>
+	<real>2.190000057220459</real>
 	<key>finishParticleSizeVariance</key>
 	<real>0.0</real>
 	<key>gravityx</key>
-	<real>0.0</real>
+	<real>-276.32000732421875</real>
 	<key>gravityy</key>
-	<real>0.0</real>
+	<real>355.260009765625</real>
 	<key>maxParticles</key>
-	<real>750</real>
+	<real>111</real>
 	<key>maxRadius</key>
-	<real>192.6300048828125</real>
+	<real>268.42001342773438</real>
 	<key>maxRadiusVariance</key>
 	<real>0.0</real>
 	<key>minRadius</key>
 	<real>0.0</real>
 	<key>particleLifespan</key>
-	<real>1.5119999647140503</real>
+	<real>10</real>
 	<key>particleLifespanVariance</key>
 	<real>0.0</real>
 	<key>radialAccelVariance</key>
 	<real>0.0</real>
 	<key>radialAcceleration</key>
-	<real>92.110000610351562</real>
+	<real>0.0</real>
 	<key>rotatePerSecond</key>
-	<real>73.419998168945312</real>
+	<real>360</real>
 	<key>rotatePerSecondVariance</key>
-	<real>73.419998168945312</real>
+	<real>0.0</real>
 	<key>rotationEnd</key>
 	<real>0.0</real>
 	<key>rotationEndVariance</key>
@@ -67,27 +67,27 @@
 	<key>rotationStartVariance</key>
 	<real>0.0</real>
 	<key>sourcePositionVariancex</key>
-	<real>-64</real>
+	<real>0.0</real>
 	<key>sourcePositionVariancey</key>
 	<real>0.0</real>
 	<key>sourcePositionx</key>
 	<real>160</real>
 	<key>sourcePositiony</key>
-	<real>180</real>
+	<real>240</real>
 	<key>speed</key>
-	<real>190.78999328613281</real>
+	<real>0.0</real>
 	<key>speedVariance</key>
-	<real>32.889999389648438</real>
+	<real>203.94999694824219</real>
 	<key>startColorAlpha</key>
-	<real>0.40000000596046448</real>
-	<key>startColorBlue</key>
-	<real>0.0</real>
-	<key>startColorGreen</key>
-	<real>0.0</real>
-	<key>startColorRed</key>
 	<real>1</real>
+	<key>startColorBlue</key>
+	<real>0.74000000953674316</real>
+	<key>startColorGreen</key>
+	<real>0.2199999988079071</real>
+	<key>startColorRed</key>
+	<real>0.6600000262260437</real>
 	<key>startColorVarianceAlpha</key>
-	<real>0.0</real>
+	<real>0.86000001430511475</real>
 	<key>startColorVarianceBlue</key>
 	<real>1</real>
 	<key>startColorVarianceGreen</key>
@@ -95,13 +95,13 @@
 	<key>startColorVarianceRed</key>
 	<real>1</real>
 	<key>startParticleSize</key>
-	<real>10.109999656677246</real>
+	<real>64</real>
 	<key>startParticleSizeVariance</key>
 	<real>0.0</real>
 	<key>tangentialAccelVariance</key>
 	<real>0.0</real>
 	<key>tangentialAcceleration</key>
-	<real>-13.159999847412109</real>
+	<real>0.0</real>
 	<key>textureFileName</key>
 	<string>ball5.png</string>
 	<key>textureImageData</key>

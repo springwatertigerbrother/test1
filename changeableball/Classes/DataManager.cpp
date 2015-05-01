@@ -175,6 +175,7 @@ bool DataManager::init()
     listener->onTouchesEnded = CC_CALLBACK_2(DataManager::onTouchesEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
    
+    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(DataManager::useSuperTool), USE_SUPER_TOOL, NULL);
 
 
 //    m_pDrawNode = DrawNode::create();
@@ -230,13 +231,34 @@ bool DataManager::init()
 //    pMoon->setPosition(ccp(s.width - 10,s.height - 10));
 //    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pMoon);
+    std::string supertool;
+    
+    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
+    switch (currentLanguageType)
+    {
+        case cocos2d::LanguageType::CHINESE:
+        {
+            supertool = "超级道具";
+        }
+            break;
+        case cocos2d::LanguageType::ENGLISH:
+        {
+            supertool = "supertool";
+
+        }
+            break;
+        default:
+            break;
+    }
+    
+
     
     MenuItemFont::setFontSize(30);
-    auto superTool =  MenuItemFont::create("superTool", CC_CALLBACK_1(DataManager::selectedTool, this));
+    auto superTool =  MenuItemFont::create(supertool.c_str(), CC_CALLBACK_1(DataManager::selectedTool, this));
     superTool->setTag(supertoolTag);
     
     MenuItemImage* pItem1 = MenuItemImage::create("Images/bombbtn.png", "Images/bombbtn.png", CC_CALLBACK_1(DataManager::selectedTool, this)) ;
-    pItem1 ->setTag(supertoolTag);
+    pItem1 ->setTag(bomb);
     pItem1->setScale(CC_CONTENT_SCALE_FACTOR());
     MenuItemImage* pItem2 = MenuItemImage::create("Images/mushroom.png", "Images/mushroom.png", CC_CALLBACK_1(DataManager::selectedTool,this)) ;
     pItem2->setTag(wave);
@@ -250,6 +272,12 @@ bool DataManager::init()
     
     pMenu->setPosition(ccp(s.width/2  + 180, s.height - 250));
     addChild(pMenu);
+    
+    auto particle2 = ParticleSystemQuad::create("Particles/huoyan.plist");
+    particle2->setPosition(ccp(s.width/2  + 100, s.height - 250));
+    //    //    _emitter = ParticleExplosion::create();
+    particle2->retain();
+        addChild(particle2, 1000);
     
 
 //    auto menu = Menu::create(
@@ -314,7 +342,6 @@ bool DataManager::init()
     clearaway2 = "click ?? ";
     helpStr = GAME_RULE_CHINISE;
 
-    LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
     switch (currentLanguageType)
     {
         case cocos2d::LanguageType::CHINESE:
@@ -400,6 +427,20 @@ bool DataManager::init()
     menu->setPosition(ccp(s.width/2 + 150,s.height-50));
     this-> addChild(menu);
 
+    CCSize size = Director::getInstance()->getWinSize();
+    CCPoint pos = ccp(size.width/2,size.height/2);
+    
+//    auto particle = ParticleSystemQuad::create("Particles/shanshuodexing.plist");
+//    particle->setPosition(pos);
+//    //    _emitter = ParticleExplosion::create();
+//    particle->retain();
+//    addChild(particle, 1000);
+    
+//    auto particle2 = ParticleSystemQuad::create("Particles/huoyan.plist");
+//    particle2->setPosition(pos);
+//    //    _emitter = ParticleExplosion::create();
+//    particle2->retain();
+//    addChild(particle2, 1000);
     
 //    registerWithTouchDispatcher();
     return true;
@@ -1248,14 +1289,14 @@ void DataManager::usebomb(CCPoint local)
 void DataManager::superTool(CCPoint local)
 {
     CCSize size = Director::getInstance()->getWinSize();
-    CCPoint pos = ccp(size.width/2,size.height/2);
+    CCPoint pos = ccp(size.width/2,size.height/2 -100);
     
     super_emitter = ParticleSystemQuad::create("Particles/ball5.plist");
-        
+    super_emitter->setPosition(pos);
         //    _emitter = ParticleExplosion::create();
         super_emitter->retain();
         addChild(super_emitter, 1000);
-
+    super_emitter->setScale(CC_CONTENT_SCALE_FACTOR());
     m_selectedTool = none;
     
 }
@@ -1403,6 +1444,18 @@ void DataManager::waveChangeType(Node* pNode)
         _emitter->setAutoRemoveOnFinish(true);
         }
     }
+void DataManager::changeAllElements(Node* pNode)
+{
+    int num = m_ballSpriteArray.size();
+    for (int i = 0; i<num; i++)
+    {
+        BallSprite* pLastElement = m_ballSpriteArray[i];
+        if(pLastElement)
+        {
+            pLastElement->changeTypeWithType(5);
+        }
+    }
+}
 void DataManager::consumeDiamond(int nDiamond)
 {
     int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
@@ -1418,4 +1471,14 @@ void DataManager::consumeDiamond(int nDiamond)
         }
         setIntegerForKey("LIFE_LIQUID", lifeLiquid);
     }
+}
+void DataManager::useSuperTool(Ref* obj)
+{
+    superTool(CCPointZero);
+    
+    runAction(Sequence::create(CCDelayTime::create(10),CallFuncN::create(CC_CALLBACK_1(DataManager::removeSuperEffect, this)),CallFuncN::create(CC_CALLBACK_1(DataManager::changeAllElements,this)), NULL ));
+}
+void DataManager::removeSuperEffect(Node* pNode)
+{
+    super_emitter->removeFromParentAndCleanup(true);
 }

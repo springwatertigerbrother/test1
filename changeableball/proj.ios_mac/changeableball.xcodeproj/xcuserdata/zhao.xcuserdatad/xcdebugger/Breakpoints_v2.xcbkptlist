@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "452110189.944784"
+            timestampString = "452154005.231252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
+            startingLineNumber = "530"
+            endingLineNumber = "530"
             landmarkName = "DataManager:: touchMove(CCPoint local)"
             landmarkType = "5">
          </BreakpointContent>
@@ -70,11 +70,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/BuyLifeLayer.cpp"
-            timestampString = "450151412.259713"
+            timestampString = "452152043.78366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "BuyLifeLayer::CallUseLife(void* sender)"
             landmarkType = "5">
          </BreakpointContent>
@@ -182,13 +182,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "452110189.944784"
+            timestampString = "452154005.231252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1073"
-            endingLineNumber = "1073"
+            startingLineNumber = "1114"
+            endingLineNumber = "1114"
             landmarkName = "DataManager::playingSound(int count,int nType)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DataManager::playingSound(int, int)"
+                  moduleName = "changeableball iOS copy"
+                  urlString = "file:///Users/zhao/game/baoll3.2Version/changeableball/classes/DataManager.cpp"
+                  timestampString = "452154005.2882"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1115"
+                  endingLineNumber = "1115"
+                  offsetFromSymbolStart = "447">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DataManager::playingSound(int, int)"
+                  moduleName = "changeableball iOS copy"
+                  urlString = "file:///Users/zhao/game/baoll3.2Version/changeableball/classes/DataManager.cpp"
+                  timestampString = "452154005.288383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1115"
+                  endingLineNumber = "1115"
+                  offsetFromSymbolStart = "462">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -198,11 +228,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "452110189.944784"
+            timestampString = "452154005.231252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1069"
-            endingLineNumber = "1069"
+            startingLineNumber = "1110"
+            endingLineNumber = "1110"
             landmarkName = "DataManager::playingSound(int count,int nType)"
             landmarkType = "5">
          </BreakpointContent>
@@ -278,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/BuyLifeLayer.cpp"
-            timestampString = "450151412.259713"
+            timestampString = "452152043.78366"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "BuyLifeLayer::CallBuyLife(void* sender)"
             landmarkType = "5">
          </BreakpointContent>
@@ -326,11 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "452110233.751286"
+            timestampString = "452154005.231252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1225"
-            endingLineNumber = "1225"
+            startingLineNumber = "1266"
+            endingLineNumber = "1266"
             landmarkName = "DataManager::usebomb(CCPoint local)"
             landmarkType = "5">
          </BreakpointContent>
@@ -380,54 +410,6 @@
             startingLineNumber = "218"
             endingLineNumber = "218"
             landmarkName = "GameCenterScene:: tick(float dt)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/DataManager.cpp"
-            timestampString = "452110180.425759"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1201"
-            endingLineNumber = "1201"
-            landmarkName = "DataManager::selectedTool(void* sender)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/DataManager.cpp"
-            timestampString = "452110241.799916"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1174"
-            endingLineNumber = "1174"
-            landmarkName = "DataManager::selectedTool(void* sender)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/buyDiamond.cpp"
-            timestampString = "452147321.247348"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "buyDiamond::onEnter()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
