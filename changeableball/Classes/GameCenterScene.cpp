@@ -211,6 +211,7 @@ void GameCenterScene:: tick(float dt)
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xiaoxinjiayou.mp3");
 
         buyLayer->setVisible(true);
+        buyLayer->reload(nullptr);
         m_data->m_canPlaying = false;
         log("gameover");
     }

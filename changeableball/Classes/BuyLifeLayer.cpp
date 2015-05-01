@@ -262,8 +262,6 @@ void BuyLifeLayer::CallUseLife(void* sender)
 }
 void BuyLifeLayer::gameOver(void* sender)
 {
-    removeFromParentAndCleanup(true);
-//    
-//    auto scene = GameOverLayer::scene();
-//    Director::getInstance()->replaceScene(scene);
+    auto scene = GameOverLayer::scene();
+    Director::getInstance()->replaceScene(scene);
 }

@@ -12,6 +12,7 @@
 #include "DataBase64.h"
 #include "MUtils.h"
 #include "buyDiamond.h"
+#include "ballGamescene.h"
 
 bool UpStateLayer::init()
 {
@@ -72,6 +73,7 @@ bool UpStateLayer::init()
             std::string totalScoreTitleStr;
             std::string currentNciyuanTitleStr;
             std::string currentEnergyStr;
+            std::string backStr;
             nicyuantitleStr = "total dimension:";
             totalScoreTitleStr = "total energy:";
             currentNciyuanTitleStr = "current power:";
@@ -85,16 +87,28 @@ bool UpStateLayer::init()
                     totalScoreTitleStr = "总能量：";
                     currentNciyuanTitleStr = "当前战斗力：";
                     currentEnergyStr = "当前能量：";
+                    backStr = "返回";
                     break;
                 case cocos2d::LanguageType::ENGLISH:
                     nicyuantitleStr = "total dimension:";
                     totalScoreTitleStr = "total energy:";
                     currentNciyuanTitleStr = "current power:";
                     currentEnergyStr = "current energy:";
+                    backStr = "back";
                     break;
                 default:
                     break;
             }
+            
+//            auto itemback = MenuItemFont::create(backStr.c_str(), CC_CALLBACK_1(UpStateLayer::back, this));
+//            itemback->setFontSize(30);
+//            itemback->setScale(CC_CONTENT_SCALE_FACTOR());
+//            CCMenu *menuBack = CCMenu::create(itemback, NULL);
+//            menuBack->alignItemsVerticallyWithPadding(5);
+//            
+//            menuBack->setPosition(ccp(s.width/2 + 80,150));
+//            this-> addChild(menuBack);
+
             
             unsigned long nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
 //            int nTotalScore = CCUserDefault::sharedUserDefault()->getStringForKey("TOTALSCORE");
@@ -375,6 +389,11 @@ void UpStateLayer::buyDiamond(void* sender)
 //    
 //    auto buyLayer = buyDiamond)::create();
 //    addChild(buyLayer);
+}
+void UpStateLayer::back(void* sender)
+{
+    auto scene = BallGameScene::scene();
+    Director::getInstance()->replaceScene(scene);
 }
 //void removeSelf(Ref* pNode)
 //{

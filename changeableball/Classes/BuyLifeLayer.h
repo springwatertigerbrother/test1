@@ -33,7 +33,7 @@ class BuyLifeLayer :public cocos2d::CCLayer
     void CallUseLife(void* sender);
     void gameOver(void* sender);
     CCLabelTTF * m_labelDiamond;
-    
+public:
     void reload(Ref* obj);
 public:
     CREATE_FUNC(BuyLifeLayer);

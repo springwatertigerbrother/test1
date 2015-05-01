@@ -51,7 +51,7 @@ void menuBePressed(Ref* pSender);
 void startAnimationDisplay(Ref* pSender);
     void musicControl(Ref* pSender);
     void buyDiamond(void* sender);
-    
+    void back(void* sender);
 //    void removeSelf(Node* pNode);
 };
 #endif /* defined(__changeableball__DataUpdateLayer__) */
