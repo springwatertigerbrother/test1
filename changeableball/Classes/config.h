@@ -62,6 +62,7 @@
 #define RIVIVE_COSUMED_DIAMOND 300
 #define BOMB_COSUMED_DIAMOND   200
 #define PULSE_COSUMED_DIAMOND  600
+#define SUPER_COSUMED_DIAMOND  2000
 #define ADD_DIAMOND_N           10
 
 #define GAME_RULE_CHINISE "  游戏规则:\n     1,按住屏幕不放滑动手指，有连续三个以上相同元素便可以消除，且最后一个元素在当前值下加1后进化成相应元素，消除3个加1，消除4个加2，依此类推，最大进化为5；\n\n\积分方式：\n    1，E=mc², m为一次所消除的元素的个数，c为元素对应的值；\n    2，次元值是是根据生命光波的跃迁来计算的，公式为：(value = 12 + (nScore - 4096)/2048)\n \n       小伙伴们，像电子一样跃迁吧 \n \n      "
@@ -85,6 +86,7 @@ typedef enum{
     none = 0,
     bomb = 1,
     wave = 2,
+    supertoolTag = 3
 }TOOL_TAG;
 
 static const char s_stars1[]              = "Images/stars.png";

@@ -227,6 +227,10 @@
 		FE512D5B1ACFE33400B7232F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE512D5A1ACFE33400B7232F /* GameKit.framework */; };
 		FE6AB8931AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
 		FE6AB8941AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
+		FE6AB8991AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FE6AB89A1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FE6AB89B1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FE6AB89C1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
 		FE74594D1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
 		FE74594E1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
 		FE74594F1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
@@ -1051,6 +1055,8 @@
 		FE512D5A1ACFE33400B7232F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = buyDiamond.cpp; path = ../Classes/buyDiamond.cpp; sourceTree = "<group>"; };
 		FE6AB8921AF28E6A00FA1818 /* buyDiamond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buyDiamond.h; path = ../Classes/buyDiamond.h; sourceTree = "<group>"; };
+		FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AlertLayer.cpp; path = ../Classes/AlertLayer.cpp; sourceTree = "<group>"; };
+		FE6AB8981AF2A03000FA1818 /* AlertLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertLayer.h; path = ../Classes/AlertLayer.h; sourceTree = "<group>"; };
 		FE74594B1ADA774F00D625AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FE74594C1ADA774F00D625AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		FE7FF2951AA06FE6009C8339 /* MUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MUtils.cpp; path = ../Classes/MUtils.cpp; sourceTree = "<group>"; };
@@ -1894,6 +1900,8 @@
 				FE348B3E1AAB4F6A00391F6E /* BuyLifeLayer.h */,
 				FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */,
 				FE6AB8921AF28E6A00FA1818 /* buyDiamond.h */,
+				FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */,
+				FE6AB8981AF2A03000FA1818 /* AlertLayer.h */,
 				FE9A95921A9B5C2000D5C192 /* GameOverLayer.h */,
 				FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */,
 				FE7FF2951AA06FE6009C8339 /* MUtils.cpp */,
@@ -3093,6 +3101,7 @@
 			files = (
 				FE9A95941A9B5C2000D5C192 /* GameOverLayer.mm in Sources */,
 				FED298681AC1115000C89B6F /* readme.md in Sources */,
+				FE6AB8991AF2A03000FA1818 /* AlertLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				FE438D7E19F48F0300D9C636 /* BallSprite.cpp in Sources */,
 				FE348B3F1AAB4F6A00391F6E /* BuyLifeLayer.cpp in Sources */,
@@ -3145,6 +3154,7 @@
 				FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */,
 				FED28B031AC00FBA00C89B6F /* IOSiAP.mm in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				FE6AB89A1AF2A03000FA1818 /* AlertLayer.cpp in Sources */,
 				FED298691AC1115000C89B6F /* readme.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3211,6 +3221,7 @@
 				FE9A392A1AD3C9C70066BE03 /* readme.md in Sources */,
 				FE9A392B1AD3C9C70066BE03 /* AppController.mm in Sources */,
 				FE9A392C1AD3C9C70066BE03 /* BallSprite.cpp in Sources */,
+				FE6AB89C1AF2A03000FA1818 /* AlertLayer.cpp in Sources */,
 				FE9A392D1AD3C9C70066BE03 /* BuyLifeLayer.cpp in Sources */,
 				FE9A392E1AD3C9C70066BE03 /* ControllerLayer.cpp in Sources */,
 				FEF8F4ED1AD7651600C0CAC3 /* CDataScanner.m in Sources */,
@@ -3261,6 +3272,7 @@
 			files = (
 				FEA72B761AAEE090009226A1 /* GameOverLayer.mm in Sources */,
 				FED2986A1AC1115000C89B6F /* readme.md in Sources */,
+				FE6AB89B1AF2A03000FA1818 /* AlertLayer.cpp in Sources */,
 				FEA72B771AAEE090009226A1 /* AppController.mm in Sources */,
 				FEA72B781AAEE090009226A1 /* BallSprite.cpp in Sources */,
 				FEA72B791AAEE090009226A1 /* BuyLifeLayer.cpp in Sources */,
@@ -4530,8 +4542,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4636,7 +4648,7 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "acdb001f-df3d-4678-ad32-34e1de0e881a";
+				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4647,8 +4659,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4751,7 +4763,7 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "acdb001f-df3d-4678-ad32-34e1de0e881a";
+				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
