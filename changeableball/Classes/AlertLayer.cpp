@@ -207,7 +207,7 @@ void AlertLayer::CallBuyLife(void* sender)
     }
     removeFromParentAndCleanup(true);
     NotificationCenter::getInstance()->postNotification(USE_SUPER_TOOL);
-
+ 
     //
     //    EventCustom event(BUY_LIFE_LIQUID);
     //    _eventDispatcher->dispatchEvent(&event);
