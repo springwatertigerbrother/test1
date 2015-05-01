@@ -5,7 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
+<<<<<<< HEAD
 	<string>n 次元</string>
+=======
+	<string>n次元</string>
+>>>>>>> e1f6043... ADD particle effect and complete change to 5
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>

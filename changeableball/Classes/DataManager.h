@@ -114,7 +114,7 @@ public:
     void superTool(CCPoint local);
     int m_selectedTool;
     void useTool(CCPoint local);
-    
+    void useSuperTool(Ref* obj);
     
     CCSprite* m_pBg;
     CCSprite* m_pGood;
@@ -131,9 +131,10 @@ public:
 
     void waveChangeType(Node* pNode);
     void waveParticles(Node* pNode);
+    void changeAllElements(Node* pNode);
     void consumeDiamond(int nDiamond);
     void removeSelf(Node* pNode);
-
+    void removeSuperEffect(Node* pNode);
 };
 
 #endif /* defined(__changeableball__DataManager__) */
