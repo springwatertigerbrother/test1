@@ -158,7 +158,7 @@ void BuyLifeLayer::onEnter()
     {
         case cocos2d::LanguageType::CHINESE:
         {
-            xiaohuoban = "小伙伴使用%d钻石复活吧,这样你的战斗力会继续增加 ^O^";
+            xiaohuoban = "小伙伴使用%d钻石复活吧,这样你的战斗力不会清零，而会继续增加，战斗力越高，每次消除所增加的钻石越多; ";
             shoping = "正在去往商店。。。";
         }
             break;

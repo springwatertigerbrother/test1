@@ -251,7 +251,7 @@ void BallGameScene::onEnter()
         case cocos2d::LanguageType::CHINESE:
             yourworld = "您的世界已进入";
             nciyuan = "%d 次元";
-            bicicle = "人生如同骑单车，要想保持平衡就必须前行";
+            bicicle = "人生如同骑单车，要想保持平衡就必须前行要想保持平衡就必须前行";
             shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
             break;
         case cocos2d::LanguageType::ENGLISH:

@@ -15,6 +15,8 @@
 #include "BuyLifeLayer.h"
 #include "MUtils.h"
 #include "DataBase64.h"
+#include "AlertLayer.h"
+
 static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
 }
@@ -229,14 +231,18 @@ bool DataManager::init()
 //    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pMoon);
     
+    MenuItemFont::setFontSize(30);
+    auto superTool =  MenuItemFont::create("superTool", CC_CALLBACK_1(DataManager::selectedTool, this));
+    superTool->setTag(supertoolTag);
+    
     MenuItemImage* pItem1 = MenuItemImage::create("Images/bombbtn.png", "Images/bombbtn.png", CC_CALLBACK_1(DataManager::selectedTool, this)) ;
-    pItem1 ->setTag(bomb);
+    pItem1 ->setTag(supertoolTag);
     pItem1->setScale(CC_CONTENT_SCALE_FACTOR());
     MenuItemImage* pItem2 = MenuItemImage::create("Images/mushroom.png", "Images/mushroom.png", CC_CALLBACK_1(DataManager::selectedTool,this)) ;
     pItem2->setTag(wave);
     pItem2->setScale(CC_CONTENT_SCALE_FACTOR());
 
-    Menu* pMenu = Menu::create(pItem1,pItem2, NULL);
+    Menu* pMenu = Menu::create(superTool,pItem1,pItem2, NULL);
     pMenu->alignItemsHorizontallyWithPadding(1);
 //    pMenu->setAnchorPoint(ccp(0,0.5));
     //    pItem1->setFontSize(30);
@@ -244,7 +250,17 @@ bool DataManager::init()
     
     pMenu->setPosition(ccp(s.width/2  + 180, s.height - 250));
     addChild(pMenu);
-                       
+    
+
+//    auto menu = Menu::create(
+//                             MenuItemFont::create("Left", CC_CALLBACK_1(LabelTTFTest::setAlignmentLeft, this)),
+//                             MenuItemFont::create("Center", CC_CALLBACK_1(LabelTTFTest::setAlignmentCenter, this)),
+//                             MenuItemFont::create("Right", CC_CALLBACK_1(LabelTTFTest::setAlignmentRight, this)),
+//                             NULL);
+//    menu->alignItemsVerticallyWithPadding(4);
+//    menu->setPosition(Vec2(50, s.height / 2 - 20));
+//    this->addChild(menu);
+    
     initElements();
 
 //    if (mCoreLayer)
@@ -1170,11 +1186,22 @@ void DataManager::selectedTool(void* sender)
             consumeDiamond = PULSE_COSUMED_DIAMOND;
         }
             break;
-            
+        case supertoolTag:
+        {
+            consumeDiamond = SUPER_COSUMED_DIAMOND;
+        }
+            break;
+
         default:
             break;
     }
 
+    if (consumeDiamond == SUPER_COSUMED_DIAMOND)
+    {
+        auto alert = AlertLayer::create();
+        addChild(alert);
+        return;
+    }
     if (!checkDiamondWithConsume(consumeDiamond, this))
     {
         return;
@@ -1257,6 +1284,11 @@ void DataManager::useTool(CCPoint local)
             consumeDiamond(PULSE_COSUMED_DIAMOND);
             CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/pulse.mp3");
 
+        }
+            break;
+        case supertoolTag:
+        {
+            superTool(local);
         }
             break;
             
