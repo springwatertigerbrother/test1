@@ -43,6 +43,13 @@ void IOSiAP_Bridge:: requestProducts(int id)
     product.push_back("com.skyter.ndimpaid.ndp6b");
     product.push_back("com.skyter.ndimpaid.ndp18");
     product.push_back("com.skyter.ndimpaid.ndp68");
+<<<<<<< HEAD
+=======
+    
+//    product.push_back("com.skyter.ndimpaidEN.ndp6");
+//    product.push_back("com.skyter.ndimpaidEN.ndp18");
+//    product.push_back("com.skyter.ndimpaidEN.ndp68");
+>>>>>>> 8c4a638... buy crash and circle selected
 //    product.push_back("com.skyter.ndimpaid.ndp6");
 	//把需要付费的道具的所有product id都放到容器里面传进去
     iap->requestProducts(product);
@@ -94,7 +101,7 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
                 int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
 
 //                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-                lifeLiquid += 100;
+                lifeLiquid += 1000;
                 setIntegerForKey("LIFE_LIQUID",lifeLiquid);
 
 //                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
@@ -106,7 +113,7 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
                 int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
 
 //                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-                lifeLiquid += 500;
+                lifeLiquid += 5000;
                 setIntegerForKey("LIFE_LIQUID",lifeLiquid);
 //                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);
                 UserDefault::getInstance()->flush();
@@ -117,7 +124,7 @@ void IOSiAP_Bridge::onPaymentEvent(std::string &identifier, IOSiAPPaymentEvent e
                 int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
 
 //                int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-                lifeLiquid += 2000;
+                lifeLiquid += 20000;
                 setIntegerForKey("LIFE_LIQUID",lifeLiquid);
 
 //                UserDefault::getInstance()->setIntegerForKey("LIFE_LIQUID",lifeLiquid);

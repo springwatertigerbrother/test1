@@ -16,7 +16,7 @@
 #include "MUtils.h"
 #include "DataBase64.h"
 #include "AlertLayer.h"
-
+#include "ballGamescene.h"
 static inline int calcIndex(int x,int y){
     return TOTALX * y + x;
 }
@@ -338,6 +338,8 @@ bool DataManager::init()
     std::string clearaway;
     std::string clearaway2;
     std::string helpStr;
+    std::string backStr;
+
     clearaway = "click ?? top of screen to clear away words";
     clearaway2 = "click ?? ";
     helpStr = GAME_RULE_CHINISE;
@@ -349,6 +351,8 @@ bool DataManager::init()
             clearaway = "点击右上方的 “??” 使文字消失或出现";
             clearaway2 = "点击 ?? ";
             helpStr = GAME_RULE_CHINISE;
+            backStr = "返回";
+
         }
             break;
         case cocos2d::LanguageType::ENGLISH:
@@ -356,6 +360,8 @@ bool DataManager::init()
             clearaway = "click ?? right top of screen to clear away words";
             clearaway2 = "click ?? ";
             helpStr = GAME_RULE_ENGLISH;
+            backStr = "back";
+
         }
             break;
         default:
@@ -420,15 +426,21 @@ bool DataManager::init()
     
     m_helpLayer-> addChild(m_pLabelHelp,10000);
     m_helpLayer->setVisible(false);
+
     
     auto helpItem= MenuItemFont::create("??", CC_CALLBACK_1(DataManager::help, this));
     helpItem->setFontSize(200);
     helpItem->setScale(2);
-    CCMenu *menu = CCMenu::create(helpItem, NULL);
+    MenuItemFont::setFontName("American Typewriter");
+    MenuItemFont::setFontSize(40);
+    auto itemback = MenuItemFont::create(backStr.c_str(), CC_CALLBACK_1(DataManager::back, this));
+    itemback->setScale(1);
     
-    menu->alignItemsVerticallyWithPadding(10);
+    CCMenu *menu = CCMenu::create(itemback,helpItem, NULL);
     
-    menu->setPosition(ccp(s.width/2 + 150,s.height-50));
+    menu->alignItemsHorizontallyWithPadding(20);
+    
+    menu->setPosition(ccp(s.width/2 + 150,s.height-30));
     this-> addChild(menu);
 
     CCSize size = Director::getInstance()->getWinSize();
@@ -555,7 +567,7 @@ void DataManager:: touchMove(CCPoint local)
             return;
         }
 
-        if (m_objectHasContina && containObject(ds,m_stackArray))
+        if (containObject(ds,m_stackArray))
         {
             return;
         }
@@ -1555,7 +1567,7 @@ void DataManager::useSuperTool(Ref* obj)
         labelLife->setDimensions(CCSize(500,0));
         //        labelLife->setVisible(false);
         addChild(labelLife,11);
-        labelLife->runAction(Sequence::create(DelayTime::create(2), FadeOut::create(3), NULL));
+        labelLife->runAction(Sequence::create(DelayTime::create(5), FadeOut::create(3), NULL));
         //        CallFunc* call = [](){};
         "生命药水不够，请购买";
     }
@@ -1566,4 +1578,12 @@ void DataManager::removeSuperEffect(Node* pNode)
 {
     super_emitter->removeFromParentAndCleanup(true);
 }
+<<<<<<< HEAD
 >>>>>>> e1f6043... ADD particle effect and complete change to 5
+=======
+void DataManager::back(void* sender)
+{
+    auto scene = BallGameScene::scene();
+    Director::getInstance()->replaceScene(scene);
+}
+>>>>>>> 8c4a638... buy crash and circle selected

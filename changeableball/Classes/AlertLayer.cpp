@@ -163,13 +163,13 @@ void AlertLayer::onEnter()
     {
         case cocos2d::LanguageType::CHINESE:
         {
-            xiaohuoban = "亲爱的，使用超级道具消耗1000钻石，不过只有十分之一的机会才能成功使用哦！请谨慎使用,它可以使全部的元素都变成 5。请选择确定使用或关闭退出。";
+            xiaohuoban = "亲爱的，使用超级道具消耗%d钻石，不过只有十分之一的机会才能成功使用哦！请谨慎使用,它可以使全部的元素都变成 5。请选择确定使用或关闭退出。";
             shoping = "正在去往商店。。。";
         }
             break;
         case cocos2d::LanguageType::ENGLISH:
         {
-            xiaohuoban = "Dear you can relive by %d diamonds";
+            xiaohuoban = "Dear, supertool will spend your %d diamond, but you only have 1/10 chance to get it succcessful! please be careful,It can make all elements change to 5.";
             shoping = "shopping";
         }
             break;
@@ -177,7 +177,7 @@ void AlertLayer::onEnter()
             break;
     }
     
-    sprintf(tempStr,xiaohuoban.c_str(), RIVIVE_COSUMED_DIAMOND);
+    sprintf(tempStr,xiaohuoban.c_str(), SUPER_COSUMED_DIAMOND);
     pConsumedDiamond->setString(tempStr);
     pConsumedDiamond->setDimensions(CCSize(500,0));
     addChild(pConsumedDiamond);
@@ -191,11 +191,11 @@ void AlertLayer::onEnter()
     //    m_shopMenu->setPosition(ccp(size.width/2,2* (m_iap6->getContentSize().height + padding)));
     //    this-> addChild(m_shopMenu);
     
-    pLabelUpload = CCLabelTTF::create(shoping,"ArialRoundedMTBold",50);
-    pLabelUpload->setAnchorPoint(ccp(0.5,1));
-    pLabelUpload->setPosition(ccp(size.width*0.5,size.height*0.5));
-    pLabelUpload->setVisible(false);
-    addChild(pLabelUpload);
+//    pLabelUpload = CCLabelTTF::create(shoping,"ArialRoundedMTBold",50);
+//    pLabelUpload->setAnchorPoint(ccp(0.5,1));
+//    pLabelUpload->setPosition(ccp(size.width*0.5,size.height*0.5));
+//    pLabelUpload->setVisible(false);
+//    addChild(pLabelUpload);
     
 }
 void AlertLayer::CallBuyLife(void* sender)

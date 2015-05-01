@@ -53,7 +53,7 @@
 #define DISPLAY_BUY_DIAMOND "display_buy_diamond"
 #define USE_SUPER_TOOL "use_super_tool"
 
-#define DONATE_DIAMOND  3000
+#define DONATE_DIAMOND  30000
 //#define kLeaderboardID @"ndimpaid_Leaderboard"
 #define kLeaderboardID @"ndimpaid_Leaderboard_en"
 

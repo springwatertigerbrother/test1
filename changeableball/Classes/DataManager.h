@@ -135,6 +135,8 @@ public:
     void consumeDiamond(int nDiamond);
     void removeSelf(Node* pNode);
     void removeSuperEffect(Node* pNode);
+    void back(void* sender);
+
 };
 
 #endif /* defined(__changeableball__DataManager__) */

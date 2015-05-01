@@ -45,9 +45,9 @@ void buyDiamond::reload(Ref* obj)
 {
     int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
     //    int lifeLiquid = UserDefault::getInstance()->getIntegerForKey("LIFE_LIQUID");
-    char tempStr[10];
-    sprintf(tempStr,"%d", lifeLiquid);
-    m_labelDiamond->setString(tempStr);
+//    char tempStr[10];
+//    sprintf(tempStr,"%d", lifeLiquid);
+//    m_labelDiamond->setString(tempStr);
     
     m_shopMenu->setEnabled(true);
     pLabelUpload->setVisible(false);
@@ -58,7 +58,7 @@ void buyDiamond::onEnter()
     
     CCLayer::onEnter();
     
-//    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(buyDiamond::reload), REFESH_BUYLIFE_UI, NULL);
+    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(buyDiamond::reload), REFESH_BUYLIFE_UI, NULL);
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     
     //    m_BuyItem = CCMenuItemImage::create("Images/startStandard.png","Images/startStandard.png", CC_CALLBACK_1(buyDiamond::CallBuyLife,this));
