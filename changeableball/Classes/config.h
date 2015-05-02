@@ -24,7 +24,7 @@
 #define DRAWSPRITE_WIDTH 24.0
 #define DRAWSPRITE_HEIGH 24.0
 
-#define AddHeigh 90
+#define AddHeigh 40
 #define addWidth 35
 
 #define TOTAL_TYPE 5
