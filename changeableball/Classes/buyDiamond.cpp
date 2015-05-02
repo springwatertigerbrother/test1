@@ -164,7 +164,7 @@ void buyDiamond::onEnter()
             break;
         case cocos2d::LanguageType::ENGLISH:
         {
-            xiaohuoban = "Dear you can relive by %d diamonds";
+            xiaohuoban = "Dear you can relive by %d diamonds. supertool make all elements to 5";
             shoping = "shopping";
         }
             break;

@@ -1267,6 +1267,7 @@ void DataManager::selectedTool(void* sender)
     if (consumeDiamond == SUPER_COSUMED_DIAMOND)
     {
         auto alert = AlertLayer::create();
+        alert->setPosition(ccp(0,-200));
         addChild(alert);
         return;
     }

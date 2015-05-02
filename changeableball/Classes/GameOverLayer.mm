@@ -252,7 +252,7 @@ bool GameOverLayer::init()
     
     CCLabelTTF* pshareBunus = CCLabelTTF::create(shareDiscription.c_str(), "ArialRoundedMTBold",20);
     pshareBunus->setAnchorPoint(ccp(0,0.5));
-    pshareBunus->setPosition(ccp(20,230));
+    pshareBunus->setPosition(ccp(20,240));
 //    pshareBunus->setColor(ccc3Red);
     addChild(pshareBunus);
     pshareBunus->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),DelayTime::create(1), CCScaleTo::create(0.3f, 1.0f),NULL)));
