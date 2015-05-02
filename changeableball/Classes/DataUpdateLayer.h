@@ -26,6 +26,7 @@ class UpStateLayer :public cocos2d::CCLayerColor {
     CCLabelTTF* m_labelCurrentScoreValue;
     CCLabelTTF* m_labelCountDown;
     CCLabelTTF * m_labelDiamond;
+    CCLabelTTF * m_labelLevel;
     
     void reload(Ref* obj);
 

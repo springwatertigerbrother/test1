@@ -68,6 +68,13 @@ bool UpStateLayer::init()
             m_labelCurrentScoreTitle = CCLabelTTF::create("当前能量：","ArialRoundedMTBold",30);
             m_labelCurrentScoreValue = CCLabelTTF::create("0","ArialRoundedMTBold",30);
             m_labelCountDown = CCLabelTTF::create("300","ArialRoundedMTBold",50);
+           
+            m_labelLevel = CCLabelTTF::create("level: 1","ArialRoundedMTBold",50);
+            m_labelLevel->setPosition(ccp(s.width/2,-70));
+            int currentValue = getIntegerForKey("level");
+            String* scoreStr = String::createWithFormat("level: %d",currentValue);
+            m_labelLevel->setString(scoreStr->getCString());
+            addChild(m_labelLevel);
             
             std::string nicyuantitleStr;
             std::string totalScoreTitleStr;
@@ -324,10 +331,32 @@ void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
 {
 //    m_labelScore->runAction(CCSequence::create(DelayTime::create(1.5f), CCScaleTo::create(0.3f, 2.0f), CCScaleTo::create(0.3f, 1.0f),NULL));
     
+    
+    
+    unsigned long nTotalScore = strtoul((getStringForKey("TOTALSCORE")).c_str(), nullptr, 10);
+    int nOldValue = calculate_score(nTotalScore,0);
+    int nCurrentValue = calculate_score(nValue,0);
+    
+    
+//    int currentValue = (unsigned int)(log(string->uintValue())/log(2));
+    
+    if (nCurrentValue > nOldValue)
+    {
+        int level = getIntegerForKey("level");
+        level++;
+        String* levelStr = String::createWithFormat("level: %d",level);
+        m_labelLevel->setString(levelStr->getCString());
+        auto action1 = ScaleTo::create(1, 1.5);
+        auto action2 = ScaleTo::create(0.5, 1);
+        m_labelLevel->runAction(Sequence::create(action1,action2, NULL));
+        setIntegerForKey("level",level);
+    }
+
+    
     String* scoreStr = String::createWithFormat("%d",nValue);
     m_labelScore->setString(scoreStr->getCString());
 
-    String* temStr = String::createWithFormat("%d",(unsigned int)(log2(nValue)));
+    String* temStr = String::createWithFormat("%d",(unsigned int)(log(nValue)/log(2)));
     m_labelNValue->setString(temStr->getCString());
     
     auto rotation = RotateBy::create(0.1, 30);
@@ -336,7 +365,10 @@ void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
     m_pAiyinsitan->runAction(CCRepeat::create(aiyinsitanswing,2));
 
     
-
+    auto num = nValue;
+    char str[100];
+    sprintf(str, " %lu" , num);
+    setStringForKey("TOTALSCORE", str);
 }
 void UpStateLayer::resetCurrentScoreWithIntValue(unsigned long int nValue)
 {
