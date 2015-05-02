@@ -150,7 +150,7 @@ void AlertLayer::onEnter()
     //    m_labelDiamond->setString(tempStr);
     //    addChild(m_labelDiamond);
     
-    CCLabelTTF* pConsumedDiamond = CCLabelTTF::create("30","ArialRoundedMTBold",20);
+    LabelTTF* pConsumedDiamond = LabelTTF::create("30","ArialRoundedMTBold",20);
     pConsumedDiamond->setAnchorPoint(ccp(0.5,1));
     pConsumedDiamond->setPosition(ccp(size.width*0.5,size.height/2+200));
     
@@ -169,7 +169,7 @@ void AlertLayer::onEnter()
             break;
         case cocos2d::LanguageType::ENGLISH:
         {
-            xiaohuoban = "Dear, supertool will spend your %d diamond, but you only have 1/10 chance to get it succcessful! please be careful,It can make all elements change to 5.";
+            xiaohuoban = "supertool will spend %d diamond, only have 1/10 chance to get it succcessful!make all elements to 5.";
             shoping = "shopping";
         }
             break;
