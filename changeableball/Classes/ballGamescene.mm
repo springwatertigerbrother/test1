@@ -179,6 +179,7 @@ void BallGameScene::onEnter()
     std::string nciyuan;
     std::string bicicle;
     std::string shareStr;
+    std::string shareDiscription;
     yourworld = "your world is";
     nciyuan = "%d dimension";
     bicicle = "Life is like riding a bicycle.To keep your balance you must keep moving";
@@ -192,12 +193,16 @@ void BallGameScene::onEnter()
             nciyuan = "%d 次元";
             bicicle = "人生如同骑单车，要想保持平衡就必须前行要想保持平衡就必须前行";
             shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，小伙伴你呢？？？";
+            shareDiscription = "炫耀奖励钻石1000";
+
             break;
         case cocos2d::LanguageType::ENGLISH:
             yourworld = "your world is";
             nciyuan = "%d dimension";
             bicicle = "Life is like riding a bicycle.To keep your balance you must keep moving";
             shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+            shareDiscription = "flaunt to get 1000 diamonds";
+
             break;
         default:
             break;
@@ -244,6 +249,13 @@ void BallGameScene::onEnter()
     
     auto scaleAction = ScaleBy::create(2, 1.5);
     labelLife->runAction(RepeatForever::create(Sequence::create(scaleAction,scaleAction->reverse(), nil)));
+    
+    CCLabelTTF* pshareBunus = CCLabelTTF::create(shareDiscription.c_str(), "ArialRoundedMTBold",20);
+    pshareBunus->setAnchorPoint(ccp(0,0.5));
+    pshareBunus->setPosition(ccp(20,100));
+    //    pshareBunus->setColor(ccc3Red);
+    addChild(pshareBunus);
+    pshareBunus->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),DelayTime::create(1), CCScaleTo::create(0.3f, 1.0f),NULL)));
     
     [[ NCSGameCenter sharedGameCenter] reportScore:nTotalScore forCategory:kLeaderboardID];
 
@@ -344,6 +356,34 @@ void BallGameScene:: share(void* sender)
             break;
         default:
             break;
+    }
+    
+    int lastTime  = getIntegerForKey("LAST_TIME");
+    
+    time_t nowtime;
+    struct tm *timeinfo;
+    time( &nowtime );
+    timeinfo = localtime( &nowtime );
+    int year, month, day;
+    year = timeinfo->tm_year + 1900;
+    month = timeinfo->tm_mon + 1;
+    day = timeinfo->tm_mday;
+    
+    if (day != lastTime)
+    {
+        setIntegerForKey("LAST_TIME",day);
+        int sharetimes = getIntegerForKey("SHARE_TIMES");
+        
+        if (sharetimes<5)
+        {
+            sharetimes++;
+            setIntegerForKey("SHARE_TIMES",sharetimes);
+            
+            int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+            
+            lifeLiquid += 1000;
+            setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+        }
     }
     
     std::string outputFile = "";

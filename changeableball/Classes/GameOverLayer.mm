@@ -94,6 +94,7 @@ bool GameOverLayer::init()
     std::string totalScoreTitleStr;
     std::string sigleMost;
     std::string sigleState;
+    std::string shareDiscription;
     LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
     if (currentLanguageType == cocos2d::LanguageType::CHINESE)
     {
@@ -102,6 +103,7 @@ bool GameOverLayer::init()
         totalScoreTitleStr = "总能量：";
         sigleMost = "单次最高能量";
         sigleState ="最佳战斗力";
+        shareDiscription = "炫耀奖励钻石1000";
     }
     else
     {
@@ -110,7 +112,7 @@ bool GameOverLayer::init()
         totalScoreTitleStr = "total energy";
         sigleMost = "peak energy";
         sigleState ="most power";
-
+        shareDiscription = "flaunt to get 1000 diamonds";
     }
     
     CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/good.mp3");
@@ -248,7 +250,7 @@ bool GameOverLayer::init()
 //    [simple.bannerView setHidden:false];
     
     
-    CCLabelTTF* pshareBunus = CCLabelTTF::create("每天炫耀奖励钻石1000", "ArialRoundedMTBold",20);
+    CCLabelTTF* pshareBunus = CCLabelTTF::create(shareDiscription.c_str(), "ArialRoundedMTBold",20);
     pshareBunus->setAnchorPoint(ccp(0,0.5));
     pshareBunus->setPosition(ccp(20,230));
 //    pshareBunus->setColor(ccc3Red);
