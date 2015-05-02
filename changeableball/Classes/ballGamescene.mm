@@ -294,6 +294,15 @@ void BallGameScene::onEnter()
     labelLife->setDimensions(CCSize(400,0));
     //        labelLife->setVisible(false);
     addChild(labelLife,11);
+    
+    CCLabelTTF* labelInfo  = CCLabelTTF::create("Developer: Huge.Zhao  Jingsong.Liu","ArialRoundedMTBold",15);
+    labelInfo->setAnchorPoint(ccp(0, 0.5));
+    labelInfo->setColor(ccRED);
+    labelInfo->setPosition(ccp(size.width/2 - 150,50));
+    labelInfo->setDimensions(CCSize(400,0));
+    //        labelLife->setVisible(false);
+    addChild(labelInfo,11);
+    
     auto scaleAction = ScaleBy::create(2, 1.5);
     labelLife->runAction(RepeatForever::create(Sequence::create(scaleAction,scaleAction->reverse(), nil)));
     

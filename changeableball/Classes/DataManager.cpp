@@ -1515,12 +1515,12 @@ void DataManager::useSuperTool(Ref* obj)
         {
             case cocos2d::LanguageType::CHINESE:
             {
-                enoughDiamond = "运气不佳，没有成功获取道具，下次再来！";
+                enoughDiamond = "运气不佳，没有成功获取道具，再试试手气！";
             }
                 break;
             case cocos2d::LanguageType::ENGLISH:
             {
-                enoughDiamond = "sorry,you can not get the tool,next time";
+                enoughDiamond = "sorry,you can not get the tool,try again";
             }
                 break;
             default:
