@@ -45,7 +45,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
      NSLog(@"失败  %@",error);
      }
      }];
+#if FREE_VERSION
+    MOBCLICKCPP_START_WITH_APPKEY_AND_CHANNEL("5523e234fd98c579c800038b", "你的渠道111111id");
+
+#else
     MOBCLICKCPP_START_WITH_APPKEY_AND_CHANNEL("55121768fd98c588b0000a3e", "你的渠道111111id");
+
+#endif
+
     //或者MOBCLICKCPP_START_WITH_APPKEY("你的appkey");
     
     // initialize director
