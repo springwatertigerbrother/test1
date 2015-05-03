@@ -159,6 +159,36 @@
             endingLineNumber = "56"
             landmarkName = "IOSiAP_Bridge::onRequestProductsFinish(void)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IOSiAP_Bridge::onRequestProductsFinish()"
+                  moduleName = "changeableball iOS free copy"
+                  urlString = "file:///Users/zhao/game/baoll3.2Version/changeableball/iap/IOSiAP_Bridge.cpp"
+                  timestampString = "452339125.425884"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "342">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_GLOBAL__I_a"
+                  moduleName = "changeableball iOS free copy"
+                  urlString = "file:///Users/zhao/game/baoll3.2Version/changeableball/iap/IOSiAP_Bridge.cpp"
+                  timestampString = "452339125.426086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
