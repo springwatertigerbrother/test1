@@ -273,11 +273,11 @@ bool DataManager::init()
     pMenu->setPosition(ccp(s.width/2  + 180, s.height - 250));
     addChild(pMenu);
     
-    auto particle2 = ParticleSystemQuad::create("Particles/huoyan.plist");
-    particle2->setPosition(ccp(s.width/2  + 100, s.height - 250));
-    //    //    _emitter = ParticleExplosion::create();
-    particle2->retain();
-        addChild(particle2, 1000);
+//    auto particle2 = ParticleSystemQuad::create("Particles/huoyan.plist");
+//    particle2->setPosition(ccp(s.width/2  + 100, s.height - 250));
+//    //    //    _emitter = ParticleExplosion::create();
+//    particle2->retain();
+//        addChild(particle2, 1000);
     
 
 //    auto menu = Menu::create(
@@ -387,11 +387,8 @@ bool DataManager::init()
 
     CCLabelTTF* pLabelHelpCancel = CCLabelTTF::create();
     //    m_pTotalScoreLabel->setString(scoreStr);
-<<<<<<< HEAD
-    pLabelHelpCancel->setPosition(ccp(s.width/2+100, s.height-50));
-=======
+
     pLabelHelpCancel->setPosition(ccp(s.width/2+50, s.height-50));
->>>>>>> 3e71852... local language
     pLabelHelpCancel->setVisible(true);
     pLabelHelpCancel->setColor(ccRED);
     //    m_pLabelHelp->setScale(2);
@@ -758,10 +755,7 @@ void DataManager:: touchEnd(CCPoint local)
     {
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/youbang.wav");
         CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("Sounds/xibanya.mp3");
-<<<<<<< HEAD
-=======
-        
->>>>>>> b281c4a... add matador music
+
     }
 
     m_stackArray.clear();
@@ -1266,9 +1260,9 @@ void DataManager::selectedTool(void* sender)
 
     if (consumeDiamond == SUPER_COSUMED_DIAMOND)
     {
-        auto alert = AlertLayer::create();
-        alert->setPosition(ccp(0,-200));
-        addChild(alert);
+//        auto alert = AlertLayer::create();
+//        alert->setPosition(ccp(0,-200));
+//        addChild(alert);
         return;
     }
     if (!checkDiamondWithConsume(consumeDiamond, this))
@@ -1456,19 +1450,19 @@ void DataManager::waveChangeType(Node* pNode)
 }
     void DataManager::waveParticles(Node* pNode)
     {
-        case bomb:
-            usebomb(local);
-            break;
-            
-        case wave:
-            useWave(local);
-            break;
-            
-        default:
-            break;
-    }
-    m_selectedTool = none;
-}
+//        case bomb:
+//            usebomb(local);
+//            break;
+//            
+//        case wave:
+//            useWave(local);
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    m_selectedTool = none;
+
         
         BallSprite * ds = (BallSprite*)(pNode);
         
@@ -1484,11 +1478,11 @@ void DataManager::waveChangeType(Node* pNode)
         _emitter->setStartColor(calcColorWithType(ds->getType()-1));
         _emitter->setAutoRemoveOnFinish(true);
         }
+        
+        m_selectedTool = none;
+
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
 void DataManager::changeAllElements(Node* pNode)
 {
     int num = m_ballSpriteArray.size();
@@ -1501,7 +1495,6 @@ void DataManager::changeAllElements(Node* pNode)
         }
     }
 }
->>>>>>> e1f6043... ADD particle effect and complete change to 5
 void DataManager::consumeDiamond(int nDiamond)
 {
     int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
@@ -1518,9 +1511,7 @@ void DataManager::consumeDiamond(int nDiamond)
         setIntegerForKey("LIFE_LIQUID", lifeLiquid);
     }
 }
-<<<<<<< HEAD
->>>>>>> f844c02... tool use and consume diamond
-=======
+
 void DataManager::useSuperTool(Ref* obj)
 {
     consumeDiamond(SUPER_COSUMED_DIAMOND);
@@ -1579,12 +1570,9 @@ void DataManager::removeSuperEffect(Node* pNode)
 {
     super_emitter->removeFromParentAndCleanup(true);
 }
-<<<<<<< HEAD
->>>>>>> e1f6043... ADD particle effect and complete change to 5
-=======
+
 void DataManager::back(void* sender)
 {
     auto scene = BallGameScene::scene();
     Director::getInstance()->replaceScene(scene);
 }
->>>>>>> 8c4a638... buy crash and circle selected

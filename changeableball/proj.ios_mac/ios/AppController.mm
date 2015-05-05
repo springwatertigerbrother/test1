@@ -29,6 +29,7 @@
 #import "RootViewController.h"
 #include "IADSimple.h"
 #import "AdViewController.h"
+#include "UMessage.h"
 
 //@class GADBannerView;
 
@@ -122,10 +123,30 @@ static AppDelegate s_sharedApplication;
 //                            ];
 //    [self.bannerView loadRequest:request];
     
+    [UMessage startWithAppkey:@"55121768fd98c588b0000a3e" launchOptions:launchOptions];
+    
+    //register remoteNotification types
+    
+    //register remoteNotification types (iOS 8.0以下)
+    [UMessage registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge
+     |UIRemoteNotificationTypeSound
+     |UIRemoteNotificationTypeAlert];
+    [UMessage setLogEnabled:YES];
+
     return YES;
 }
 
-
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    [UMessage registerDeviceToken:deviceToken];
+    NSLog(@"%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                  stringByReplacingOccurrencesOfString: @">" withString: @""]
+                 stringByReplacingOccurrencesOfString: @" " withString: @""]);
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [UMessage didReceiveRemoteNotification:userInfo];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -44,14 +44,12 @@ public:
     void tick(float dt);
     void reload(Ref* obj);
     
-<<<<<<< HEAD
 //    BuyLifeLayer* buyLayer;
 
-=======
     BuyLifeLayer* buyLayer;
-    buyDiamond* m_buyDiamond;
+//    buyDiamond* m_buyDiamond;
     
->>>>>>> 923ad67... add buy diamond layer
+
 //    void registerWithTouchDispatcher();
 //    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
 //    virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);

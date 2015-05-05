@@ -96,6 +96,12 @@
 		FE512D561ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
 		FE512D571ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
 		FE512D581ACFE25C00B7232F /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
+		FE6AB8931AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
+		FE6AB8941AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
+		FE6AB8991AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FE6AB89A1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FE6AB89B1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FE6AB89C1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
 		FE7A7E711AD65C62009CE223 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7A7E701AD65C62009CE223 /* EventKitUI.framework */; };
 		FE7A7EA41AD6C0D1009CE223 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77617EB970100C73F5D /* Icon-120.png */; };
 		FE7A7EA51AD6C0D1009CE223 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1228081AD3EBF10075F4F6 /* Icon@2x.png */; };
@@ -224,23 +230,12 @@
 		FE7A7F741AD6C0D1009CE223 /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
 		FE7A7F751AD6C0D1009CE223 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		FE7A7F761AD6C0D1009CE223 /* libtiff_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D31AC2B35100C89B6F /* libtiff_arm64.a */; };
-		FE512D5B1ACFE33400B7232F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE512D5A1ACFE33400B7232F /* GameKit.framework */; };
-		FE6AB8931AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
-		FE6AB8941AF28E6A00FA1818 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
-		FE6AB8991AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
-		FE6AB89A1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
-		FE6AB89B1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
-		FE6AB89C1AF2A03000FA1818 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
-		FE74594D1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
-		FE74594E1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
-		FE74594F1ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
-		FE7459501ADA774F00D625AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594B1ADA774F00D625AA /* Icon.png */; };
-		FE7459511ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
-		FE7459521ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
-		FE7459531ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
-		FE7459541ADA774F00D625AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE74594C1ADA774F00D625AA /* Icon@2x.png */; };
 		FE7FF2971AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
 		FE7FF2981AA06FE6009C8339 /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
+		FE9725211AF750A900466D80 /* libUMessage_Sdk_1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9724E91AF750A900466D80 /* libUMessage_Sdk_1.1.0.a */; };
+		FE9725221AF750A900466D80 /* libUMessage_Sdk_1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9724E91AF750A900466D80 /* libUMessage_Sdk_1.1.0.a */; };
+		FE9725231AF750A900466D80 /* libUMessage_Sdk_1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9724E91AF750A900466D80 /* libUMessage_Sdk_1.1.0.a */; };
+		FE9725921AF7510C00466D80 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298791AC112AF00C89B6F /* libz.dylib */; };
 		FE977FF21AD3FA60004656BC /* IADSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FE977FF11AD3FA60004656BC /* IADSimple.m */; };
 		FE977FF31AD3FA60004656BC /* IADSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FE977FF11AD3FA60004656BC /* IADSimple.m */; };
 		FE977FF41AD3FA60004656BC /* IADSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FE977FF11AD3FA60004656BC /* IADSimple.m */; };
@@ -560,6 +555,10 @@
 		FED299F61AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
 		FED299F71AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
 		FED299F81AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
+		FEDC36C11AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C21AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C31AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDC36C41AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
 		FEF8F34D1AD7651000C0CAC3 /* AdViewAdapterAdChina.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */; };
 		FEF8F34E1AD7651000C0CAC3 /* AdViewAdapterAdChina.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		FEF8F34F1AD7651000C0CAC3 /* libAdChinaSDK3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F1421AD7650F00C0CAC3 /* libAdChinaSDK3.a */; };
@@ -717,14 +716,6 @@
 		FEF8F4FF1AD7651600C0CAC3 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F34B1AD7651000C0CAC3 /* CJSONSerializer.m */; };
 		FEF8F5001AD7651600C0CAC3 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F34B1AD7651000C0CAC3 /* CJSONSerializer.m */; };
 		FEF8F5021AD765EF00C0CAC3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F5011AD765EF00C0CAC3 /* GameKit.framework */; };
-		FEDC36C11AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
-		FEDC36C21AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
-		FEDC36C31AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
-		FEDC36C41AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
-		FEF172081AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
-		FEF172091AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
-		FEF1720A1AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
-		FEF1720B1AD508A4000A2C50 /* InfoPlist.strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEF1720D1AD508A4000A2C50 /* InfoPlist.strings.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1049,18 +1040,17 @@
 		FE438D7B19F48F0300D9C636 /* BallSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallSprite.h; sourceTree = "<group>"; };
 		FE512D551ACFE25C00B7232F /* NCSGameCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCSGameCenter.m; path = ../Classes/NCSGameCenter.m; sourceTree = "<group>"; };
 		FE512D591ACFE2AC00B7232F /* NCSGameCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCSGameCenter.h; path = ../Classes/NCSGameCenter.h; sourceTree = "<group>"; };
-		FE7A7E701AD65C62009CE223 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
-		FE7A7F7A1AD6C0D1009CE223 /* changeableball iOS free copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS free copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE7A7F7B1AD6C0D1009CE223 /* changeableball iOS free copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS free copy-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS free copy-Info.plist"; sourceTree = "<absolute>"; };
-		FE512D5A1ACFE33400B7232F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = buyDiamond.cpp; path = ../Classes/buyDiamond.cpp; sourceTree = "<group>"; };
 		FE6AB8921AF28E6A00FA1818 /* buyDiamond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buyDiamond.h; path = ../Classes/buyDiamond.h; sourceTree = "<group>"; };
 		FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AlertLayer.cpp; path = ../Classes/AlertLayer.cpp; sourceTree = "<group>"; };
 		FE6AB8981AF2A03000FA1818 /* AlertLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertLayer.h; path = ../Classes/AlertLayer.h; sourceTree = "<group>"; };
-		FE74594B1ADA774F00D625AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		FE74594C1ADA774F00D625AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		FE7A7E701AD65C62009CE223 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
+		FE7A7F7A1AD6C0D1009CE223 /* changeableball iOS free copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS free copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE7A7F7B1AD6C0D1009CE223 /* changeableball iOS free copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS free copy-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS free copy-Info.plist"; sourceTree = "<absolute>"; };
 		FE7FF2951AA06FE6009C8339 /* MUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MUtils.cpp; path = ../Classes/MUtils.cpp; sourceTree = "<group>"; };
 		FE7FF2961AA06FE6009C8339 /* MUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MUtils.h; path = ../Classes/MUtils.h; sourceTree = "<group>"; };
+		FE9724E91AF750A900466D80 /* libUMessage_Sdk_1.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.1.0.a; sourceTree = "<group>"; };
+		FE9724EA1AF750A900466D80 /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		FE977FF01AD3FA60004656BC /* IADSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADSimple.h; sourceTree = "<group>"; };
 		FE977FF11AD3FA60004656BC /* IADSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADSimple.m; sourceTree = "<group>"; };
 		FE977FF61AD3FBB4004656BC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/iAd.framework; sourceTree = DEVELOPER_DIR; };
@@ -1175,6 +1165,7 @@
 		FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsockets_arm64.a; sourceTree = "<group>"; };
 		FED299EE1AC2B56800C89B6F /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
 		FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCppWithLibCpp.a; sourceTree = "<group>"; };
+		FEDC36C01AE4F93B00BDE41A /* Particles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Particles; sourceTree = "<group>"; };
 		FEF8F1271AD7650F00C0CAC3 /* AdViewAdapterAdChina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewAdapterAdChina.h; sourceTree = "<group>"; };
 		FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewAdapterAdChina.m; sourceTree = "<group>"; };
 		FEF8F12A1AD7650F00C0CAC3 /* ACSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSingle.h; sourceTree = "<group>"; };
@@ -1347,10 +1338,6 @@
 		FEF8F34C1AD7651000C0CAC3 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		FEF8F5011AD765EF00C0CAC3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		FEF8F5031AD777E300C0CAC3 /* changeableball iOS free copy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "changeableball iOS free copy.entitlements"; sourceTree = "<group>"; };
-		FEDC36C01AE4F93B00BDE41A /* Particles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Particles; sourceTree = "<group>"; };
-		FEF1720E1AD508B4000A2C50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
-		FEF172101AD508D6000A2C50 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings.strings"; sourceTree = "<group>"; };
-		FEF172111AD51CF7000A2C50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1358,6 +1345,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9725921AF7510C00466D80 /* libz.dylib in Frameworks */,
 				FED298501AC1114E00C89B6F /* libSocialQQ.a in Frameworks */,
 				1AC6FB2E180E99EB004C840B /* libbox2d iOS.a in Frameworks */,
 				FED299DF1AC2B35100C89B6F /* libpng_arm64.a in Frameworks */,
@@ -1373,6 +1361,7 @@
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				FED298621AC1115000C89B6F /* libSocialYiXin.a in Frameworks */,
+				FE9725211AF750A900466D80 /* libUMessage_Sdk_1.1.0.a in Frameworks */,
 				FED299DC1AC2B35100C89B6F /* libjpeg_arm64.a in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				FED298591AC1114F00C89B6F /* libSocialTwitter.a in Frameworks */,
@@ -1496,6 +1485,7 @@
 				FE7A7F621AD6C0D1009CE223 /* CoreGraphics.framework in Frameworks */,
 				FE7A7F631AD6C0D1009CE223 /* OpenGLES.framework in Frameworks */,
 				FE7A7F641AD6C0D1009CE223 /* libwebp_arm64.a in Frameworks */,
+				FE9725231AF750A900466D80 /* libUMessage_Sdk_1.1.0.a in Frameworks */,
 				FE7A7F651AD6C0D1009CE223 /* libUMSocial_Sdk_Comment_4.2.a in Frameworks */,
 				FE7A7F671AD6C0D1009CE223 /* libcurl_arm64.a in Frameworks */,
 				FE7A7F681AD6C0D1009CE223 /* libz.dylib in Frameworks */,
@@ -1619,6 +1609,7 @@
 				FEA72B891AAEE090009226A1 /* libcocos2dx-extensions iOS.a in Frameworks */,
 				FEA72B8A1AAEE090009226A1 /* libCocosDenshion iOS.a in Frameworks */,
 				FED298671AC1115000C89B6F /* libYixinSDK_V2.2.a in Frameworks */,
+				FE9725221AF750A900466D80 /* libUMessage_Sdk_1.1.0.a in Frameworks */,
 				FEA72B8B1AAEE090009226A1 /* CoreMotion.framework in Frameworks */,
 				FEA72B8C1AAEE090009226A1 /* Foundation.framework in Frameworks */,
 				FEA72B8D1AAEE090009226A1 /* UIKit.framework in Frameworks */,
@@ -1720,6 +1711,7 @@
 			isa = PBXGroup;
 			children = (
 				FEF8F5031AD777E300C0CAC3 /* changeableball iOS free copy.entitlements */,
+				FE9724E71AF750A900466D80 /* UMessage_Sdk_All_1.1.0(idfa) */,
 				FEF8F1231AD7650F00C0CAC3 /* AdViewSDK-3.1.5 */,
 				FED299EB1AC2B56800C89B6F /* iosumanalytics */,
 				FED293F21AC1114B00C89B6F /* Social_Cocos2dx_SDK_V2.0 */,
@@ -1917,6 +1909,23 @@
 				FE512D591ACFE2AC00B7232F /* NCSGameCenter.h */,
 			);
 			name = gamecenter;
+			sourceTree = "<group>";
+		};
+		FE9724E71AF750A900466D80 /* UMessage_Sdk_All_1.1.0(idfa) */ = {
+			isa = PBXGroup;
+			children = (
+				FE9724E81AF750A900466D80 /* UMessage_Sdk_1.1.0 */,
+			);
+			path = "UMessage_Sdk_All_1.1.0(idfa)";
+			sourceTree = "<group>";
+		};
+		FE9724E81AF750A900466D80 /* UMessage_Sdk_1.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				FE9724E91AF750A900466D80 /* libUMessage_Sdk_1.1.0.a */,
+				FE9724EA1AF750A900466D80 /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.1.0;
 			sourceTree = "<group>";
 		};
 		FE977FEF1AD3FA3D004656BC /* ads */ = {
@@ -3551,8 +3560,10 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WQMobile",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
-				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
+				PROVISIONING_PROFILE = "6d41055e-377b-40d6-aa4c-d09e7791e318";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -3665,8 +3676,10 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WQMobile",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
-				PROVISIONING_PROFILE = "1d8790af-1382-4c32-98d5-d8207d0f8adb";
+				PROVISIONING_PROFILE = "6d41055e-377b-40d6-aa4c-d09e7791e318";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4096,6 +4109,8 @@
 					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/WQMobile/lib",
 					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/YouMi/lib",
 					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdView",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
@@ -4240,6 +4255,8 @@
 					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/WQMobile/lib",
 					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/YouMi/lib",
 					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdView",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
@@ -4646,6 +4663,8 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WQMobile",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
 				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
@@ -4761,6 +4780,8 @@
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WQMobile",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
 					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
 				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
