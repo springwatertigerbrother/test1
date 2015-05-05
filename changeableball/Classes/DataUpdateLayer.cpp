@@ -74,6 +74,7 @@ bool UpStateLayer::init()
             int currentValue = getIntegerForKey("level");
             String* scoreStr = String::createWithFormat("level: %d",currentValue);
             m_labelLevel->setString(scoreStr->getCString());
+            m_labelLevel->setScale(0.01);
             addChild(m_labelLevel);
             
             std::string nicyuantitleStr;
@@ -348,7 +349,8 @@ void UpStateLayer::resetScoreWithIntValue(unsigned long nValue)
         m_labelLevel->setString(levelStr->getCString());
         auto action1 = ScaleTo::create(1, 1.5);
         auto action2 = ScaleTo::create(0.5, 1);
-        m_labelLevel->runAction(Sequence::create(action1,action2, NULL));
+        auto action3 = ScaleTo::create(0.01, 0.01);
+        m_labelLevel->runAction(Sequence::create(action1,action2,action3, NULL));
         setIntegerForKey("level",level);
     }
 
