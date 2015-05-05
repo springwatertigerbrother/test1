@@ -247,6 +247,13 @@ bool GameOverLayer::init()
 //    IADSimple* simple = [IADSimple IADSimple];
 //    [simple.bannerView setHidden:false];
     
+    
+    CCLabelTTF* pshareBunus = CCLabelTTF::create("每天炫耀奖励钻石1000", "ArialRoundedMTBold",20);
+    pshareBunus->setAnchorPoint(ccp(0,0.5));
+    pshareBunus->setPosition(ccp(20,230));
+//    pshareBunus->setColor(ccc3Red);
+    addChild(pshareBunus);
+    pshareBunus->runAction(RepeatForever::create(CCSequence::create(DelayTime::create(1.5f + 0.9f), CCScaleTo::create(0.3f, 2.0f),DelayTime::create(1), CCScaleTo::create(0.3f, 1.0f),NULL)));
     //    CCDirector::sharedDirector()->pushScene(AdBottomDemo::scene(AdSceneDemo::DemoAdBottom));
     setIntegerForKey("HistoryHighestScore", m_i_HistoryHighestScore);
 //    CCUserDefault::sharedUserDefault()->setIntegerForKey("HistoryHighestScore", m_i_HistoryHighestScore);
@@ -294,6 +301,41 @@ void GameOverLayer::ExitGame()
 }
 void GameOverLayer::ShareGame()
 {
+
+    
+    
+    int lastTime  = getIntegerForKey("LAST_TIME");
+    
+    time_t nowtime;
+    struct tm *timeinfo;
+    time( &nowtime );
+    timeinfo = localtime( &nowtime );
+    int year, month, day;
+    year = timeinfo->tm_year + 1900;
+    month = timeinfo->tm_mon + 1;
+    day = timeinfo->tm_mday;
+    
+    if (day != lastTime)
+    {
+        setIntegerForKey("LAST_TIME",day);
+        int sharetimes = getIntegerForKey("SHARE_TIMES");
+       
+        if (sharetimes<5)
+        {
+            sharetimes++;
+            setIntegerForKey("SHARE_TIMES",sharetimes);
+            
+            int lifeLiquid = getIntegerForKey("LIFE_LIQUID");
+            
+            lifeLiquid += 1000;
+            setIntegerForKey("LIFE_LIQUID",lifeLiquid);
+        }
+    }
+    
+
+    
+//    log("%d time",nowtime);
+    
     std::string shareStr;
     LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
     switch (currentLanguageType)
