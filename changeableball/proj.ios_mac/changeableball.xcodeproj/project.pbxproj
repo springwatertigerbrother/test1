@@ -559,6 +559,219 @@
 		FEDC36C21AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
 		FEDC36C31AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
 		FEDC36C41AE4F93B00BDE41A /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDDE71F1AF9046900CB2C2E /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEDDE7201AF9046900CB2C2E /* sns_icon_19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1621AD7651000C0CAC3 /* sns_icon_19@2x.png */; };
+		FEDDE7211AF9046900CB2C2E /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77617EB970100C73F5D /* Icon-120.png */; };
+		FEDDE7221AF9046900CB2C2E /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1591AD7651000C0CAC3 /* share.png */; };
+		FEDDE7231AF9046900CB2C2E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1228081AD3EBF10075F4F6 /* Icon@2x.png */; };
+		FEDDE7241AF9046900CB2C2E /* icon_call.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3141AD7651000C0CAC3 /* icon_call.png */; };
+		FEDDE7251AF9046900CB2C2E /* adchina_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1451AD7650F00C0CAC3 /* adchina_back@2x.png */; };
+		FEDDE7261AF9046900CB2C2E /* adchina_full_backgrand.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F14F1AD7651000C0CAC3 /* adchina_full_backgrand.png */; };
+		FEDDE7271AF9046900CB2C2E /* adchina_closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1491AD7650F00C0CAC3 /* adchina_closeButton.png */; };
+		FEDDE7281AF9046900CB2C2E /* UMShareEditViewControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED2953D1AC1114C00C89B6F /* UMShareEditViewControlleriPad.xib */; };
+		FEDDE7291AF9046900CB2C2E /* AdInStLClOsE.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3131AD7651000C0CAC3 /* AdInStLClOsE.png */; };
+		FEDDE72A1AF9046900CB2C2E /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77B17EB970100C73F5D /* Icon-76.png */; };
+		FEDDE72B1AF9046900CB2C2E /* adchina_btnconfirm.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1461AD7650F00C0CAC3 /* adchina_btnconfirm.png */; };
+		FEDDE72C1AF9046900CB2C2E /* icon_down.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3151AD7651000C0CAC3 /* icon_down.png */; };
+		FEDDE72D1AF9046900CB2C2E /* icon_map.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3181AD7651000C0CAC3 /* icon_map.png */; };
+		FEDDE72E1AF9046900CB2C2E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77417EB970100C73F5D /* Default@2x.png */; };
+		FEDDE72F1AF9046900CB2C2E /* adchina_forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F14E1AD7650F00C0CAC3 /* adchina_forward@2x.png */; };
+		FEDDE7301AF9046900CB2C2E /* mg_back.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1571AD7651000C0CAC3 /* mg_back.png */; };
+		FEDDE7311AF9046900CB2C2E /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
+		FEDDE7321AF9046900CB2C2E /* sns_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1631AD7651000C0CAC3 /* sns_icon_1@2x.png */; };
+		FEDDE7331AF9046900CB2C2E /* sns_icon_22.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1641AD7651000C0CAC3 /* sns_icon_22.png */; };
+		FEDDE7341AF9046900CB2C2E /* share@.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F15A1AD7651000C0CAC3 /* share@.png */; };
+		FEDDE7351AF9046900CB2C2E /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED2953F1AC1114C00C89B6F /* UMSnsAccountViewController.xib */; };
+		FEDDE7361AF9046900CB2C2E /* sharing.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F15C1AD7651000C0CAC3 /* sharing.png */; };
+		FEDDE7371AF9046900CB2C2E /* sns_icon_24.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1681AD7651000C0CAC3 /* sns_icon_24.png */; };
+		FEDDE7381AF9046900CB2C2E /* sns_icon_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1691AD7651000C0CAC3 /* sns_icon_24@2x.png */; };
+		FEDDE7391AF9046900CB2C2E /* adchina_close.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1481AD7650F00C0CAC3 /* adchina_close.png */; };
+		FEDDE73A1AF9046900CB2C2E /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FED295531AC1114C00C89B6F /* TencentOpenApi_IOS_Bundle.bundle */; };
+		FEDDE73B1AF9046900CB2C2E /* adchina_expand.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F14B1AD7650F00C0CAC3 /* adchina_expand.png */; };
+		FEDDE73C1AF9046900CB2C2E /* icon_video.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3191AD7651000C0CAC3 /* icon_video.png */; };
+		FEDDE73D1AF9046900CB2C2E /* UMSCommentInputControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED2953B1AC1114C00C89B6F /* UMSCommentInputControlleriPad.xib */; };
+		FEDDE73E1AF9046900CB2C2E /* icon_web.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F31A1AD7651000C0CAC3 /* icon_web.png */; };
+		FEDDE73F1AF9046900CB2C2E /* Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77817EB970100C73F5D /* Icon-152.png */; };
+		FEDDE7401AF9046900CB2C2E /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F15B1AD7651000C0CAC3 /* share@2x.png */; };
+		FEDDE7411AF9046900CB2C2E /* adchina_hide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1511AD7651000C0CAC3 /* adchina_hide@2x.png */; };
+		FEDDE7421AF9046900CB2C2E /* Images in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5619F48D7000D9C636 /* Images */; };
+		FEDDE7431AF9046900CB2C2E /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FED295411AC1114C00C89B6F /* UMSocialSDKResourcesNew.bundle */; };
+		FEDDE7441AF9046900CB2C2E /* UMShareEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED2953C1AC1114C00C89B6F /* UMShareEditViewController.xib */; };
+		FEDDE7451AF9046900CB2C2E /* sns_icon_18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1601AD7651000C0CAC3 /* sns_icon_18@2x.png */; };
+		FEDDE7461AF9046900CB2C2E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE1228071AD3EBF10075F4F6 /* Icon.png */; };
+		FEDDE7471AF9046900CB2C2E /* sns_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F15E1AD7651000C0CAC3 /* sns_icon_1.png */; };
+		FEDDE7481AF9046900CB2C2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77217EB970100C73F5D /* Default-568h@2x.png */; };
+		FEDDE7491AF9046900CB2C2E /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F32A1AD7651000C0CAC3 /* ChangeLog.txt */; };
+		FEDDE74A1AF9046900CB2C2E /* sns_icon_23.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1661AD7651000C0CAC3 /* sns_icon_23.png */; };
+		FEDDE74B1AF9046900CB2C2E /* dian_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1551AD7651000C0CAC3 /* dian_1.png */; };
+		FEDDE74C1AF9046900CB2C2E /* sns_icon_22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1651AD7651000C0CAC3 /* sns_icon_22@2x.png */; };
+		FEDDE74D1AF9046900CB2C2E /* IOSƒ⁄÷ß∏∂IAPœÍœ∏∑Ω∑®.docx in Resources */ = {isa = PBXBuildFile; fileRef = FED28B011AC00FBA00C89B6F /* IOSƒ⁄÷ß∏∂IAPœÍœ∏∑Ω∑®.docx */; };
+		FEDDE74E1AF9046900CB2C2E /* sns_icon_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F16B1AD7651000C0CAC3 /* sns_icon_6@2x.png */; };
+		FEDDE74F1AF9046900CB2C2E /* log in Resources */ = {isa = PBXBuildFile; fileRef = FE9A95991A9C385F00D5C192 /* log */; };
+		FEDDE7501AF9046900CB2C2E /* adchina_expand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F14C1AD7650F00C0CAC3 /* adchina_expand@2x.png */; };
+		FEDDE7511AF9046900CB2C2E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77A17EB970100C73F5D /* Icon-72.png */; };
+		FEDDE7521AF9046900CB2C2E /* doc.html in Resources */ = {isa = PBXBuildFile; fileRef = FED294041AC1114B00C89B6F /* doc.html */; };
+		FEDDE7531AF9046900CB2C2E /* adchina_btnconfirm2.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1471AD7650F00C0CAC3 /* adchina_btnconfirm2.png */; };
+		FEDDE7541AF9046900CB2C2E /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5819F48D7000D9C636 /* fonts */; };
+		FEDDE7551AF9046900CB2C2E /* icon_email.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3161AD7651000C0CAC3 /* icon_email.png */; };
+		FEDDE7561AF9046900CB2C2E /* adchina_toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1541AD7651000C0CAC3 /* adchina_toolbar.png */; };
+		FEDDE7571AF9046900CB2C2E /* sns_icon_18.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F15F1AD7651000C0CAC3 /* sns_icon_18.png */; };
+		FEDDE7581AF9046900CB2C2E /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		FEDDE7591AF9046900CB2C2E /* icon_ems.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3171AD7651000C0CAC3 /* icon_ems.png */; };
+		FEDDE75A1AF9046900CB2C2E /* UMSCommentInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED2953A1AC1114C00C89B6F /* UMSCommentInputController.xib */; };
+		FEDDE75B1AF9046900CB2C2E /* sharing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F15D1AD7651000C0CAC3 /* sharing@2x.png */; };
+		FEDDE75C1AF9046900CB2C2E /* adchina_stoploading.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1521AD7651000C0CAC3 /* adchina_stoploading.png */; };
+		FEDDE75D1AF9046900CB2C2E /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED295391AC1114C00C89B6F /* UMSCommentDetailController.xib */; };
+		FEDDE75E1AF9046900CB2C2E /* adchina_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F14D1AD7650F00C0CAC3 /* adchina_forward.png */; };
+		FEDDE75F1AF9046900CB2C2E /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77517EB970100C73F5D /* Icon-114.png */; };
+		FEDDE7601AF9046900CB2C2E /* markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = FED294051AC1114B00C89B6F /* markdown.css */; };
+		FEDDE7611AF9046900CB2C2E /* title_back.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F31B1AD7651000C0CAC3 /* title_back.png */; };
+		FEDDE7621AF9046900CB2C2E /* UMSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED2953E1AC1114C00C89B6F /* UMSLoginViewController.xib */; };
+		FEDDE7631AF9046900CB2C2E /* mg_fs.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1581AD7651000C0CAC3 /* mg_fs.png */; };
+		FEDDE7641AF9046900CB2C2E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F32B1AD7651000C0CAC3 /* README.txt */; };
+		FEDDE7651AF9046900CB2C2E /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FED295281AC1114C00C89B6F /* UMSocialLocalizable.strings */; };
+		FEDDE7661AF9046900CB2C2E /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
+		FEDDE7671AF9046900CB2C2E /* VERSIONS in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F32C1AD7651000C0CAC3 /* VERSIONS */; };
+		FEDDE7681AF9046900CB2C2E /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629217ECD46A001EB2F8 /* Icon-40.png */; };
+		FEDDE7691AF9046900CB2C2E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F2211AD7651000C0CAC3 /* README.txt */; };
+		FEDDE76A1AF9046900CB2C2E /* dian_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1561AD7651000C0CAC3 /* dian_2.png */; };
+		FEDDE76B1AF9046900CB2C2E /* adchina_closeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F14A1AD7650F00C0CAC3 /* adchina_closeButton@2x.png */; };
+		FEDDE76C1AF9046900CB2C2E /* adchina_back.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1441AD7650F00C0CAC3 /* adchina_back.png */; };
+		FEDDE76D1AF9046900CB2C2E /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77717EB970100C73F5D /* Icon-144.png */; };
+		FEDDE76E1AF9046900CB2C2E /* sns_icon_19.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1611AD7651000C0CAC3 /* sns_icon_19.png */; };
+		FEDDE76F1AF9046900CB2C2E /* sns_icon_23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1671AD7651000C0CAC3 /* sns_icon_23@2x.png */; };
+		FEDDE7701AF9046900CB2C2E /* AdSingleTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F3261AD7651000C0CAC3 /* AdSingleTestViewController.xib */; };
+		FEDDE7711AF9046900CB2C2E /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = FE438D5719F48D7000D9C636 /* Sounds */; };
+		FEDDE7721AF9046900CB2C2E /* sns_icon_6.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F16A1AD7651000C0CAC3 /* sns_icon_6.png */; };
+		FEDDE7731AF9046900CB2C2E /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629417ECD46A001EB2F8 /* Icon-80.png */; };
+		FEDDE7741AF9046900CB2C2E /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED295401AC1114C00C89B6F /* UMSShareListController.xib */; };
+		FEDDE7751AF9046900CB2C2E /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77917EB970100C73F5D /* Icon-57.png */; };
+		FEDDE7761AF9046900CB2C2E /* adchina_hide.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1501AD7651000C0CAC3 /* adchina_hide.png */; };
+		FEDDE7771AF9046900CB2C2E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5087E77317EB970100C73F5D /* Default.png */; };
+		FEDDE7781AF9046900CB2C2E /* adchina_stoploading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF8F1531AD7651000C0CAC3 /* adchina_stoploading@2x.png */; };
+		FEDDE7791AF9046900CB2C2E /* Icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629317ECD46A001EB2F8 /* Icon-58.png */; };
+		FEDDE77B1AF9046900CB2C2E /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
+		FEDDE77C1AF9046900CB2C2E /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
+		FEDDE77D1AF9046900CB2C2E /* GameOverLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE9A95931A9B5C2000D5C192 /* GameOverLayer.mm */; };
+		FEDDE77E1AF9046900CB2C2E /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F33D1AD7651000C0CAC3 /* CJSONSerialization.m */; };
+		FEDDE77F1AF9046900CB2C2E /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = FED295641AC1114C00C89B6F /* readme.md */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7801AF9046900CB2C2E /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
+		FEDDE7811AF9046900CB2C2E /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7A19F48F0300D9C636 /* BallSprite.cpp */; };
+		FEDDE7821AF9046900CB2C2E /* BuyLifeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE348B3D1AAB4F6A00391F6E /* BuyLifeLayer.cpp */; };
+		FEDDE7831AF9046900CB2C2E /* ControllerLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6719F48EDC00D9C636 /* ControllerLayer.cpp */; };
+		FEDDE7841AF9046900CB2C2E /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3361AD7651000C0CAC3 /* CDataScanner.m */; };
+		FEDDE7851AF9046900CB2C2E /* SimMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3281AD7651000C0CAC3 /* SimMethod.cpp */; };
+		FEDDE7861AF9046900CB2C2E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3331AD7651000C0CAC3 /* Reachability.m */; };
+		FEDDE7871AF9046900CB2C2E /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F33F1AD7651000C0CAC3 /* CJSONSerializedData.m */; };
+		FEDDE7881AF9046900CB2C2E /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
+		FEDDE7891AF9046900CB2C2E /* IOSiAP.mm in Sources */ = {isa = PBXBuildFile; fileRef = FED28AFE1AC00FBA00C89B6F /* IOSiAP.mm */; };
+		FEDDE78A1AF9046900CB2C2E /* AdViewAdapterIAd.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F23A1AD7651000C0CAC3 /* AdViewAdapterIAd.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE78B1AF9046900CB2C2E /* GameCenterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7119F48EEC00D9C636 /* GameCenterScene.cpp */; };
+		FEDDE78C1AF9046900CB2C2E /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3391AD7651000C0CAC3 /* CFilteringJSONSerializer.m */; };
+		FEDDE78D1AF9046900CB2C2E /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3471AD7651000C0CAC3 /* CJSONDeserializer.m */; };
+		FEDDE78E1AF9046900CB2C2E /* UmSocialControllerIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = FED293FD1AC1114B00C89B6F /* UmSocialControllerIOS.mm */; };
+		FEDDE78F1AF9046900CB2C2E /* DataHome.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6319F48ECF00D9C636 /* DataHome.cpp */; };
+		FEDDE7901AF9046900CB2C2E /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F33B1AD7651000C0CAC3 /* CJSONDeserializer_BlocksExtensions.m */; };
+		FEDDE7911AF9046900CB2C2E /* AdViewToolX.mm in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3201AD7651000C0CAC3 /* AdViewToolX.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7921AF9046900CB2C2E /* AdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F31E1AD7651000C0CAC3 /* AdViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7931AF9046900CB2C2E /* AdInstlAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F2091AD7651000C0CAC3 /* AdInstlAdapterAdMob.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7941AF9046900CB2C2E /* IOSiAP_Bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED28AFF1AC00FBA00C89B6F /* IOSiAP_Bridge.cpp */; };
+		FEDDE7951AF9046900CB2C2E /* IADSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = FE977FF11AD3FA60004656BC /* IADSimple.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7961AF9046900CB2C2E /* AdRunStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3231AD7651000C0CAC3 /* AdRunStateManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7971AF9046900CB2C2E /* UMShareButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED294011AC1114B00C89B6F /* UMShareButton.cpp */; };
+		FEDDE7981AF9046900CB2C2E /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3301AD7651000C0CAC3 /* JSONKit.m */; };
+		FEDDE7991AF9046900CB2C2E /* MUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7FF2951AA06FE6009C8339 /* MUtils.cpp */; };
+		FEDDE79A1AF9046900CB2C2E /* UMSocialUIObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = FED293FF1AC1114B00C89B6F /* UMSocialUIObject.mm */; };
+		FEDDE79B1AF9046900CB2C2E /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.mm */; };
+		FEDDE79C1AF9046900CB2C2E /* ballGamescene.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6F19F48EEC00D9C636 /* ballGamescene.mm */; };
+		FEDDE79D1AF9046900CB2C2E /* CCUMSocialSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED293F81AC1114B00C89B6F /* CCUMSocialSDK.cpp */; };
+		FEDDE79E1AF9046900CB2C2E /* AdSingleTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3251AD7651000C0CAC3 /* AdSingleTestViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE79F1AF9046900CB2C2E /* AdViewAdapterAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F20B1AD7651000C0CAC3 /* AdViewAdapterAdMob.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7A01AF9046900CB2C2E /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3491AD7651000C0CAC3 /* CJSONScanner.m */; };
+		FEDDE7A11AF9046900CB2C2E /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F34B1AD7651000C0CAC3 /* CJSONSerializer.m */; };
+		FEDDE7A21AF9046900CB2C2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
+		FEDDE7A31AF9046900CB2C2E /* DataUpdateLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D6919F48EDC00D9C636 /* DataUpdateLayer.cpp */; };
+		FEDDE7A41AF9046900CB2C2E /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
+		FEDDE7A51AF9046900CB2C2E /* AdViewAdapterAdChina.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		FEDDE7A61AF9046900CB2C2E /* NCSGameCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE512D551ACFE25C00B7232F /* NCSGameCenter.m */; };
+		FEDDE7A71AF9046900CB2C2E /* DataBase64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEB886A81AD187AB0070FB43 /* DataBase64.cpp */; };
+		FEDDE7A81AF9046900CB2C2E /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3441AD7651000C0CAC3 /* NSDictionary_JSONExtensions.m */; };
+		FEDDE7A91AF9046900CB2C2E /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F3421AD7651000C0CAC3 /* CDataScanner_Extensions.m */; };
+		FEDDE7AA1AF9046900CB2C2E /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE438D7819F48F0300D9C636 /* DataManager.cpp */; };
+		FEDDE7AC1AF9046900CB2C2E /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7A7E701AD65C62009CE223 /* EventKitUI.framework */; };
+		FEDDE7AD1AF9046900CB2C2E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97854F1AD40FDF004656BC /* CFNetwork.framework */; };
+		FEDDE7AE1AF9046900CB2C2E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2986D1AC1126700C89B6F /* libiconv.dylib */; };
+		FEDDE7AF1AF9046900CB2C2E /* libAdChinaSDK3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F1421AD7650F00C0CAC3 /* libAdChinaSDK3.a */; };
+		FEDDE7B01AF9046900CB2C2E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97854D1AD40FC4004656BC /* CoreVideo.framework */; };
+		FEDDE7B11AF9046900CB2C2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2986F1AC1127000C89B6F /* SystemConfiguration.framework */; };
+		FEDDE7B21AF9046900CB2C2E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2986B1AC1125C00C89B6F /* Security.framework */; };
+		FEDDE7B31AF9046900CB2C2E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97854B1AD40F7A004656BC /* QuartzCore.framework */; };
+		FEDDE7B41AF9046900CB2C2E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785491AD40F74004656BC /* MobileCoreServices.framework */; };
+		FEDDE7B51AF9046900CB2C2E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F5011AD765EF00C0CAC3 /* GameKit.framework */; };
+		FEDDE7B61AF9046900CB2C2E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785471AD40F65004656BC /* MessageUI.framework */; };
+		FEDDE7B71AF9046900CB2C2E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785451AD40F5E004656BC /* MediaPlayer.framework */; };
+		FEDDE7B81AF9046900CB2C2E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785431AD40F54004656BC /* MapKit.framework */; };
+		FEDDE7B91AF9046900CB2C2E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785411AD40F4C004656BC /* ImageIO.framework */; };
+		FEDDE7BA1AF9046900CB2C2E /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97853F1AD40F42004656BC /* EventKit.framework */; };
+		FEDDE7BB1AF9046900CB2C2E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298751AC1129600C89B6F /* CoreTelephony.framework */; };
+		FEDDE7BC1AF9046900CB2C2E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97853D1AD40F2F004656BC /* CoreLocation.framework */; };
+		FEDDE7BD1AF9046900CB2C2E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97853B1AD40F26004656BC /* AVFoundation.framework */; };
+		FEDDE7BE1AF9046900CB2C2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785391AD40F1E004656BC /* AudioToolbox.framework */; };
+		FEDDE7BF1AF9046900CB2C2E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785351AD40F10004656BC /* AddressBook.framework */; };
+		FEDDE7C01AF9046900CB2C2E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9785361AD40F10004656BC /* AddressBookUI.framework */; };
+		FEDDE7C11AF9046900CB2C2E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE977FF61AD3FBB4004656BC /* iAd.framework */; };
+		FEDDE7C21AF9046900CB2C2E /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97852E1AD40CE4004656BC /* PassKit.framework */; };
+		FEDDE7C31AF9046900CB2C2E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97852C1AD40CD6004656BC /* AdSupport.framework */; };
+		FEDDE7C41AF9046900CB2C2E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE97852A1AD40CC6004656BC /* CoreMedia.framework */; };
+		FEDDE7C51AF9046900CB2C2E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2987D1AC112C000C89B6F /* Accounts.framework */; };
+		FEDDE7C61AF9046900CB2C2E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2987B1AC112B700C89B6F /* Social.framework */; };
+		FEDDE7C71AF9046900CB2C2E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298791AC112AF00C89B6F /* libz.dylib */; };
+		FEDDE7C81AF9046900CB2C2E /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298771AC112A500C89B6F /* libstdc++.dylib */; };
+		FEDDE7C91AF9046900CB2C2E /* libjpeg_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D11AC2B35100C89B6F /* libjpeg_arm64.a */; };
+		FEDDE7CA1AF9046900CB2C2E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298731AC1128A00C89B6F /* libsqlite3.dylib */; };
+		FEDDE7CB1AF9046900CB2C2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED298711AC1127A00C89B6F /* CoreGraphics.framework */; };
+		FEDDE7CC1AF9046900CB2C2E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED28B0B1AC0101C00C89B6F /* StoreKit.framework */; };
+		FEDDE7CD1AF9046900CB2C2E /* libUMSocial_Sdk_4.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295361AC1114C00C89B6F /* libUMSocial_Sdk_4.2.a */; };
+		FEDDE7CE1AF9046900CB2C2E /* libbox2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0D180E9839004C840B /* libbox2d iOS.a */; };
+		FEDDE7CF1AF9046900CB2C2E /* libchipmunk iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0B180E9839004C840B /* libchipmunk iOS.a */; };
+		FEDDE7D01AF9046900CB2C2E /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2954E1AC1114C00C89B6F /* libSocialSina.a */; };
+		FEDDE7D11AF9046900CB2C2E /* libfreetype_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D01AC2B35100C89B6F /* libfreetype_arm64.a */; };
+		FEDDE7D21AF9046900CB2C2E /* libcocos2dx iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2dx iOS.a */; };
+		FEDDE7D31AF9046900CB2C2E /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
+		FEDDE7D41AF9046900CB2C2E /* libCocosDenshion iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0F180E9839004C840B /* libCocosDenshion iOS.a */; };
+		FEDDE7D51AF9046900CB2C2E /* libYixinSDK_V2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295601AC1114C00C89B6F /* libYixinSDK_V2.2.a */; };
+		FEDDE7D61AF9046900CB2C2E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		FEDDE7D71AF9046900CB2C2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		FEDDE7D81AF9046900CB2C2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		FEDDE7D91AF9046900CB2C2E /* libSocialInstagram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295481AC1114C00C89B6F /* libSocialInstagram.a */; };
+		FEDDE7DA1AF9046900CB2C2E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2955A1AC1114C00C89B6F /* libWeChatSDK.a */; };
+		FEDDE7DB1AF9046900CB2C2E /* libSocialFacebook.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295451AC1114C00C89B6F /* libSocialFacebook.a */; };
+		FEDDE7DC1AF9046900CB2C2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		FEDDE7DD1AF9046900CB2C2E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
+		FEDDE7DE1AF9046900CB2C2E /* libwebp_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D41AC2B35100C89B6F /* libwebp_arm64.a */; };
+		FEDDE7DF1AF9046900CB2C2E /* libUMessage_Sdk_1.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9724E91AF750A900466D80 /* libUMessage_Sdk_1.1.0.a */; };
+		FEDDE7E01AF9046900CB2C2E /* libUMSocial_Sdk_Comment_4.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295371AC1114C00C89B6F /* libUMSocial_Sdk_Comment_4.2.a */; };
+		FEDDE7E11AF9046900CB2C2E /* libcurl_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299CF1AC2B35100C89B6F /* libcurl_arm64.a */; };
+		FEDDE7E21AF9046900CB2C2E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
+		FEDDE7E31AF9046900CB2C2E /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295521AC1114C00C89B6F /* TencentOpenAPI.framework */; };
+		FEDDE7E41AF9046900CB2C2E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		FEDDE7E51AF9046900CB2C2E /* libSocialTwitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295561AC1114C00C89B6F /* libSocialTwitter.a */; };
+		FEDDE7E61AF9046900CB2C2E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
+		FEDDE7E71AF9046900CB2C2E /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F2201AD7651000C0CAC3 /* libGoogleAdMobAds.a */; };
+		FEDDE7E81AF9046900CB2C2E /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295591AC1114C00C89B6F /* libSocialWechat.a */; };
+		FEDDE7E91AF9046900CB2C2E /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED295511AC1114C00C89B6F /* libSocialQQ.a */; };
+		FEDDE7EA1AF9046900CB2C2E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
+		FEDDE7EB1AF9046900CB2C2E /* libSocialLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2954B1AC1114C00C89B6F /* libSocialLine.a */; };
+		FEDDE7EC1AF9046900CB2C2E /* libpng_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D21AC2B35100C89B6F /* libpng_arm64.a */; };
+		FEDDE7ED1AF9046900CB2C2E /* libwebsockets_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D51AC2B35100C89B6F /* libwebsockets_arm64.a */; };
+		FEDDE7EE1AF9046900CB2C2E /* libSocialYiXin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED2955F1AC1114C00C89B6F /* libSocialYiXin.a */; };
+		FEDDE7EF1AF9046900CB2C2E /* libMobClickCppWithLibCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */; };
+		FEDDE7F01AF9046900CB2C2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
+		FEDDE7F11AF9046900CB2C2E /* libAdViewSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F3111AD7651000C0CAC3 /* libAdViewSDK.a */; };
+		FEDDE7F21AF9046900CB2C2E /* libtiff_arm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FED299D31AC2B35100C89B6F /* libtiff_arm64.a */; };
+		FEE849111AF87A7900C99713 /* Particles in Resources */ = {isa = PBXBuildFile; fileRef = FEDC36C01AE4F93B00BDE41A /* Particles */; };
+		FEE849141AF87C0D00C99713 /* buyDiamond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8911AF28E6A00FA1818 /* buyDiamond.cpp */; };
+		FEE849151AF87C0D00C99713 /* AlertLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE6AB8971AF2A03000FA1818 /* AlertLayer.cpp */; };
 		FEF8F34D1AD7651000C0CAC3 /* AdViewAdapterAdChina.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */; };
 		FEF8F34E1AD7651000C0CAC3 /* AdViewAdapterAdChina.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		FEF8F34F1AD7651000C0CAC3 /* libAdChinaSDK3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF8F1421AD7650F00C0CAC3 /* libAdChinaSDK3.a */; };
@@ -964,6 +1177,41 @@
 			remoteGlobalIDString = A07A4F9F178387730073F6A7;
 			remoteInfo = "CocosDenshion iOS";
 		};
+		FEDDE7151AF9046900CB2C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4C241783777C0073F6A7;
+			remoteInfo = "cocos2dx iOS";
+		};
+		FEDDE7171AF9046900CB2C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4E111783867C0073F6A7;
+			remoteInfo = "cocos2dx-extensions iOS";
+		};
+		FEDDE7191AF9046900CB2C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4EFD178387670073F6A7;
+			remoteInfo = "chipmunk iOS";
+		};
+		FEDDE71B1AF9046900CB2C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4F3C1783876B0073F6A7;
+			remoteInfo = "box2d iOS";
+		};
+		FEDDE71D1AF9046900CB2C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A07A4F9F178387730073F6A7;
+			remoteInfo = "CocosDenshion iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -1166,6 +1414,9 @@
 		FED299EE1AC2B56800C89B6F /* MobClickCpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickCpp.h; sourceTree = "<group>"; };
 		FED299F51AC2BAB100C89B6F /* libMobClickCppWithLibCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickCppWithLibCpp.a; sourceTree = "<group>"; };
 		FEDC36C01AE4F93B00BDE41A /* Particles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Particles; sourceTree = "<group>"; };
+		FEDDE7121AF8FFC700CB2C2E /* changeableball iOS free copy copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS free copy copy-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS free copy copy-Info.plist"; sourceTree = "<absolute>"; };
+		FEDDE7F61AF9046900CB2C2E /* changeableball iOS free copy copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "changeableball iOS free copy copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDDE7F71AF9046A00CB2C2E /* changeableball iOS free copy copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "changeableball iOS free copy copy2-Info.plist"; path = "/Users/zhao/game/baoll3.2Version/changeableball/proj.ios_mac/changeableball iOS free copy copy2-Info.plist"; sourceTree = "<absolute>"; };
 		FEF8F1271AD7650F00C0CAC3 /* AdViewAdapterAdChina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdViewAdapterAdChina.h; sourceTree = "<group>"; };
 		FEF8F1281AD7650F00C0CAC3 /* AdViewAdapterAdChina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdViewAdapterAdChina.m; sourceTree = "<group>"; };
 		FEF8F12A1AD7650F00C0CAC3 /* ACSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACSingle.h; sourceTree = "<group>"; };
@@ -1639,6 +1890,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEDDE7AB1AF9046900CB2C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDDE7AC1AF9046900CB2C2E /* EventKitUI.framework in Frameworks */,
+				FEDDE7AD1AF9046900CB2C2E /* CFNetwork.framework in Frameworks */,
+				FEDDE7AE1AF9046900CB2C2E /* libiconv.dylib in Frameworks */,
+				FEDDE7AF1AF9046900CB2C2E /* libAdChinaSDK3.a in Frameworks */,
+				FEDDE7B01AF9046900CB2C2E /* CoreVideo.framework in Frameworks */,
+				FEDDE7B11AF9046900CB2C2E /* SystemConfiguration.framework in Frameworks */,
+				FEDDE7B21AF9046900CB2C2E /* Security.framework in Frameworks */,
+				FEDDE7B31AF9046900CB2C2E /* QuartzCore.framework in Frameworks */,
+				FEDDE7B41AF9046900CB2C2E /* MobileCoreServices.framework in Frameworks */,
+				FEDDE7B51AF9046900CB2C2E /* GameKit.framework in Frameworks */,
+				FEDDE7B61AF9046900CB2C2E /* MessageUI.framework in Frameworks */,
+				FEDDE7B71AF9046900CB2C2E /* MediaPlayer.framework in Frameworks */,
+				FEDDE7B81AF9046900CB2C2E /* MapKit.framework in Frameworks */,
+				FEDDE7B91AF9046900CB2C2E /* ImageIO.framework in Frameworks */,
+				FEDDE7BA1AF9046900CB2C2E /* EventKit.framework in Frameworks */,
+				FEDDE7BB1AF9046900CB2C2E /* CoreTelephony.framework in Frameworks */,
+				FEDDE7BC1AF9046900CB2C2E /* CoreLocation.framework in Frameworks */,
+				FEDDE7BD1AF9046900CB2C2E /* AVFoundation.framework in Frameworks */,
+				FEDDE7BE1AF9046900CB2C2E /* AudioToolbox.framework in Frameworks */,
+				FEDDE7BF1AF9046900CB2C2E /* AddressBook.framework in Frameworks */,
+				FEDDE7C01AF9046900CB2C2E /* AddressBookUI.framework in Frameworks */,
+				FEDDE7C11AF9046900CB2C2E /* iAd.framework in Frameworks */,
+				FEDDE7C21AF9046900CB2C2E /* PassKit.framework in Frameworks */,
+				FEDDE7C31AF9046900CB2C2E /* AdSupport.framework in Frameworks */,
+				FEDDE7C41AF9046900CB2C2E /* CoreMedia.framework in Frameworks */,
+				FEDDE7C51AF9046900CB2C2E /* Accounts.framework in Frameworks */,
+				FEDDE7C61AF9046900CB2C2E /* Social.framework in Frameworks */,
+				FEDDE7C71AF9046900CB2C2E /* libz.dylib in Frameworks */,
+				FEDDE7C81AF9046900CB2C2E /* libstdc++.dylib in Frameworks */,
+				FEDDE7C91AF9046900CB2C2E /* libjpeg_arm64.a in Frameworks */,
+				FEDDE7CA1AF9046900CB2C2E /* libsqlite3.dylib in Frameworks */,
+				FEDDE7CB1AF9046900CB2C2E /* CoreGraphics.framework in Frameworks */,
+				FEDDE7CC1AF9046900CB2C2E /* StoreKit.framework in Frameworks */,
+				FEDDE7CD1AF9046900CB2C2E /* libUMSocial_Sdk_4.2.a in Frameworks */,
+				FEDDE7CE1AF9046900CB2C2E /* libbox2d iOS.a in Frameworks */,
+				FEDDE7CF1AF9046900CB2C2E /* libchipmunk iOS.a in Frameworks */,
+				FEDDE7D01AF9046900CB2C2E /* libSocialSina.a in Frameworks */,
+				FEDDE7D11AF9046900CB2C2E /* libfreetype_arm64.a in Frameworks */,
+				FEDDE7D21AF9046900CB2C2E /* libcocos2dx iOS.a in Frameworks */,
+				FEDDE7D31AF9046900CB2C2E /* libcocos2dx-extensions iOS.a in Frameworks */,
+				FEDDE7D41AF9046900CB2C2E /* libCocosDenshion iOS.a in Frameworks */,
+				FEDDE7D51AF9046900CB2C2E /* libYixinSDK_V2.2.a in Frameworks */,
+				FEDDE7D61AF9046900CB2C2E /* CoreMotion.framework in Frameworks */,
+				FEDDE7D71AF9046900CB2C2E /* Foundation.framework in Frameworks */,
+				FEDDE7D81AF9046900CB2C2E /* UIKit.framework in Frameworks */,
+				FEDDE7D91AF9046900CB2C2E /* libSocialInstagram.a in Frameworks */,
+				FEDDE7DA1AF9046900CB2C2E /* libWeChatSDK.a in Frameworks */,
+				FEDDE7DB1AF9046900CB2C2E /* libSocialFacebook.a in Frameworks */,
+				FEDDE7DC1AF9046900CB2C2E /* CoreGraphics.framework in Frameworks */,
+				FEDDE7DD1AF9046900CB2C2E /* OpenGLES.framework in Frameworks */,
+				FEDDE7DE1AF9046900CB2C2E /* libwebp_arm64.a in Frameworks */,
+				FEDDE7DF1AF9046900CB2C2E /* libUMessage_Sdk_1.1.0.a in Frameworks */,
+				FEDDE7E01AF9046900CB2C2E /* libUMSocial_Sdk_Comment_4.2.a in Frameworks */,
+				FEDDE7E11AF9046900CB2C2E /* libcurl_arm64.a in Frameworks */,
+				FEDDE7E21AF9046900CB2C2E /* libz.dylib in Frameworks */,
+				FEDDE7E31AF9046900CB2C2E /* TencentOpenAPI.framework in Frameworks */,
+				FEDDE7E41AF9046900CB2C2E /* QuartzCore.framework in Frameworks */,
+				FEDDE7E51AF9046900CB2C2E /* libSocialTwitter.a in Frameworks */,
+				FEDDE7E61AF9046900CB2C2E /* OpenAL.framework in Frameworks */,
+				FEDDE7E71AF9046900CB2C2E /* libGoogleAdMobAds.a in Frameworks */,
+				FEDDE7E81AF9046900CB2C2E /* libSocialWechat.a in Frameworks */,
+				FEDDE7E91AF9046900CB2C2E /* libSocialQQ.a in Frameworks */,
+				FEDDE7EA1AF9046900CB2C2E /* AVFoundation.framework in Frameworks */,
+				FEDDE7EB1AF9046900CB2C2E /* libSocialLine.a in Frameworks */,
+				FEDDE7EC1AF9046900CB2C2E /* libpng_arm64.a in Frameworks */,
+				FEDDE7ED1AF9046900CB2C2E /* libwebsockets_arm64.a in Frameworks */,
+				FEDDE7EE1AF9046900CB2C2E /* libSocialYiXin.a in Frameworks */,
+				FEDDE7EF1AF9046900CB2C2E /* libMobClickCppWithLibCpp.a in Frameworks */,
+				FEDDE7F01AF9046900CB2C2E /* AudioToolbox.framework in Frameworks */,
+				FEDDE7F11AF9046900CB2C2E /* libAdViewSDK.a in Frameworks */,
+				FEDDE7F21AF9046900CB2C2E /* libtiff_arm64.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1686,6 +2015,7 @@
 				FEA72B981AAEE090009226A1 /* changeableball iOS copy.app */,
 				FE9A39751AD3C9C70066BE03 /* changeableball iOS paid copy.app */,
 				FE7A7F7A1AD6C0D1009CE223 /* changeableball iOS free copy.app */,
+				FEDDE7F61AF9046900CB2C2E /* changeableball iOS free copy copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1726,6 +2056,8 @@
 				FEA72B991AAEE090009226A1 /* changeableball iOS copy-Info.plist */,
 				FE9A39761AD3C9C70066BE03 /* changeableball iOS paid copy-Info.plist */,
 				FE7A7F7B1AD6C0D1009CE223 /* changeableball iOS free copy-Info.plist */,
+				FEDDE7121AF8FFC700CB2C2E /* changeableball iOS free copy copy-Info.plist */,
+				FEDDE7F71AF9046A00CB2C2E /* changeableball iOS free copy copy2-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -2660,6 +2992,28 @@
 			productReference = FEA72B981AAEE090009226A1 /* changeableball iOS copy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FEDDE7131AF9046900CB2C2E /* changeableball iOS free copy copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEDDE7F31AF9046900CB2C2E /* Build configuration list for PBXNativeTarget "changeableball iOS free copy copy" */;
+			buildPhases = (
+				FEDDE71E1AF9046900CB2C2E /* Resources */,
+				FEDDE77A1AF9046900CB2C2E /* Sources */,
+				FEDDE7AB1AF9046900CB2C2E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEDDE7141AF9046900CB2C2E /* PBXTargetDependency */,
+				FEDDE7161AF9046900CB2C2E /* PBXTargetDependency */,
+				FEDDE7181AF9046900CB2C2E /* PBXTargetDependency */,
+				FEDDE71A1AF9046900CB2C2E /* PBXTargetDependency */,
+				FEDDE71C1AF9046900CB2C2E /* PBXTargetDependency */,
+			);
+			name = "changeableball iOS free copy copy";
+			productName = iphone;
+			productReference = FEDDE7F61AF9046900CB2C2E /* changeableball iOS free copy copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2712,6 +3066,7 @@
 				FEA72B521AAEE090009226A1 /* changeableball iOS paid */,
 				FE9A38FA1AD3C9C70066BE03 /* changeableball zanting iOS free */,
 				FE7A7E961AD6C0D1009CE223 /* changeableball iOS free copy */,
+				FEDDE7131AF9046900CB2C2E /* changeableball iOS free copy copy */,
 			);
 		};
 /* End PBXProject section */
@@ -2866,6 +3221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE849111AF87A7900C99713 /* Particles in Resources */,
 				FEF8F38E1AD7651000C0CAC3 /* sns_icon_19@2x.png in Resources */,
 				FE7A7EA41AD6C0D1009CE223 /* Icon-120.png in Resources */,
 				FEF8F37C1AD7651000C0CAC3 /* share.png in Resources */,
@@ -3101,6 +3457,104 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEDDE71E1AF9046900CB2C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDDE71F1AF9046900CB2C2E /* Particles in Resources */,
+				FEDDE7201AF9046900CB2C2E /* sns_icon_19@2x.png in Resources */,
+				FEDDE7211AF9046900CB2C2E /* Icon-120.png in Resources */,
+				FEDDE7221AF9046900CB2C2E /* share.png in Resources */,
+				FEDDE7231AF9046900CB2C2E /* Icon@2x.png in Resources */,
+				FEDDE7241AF9046900CB2C2E /* icon_call.png in Resources */,
+				FEDDE7251AF9046900CB2C2E /* adchina_back@2x.png in Resources */,
+				FEDDE7261AF9046900CB2C2E /* adchina_full_backgrand.png in Resources */,
+				FEDDE7271AF9046900CB2C2E /* adchina_closeButton.png in Resources */,
+				FEDDE7281AF9046900CB2C2E /* UMShareEditViewControlleriPad.xib in Resources */,
+				FEDDE7291AF9046900CB2C2E /* AdInStLClOsE.png in Resources */,
+				FEDDE72A1AF9046900CB2C2E /* Icon-76.png in Resources */,
+				FEDDE72B1AF9046900CB2C2E /* adchina_btnconfirm.png in Resources */,
+				FEDDE72C1AF9046900CB2C2E /* icon_down.png in Resources */,
+				FEDDE72D1AF9046900CB2C2E /* icon_map.png in Resources */,
+				FEDDE72E1AF9046900CB2C2E /* Default@2x.png in Resources */,
+				FEDDE72F1AF9046900CB2C2E /* adchina_forward@2x.png in Resources */,
+				FEDDE7301AF9046900CB2C2E /* mg_back.png in Resources */,
+				FEDDE7311AF9046900CB2C2E /* Icon-100.png in Resources */,
+				FEDDE7321AF9046900CB2C2E /* sns_icon_1@2x.png in Resources */,
+				FEDDE7331AF9046900CB2C2E /* sns_icon_22.png in Resources */,
+				FEDDE7341AF9046900CB2C2E /* share@.png in Resources */,
+				FEDDE7351AF9046900CB2C2E /* UMSnsAccountViewController.xib in Resources */,
+				FEDDE7361AF9046900CB2C2E /* sharing.png in Resources */,
+				FEDDE7371AF9046900CB2C2E /* sns_icon_24.png in Resources */,
+				FEDDE7381AF9046900CB2C2E /* sns_icon_24@2x.png in Resources */,
+				FEDDE7391AF9046900CB2C2E /* adchina_close.png in Resources */,
+				FEDDE73A1AF9046900CB2C2E /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				FEDDE73B1AF9046900CB2C2E /* adchina_expand.png in Resources */,
+				FEDDE73C1AF9046900CB2C2E /* icon_video.png in Resources */,
+				FEDDE73D1AF9046900CB2C2E /* UMSCommentInputControlleriPad.xib in Resources */,
+				FEDDE73E1AF9046900CB2C2E /* icon_web.png in Resources */,
+				FEDDE73F1AF9046900CB2C2E /* Icon-152.png in Resources */,
+				FEDDE7401AF9046900CB2C2E /* share@2x.png in Resources */,
+				FEDDE7411AF9046900CB2C2E /* adchina_hide@2x.png in Resources */,
+				FEDDE7421AF9046900CB2C2E /* Images in Resources */,
+				FEDDE7431AF9046900CB2C2E /* UMSocialSDKResourcesNew.bundle in Resources */,
+				FEDDE7441AF9046900CB2C2E /* UMShareEditViewController.xib in Resources */,
+				FEDDE7451AF9046900CB2C2E /* sns_icon_18@2x.png in Resources */,
+				FEDDE7461AF9046900CB2C2E /* Icon.png in Resources */,
+				FEDDE7471AF9046900CB2C2E /* sns_icon_1.png in Resources */,
+				FEDDE7481AF9046900CB2C2E /* Default-568h@2x.png in Resources */,
+				FEDDE7491AF9046900CB2C2E /* ChangeLog.txt in Resources */,
+				FEDDE74A1AF9046900CB2C2E /* sns_icon_23.png in Resources */,
+				FEDDE74B1AF9046900CB2C2E /* dian_1.png in Resources */,
+				FEDDE74C1AF9046900CB2C2E /* sns_icon_22@2x.png in Resources */,
+				FEDDE74D1AF9046900CB2C2E /* IOSƒ⁄÷ß∏∂IAPœÍœ∏∑Ω∑®.docx in Resources */,
+				FEDDE74E1AF9046900CB2C2E /* sns_icon_6@2x.png in Resources */,
+				FEDDE74F1AF9046900CB2C2E /* log in Resources */,
+				FEDDE7501AF9046900CB2C2E /* adchina_expand@2x.png in Resources */,
+				FEDDE7511AF9046900CB2C2E /* Icon-72.png in Resources */,
+				FEDDE7521AF9046900CB2C2E /* doc.html in Resources */,
+				FEDDE7531AF9046900CB2C2E /* adchina_btnconfirm2.png in Resources */,
+				FEDDE7541AF9046900CB2C2E /* fonts in Resources */,
+				FEDDE7551AF9046900CB2C2E /* icon_email.png in Resources */,
+				FEDDE7561AF9046900CB2C2E /* adchina_toolbar.png in Resources */,
+				FEDDE7571AF9046900CB2C2E /* sns_icon_18.png in Resources */,
+				FEDDE7581AF9046900CB2C2E /* Icon-50.png in Resources */,
+				FEDDE7591AF9046900CB2C2E /* icon_ems.png in Resources */,
+				FEDDE75A1AF9046900CB2C2E /* UMSCommentInputController.xib in Resources */,
+				FEDDE75B1AF9046900CB2C2E /* sharing@2x.png in Resources */,
+				FEDDE75C1AF9046900CB2C2E /* adchina_stoploading.png in Resources */,
+				FEDDE75D1AF9046900CB2C2E /* UMSCommentDetailController.xib in Resources */,
+				FEDDE75E1AF9046900CB2C2E /* adchina_forward.png in Resources */,
+				FEDDE75F1AF9046900CB2C2E /* Icon-114.png in Resources */,
+				FEDDE7601AF9046900CB2C2E /* markdown.css in Resources */,
+				FEDDE7611AF9046900CB2C2E /* title_back.png in Resources */,
+				FEDDE7621AF9046900CB2C2E /* UMSLoginViewController.xib in Resources */,
+				FEDDE7631AF9046900CB2C2E /* mg_fs.png in Resources */,
+				FEDDE7641AF9046900CB2C2E /* README.txt in Resources */,
+				FEDDE7651AF9046900CB2C2E /* UMSocialLocalizable.strings in Resources */,
+				FEDDE7661AF9046900CB2C2E /* Icon-29.png in Resources */,
+				FEDDE7671AF9046900CB2C2E /* VERSIONS in Resources */,
+				FEDDE7681AF9046900CB2C2E /* Icon-40.png in Resources */,
+				FEDDE7691AF9046900CB2C2E /* README.txt in Resources */,
+				FEDDE76A1AF9046900CB2C2E /* dian_2.png in Resources */,
+				FEDDE76B1AF9046900CB2C2E /* adchina_closeButton@2x.png in Resources */,
+				FEDDE76C1AF9046900CB2C2E /* adchina_back.png in Resources */,
+				FEDDE76D1AF9046900CB2C2E /* Icon-144.png in Resources */,
+				FEDDE76E1AF9046900CB2C2E /* sns_icon_19.png in Resources */,
+				FEDDE76F1AF9046900CB2C2E /* sns_icon_23@2x.png in Resources */,
+				FEDDE7701AF9046900CB2C2E /* AdSingleTestViewController.xib in Resources */,
+				FEDDE7711AF9046900CB2C2E /* Sounds in Resources */,
+				FEDDE7721AF9046900CB2C2E /* sns_icon_6.png in Resources */,
+				FEDDE7731AF9046900CB2C2E /* Icon-80.png in Resources */,
+				FEDDE7741AF9046900CB2C2E /* UMSShareListController.xib in Resources */,
+				FEDDE7751AF9046900CB2C2E /* Icon-57.png in Resources */,
+				FEDDE7761AF9046900CB2C2E /* adchina_hide.png in Resources */,
+				FEDDE7771AF9046900CB2C2E /* Default.png in Resources */,
+				FEDDE7781AF9046900CB2C2E /* adchina_stoploading@2x.png in Resources */,
+				FEDDE7791AF9046900CB2C2E /* Icon-58.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3172,6 +3626,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE849141AF87C0D00C99713 /* buyDiamond.cpp in Sources */,
+				FEE849151AF87C0D00C99713 /* AlertLayer.cpp in Sources */,
 				FE7A7ED81AD6C0D1009CE223 /* GameOverLayer.mm in Sources */,
 				FEF8F4F41AD7651600C0CAC3 /* CJSONSerialization.m in Sources */,
 				FE7A7EDC1AD6C0D1009CE223 /* readme.md in Sources */,
@@ -3309,6 +3765,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FEDDE77A1AF9046900CB2C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEDDE77B1AF9046900CB2C2E /* buyDiamond.cpp in Sources */,
+				FEDDE77C1AF9046900CB2C2E /* AlertLayer.cpp in Sources */,
+				FEDDE77D1AF9046900CB2C2E /* GameOverLayer.mm in Sources */,
+				FEDDE77E1AF9046900CB2C2E /* CJSONSerialization.m in Sources */,
+				FEDDE77F1AF9046900CB2C2E /* readme.md in Sources */,
+				FEDDE7801AF9046900CB2C2E /* AppController.mm in Sources */,
+				FEDDE7811AF9046900CB2C2E /* BallSprite.cpp in Sources */,
+				FEDDE7821AF9046900CB2C2E /* BuyLifeLayer.cpp in Sources */,
+				FEDDE7831AF9046900CB2C2E /* ControllerLayer.cpp in Sources */,
+				FEDDE7841AF9046900CB2C2E /* CDataScanner.m in Sources */,
+				FEDDE7851AF9046900CB2C2E /* SimMethod.cpp in Sources */,
+				FEDDE7861AF9046900CB2C2E /* Reachability.m in Sources */,
+				FEDDE7871AF9046900CB2C2E /* CJSONSerializedData.m in Sources */,
+				FEDDE7881AF9046900CB2C2E /* RootViewController.mm in Sources */,
+				FEDDE7891AF9046900CB2C2E /* IOSiAP.mm in Sources */,
+				FEDDE78A1AF9046900CB2C2E /* AdViewAdapterIAd.m in Sources */,
+				FEDDE78B1AF9046900CB2C2E /* GameCenterScene.cpp in Sources */,
+				FEDDE78C1AF9046900CB2C2E /* CFilteringJSONSerializer.m in Sources */,
+				FEDDE78D1AF9046900CB2C2E /* CJSONDeserializer.m in Sources */,
+				FEDDE78E1AF9046900CB2C2E /* UmSocialControllerIOS.mm in Sources */,
+				FEDDE78F1AF9046900CB2C2E /* DataHome.cpp in Sources */,
+				FEDDE7901AF9046900CB2C2E /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				FEDDE7911AF9046900CB2C2E /* AdViewToolX.mm in Sources */,
+				FEDDE7921AF9046900CB2C2E /* AdViewController.m in Sources */,
+				FEDDE7931AF9046900CB2C2E /* AdInstlAdapterAdMob.m in Sources */,
+				FEDDE7941AF9046900CB2C2E /* IOSiAP_Bridge.cpp in Sources */,
+				FEDDE7951AF9046900CB2C2E /* IADSimple.m in Sources */,
+				FEDDE7961AF9046900CB2C2E /* AdRunStateManager.m in Sources */,
+				FEDDE7971AF9046900CB2C2E /* UMShareButton.cpp in Sources */,
+				FEDDE7981AF9046900CB2C2E /* JSONKit.m in Sources */,
+				FEDDE7991AF9046900CB2C2E /* MUtils.cpp in Sources */,
+				FEDDE79A1AF9046900CB2C2E /* UMSocialUIObject.mm in Sources */,
+				FEDDE79B1AF9046900CB2C2E /* AppDelegate.mm in Sources */,
+				FEDDE79C1AF9046900CB2C2E /* ballGamescene.mm in Sources */,
+				FEDDE79D1AF9046900CB2C2E /* CCUMSocialSDK.cpp in Sources */,
+				FEDDE79E1AF9046900CB2C2E /* AdSingleTestViewController.m in Sources */,
+				FEDDE79F1AF9046900CB2C2E /* AdViewAdapterAdMob.m in Sources */,
+				FEDDE7A01AF9046900CB2C2E /* CJSONScanner.m in Sources */,
+				FEDDE7A11AF9046900CB2C2E /* CJSONSerializer.m in Sources */,
+				FEDDE7A21AF9046900CB2C2E /* main.m in Sources */,
+				FEDDE7A31AF9046900CB2C2E /* DataUpdateLayer.cpp in Sources */,
+				FEDDE7A41AF9046900CB2C2E /* HelloWorldScene.cpp in Sources */,
+				FEDDE7A51AF9046900CB2C2E /* AdViewAdapterAdChina.m in Sources */,
+				FEDDE7A61AF9046900CB2C2E /* NCSGameCenter.m in Sources */,
+				FEDDE7A71AF9046900CB2C2E /* DataBase64.cpp in Sources */,
+				FEDDE7A81AF9046900CB2C2E /* NSDictionary_JSONExtensions.m in Sources */,
+				FEDDE7A91AF9046900CB2C2E /* CDataScanner_Extensions.m in Sources */,
+				FEDDE7AA1AF9046900CB2C2E /* DataManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -3436,6 +3947,31 @@
 			isa = PBXTargetDependency;
 			name = "CocosDenshion iOS";
 			targetProxy = FEA72B5C1AAEE090009226A1 /* PBXContainerItemProxy */;
+		};
+		FEDDE7141AF9046900CB2C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cocos2dx iOS";
+			targetProxy = FEDDE7151AF9046900CB2C2E /* PBXContainerItemProxy */;
+		};
+		FEDDE7161AF9046900CB2C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cocos2dx-extensions iOS";
+			targetProxy = FEDDE7171AF9046900CB2C2E /* PBXContainerItemProxy */;
+		};
+		FEDDE7181AF9046900CB2C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "chipmunk iOS";
+			targetProxy = FEDDE7191AF9046900CB2C2E /* PBXContainerItemProxy */;
+		};
+		FEDDE71A1AF9046900CB2C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "box2d iOS";
+			targetProxy = FEDDE71B1AF9046900CB2C2E /* PBXContainerItemProxy */;
+		};
+		FEDDE71C1AF9046900CB2C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CocosDenshion iOS";
+			targetProxy = FEDDE71D1AF9046900CB2C2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3977,8 +4513,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4114,7 +4650,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
-				PROVISIONING_PROFILE = "68caddcc-3156-4ca7-b046-f4f388f1d977";
+				PROVISIONING_PROFILE = "829d0c36-72d6-4766-8fba-4e35f364ab51";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4125,8 +4661,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: hujun zhao (CDG5M7LJG3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hujun zhao (3N2S83TNT8)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4260,7 +4796,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
-				PROVISIONING_PROFILE = "68caddcc-3156-4ca7-b046-f4f388f1d977";
+				PROVISIONING_PROFILE = "829d0c36-72d6-4766-8fba-4e35f364ab51";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4791,6 +5327,302 @@
 			};
 			name = Release;
 		};
+		FEDDE7F41AF9046900CB2C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMPRESS_PNG_FILES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Connection,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Core,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/GooglePlusSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/Pinterest.embeddedframework,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/QQConnectSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/RenRenSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/UI,
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Immob",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MobWin",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdViewSDK",
+					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.1-1.0",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/GoogleAdMob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Chartboost/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Lmmob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Waps/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/XingYun/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/YiJiFen/lib",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ios/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+					"COCOS2D_DEBUG=1",
+					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					FREE_VERSION,
+					FREE_EN,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
+				);
+				INFOPLIST_FILE = "changeableball iOS free copy copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/LaiWang,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/TencentWeibo,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_4.2,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Facebook,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Instagram,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Line,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Sina,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Twitter,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Wechat,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/YiXin,
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/LaiWang",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/TencentWeibo",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_4.2",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Facebook",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Instagram",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Line",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Sina",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Twitter",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Wechat",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/YiXin",
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/LaiWang,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/TencentWeibo,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_4.2,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Facebook,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Instagram,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Line,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Sina,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Twitter,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Wechat,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/YiXin,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/SinaWeiboSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/TencentWeiboSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
+					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/_KOpenAPIAdView",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/AdChina",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Ader",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/AdFracta",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Adwo",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/AirAD",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Baidu",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Casee",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Domob",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/GoogleAdMob",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Greystripe",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/InMobi",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/IZP",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Miidi",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MillennialMedia",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MobiSage",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MobWin",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/SmartMad",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/UMAd",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/VPon",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WiAd",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Wooboo",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WQMobile",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/AdChina/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Adwo/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Baidu/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Chance/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/DIanRu/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Domob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/GDTMob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/GoogleAdMob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/GuoHe/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Guomob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/InMobi/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Miidi/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/MobiSage/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Pingcoo/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/SmartMad/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Tanx/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/VPon/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/WQMobile/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/YouMi/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdView",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "changeableball iOS free copy copy";
+				PROVISIONING_PROFILE = "16c4f79f-eecd-404d-90be-a75d6195be22";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		FEDDE7F51AF9046900CB2C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMPRESS_PNG_FILES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Connection,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Core,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/GooglePlusSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/Pinterest.embeddedframework,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/QQConnectSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/RenRenSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/UI,
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Immob",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MobWin",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdViewSDK",
+					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.1-1.0",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/GoogleAdMob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Chartboost/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Lmmob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Waps/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/XingYun/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/YiJiFen/lib",
+				);
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ios/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					USE_FILE32API,
+					CC_TARGET_OS_IPHONE,
+					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					FREE_VERSION,
+					FREE_EN,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
+					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+					"~/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0",
+				);
+				INFOPLIST_FILE = "changeableball iOS free copy copy2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/LaiWang,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/Frameworks_32/TencentWeibo,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_4.2,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Facebook,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Instagram,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Line,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Sina,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Twitter,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Wechat,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/YiXin,
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/LaiWang",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/TencentWeibo",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_4.2",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Facebook",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Instagram",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Line",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Sina",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Twitter",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Wechat",
+					"$(PROJECT_DIR)/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/YiXin",
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/LaiWang,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/Frameworks_32/TencentWeibo,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_4.2,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Facebook,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Instagram,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Line,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Sina,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Twitter,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/Wechat,
+					/Users/zhao/game/baoll3.2Version/changeableball/Social_Cocos2dx_SDK_V2.0/Platforms/iOS/UMSocial_Sdk_Extra_Frameworks/YiXin,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/SinaWeiboSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/TencentWeiboSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/WeChatSDK,
+					/Users/zhao/game/baoll3.2Version/changeableball/Classes/C2DXShareSDK/ShareSDK/Extend/YiXinSDK,
+					"$(PROJECT_DIR)/iosumanalytics",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/_KOpenAPIAdView",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/AdChina",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Ader",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/AdFracta",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Adwo",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/AirAD",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Baidu",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Casee",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Domob",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/GoogleAdMob",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Greystripe",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/InMobi",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/IZP",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Miidi",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MillennialMedia",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MobiSage",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/MobWin",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/SmartMad",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/UMAd",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/VPon",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WiAd",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Wooboo",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/WQMobile",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/YouMi",
+					"$(PROJECT_DIR)/MYADVIEWSDK/AdNetworks/Yunyun",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/AdChina/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Adwo/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Baidu/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Chance/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/DIanRu/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Domob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/GDTMob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/GoogleAdMob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/GuoHe/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Guomob/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/InMobi/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Miidi/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/MobiSage/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Pingcoo/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/SmartMad/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/Tanx/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/VPon/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/WQMobile/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdNetworks/YouMi/lib",
+					"$(PROJECT_DIR)/AdViewSDK-3.1.5/AdView",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_1.1.0",
+					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "changeableball iOS free copy copy";
+				PROVISIONING_PROFILE = "16c4f79f-eecd-404d-90be-a75d6195be22";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -4844,6 +5676,15 @@
 			buildConfigurations = (
 				FEA72B961AAEE090009226A1 /* Debug */,
 				FEA72B971AAEE090009226A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FEDDE7F31AF9046900CB2C2E /* Build configuration list for PBXNativeTarget "changeableball iOS free copy copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEDDE7F41AF9046900CB2C2E /* Debug */,
+				FEDDE7F51AF9046900CB2C2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>N次元(免费)</string>
+	<string>n dimension(free)</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
@@ -42,7 +42,7 @@
 		<string>Icon-144.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.skyter.ndimfree</string>
+	<string>com.skyter.ndimfreeEN</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

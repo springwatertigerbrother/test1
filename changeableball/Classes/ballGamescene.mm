@@ -413,6 +413,7 @@ void BallGameScene:: share(void* sender)
     platforms->push_back(SINA);
     platforms->push_back(RENREN) ;
     platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(WEIXIN);
         platforms->push_back(FACEBOOK);
     //    platforms->push_back(QZONE) ;
     //    platforms->push_back(QQ) ;

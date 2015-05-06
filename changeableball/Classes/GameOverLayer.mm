@@ -375,13 +375,15 @@ void GameOverLayer::ShareGame()
     
     // 设置用户点击一条图文分享时用户跳转到的目标页面, 一般为app主页或者下载页面
 //    sdk->setTargetUrl("https://itunes.apple.com/us/app/n-dimension/id983646428?l=zh&ls=1&mt=8");
-    sdk->setTargetUrl("https://itunes.apple.com/us/app/n-dimension-free/id984294274?l=zh&ls=1&mt=8");
-    
+//    sdk->setTargetUrl("https://itunes.apple.com/us/app/n-dimension-free/id984294274?l=zh&ls=1&mt=8");
+    sdk->setTargetUrl(SHARED_URL);
+
     // 设置友盟分享面板上显示的平台
     vector<int>* platforms = new vector<int>();
     platforms->push_back(SINA);
     platforms->push_back(RENREN) ;
     platforms->push_back(WEIXIN_CIRCLE) ;
+    platforms->push_back(WEIXIN);
     platforms->push_back(FACEBOOK);
 //    platforms->push_back(QZONE) ;
 //    platforms->push_back(QQ) ;

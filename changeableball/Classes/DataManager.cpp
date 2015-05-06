@@ -273,11 +273,11 @@ bool DataManager::init()
     pMenu->setPosition(ccp(s.width/2  + 180, s.height - 250));
     addChild(pMenu);
     
-//    auto particle2 = ParticleSystemQuad::create("Particles/huoyan.plist");
-//    particle2->setPosition(ccp(s.width/2  + 100, s.height - 250));
-//    //    //    _emitter = ParticleExplosion::create();
-//    particle2->retain();
-//        addChild(particle2, 1000);
+    auto particle2 = ParticleSystemQuad::create("Particles/huoyan.plist");
+    particle2->setPosition(ccp(s.width/2  + 100, s.height - 250));
+    //    //    _emitter = ParticleExplosion::create();
+    particle2->retain();
+        addChild(particle2, 1000);
     
 
 //    auto menu = Menu::create(
@@ -1260,9 +1260,9 @@ void DataManager::selectedTool(void* sender)
 
     if (consumeDiamond == SUPER_COSUMED_DIAMOND)
     {
-//        auto alert = AlertLayer::create();
-//        alert->setPosition(ccp(0,-200));
-//        addChild(alert);
+        auto alert = AlertLayer::create();
+        alert->setPosition(ccp(0,-200));
+        addChild(alert);
         return;
     }
     if (!checkDiamondWithConsume(consumeDiamond, this))
@@ -1553,7 +1553,7 @@ void DataManager::useSuperTool(Ref* obj)
         CCSize size = Director::getInstance()->getWinSize();
         CCLabelTTF* labelLife  = CCLabelTTF::create("60","ArialRoundedMTBold",40);
         labelLife->setAnchorPoint(ccp(0.5, 0.5));
-        labelLife->setColor(ccRED);
+        labelLife->setColor(ccWHITE);
         labelLife->setPosition(ccp(size.width/2,size.height/2 + 150));
         labelLife->setString(enoughDiamond);
         labelLife->setDimensions(CCSize(500,0));

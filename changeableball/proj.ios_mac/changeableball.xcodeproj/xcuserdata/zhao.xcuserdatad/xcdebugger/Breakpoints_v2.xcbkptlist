@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "473"
             endingLineNumber = "473"
-            landmarkName = "DataManager:: touchMove(CCPoint local)"
+            landmarkName = "DataManager::loadEffectSounds()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -159,36 +159,6 @@
             endingLineNumber = "56"
             landmarkName = "IOSiAP_Bridge::onRequestProductsFinish(void)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSiAP_Bridge::onRequestProductsFinish()"
-                  moduleName = "changeableball iOS free copy"
-                  urlString = "file:///Users/zhao/game/baoll3.2Version/changeableball/iap/IOSiAP_Bridge.cpp"
-                  timestampString = "452339125.425884"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "342">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "_GLOBAL__I_a"
-                  moduleName = "changeableball iOS free copy"
-                  urlString = "file:///Users/zhao/game/baoll3.2Version/changeableball/iap/IOSiAP_Bridge.cpp"
-                  timestampString = "452339125.426086"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -235,7 +205,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1057"
             endingLineNumber = "1057"
-            landmarkName = "DataManager::metetors()"
+            landmarkName = "DataManager:: onTouchBegan(Touch *touch, Event *unused_event)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -251,7 +221,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1053"
             endingLineNumber = "1053"
-            landmarkName = "DataManager::metetors()"
+            landmarkName = "DataManager:: onTouchBegan(Touch *touch, Event *unused_event)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -310,12 +280,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/ballGamescene.mm"
-            timestampString = "450279279.986871"
+            timestampString = "452492851.964204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "579"
-            endingLineNumber = "579"
-            landmarkName = "BallGameScene::standardButtonWithTitle(const char * title)"
+            startingLineNumber = "580"
+            endingLineNumber = "580"
+            landmarkName = "BallGameScene::ControlButtoninit(Node* obj,std::vector&lt;std::string&gt; vec)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -326,12 +296,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/ballGamescene.mm"
-            timestampString = "450279279.986871"
+            timestampString = "452492851.964204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "575"
-            endingLineNumber = "575"
-            landmarkName = "BallGameScene::standardButtonWithTitle(const char * title)"
+            startingLineNumber = "576"
+            endingLineNumber = "576"
+            landmarkName = "BallGameScene::ControlButtoninit(Node* obj,std::vector&lt;std::string&gt; vec)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -389,77 +359,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios/AppController.mm"
-            timestampString = "450236524.452034"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../classes/ballGamescene.mm"
-            timestampString = "450266006.486639"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "BallGameScene::onEnter()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
-            timestampString = "450266006.486639"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "BallGameScene::onEnter()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
-            timestampString = "450279279.986871"
+            timestampString = "452492851.964204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "415"
             endingLineNumber = "415"
-            landmarkName = "BallGameScene:: multiplePlayer(void* sender)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../classes/ballGamescene.mm"
-            timestampString = "450277875.759894"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "BallGameScene::onEnter()"
+            landmarkName = "BallGameScene:: share(void* sender)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -476,6 +382,86 @@
             startingLineNumber = "257"
             endingLineNumber = "257"
             landmarkName = "GameOverLayer::init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios/AppController.mm"
+            timestampString = "452526509.423059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios/AppController.mm"
+            timestampString = "452526509.423059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "-application:didReceiveRemoteNotification:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../classes/DataManager.cpp"
+            timestampString = "452492134.183225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1517"
+            endingLineNumber = "1517"
+            landmarkName = "DataManager::useSuperTool(Ref* obj)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios/AppController.mm"
+            timestampString = "452526509.423059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios/AppController.mm"
+            timestampString = "452526719.236111"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

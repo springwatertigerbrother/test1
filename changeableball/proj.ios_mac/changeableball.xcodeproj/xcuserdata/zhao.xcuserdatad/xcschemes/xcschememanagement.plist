@@ -11,11 +11,27 @@
 		</dict>
 		<key>changeableball Mac.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>changeableball iOS free copy copy 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>changeableball iOS free copy copy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>changeableball iOS free copy.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>14</integer>
 		</dict>
@@ -31,6 +47,8 @@
 		</dict>
 		<key>changeableball iOS.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -58,6 +76,16 @@
 			<true/>
 		</dict>
 		<key>FEA72B521AAEE090009226A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEDDE62E1AF8FFC700CB2C2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEDDE7131AF9046900CB2C2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
