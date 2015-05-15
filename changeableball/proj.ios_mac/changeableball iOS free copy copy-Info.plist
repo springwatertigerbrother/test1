@@ -50,7 +50,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
+<<<<<<< HEAD:changeableball/proj.ios_mac/changeableball iOS free copy copy-Info.plist
 	<string>1.1.0</string>
+=======
+	<string>1.0</string>
+>>>>>>> e0ae1d2... delete bg pictures and aiyinsitan:changeableball/proj.ios_mac/cn paid copy copy-Info.plist
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -73,7 +77,13 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
+<<<<<<< HEAD:changeableball/proj.ios_mac/changeableball iOS free copy copy-Info.plist
 	<string>1.2</string>
+=======
+	<string>1.0</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
+>>>>>>> e0ae1d2... delete bg pictures and aiyinsitan:changeableball/proj.ios_mac/cn paid copy copy-Info.plist
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIAppFonts</key>

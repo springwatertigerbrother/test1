@@ -193,23 +193,24 @@ bool DataManager::init()
         bg_cstr ="Images/gamebg.png";
     }
     
-    m_pBg = Sprite::create(bg_cstr);
-    m_pBg->setPosition(ccp(s.width/2,s.height/2 - 0));
-//    m_pBg->setOpacity(170);
-    addChild(m_pBg,-10);
-    m_pBg->setZOrder(-100);
-    m_pBg->setScale(3*CC_CONTENT_SCALE_FACTOR(), 3*CC_CONTENT_SCALE_FACTOR());
-    CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5, 360), NULL);
-    CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5,-360), NULL);
-    m_pBg->runAction(Sequence::create(spawn1,spawn2,NULL) );
+//    m_pBg = Sprite::create(bg_cstr);
+//    m_pBg->setPosition(ccp(s.width/2,s.height/2 - 0));
+////    m_pBg->setOpacity(170);
+//    addChild(m_pBg,-10);
+//    m_pBg->setZOrder(-100);
+//    m_pBg->setScale(3*CC_CONTENT_SCALE_FACTOR(), 3*CC_CONTENT_SCALE_FACTOR());
+//    CCSpawn* spawn1 = Spawn::create(ScaleTo::create(0.5, 0.1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5, 360), NULL);
+//    CCSpawn* spawn2 = Spawn::create(ScaleTo::create(0.5, 1*CC_CONTENT_SCALE_FACTOR()), RotateBy::create(0.5,-360), NULL);
+//    m_pBg->runAction(Sequence::create(spawn1,spawn2,NULL) );
 
        
-    mCoreLayer = CCLayerColor::create(ccc4(255, 255, 255, 255));//WithColor:ccc4(230, 230, 230, 255)
+    mCoreLayer = CCLayerColor::create(ccc4(38, 156, 252, 255));//WithColor:ccc4(230, 230, 230, 255)
     if ( !mCoreLayer )
     {
         return false;
     }
-    
+    addChild(mCoreLayer);
+    mCoreLayer->setOpacity(250);
     m_pTotalScoreLabel = CCLabelTTF::create();
 //    m_pTotalScoreLabel->setString(scoreStr);
 //    m_pTotalScoreLabel->setPosition(ccp(s.width/2, s.height*0.66));
@@ -505,7 +506,8 @@ bool DataManager::touchBegine(CCPoint local)
         
         return false;
     }
-    m_pBg->setOpacity(170);
+//    m_pBg->setOpacity(170);
+    mCoreLayer->setOpacity(180);
 
     m_movePos = local;
     m_objectHasContina = false;
@@ -620,7 +622,8 @@ void DataManager::removeSelf(Node* pNode)
 void DataManager:: touchEnd(CCPoint local)
 {
     useTool(local);
-    
+    mCoreLayer->setOpacity(220);
+
      if (m_stackArray.size()>=ELIMINABLE_NUM)
      {
          
@@ -650,7 +653,7 @@ void DataManager:: touchEnd(CCPoint local)
      }
     
     m_drawLine = false;
-    m_pBg->setOpacity(255);
+//    m_pBg->setOpacity(255);
 
     int disappearCount = 0;
     

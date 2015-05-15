@@ -84,7 +84,7 @@ CCScene* GameOverLayer::scene()
 
 bool GameOverLayer::init()
 {
-    if ( !CCLayerColor::initWithColor(ccc4(0, 0, 0, 0)))
+    if ( !CCLayerColor::initWithColor(ccc4(38, 156, 252, 255)))
     {
         return false;
     }
@@ -120,12 +120,12 @@ bool GameOverLayer::init()
     //    setTouchEnabled(true);
     CCSize s = CCDirector::sharedDirector()->getWinSize();
     
-    CCSprite* pBg = Sprite::create("Images/bg3.png");
-    pBg->setPosition(ccp(s.width/2,s.height/2));
-    pBg->setScale(CC_CONTENT_SCALE_FACTOR());
-    addChild(pBg);
-//    pBg->setColor(Color3B(255, 0, 0));
-    pBg->setOpacity(200);
+//    CCSprite* pBg = Sprite::create("Images/bg3.png");
+//    pBg->setPosition(ccp(s.width/2,s.height/2));
+//    pBg->setScale(CC_CONTENT_SCALE_FACTOR());
+//    addChild(pBg);
+////    pBg->setColor(Color3B(255, 0, 0));
+//    pBg->setOpacity(200);
     MenuItemImage* pItem1 = MenuItemImage::create("Images/restartn.png", "Images/restart.png", CC_CALLBACK_0(GameOverLayer::ReStartGame, this)) ;
     
     MenuItemImage* pItem2 = MenuItemImage::create("Images/sharen.png", "Images/share.png", CC_CALLBACK_0(GameOverLayer::ShareGame,this)) ;
