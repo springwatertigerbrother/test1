@@ -1227,6 +1227,7 @@ void DataManager::help(void *sender)
 // tools
 void DataManager::selectedTool(void* sender)
 {
+    m_pTotalScoreLabel->setString("dfdfd");
     Node* pNode = ((Node*)sender);
     if (!pNode)
     {

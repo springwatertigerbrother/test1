@@ -246,11 +246,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../classes/DataManager.cpp"
-            timestampString = "452274424.888369"
+            timestampString = "452934548.230001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1287"
-            endingLineNumber = "1287"
+            startingLineNumber = "1288"
+            endingLineNumber = "1288"
             landmarkName = "DataManager::usebomb(CCPoint local)"
             landmarkType = "5">
          </BreakpointContent>

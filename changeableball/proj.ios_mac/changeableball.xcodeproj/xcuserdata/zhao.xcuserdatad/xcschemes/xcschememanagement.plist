@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>cn paid copy copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -38,6 +43,11 @@
 			<true/>
 		</dict>
 		<key>5087E73D17EB910900C73F5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE67A6361B05B42500FE9410</key>
 		<dict>
 			<key>primary</key>
 			<true/>
