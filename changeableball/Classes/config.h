@@ -53,7 +53,7 @@
 
 #define DONATE_DIAMOND  30000
 //#define kLeaderboardID @"ndimpaid_Leaderboard"
-#define kLeaderboardID @"ndimpaid_Leaderboard_en"
+#define kLeaderboardID @"xmzpaidcn_Leaderboard"
 
 //#define SHARED_URL "https://itunes.apple.com/us/app/n-ci-yuan/id975972814?l=zh&ls=1&mt=8"
 #define SHARED_URL "https://itunes.apple.com/us/app/n-dimension/id984346293?l=zh&ls=1&mt=8"
