@@ -32,7 +32,7 @@ bool UpStateLayer::init()
 //            addChild(pBg);
             
             m_pAiyinsitan = Sprite::create("Images/aiyinsitanhead.png");
-            m_pAiyinsitan->setPosition(ccp(s.width/2  + 200,100));
+            m_pAiyinsitan->setPosition(ccp(s.width/2  + 200,110));
             m_pAiyinsitan->setScale(CC_CONTENT_SCALE_FACTOR());
             addChild(m_pAiyinsitan);
             

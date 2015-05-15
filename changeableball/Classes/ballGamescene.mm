@@ -151,7 +151,7 @@ void BallGameScene::onEnter()
     CCSprite* pBg4 = Sprite::create("Images/bg1.png");
     pBg4->setPosition(ccp(size.width/2,size.height/2));
     pBg4->setOpacity(230);
-    addChild(pBg4);
+//    addChild(pBg4);
     pBg4->setScale(get_content_scale_factor(), get_content_scale_factor());
     
 //    CCSprite* pBg = Sprite::create("Images/aiyisitanfudiao.png");

@@ -3300,7 +3300,7 @@
 					"$(PROJECT_DIR)/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "cn paid copy copy";
-				PROVISIONING_PROFILE = "3c56e72a-90c1-413d-a206-5cb952ebbc02";
+				PROVISIONING_PROFILE = "1c12834d-b83c-48ee-9fd5-8693ae5092f2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -3388,7 +3388,7 @@
 					"$(PROJECT_DIR)/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "cn paid copy copy";
-				PROVISIONING_PROFILE = "3c56e72a-90c1-413d-a206-5cb952ebbc02";
+				PROVISIONING_PROFILE = "1c12834d-b83c-48ee-9fd5-8693ae5092f2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

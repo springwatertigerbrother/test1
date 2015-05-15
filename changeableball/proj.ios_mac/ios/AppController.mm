@@ -88,7 +88,7 @@ static AppDelegate s_sharedApplication;
 #ifdef PAID_EN
     [UMessage startWithAppkey:@"55497a3567e58edbdb00163f" launchOptions:launchOptions];
 #else
-    [UMessage startWithAppkey:@"554987a067e58efce4003e20" launchOptions:launchOptions];
+    [UMessage startWithAppkey:@"55557b42e0f55aee4d002536" launchOptions:launchOptions];
 #endif
     
     //register remoteNotification types
