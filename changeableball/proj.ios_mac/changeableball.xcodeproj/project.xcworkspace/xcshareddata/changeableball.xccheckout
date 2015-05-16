@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3E46F3E3-36BD-4FD0-A0FD-95B61C4A4B69</string>
+	<string>A95D48C3-3ED8-4488-8225-87E622B993B6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>changeableball</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -22,7 +22,7 @@
 		<key>A58EFAAEC9EA11EFFAD6416E99287599D5746B1C</key>
 		<string>../../../..</string>
 		<key>F0F3A11FE80094F6A3203D745EA35B6856191799</key>
-		<string>../../../..changeableball/Social_Cocos2dx_SDK_V2.0</string>
+		<string>../../../..changeableball/Social_Cocos2dx_SDK_V2.0/</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/springwatertigerbrother/test1.git</string>

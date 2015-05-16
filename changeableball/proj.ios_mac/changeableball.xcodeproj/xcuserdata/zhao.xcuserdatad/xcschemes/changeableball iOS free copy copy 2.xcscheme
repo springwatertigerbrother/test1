@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FEDDE7131AF9046900CB2C2E"
-               BuildableName = "changeableball iOS free copy.app"
+               BuildableName = "changeableball iOS free copy copy.app"
                BlueprintName = "changeableball iOS free copy copy"
                ReferencedContainer = "container:changeableball.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEDDE7131AF9046900CB2C2E"
-            BuildableName = "changeableball iOS free copy.app"
+            BuildableName = "changeableball iOS free copy copy.app"
             BlueprintName = "changeableball iOS free copy copy"
             ReferencedContainer = "container:changeableball.xcodeproj">
          </BuildableReference>
@@ -48,11 +48,12 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEDDE7131AF9046900CB2C2E"
-            BuildableName = "changeableball iOS free copy.app"
+            BuildableName = "changeableball iOS free copy copy.app"
             BlueprintName = "changeableball iOS free copy copy"
             ReferencedContainer = "container:changeableball.xcodeproj">
          </BuildableReference>
@@ -66,11 +67,12 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEDDE7131AF9046900CB2C2E"
-            BuildableName = "changeableball iOS free copy.app"
+            BuildableName = "changeableball iOS free copy copy.app"
             BlueprintName = "changeableball iOS free copy copy"
             ReferencedContainer = "container:changeableball.xcodeproj">
          </BuildableReference>
