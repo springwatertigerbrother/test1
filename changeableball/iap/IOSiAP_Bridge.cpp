@@ -40,13 +40,13 @@ void IOSiAP_Bridge:: requestProducts(int id)
 {
     productID = id;
     std::vector<std::string> product;
-//    product.push_back("com.skyter.ndimpaid.ndp6b");
-//    product.push_back("com.skyter.ndimpaid.ndp18");
-//    product.push_back("com.skyter.ndimpaid.ndp68");
+    product.push_back("com.skyter.ndimpaid.ndp6b");
+    product.push_back("com.skyter.ndimpaid.ndp18");
+    product.push_back("com.skyter.ndimpaid.ndp68");
     
-    product.push_back("com.skyter.ndimpaidEN.ndp6");
-    product.push_back("com.skyter.ndimpaidEN.ndp18");
-    product.push_back("com.skyter.ndimpaidEN.ndp68");
+//    product.push_back("com.skyter.ndimpaidEN.ndp6");
+//    product.push_back("com.skyter.ndimpaidEN.ndp18");
+//    product.push_back("com.skyter.ndimpaidEN.ndp68");
 	//把需要付费的道具的所有product id都放到容器里面传进去
     iap->requestProducts(product);
 }
@@ -56,13 +56,13 @@ void IOSiAP_Bridge::onRequestProductsFinish(void)
     std::string identifier = "";
     switch (productID) {
         case 6:
-            identifier = "com.skyter.ndimpaidEN.ndp6";
+            identifier = "com.skyter.ndimpaid.ndp6b";
             break;
         case 18:
-            identifier = "com.skyter.ndimpaidEN.ndp18";
+            identifier = "com.skyter.ndimpaid.ndp18";
             break;
         case 68:
-            identifier = "com.skyter.ndimpaidEN.ndp68";
+            identifier = "com.skyter.ndimpaid.ndp68";
             break;
         case 98:
             identifier = "renminbi98";
