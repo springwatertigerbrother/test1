@@ -56,7 +56,7 @@
 #define kLeaderboardID @"xmzpaidcn_Leaderboard"
 
 //#define SHARED_URL "https://itunes.apple.com/us/app/n-ci-yuan/id975972814?l=zh&ls=1&mt=8"
-#define SHARED_URL "https://itunes.apple.com/us/app/n-dimension/id984346293?l=zh&ls=1&mt=8"
+#define SHARED_URL "https://itunes.apple.com/us/app/chao-nao-xiong-mao-zhi-yi/id995144400?l=zh&ls=1&mt=8"
 
 #define RIVIVE_COSUMED_DIAMOND 300
 #define BOMB_COSUMED_DIAMOND   200
