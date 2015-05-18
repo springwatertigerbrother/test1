@@ -59,7 +59,7 @@
 
 //#define SHARED_URL "https://itunes.apple.com/us/app/n-ci-yuan/id975972814?l=zh&ls=1&mt=8"
 #define SHARED_URL "https://itunes.apple.com/us/app/n-dimension/id984346293?l=zh&ls=1&mt=8" //enfree
-#define SHARED_URL "https://itunes.apple.com/us/app/n-dimension/id983646428?l=zh&ls=1&mt=8" //cnfree
+#define SHARED_URL "https://itunes.apple.com/us/app/chao-nao-xiong-mao-zhi-mian-fei/id995560087?l=zh&ls=1&mt=8" //cnfree
 
 #define RIVIVE_COSUMED_DIAMOND 300
 #define BOMB_COSUMED_DIAMOND   200

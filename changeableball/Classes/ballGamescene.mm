@@ -348,11 +348,11 @@ void BallGameScene:: share(void* sender)
     {
         case cocos2d::LanguageType::CHINESE:
           
-            shareStr = "我在 n 次元 游戏中已经进入了 %d 次元，最佳战斗力是 %d 次元，小伙伴你呢？？？";
+            shareStr = "我在 熊猫指 游戏中进入了 %d次元，最佳战斗力%d 次元，小伙伴你呢？？？";
             break;
         case cocos2d::LanguageType::ENGLISH:
            
-            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+            shareStr = "I have into %d dimension in 'xiongmao's finger'game ,where are you friends?";
             break;
         default:
             break;
@@ -446,7 +446,7 @@ void BallGameScene:: share(void* sender)
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     sdk->openShare(pCongratulationScoreStr->getCString(), "/sdcard/image.png", share_selector(shareCallback));
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    //    sdk->setPlatformShareContent(WEIXIN_CIRCLE,"我在 n 次元 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png");
+    //    sdk->setPlatformShareContent(WEIXIN_CIRCLE,"我在 熊猫指 游戏中已经进入了　%d，小伙伴你呢？？？","Images/emc2.png");
     sdk->openShare(pCongratulationScoreStr->getCString(),outputFile.c_str(), nullptr);
 #endif
     log("share");

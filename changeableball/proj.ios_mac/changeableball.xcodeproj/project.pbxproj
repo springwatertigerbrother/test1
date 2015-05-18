@@ -4650,7 +4650,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
-				PROVISIONING_PROFILE = "fccf71de-9c28-424f-abe6-bbd77ef25548";
+				PROVISIONING_PROFILE = "011c94f9-edcf-4fb9-bb3e-0cdee8071825";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4796,7 +4796,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
-				PROVISIONING_PROFILE = "fccf71de-9c28-424f-abe6-bbd77ef25548";
+				PROVISIONING_PROFILE = "011c94f9-edcf-4fb9-bb3e-0cdee8071825";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
