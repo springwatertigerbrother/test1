@@ -105,6 +105,15 @@ bool GameOverLayer::init()
         sigleState ="最佳战斗力";
         shareDiscription = "炫耀奖励钻石1000";
     }
+    else if (currentLanguageType == cocos2d::LanguageType::GERMAN)
+    {
+        yourworld = "hi,your world is";
+        nciyuan = "%d Dimensionen";
+        totalScoreTitleStr = "Gesamtenergie";
+        sigleMost = "peak energy";
+        sigleState ="Aktuelle Kampfkraft";
+        shareDiscription = "1000 Diamanten als Belohnung fürs Angeben";
+    }
     else
     {
         yourworld = "hi,your world is";

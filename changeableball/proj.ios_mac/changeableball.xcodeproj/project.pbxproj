@@ -4650,7 +4650,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
-				PROVISIONING_PROFILE = "829d0c36-72d6-4766-8fba-4e35f364ab51";
+				PROVISIONING_PROFILE = "b51901f8-afbd-4ea8-a4bb-06900d5ec555";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -4796,7 +4796,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "changeableball iOS free copy";
-				PROVISIONING_PROFILE = "829d0c36-72d6-4766-8fba-4e35f364ab51";
+				PROVISIONING_PROFILE = "b51901f8-afbd-4ea8-a4bb-06900d5ec555";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -5203,7 +5203,7 @@
 					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
+				PROVISIONING_PROFILE = "0818425e-3645-4d49-a868-20d050cd83e2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -5320,7 +5320,7 @@
 					"$(PROJECT_DIR)/UMessage_Sdk_All_1.1.0(idfa)/UMessage_Sdk_Demo/UMessage_Sdk_Demo/UMessage_Sdk_1.1.0",
 				);
 				PRODUCT_NAME = "changeableball iOS copy";
-				PROVISIONING_PROFILE = "61217779-d9bd-41f1-80b3-0d565df9ea98";
+				PROVISIONING_PROFILE = "0818425e-3645-4d49-a868-20d050cd83e2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

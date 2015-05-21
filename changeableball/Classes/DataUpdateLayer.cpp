@@ -104,6 +104,13 @@ bool UpStateLayer::init()
                     currentEnergyStr = "current energy:";
                     backStr = "back";
                     break;
+                case cocos2d::LanguageType::GERMAN:
+                    nicyuantitleStr = "Kumulierte Dimensionen:";
+                    totalScoreTitleStr = "total energy:";
+                    currentNciyuanTitleStr = "Aktuelle Kampfkraft:";
+                    currentEnergyStr = "Aktuelle Energie:";
+                    backStr = "Zurück";
+                    break;
                 default:
                     break;
             }

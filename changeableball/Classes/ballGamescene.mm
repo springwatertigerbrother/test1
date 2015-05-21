@@ -204,6 +204,14 @@ void BallGameScene::onEnter()
             shareDiscription = "flaunt to get 1000 diamonds";
 
             break;
+        case cocos2d::LanguageType::GERMAN:
+            yourworld = "Deine Welt ist in die X-te Dimension eingetreten";
+            nciyuan = "%d dimension";
+            bicicle = "Das Leben ist wie Fahrrad fahren, man muss sich vorwärts bewegen, um das Gleichgewicht nicht zu verlieren.";
+            shareStr = "I have into %d dimension in 'N dimension'game ,where are you friends?";
+            shareDiscription = "flaunt to get 1000 diamonds";
+            
+            break;
         default:
             break;
     }

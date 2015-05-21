@@ -232,7 +232,8 @@ bool DataManager::init()
 //    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pMoon);
     std::string supertool;
-    
+    supertool = "supertool";
+
     LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
     switch (currentLanguageType)
     {
@@ -245,6 +246,12 @@ bool DataManager::init()
         {
             supertool = "supertool";
 
+        }
+            break;
+        case cocos2d::LanguageType::GERMAN:
+        {
+            supertool = "Bonusfähigkeiten";
+            
         }
             break;
         default:
@@ -342,8 +349,8 @@ bool DataManager::init()
 
     clearaway = "click ?? top of screen to clear away words";
     clearaway2 = "click ?? ";
-    helpStr = GAME_RULE_CHINISE;
-
+    helpStr = GAME_RULE_ENGLISH;
+    backStr = "back";
     switch (currentLanguageType)
     {
         case cocos2d::LanguageType::CHINESE:
@@ -364,6 +371,16 @@ bool DataManager::init()
 
         }
             break;
+        case cocos2d::LanguageType::GERMAN:
+        {
+            clearaway = "Zum Ein- oder Ausblenden des Textes  klicken Sie rechts oben auf “??”";
+            clearaway2 = "click ?? ";
+            helpStr = GAME_RULE_GERMAN;
+            backStr = "Zurück";
+            
+        }
+            break;
+            
         default:
             break;
     }
@@ -1544,6 +1561,8 @@ void DataManager::useSuperTool(Ref* obj)
             }
                 break;
             default:
+                enoughDiamond = "sorry,you can not get the tool,try again";
+
                 break;
         }
         
