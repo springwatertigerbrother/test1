@@ -233,7 +233,8 @@ bool DataManager::init()
 //    pMoon->setScale(CC_CONTENT_SCALE_FACTOR());
 //    addChild(pMoon);
     std::string supertool;
-    
+    supertool = "supertool";
+
     LanguageType currentLanguageType = CCApplication::sharedApplication()->getCurrentLanguage();
     switch (currentLanguageType)
     {
@@ -246,6 +247,13 @@ bool DataManager::init()
         {
             supertool = "supertool";
 
+        }
+            break;
+
+        case cocos2d::LanguageType::GERMAN:
+        {
+            supertool = "Bonusfähigkeiten";
+            
         }
             break;
         default:
@@ -344,6 +352,7 @@ bool DataManager::init()
     clearaway = "click ?? top of screen to clear away words";
     clearaway2 = "click ?? ";
     helpStr = GAME_RULE_CHINISE;
+    backStr = "back";
 
     switch (currentLanguageType)
     {
